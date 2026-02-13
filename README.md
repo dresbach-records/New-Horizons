@@ -1,4 +1,8 @@
 
+<p align="center">
+  <img src="public/logosemfundo.png" width="200" />
+</p>
+
 # Projeto New-Horizons
 
 Este repositório abriga o ecossistema de front-end do **Projeto New-Horizons**, uma iniciativa social focada no desenvolvimento e capacitação de jovens.
