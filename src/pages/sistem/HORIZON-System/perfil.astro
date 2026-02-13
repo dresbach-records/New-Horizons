@@ -1,0 +1,154 @@
+---
+import HORIZONSystemLayout from "@layouts/HORIZONSystemLayout.astro";
+---
+
+<HORIZONSystemLayout>
+    <div class="max-w-5xl mx-auto">
+        <div class="bg-[#151b2d] rounded-2xl border border-[#1e293b] p-8 mb-8 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-r from-accent/10 to-transparent"></div>
+            <div class="relative flex flex-col md:flex-row items-center md:items-end gap-8">
+                <div class="relative group">
+                    <img alt="Admin Profile" class="w-32 h-32 rounded-2xl object-cover border-4 border-[#0b0f1a] shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOReo_e19_4yoog43QfGwr-Jw4INr9ARXr2MuQk3yzVwtgBPKjCuqp65VSP58kT38tV8LaLs-ZMfb_AbXTu0-wsO7LmzKt237wB85YMqVAt29TNe1t_xPDwZizIABK4SUBzvbj6zChFWBIs92h5Ei2IwFHvX-_v6kH1bKlRMWKZYm-C7yPRgKXi0Y0_pjQk8oCKXrZUKxQQilPFgzDucleEypf43_LP5uP9xHBIwmraRq-A7DsfDklhflkGOOktffJpBpqn5gBtDQ"/>
+                    <button class="absolute -bottom-2 -right-2 w-10 h-10 bg-accent text-slate-900 rounded-lg flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-xl">photo_camera</span>
+                    </button>
+                </div>
+                <div class="flex-1 text-center md:text-left">
+                    <div class="mb-1">
+                        <span class="px-2 py-0.5 bg-accent/10 text-accent text-[10px] font-bold uppercase tracking-widest rounded">Agente Horizon</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-1">A. Meireles</h3>
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 text-slate-400">
+                        <div class="flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-sm text-accent">badge</span>
+                            <span class="text-sm">Diretor Regional</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-sm text-accent">location_on</span>
+                            <span class="text-sm">Luanda, Angola</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-sm text-accent">mail</span>
+                            <span class="text-sm">a.meireles@horizon.org</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <button class="px-6 py-2.5 bg-accent text-slate-900 rounded-xl text-xs font-bold uppercase tracking-widest shadow-lg shadow-accent/20 hover:brightness-110 transition-all">
+                        Editar Perfil
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mb-8 border-b border-[#1e293b]">
+            <nav class="flex gap-8">
+                <button class="pb-4 text-sm font-bold uppercase tracking-widest tab-active flex items-center gap-2">
+                    <span class="material-symbols-outlined text-lg">person</span>
+                    Meus Dados
+                </button>
+                <button class="pb-4 text-sm font-bold uppercase tracking-widest text-slate-500 hover:text-slate-300 transition-colors flex items-center gap-2">
+                    <span class="material-symbols-outlined text-lg">shield</span>
+                    Segurança
+                </button>
+                <button class="pb-4 text-sm font-bold uppercase tracking-widest text-slate-500 hover:text-slate-300 transition-colors flex items-center gap-2">
+                    <span class="material-symbols-outlined text-lg">history</span>
+                    Histórico de Atividade
+                </button>
+            </nav>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 space-y-6">
+                <div class="bg-[#151b2d] rounded-2xl border border-[#1e293b] p-6">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-6 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-accent">description</span>
+                        Informações Pessoais
+                    </h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest ml-1">Nome Completo</label>
+                            <input class="w-full bg-[#0b0f1a] border-[#1e293b] rounded-xl text-sm text-slate-300 px-4 py-3 focus:ring-accent focus:border-accent" type="text" value="António Meireles dos Santos"/>
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest ml-1">E-mail Corporativo</label>
+                            <input class="w-full bg-[#0b0f1a] border-[#1e293b] rounded-xl text-sm text-slate-300 px-4 py-3 focus:ring-accent focus:border-accent" type="email" value="a.meireles@horizon.org"/>
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest ml-1">Telefone</label>
+                            <input class="w-full bg-[#0b0f1a] border-[#1e293b] rounded-xl text-sm text-slate-300 px-4 py-3 focus:ring-accent focus:border-accent" type="text" value="+244 923 000 000"/>
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest ml-1">Cargo</label>
+                            <input class="w-full bg-[#0b0f1a]/50 border-[#1e293b] rounded-xl text-sm text-slate-500 px-4 py-3 cursor-not-allowed" disabled type="text" value="Diretor Regional"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#151b2d] rounded-2xl border border-[#1e293b] p-6">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-6 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-accent">map</span>
+                        Alocação Regional
+                    </h4>
+                    <div class="flex items-center gap-6 p-4 bg-[#0b0f1a] rounded-xl border border-[#1e293b]">
+                        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent">
+                            <span class="material-symbols-outlined text-2xl">public</span>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-xs font-bold text-white uppercase mb-0.5">Região Responsável</p>
+                            <p class="text-sm text-slate-400">Luanda - Província Sede</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-0.5">Membros sob gestão</p>
+                            <p class="text-sm font-bold text-white">24 Agentes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <div class="bg-[#151b2d] rounded-2xl border border-[#1e293b] p-6">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-6">Status da Conta</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-400 font-medium">Desde</span>
+                            <span class="text-xs font-bold text-white">Março 2022</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-400 font-medium">Nível de Acesso</span>
+                            <span class="text-xs font-bold text-accent">Nível 4 (Global)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-400 font-medium">Verificação em 2 Passos</span>
+                            <span class="px-2 py-0.5 bg-green-500/10 text-green-500 text-[9px] font-bold uppercase rounded-full border border-green-500/20">Ativo</span>
+                        </div>
+                        <div class="pt-4 border-t border-[#1e293b]">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="flex-1 h-1.5 bg-[#0b0f1a] rounded-full overflow-hidden">
+                                    <div class="w-[85%] h-full bg-accent"></div>
+                                </div>
+                                <span class="text-[10px] font-bold text-white">85%</span>
+                            </div>
+                            <p class="text-[10px] text-slate-500 font-medium leading-relaxed">Perfil completo. Todas as verificações de identidade concluídas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#151b2d] rounded-2xl border border-[#1e293b] p-6">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-6">Sessões Recentes</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-slate-500 text-lg">desktop_windows</span>
+                            <div>
+                                <p class="text-xs font-bold text-white">Windows 11 • Chrome</p>
+                                <p class="text-[10px] text-slate-500">Luanda, AO • Agora</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 opacity-60">
+                            <span class="material-symbols-outlined text-slate-500 text-lg">smartphone</span>
+                            <div>
+                                <p class="text-xs font-bold text-white">iPhone 14 • App</p>
+                                <p class="text-[10px] text-slate-500">Luanda, AO • Ontem às 18:30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</HORIZONSystemLayout>

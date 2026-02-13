@@ -1,0 +1,153 @@
+---
+import HORIZONSystemLayout from "@layouts/HORIZONSystemLayout.astro";
+---
+
+<HORIZONSystemLayout>
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-white tracking-tight">Cadastro de Nova ONG</h2>
+            <p class="text-slate-400 mt-3 max-w-2xl mx-auto">Etapa 4 de 4: Revise todas as informações antes de enviar para análise.</p>
+        </div>
+
+        <div class="bg-[#151b2d] border border-[#1e293b] rounded-2xl p-8">
+            <div class="mb-8">
+                <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-2">Progresso do Cadastro</h3>
+                <div class="w-full bg-[#0f172a] rounded-full h-2.5">
+                    <div class="bg-accent h-2.5 rounded-full" style="width: 100%"></div>
+                </div>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Seção de Revisão: Identificação -->
+                <div>
+                    <h4 class="text-lg font-bold text-white border-b border-accent/20 pb-3 mb-6 flex items-center gap-3">
+                        <span class="material-symbols-outlined text-accent">badge</span>
+                        Identificação da Organização
+                    </h4>
+                    <div class="review-grid">
+                        <div class="review-item">
+                            <span class="review-label">Nome Oficial</span>
+                            <span class="review-value">Associação Angola Futurista</span>
+                        </div>
+                        <div class="review-item">
+                            <span class="review-label">NIF</span>
+                            <span class="review-value">000.000.000-00</span>
+                        </div>
+                         <div class="review-item">
+                            <span class="review-label">Data de Fundação</span>
+                            <span class="review-value">01/01/2020</span>
+                        </div>
+                        <div class="review-item">
+                            <span class="review-label">Área de Atuação</span>
+                            <span class="review-value">Educação e Tecnologia</span>
+                        </div>
+                        <div class="review-item col-span-2">
+                            <span class="review-label">Missão</span>
+                            <span class="review-value">Promover a inclusão digital e a formação de jovens para o mercado de trabalho tecnológico em Angola.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção de Revisão: Endereço -->
+                <div>
+                    <h4 class="text-lg font-bold text-white border-b border-accent/20 pb-3 mb-6 flex items-center gap-3">
+                         <span class="material-symbols-outlined text-accent">location_on</span>
+                        Endereço e Contato
+                    </h4>
+                     <div class="review-grid">
+                        <div class="review-item col-span-2">
+                            <span class="review-label">Logradouro</span>
+                            <span class="review-value">Avenida da Inovação, 123, Bloco B</span>
+                        </div>
+                        <div class="review-item">
+                            <span class="review-label">Bairro</span>
+                            <span class="review-value">Talatona</span>
+                        </div>
+                        <div class="review-item">
+                            <span class="review-label">Cidade / Estado</span>
+                            <span class="review-value">Luanda, Angola</span>
+                        </div>
+                         <div class="review-item">
+                            <span class="review-label">Telefone</span>
+                            <span class="review-value">+244 9XX XXX XXX</span>
+                        </div>
+                        <div class="review-item">
+                            <span class="review-label">E-mail</span>
+                            <span class="review-value">contato@futurista.ao</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção de Revisão: Documentos e Responsável -->
+                 <div>
+                    <h4 class="text-lg font-bold text-white border-b border-accent/20 pb-3 mb-6 flex items-center gap-3">
+                        <span class="material-symbols-outlined text-accent">assignment_ind</span>
+                        Documentos e Responsável
+                    </h4>
+                    <div class="review-grid">
+                        <div class="review-item">
+                            <span class="review-label">Estatuto Social</span>
+                            <span class="review-value-file">estatuto_social.pdf <span class="material-symbols-outlined text-xs text-accent">check_circle</span></span>
+                        </div>
+                        <div class="review-item">
+                            <span class="review-label">Comprovativo Cadastral</span>
+                            <span class="review-value-file">comprovativo_nif.pdf <span class="material-symbols-outlined text-xs text-accent">check_circle</span></span>
+                        </div>
+                        <div class="review-item">
+                            <span class="review-label">Nome do Responsável</span>
+                            <span class="review-value">Carlos Eduardo</span>
+                        </div>
+                        <div class="review-item">
+                            <span class="review-label">Cargo</span>
+                            <span class="review-value">Presidente</span>
+                        </div>
+                         <div class="review-item col-span-2">
+                            <span class="review-label">Contato do Responsável</span>
+                            <span class="review-value">c.eduardo@futurista.ao</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form action="/sistem/HORIZON-System/ongs" method="POST">
+                 <div class="mt-12 pt-8 border-t border-white/10">
+                     <div class="flex items-start">
+                        <input id="terms" name="terms" type="checkbox" class="h-5 w-5 bg-white/5 border-white/10 text-accent rounded focus:ring-accent/30 focus:ring-offset-0 mt-0.5">
+                        <label for="terms" class="ml-3 block text-sm text-slate-300 font-medium">
+                            Declaro que todas as informações prestadas são verdadeiras e que a organização se compromete a seguir as diretrizes do Projeto Novos Horizontes.
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex justify-between items-center">
+                    <a href="/sistem/ong-registration-step-3" class="inline-flex items-center gap-2 text-sm font-bold text-slate-400 hover:text-white transition-colors group">
+                        <span class="material-symbols-outlined text-lg group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                        Voltar
+                    </a>
+                    <button type="submit" class="w-auto bg-accent hover:bg-accent/80 text-slate-900 font-extrabold py-3 px-8 rounded-xl shadow-[0_10px_30px_-10px_rgba(34,197,94,0.4)] transition-all transform active:scale-[0.98] flex items-center justify-center gap-3 text-base">
+                        <span>Finalizar e Enviar para Análise</span>
+                        <span class="material-symbols-outlined font-bold">check_circle</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</HORIZONSystemLayout>
+
+<style>
+    .review-grid {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4;
+    }
+    .review-item {
+        @apply flex flex-col gap-1 bg-white/5 p-4 rounded-lg border border-white/10;
+    }
+    .review-label {
+        @apply text-[10px] font-bold text-slate-400 uppercase tracking-widest;
+    }
+    .review-value {
+        @apply text-sm text-white font-semibold;
+    }
+    .review-value-file {
+        @apply text-sm text-white font-semibold flex items-center gap-2;
+    }
+</style>

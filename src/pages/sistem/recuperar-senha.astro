@@ -1,0 +1,28 @@
+---
+import PublicLayout from "../../layouts/PublicLayout.astro";
+---
+
+<PublicLayout title="Recuperar Senha | HORIZON System">
+    <div class="w-full max-w-md">
+        <div class="mb-12 text-center">
+            <h3 class="text-4xl font-extrabold text-white mb-3 tracking-tight">Esqueceu sua senha?</h3>
+            <p class="text-slate-400 font-medium leading-relaxed">Informe seu e-mail corporativo cadastrado e enviaremos as instruções para a criação de uma nova senha.</p>
+        </div>
+        <form class="space-y-8">
+            <div>
+                <label class="form-label" for="email">E-mail Corporativo</label>
+                <input class="input-dark w-full" id="email" name="email" placeholder="nome@horizon.com" required type="email" />
+            </div>
+            <button type="submit" class="w-full bg-accent hover:bg-accent/80 text-slate-900 font-extrabold py-4 rounded-xl shadow-[0_10px_30px_-10px_rgba(34,197,94,0.4)] transition-all transform active:scale-[0.98] flex items-center justify-center gap-3 text-base">
+                <span>Enviar Instruções</span>
+                <span class="material-symbols-outlined font-bold">send</span>
+            </button>
+        </form>
+        <div class="mt-12 text-center">
+             <a href="/sistem/login" class="inline-flex items-center gap-2 text-sm font-bold text-slate-400 hover:text-white transition-colors group">
+                <span class="material-symbols-outlined text-lg group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                Voltar ao Login
+            </a>
+        </div>
+    </div>
+</PublicLayout>

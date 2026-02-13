@@ -1,26 +1,196 @@
 ---
 // src/pages/sistem/HORIZON-System/index.astro
-import HORIZONSystemLayout from '../../../layouts/HORIZONSystemLayout.astro';
+import HORIZONSystemLayout from "@layouts/HORIZONSystemLayout.astro";
 ---
 
 <HORIZONSystemLayout>
-  <h2 class="text-2xl font-bold mb-4">Visão Geral</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <h3 class="text-lg font-semibold">Alunos Ativos</h3>
-      <p class="text-3xl font-bold">120</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div class="bg-[#151b2d] p-6 rounded-2xl border border-[#1e293b] relative overflow-hidden group">
+            <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                <span class="material-symbols-outlined text-4xl text-accent">person_add</span>
+            </div>
+            <h4 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">Total de Cadastros</h4>
+            <div class="flex items-baseline gap-2">
+                <p class="text-3xl font-bold text-white">24,592</p>
+                <span class="text-[10px] text-accent font-bold flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[12px]">trending_up</span> +14%
+                </span>
+            </div>
+            <div class="mt-4 w-full bg-[#0b0f1a] h-1 rounded-full overflow-hidden">
+                <div class="bg-accent h-full w-[70%]"></div>
+            </div>
+        </div>
+        <div class="bg-[#151b2d] p-6 rounded-2xl border border-[#1e293b] relative overflow-hidden group">
+            <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                <span class="material-symbols-outlined text-4xl text-accent">corporate_fare</span>
+            </div>
+            <h4 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">ONGs Cadastradas</h4>
+            <div class="flex items-baseline gap-2">
+                <p class="text-3xl font-bold text-white">186</p>
+                <span class="text-[10px] text-accent font-bold flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[12px]">trending_up</span> +5
+                </span>
+            </div>
+            <div class="mt-4 w-full bg-[#0b0f1a] h-1 rounded-full overflow-hidden">
+                <div class="bg-accent h-full w-[45%]"></div>
+            </div>
+        </div>
+        <div class="bg-[#151b2d] p-6 rounded-2xl border border-[#1e293b] relative overflow-hidden group">
+            <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                <span class="material-symbols-outlined text-4xl text-accent">share_location</span>
+            </div>
+            <h4 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">Espaços Registrados</h4>
+            <div class="flex items-baseline gap-2">
+                <p class="text-3xl font-bold text-white">412</p>
+                <span class="text-[10px] text-accent font-bold flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[12px]">trending_up</span> +22
+                </span>
+            </div>
+            <div class="mt-4 w-full bg-[#0b0f1a] h-1 rounded-full overflow-hidden">
+                <div class="bg-accent h-full w-[85%]"></div>
+            </div>
+        </div>
+        <div class="bg-[#151b2d] p-6 rounded-2xl border border-[#1e293b] relative overflow-hidden group">
+            <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                <span class="material-symbols-outlined text-4xl text-accent">hub</span>
+            </div>
+            <h4 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">Micro Polos Ativos</h4>
+            <div class="flex items-baseline gap-2">
+                <p class="text-3xl font-bold text-white">58</p>
+                <span class="text-[10px] text-accent font-bold flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[12px]">trending_up</span> +8%
+                </span>
+            </div>
+            <div class="mt-4 w-full bg-[#0b0f1a] h-1 rounded-full overflow-hidden">
+                <div class="bg-accent h-full w-[60%]"></div>
+            </div>
+        </div>
     </div>
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <h3 class="text-lg font-semibold">Mentores</h3>
-      <p class="text-3xl font-bold">15</p>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2 space-y-8">
+            <div class="bg-[#151b2d] p-8 rounded-2xl border border-[#1e293b]">
+                <div class="flex items-center justify-between mb-10">
+                    <div>
+                        <h3 class="text-sm font-bold text-white uppercase tracking-wider">Crescimento Semanal de Hubs</h3>
+                        <p class="text-xs text-slate-500 mt-1">Expansão de polos de inclusão digital por semana</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-accent"></span>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase">Novos Hubs</span>
+                        </div>
+                        <select class="bg-[#0b0f1a] border-[#1e293b] rounded-lg text-[10px] text-slate-400 font-bold uppercase py-1 px-3">
+                            <option>Últimos 30 dias</option>
+                            <option>Últimos 90 dias</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="h-[300px] w-full relative">
+                    <svg class="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 1000 300">
+                        <line stroke="#1e293b" stroke-width="1" x1="0" x2="1000" y1="0" y2="0"></line>
+                        <line stroke="#1e293b" stroke-width="1" x1="0" x2="1000" y1="75" y2="75"></line>
+                        <line stroke="#1e293b" stroke-width="1" x1="0" x2="1000" y1="150" y2="150"></line>
+                        <line stroke="#1e293b" stroke-width="1" x1="0" x2="1000" y1="225" y2="225"></line>
+                        <line stroke="#1e293b" stroke-width="1" x1="0" x2="1000" y1="300" y2="300"></line>
+                        <path d="M0 280 L 100 250 L 200 260 L 300 180 L 400 200 L 500 120 L 600 140 L 700 80 L 800 100 L 900 40 L 1000 60 L 1000 300 L 0 300 Z" fill="url(#gradient-green)" opacity="0.1"></path>
+                        <path class="chart-glow" d="M0 280 L 100 250 L 200 260 L 300 180 L 400 200 L 500 120 L 600 140 L 700 80 L 800 100 L 900 40 L 1000 60" fill="none" stroke="#22c55e" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path>
+                        <defs>
+                            <linearGradient id="gradient-green" x1="0%" x2="0%" y1="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1"></stop>
+                                <stop offset="100%" style="stop-color:#22c55e;stop-opacity:0"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="flex justify-between mt-6">
+                        <span class="text-[10px] text-slate-500 font-bold">SEM 01</span>
+                        <span class="text-[10px] text-slate-500 font-bold">SEM 02</span>
+                        <span class="text-[10px] text-slate-500 font-bold">SEM 03</span>
+                        <span class="text-[10px] text-slate-500 font-bold">SEM 04</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-[#151b2d] p-6 rounded-2xl border border-[#1e293b] flex items-center justify-between">
+                    <div>
+                        <p class="text-[10px] font-bold text-slate-500 uppercase mb-1">Alcance Regional</p>
+                        <h5 class="text-xl font-bold text-white">12 Províncias</h5>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                        <span class="material-symbols-outlined text-xl">map</span>
+                    </div>
+                </div>
+                <div class="bg-[#151b2d] p-6 rounded-2xl border border-[#1e293b] flex items-center justify-between">
+                    <div>
+                        <p class="text-[10px] font-bold text-slate-500 uppercase mb-1">Impacto Estimado</p>
+                        <h5 class="text-xl font-bold text-white">+145k Pessoas</h5>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                        <span class="material-symbols-outlined text-xl">diversity_3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#151b2d] rounded-2xl border border-[#1e293b] flex flex-col">
+            <div class="p-6 border-b border-[#1e293b] flex items-center justify-between">
+                <h3 class="text-sm font-bold text-white uppercase tracking-wider">Aprovações Pendentes</h3>
+                <span class="bg-accent/20 text-accent text-[10px] font-black px-2 py-0.5 rounded-full">4 NOVAS</span>
+            </div>
+            <div class="flex-1 overflow-y-auto custom-scrollbar divide-y divide-[#1e293b]">
+                <div class="p-6 hover:bg-white/5 transition-colors">
+                    <div class="flex gap-4 mb-4">
+                        <div class="w-10 h-10 bg-[#0b0f1a] rounded-xl border border-[#1e293b] flex items-center justify-center text-slate-400">
+                            <span class="material-symbols-outlined">foundation</span>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-xs font-bold text-white uppercase truncate">ONG Renascer Digital</p>
+                            <p class="text-[10px] text-slate-500 mt-0.5">Solicitação de novo credenciamento</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button class="flex-1 bg-accent text-slate-900 text-[10px] font-black uppercase py-2 rounded-lg hover:brightness-110 transition-all">Aprovar</button>
+                        <button class="px-3 py-2 bg-[#1e293b] text-slate-400 border border-[#334155] rounded-lg hover:bg-red-500/10 hover:text-red-400 hover:border-red-500/20 transition-all">
+                            <span class="material-symbols-outlined text-sm">close</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6 hover:bg-white/5 transition-colors">
+                    <div class="flex gap-4 mb-4">
+                        <div class="w-10 h-10 bg-[#0b0f1a] rounded-xl border border-[#1e293b] flex items-center justify-center text-slate-400">
+                            <span class="material-symbols-outlined">hub</span>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-xs font-bold text-white uppercase truncate">Micro Polo Cazenga II</p>
+                            <p class="text-[10px] text-slate-500 mt-0.5">Expansão de infraestrutura aprovada</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button class="flex-1 bg-accent text-slate-900 text-[10px] font-black uppercase py-2 rounded-lg hover:brightness-110 transition-all">Validar</button>
+                        <button class="px-3 py-2 bg-[#1e293b] text-slate-400 border border-[#334155] rounded-lg transition-all">
+                            <span class="material-symbols-outlined text-sm">more_horiz</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6 hover:bg-white/5 transition-colors">
+                    <div class="flex gap-4 mb-4">
+                        <div class="w-10 h-10 bg-[#0b0f1a] rounded-xl border border-[#1e293b] flex items-center justify-center text-slate-400">
+                            <span class="material-symbols-outlined">verified_user</span>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <p class="text-xs font-bold text-white uppercase truncate">Monitor João Kilamba</p>
+                            <p class="text-[10px] text-slate-500 mt-0.5">Certificação de treinamento nível 3</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button class="flex-1 bg-accent text-slate-900 text-[10px] font-black uppercase py-2 rounded-lg hover:brightness-110 transition-all">Certificar</button>
+                        <button class="px-3 py-2 bg-[#1e293b] text-slate-400 border border-[#334155] rounded-lg transition-all">
+                            <span class="material-symbols-outlined text-sm">visibility</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 bg-[#0b0f1a]/50 text-center">
+                <button class="text-[10px] font-black text-accent uppercase tracking-widest hover:underline">Ver Todas Atividades</button>
+            </div>
+        </div>
     </div>
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <h3 class="text-lg font-semibold">Cursos</h3>
-      <p class="text-3xl font-bold">25</p>
-    </div>
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <h3 class="text-lg font-semibold">Projetos</h3>
-      <p class="text-3xl font-bold">10</p>
-    </div>
-  </div>
 </HORIZONSystemLayout>

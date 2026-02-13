@@ -1,0 +1,114 @@
+---
+import HORIZONSystemLayout from "@layouts/HORIZONSystemLayout.astro";
+
+const espacos = [
+    {
+        nome: "Centro Comunitário do Cazenga",
+        bairro: "Cazenga",
+        tipo: "Salão de Eventos",
+        capacidade: 150,
+        status: "Disponível",
+        id: "ESC-001"
+    },
+    {
+        nome: "Biblioteca Municipal de Viana",
+        bairro: "Viana",
+        tipo: "Sala de Leitura",
+        capacidade: 50,
+        status: "Em Uso",
+        id: "ESC-002"
+    },
+    {
+        nome: "Espaço Aberto Talatona",
+        bairro: "Talatona",
+        tipo: "Área Externa Coberta",
+        capacidade: 200,
+        status: "Manutenção",
+        id: "ESC-003"
+    },
+    {
+        nome: "Salão Paroquial da Samba",
+        bairro: "Samba",
+        tipo: "Salão Principal",
+        capacidade: 100,
+        status: "Disponível",
+        id: "ESC-004"
+    }
+]
+
+const getStatusClass = (status) => {
+    switch (status) {
+        case "Disponível":
+            return "bg-green-500/10 border-green-500/20 text-green-500";
+        case "Em Uso":
+            return "bg-blue-500/10 border-blue-500/20 text-blue-400";
+        case "Manutenção":
+            return "bg-yellow-500/10 border-yellow-500/20 text-yellow-500";
+        default:
+            return "bg-slate-500/10 border-slate-500/20 text-slate-400";
+    }
+};
+---
+
+<HORIZONSystemLayout>
+    <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-bold text-white">Gestão de Espaços Comunitários</h2>
+        <button class="flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-500/80 rounded-lg text-xs font-bold uppercase tracking-wider text-white transition-all">
+            <span class="material-symbols-outlined text-sm">add_location_alt</span>
+            Registrar Novo Espaço
+        </button>
+    </div>
+
+     <div class="bg-[#151b2d] rounded-2xl border border-[#1e293b] overflow-hidden shadow-2xl">
+        <div class="p-6 border-b border-[#1e293b] flex items-center justify-between">
+             <div>
+                <h3 class="text-sm font-bold text-white uppercase tracking-wider">Espaços Mapeados</h3>
+                <p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1">Infraestrutura física disponível</p>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="relative">
+                    <span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-500 text-sm">search</span>
+                    <input class="bg-[#0b0f1a] border-[#1e293b] rounded-lg text-xs text-slate-300 pl-10 pr-4 py-2 w-64 focus:ring-accent focus:border-accent" placeholder="Buscar por nome ou bairro..." type="text"/>
+                </div>
+            </div>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full text-left">
+                <thead>
+                    <tr class="bg-[#0f172a]/50 text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+                        <th class="px-6 py-4">Nome do Espaço</th>
+                        <th class="px-6 py-4">Bairro</th>
+                        <th class="px-6 py-4">Tipo</th>
+                        <th class="px-6 py-4">Capacidade</th>
+                        <th class="px-6 py-4">Status</th>
+                        <th class="px-6 py-4 text-right">Ações</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-[#1e293b]">
+                    {espacos.map(espaco => (
+                        <tr class="hover:bg-white/5 transition-colors group">
+                            <td class="px-6 py-4">
+                                <p class="text-xs font-bold text-white">{espaco.nome}</p>
+                                <p class="text-[10px] text-slate-500">ID: {espaco.id}</p>
+                            </td>
+                            <td class="px-6 py-4 text-xs text-slate-300">{espaco.bairro}</td>
+                            <td class="px-6 py-4 text-xs text-slate-300">{espaco.tipo}</td>
+                            <td class="px-6 py-4 text-xs text-slate-300">{espaco.capacidade} pessoas</td>
+                            <td class="px-6 py-4">
+                                <span class:list={[
+                                    "px-2 py-1 text-[10px] font-bold uppercase rounded-full tracking-wider",
+                                    getStatusClass(espaco.status)
+                                ]}>
+                                    {espaco.status}
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 text-right">
+                                <button class="text-slate-500 hover:text-white opacity-0 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined text-lg">more_vert</span></button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</HORIZONSystemLayout>

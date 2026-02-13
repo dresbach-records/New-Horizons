@@ -1,0 +1,77 @@
+---
+import HORIZONSystemLayout from "@layouts/HORIZONSystemLayout.astro";
+---
+
+<HORIZONSystemLayout>
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-white tracking-tight">Cadastro de Nova ONG</h2>
+            <p class="text-slate-400 mt-3 max-w-2xl mx-auto">Etapa 1 de 4: Comece com as informações básicas de identificação da organização.</p>
+        </div>
+
+        <div class="bg-[#151b2d] border border-[#1e293b] rounded-2xl p-8">
+            <div class="mb-8">
+                <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-2">Progresso do Cadastro</h3>
+                <div class="w-full bg-[#0f172a] rounded-full h-2.5">
+                    <div class="bg-accent h-2.5 rounded-full" style="width: 25%"></div>
+                </div>
+            </div>
+
+            <form action="/sistem/ong-registration-step-2" method="POST">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                    
+                    <div class="md:col-span-2">
+                        <h4 class="text-lg font-bold text-white border-b border-accent/20 pb-3 mb-6">Identificação da Organização</h4>
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <label for="ong-name" class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Nome Oficial da ONG</label>
+                        <input type="text" id="ong-name" name="ong-name" class="input-dark w-full rounded-xl" placeholder="Ex: Associação Angola Futurista">
+                    </div>
+                    
+                    <div>
+                        <label for="nif" class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">NIF (Número de Identificação Fiscal)</label>
+                        <input type="text" id="nif" name="nif" class="input-dark w-full rounded-xl" placeholder="000.000.000-00">
+                    </div>
+
+                    <div>
+                        <label for="creation-date" class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Data de Fundação</label>
+                        <input type="date" id="creation-date" name="creation-date" class="input-dark w-full rounded-xl">
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <label for="area" class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Principal Área de Atuação</label>
+                        <select id="area" name="area" class="input-dark w-full rounded-xl">
+                            <option>Educação e Tecnologia</option>
+                            <option>Saúde e Bem-estar</option>
+                            <option>Desenvolvimento Comunitário</option>
+                            <option>Meio Ambiente e Sustentabilidade</option>
+                            <option>Direitos Humanos</option>
+                        </select>
+                    </div>
+
+                     <div class="md:col-span-2">
+                        <label for="description" class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Breve Descrição da Missão</label>
+                        <textarea id="description" name="description" rows="4" class="input-dark w-full rounded-xl" placeholder="Descreva em poucas palavras o principal objetivo da ONG..."></textarea>
+                    </div>
+                </div>
+
+                <div class="mt-12 pt-8 border-t border-white/10 flex justify-end items-center">
+                    <button type="submit" class="w-auto bg-accent hover:bg-accent/80 text-slate-900 font-extrabold py-3 px-8 rounded-xl shadow-[0_10px_30px_-10px_rgba(34,197,94,0.4)] transition-all transform active:scale-[0.98] flex items-center justify-center gap-3 text-base">
+                        <span>Próximo</span>
+                        <span class="material-symbols-outlined font-bold">arrow_forward</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</HORIZONSystemLayout>
+
+<style>
+    .input-dark {
+        @apply bg-white/5 border-white/10 text-white placeholder:text-slate-500 focus:border-accent focus:ring-accent/20 transition-all duration-300;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(0.6);
+    }
+</style>

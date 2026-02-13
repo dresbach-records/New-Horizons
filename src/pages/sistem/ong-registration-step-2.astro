@@ -1,0 +1,102 @@
+---
+import HORIZONSystemLayout from "@layouts/HORIZONSystemLayout.astro";
+---
+
+<HORIZONSystemLayout>
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-white tracking-tight">Cadastro de Nova ONG</h2>
+            <p class="text-slate-400 mt-3 max-w-2xl mx-auto">Etapa 2 de 4: Preencha as informações de endereço e os dados de contato principal da organização.</p>
+        </div>
+
+        <div class="bg-[#151b2d] border border-[#1e293b] rounded-2xl p-8">
+            <div class="mb-8">
+                <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-2">Progresso do Cadastro</h3>
+                <div class="w-full bg-[#0f172a] rounded-full h-2.5">
+                    <div class="bg-accent h-2.5 rounded-full" style="width: 50%"></div>
+                </div>
+            </div>
+
+            <form action="/sistem/ong-registration-step-3" method="POST">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                    
+                    <div class="md:col-span-2">
+                        <h4 class="text-lg font-bold text-white border-b border-accent/20 pb-3 mb-6">Endereço da Sede</h4>
+                    </div>
+
+                    <div>
+                        <label for="cep" class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">CEP</label>
+                        <input type="text" id="cep" name="cep" class="input-dark w-full rounded-xl" placeholder="00000-000">
+                    </div>
+                    
+                    <div>
+                        <label for="street" class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Logradouro</label>
+                        <input type="text" id="street" name="street" class="input-dark w-full rounded-xl" placeholder="Rua, Avenida, etc.">
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-6">
+                         <div>
+                            <label for="number" class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Número</label>
+                            <input type="text" id="number" name="number" class="input-dark w-full rounded-xl">
+                        </div>
+                        <div class="col-span-2">
+                            <label for="complement" class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Complemento</label>
+                            <input type="text" id="complement" name="complement" class="input-dark w-full rounded-xl" placeholder="Apto, Bloco, etc.">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="neighborhood" class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Bairro</label>
+                        <input type="text" id="neighborhood" name="neighborhood" class="input-dark w-full rounded-xl">
+                    </div>
+
+                    <div>
+                        <label for="city" class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Cidade</label>
+                        <input type="text" id="city" name="city" class="input-dark w-full rounded-xl">
+                    </div>
+
+                    <div>
+                        <label for="state" class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Estado / Província</label>
+                        <input type="text" id="state" name="state" class="input-dark w-full rounded-xl">
+                    </div>
+                    
+                    <div class="md:col-span-2 pt-8">
+                        <h4 class="text-lg font-bold text-white border-b border-accent/20 pb-3 mb-6">Informações de Contato</h4>
+                    </div>
+
+                    <div>
+                        <label for="phone" class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Telefone Principal</label>
+                        <input type="tel" id="phone" name="phone" class="input-dark w-full rounded-xl" placeholder="+55 (00) 00000-0000">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">E-mail Institucional</label>
+                        <input type="email" id="email" name="email" class="input-dark w-full rounded-xl" placeholder="contato@ong.org">
+                    </div>
+
+                     <div class="md:col-span-2">
+                        <label for="website" class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Website (Opcional)</label>
+                        <input type="url" id="website" name="website" class="input-dark w-full rounded-xl" placeholder="https://... ">
+                    </div>
+                </div>
+
+                <div class="mt-12 pt-8 border-t border-white/10 flex justify-between items-center">
+                    <a href="/sistem/ong-registration-step-1" class="inline-flex items-center gap-2 text-sm font-bold text-slate-400 hover:text-white transition-colors group">
+                        <span class="material-symbols-outlined text-lg group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                        Voltar
+                    </a>
+                    <button type="submit" class="w-auto bg-accent hover:bg-accent/80 text-slate-900 font-extrabold py-3 px-8 rounded-xl shadow-[0_10px_30px_-10px_rgba(34,197,94,0.4)] transition-all transform active:scale-[0.98] flex items-center justify-center gap-3 text-base">
+                        <span>Próximo</span>
+                        <span class="material-symbols-outlined font-bold">arrow_forward</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</HORIZONSystemLayout>
+
+<style>
+    .input-dark {
+        @apply bg-white/5 border-white/10 text-white placeholder:text-slate-500 focus:border-accent focus:ring-accent/20 transition-all duration-300;
+    }
+</style>

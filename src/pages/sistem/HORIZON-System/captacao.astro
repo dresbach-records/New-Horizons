@@ -1,0 +1,113 @@
+---
+import HORIZONSystemLayout from "@layouts/HORIZONSystemLayout.astro";
+
+const transactions = [
+  {
+    id: "TRN-001",
+    description: "Doação Corporativa - Empresa X",
+    amount: 5000.00,
+    type: "Entrada",
+    date: "2024-03-15",
+    status: "Confirmado",
+  },
+  {
+    id: "TRN-002",
+    description: "Pagamento de Aluguel - Espaço Cazenga",
+    amount: -350.00,
+    type: "Saída",
+    date: "2024-03-14",
+    status: "Confirmado",
+  },
+  {
+    id: "TRN-003",
+    description: "Venda de Material Reciclado",
+    amount: 150.75,
+    type: "Entrada",
+    date: "2024-03-12",
+    status: "Confirmado",
+  },
+  {
+    id: "TRN-004",
+    description: "Patrocínio Evento \"Dia da Criança\"",
+    amount: 1200.00,
+    type: "Entrada",
+    date: "2024-03-10",
+    status: "Pendente",
+  },
+  {
+    id: "TRN-005",
+    description: "Compra de Equipamentos de Escritório",
+    amount: -550.20,
+    type: "Saída",
+    date: "2024-03-09",
+    status: "Confirmado",
+  },
+];
+
+const formatCurrency = (value) => {
+  return new Intl.NumberFormat('pt-AO', { style: 'currency', currency: 'AOA' }).format(value);
+};
+---
+
+<HORIZONSystemLayout>
+    <div class="flex items-center justify-between mb-8">
+        <h2 class="text-2xl font-bold text-white">Painel de Captação de Recursos</h2>
+        <button class="flex items-center gap-2 px-4 py-2 bg-emerald-500 hover:bg-emerald-500/80 rounded-lg text-xs font-bold uppercase tracking-wider text-white transition-all">
+            <span class="material-symbols-outlined text-sm">add_card</span>
+            Lançar Transação
+        </button>
+    </div>
+
+    <!-- Métricas Financeiras -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-gradient-to-br from-green-500/20 to-green-500/5 border border-green-500/30 p-6 rounded-2xl">
+            <p class="text-sm font-medium text-green-300">Total Arrecadado (Mês)</p>
+            <p class="text-3xl font-extrabold text-white mt-2">{formatCurrency(6350.75)}</p>
+        </div>
+        <div class="bg-gradient-to-br from-red-500/20 to-red-500/5 border border-red-500/30 p-6 rounded-2xl">
+            <p class="text-sm font-medium text-red-300">Total de Despesas (Mês)</p>
+            <p class="text-3xl font-extrabold text-white mt-2">{formatCurrency(-900.20)}</p>
+        </div>
+        <div class="bg-gradient-to-br from-blue-500/20 to-blue-500/5 border border-blue-500/30 p-6 rounded-2xl">
+            <p class="text-sm font-medium text-blue-300">Saldo Atual</p>
+            <p class="text-3xl font-extrabold text-white mt-2">{formatCurrency(5450.55)}</p>
+        </div>
+    </div>
+
+    <!-- Tabela de Transações -->
+    <div class="bg-[#151b2d] rounded-2xl border border-[#1e293b] overflow-hidden shadow-2xl">
+         <div class="p-6 border-b border-[#1e293b]">
+            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Transações Recentes</h3>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full text-left">
+                 <thead>
+                    <tr class="bg-[#0f172a]/50 text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+                        <th class="px-6 py-4">Descrição</th>
+                        <th class="px-6 py-4">Valor</th>
+                        <th class="px-6 py-4">Data</th>
+                        <th class="px-6 py-4">Status</th>
+                        <th class="px-6 py-4 text-right">ID</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-[#1e293b]">
+                    {transactions.map(t => (
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="px-6 py-4 text-sm text-slate-300 font-medium">{t.description}</td>
+                            <td class={`px-6 py-4 text-sm font-bold ${t.type === 'Entrada' ? 'text-green-400' : 'text-red-400'}`}>
+                                {t.type === 'Entrada' ? '+' : ''}{formatCurrency(t.amount)}
+                            </td>
+                            <td class="px-6 py-4 text-xs text-slate-400">{t.date}</td>
+                             <td class="px-6 py-4">
+                                <span class={`px-2 py-1 text-[10px] font-bold uppercase rounded-full tracking-wider ${t.status === 'Confirmado' ? 'bg-green-500/10 text-green-400' : 'bg-yellow-500/10 text-yellow-400'}`}>
+                                    {t.status}
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 text-xs text-slate-500 font-mono text-right">{t.id}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</HORIZONSystemLayout>

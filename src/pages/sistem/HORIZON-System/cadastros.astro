@@ -1,0 +1,197 @@
+---
+import HORIZONSystemLayout from "@layouts/HORIZONSystemLayout.astro";
+
+const { url } = Astro
+---
+
+<HORIZONSystemLayout>
+    <div class="mb-12">
+        <h3 class="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-6">Ações de Cadastro</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="/sistem/ong-registration-step-1" class="action-card bg-[#151b2d] p-8 rounded-2xl border border-[#1e293b] text-left transition-all group">
+                <div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-slate-900 transition-colors">
+                    <span class="material-symbols-outlined text-3xl font-bold">corporate_fare</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2">Cadastrar Nova ONG</h4>
+                <p class="text-sm text-slate-400 leading-relaxed mb-6">Inicie o processo de homologação de uma nova organização parceira no sistema.</p>
+                <div class="flex items-center text-accent text-xs font-bold uppercase tracking-widest gap-2">
+                    Iniciar Cadastro
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </div>
+            </a>
+            <button class="action-card bg-[#151b2d] p-8 rounded-2xl border border-[#1e293b] text-left transition-all group">
+                <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-400 mb-6 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-3xl font-bold">share_location</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2">Registrar Espaço Comunitário</h4>
+                <p class="text-sm text-slate-400 leading-relaxed mb-6">Mapeie e registre a infraestrutura física disponível em bairros de intervenção.</p>
+                <div class="flex items-center text-blue-400 text-xs font-bold uppercase tracking-widest gap-2">
+                    Mapear Espaço
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </div>
+            </button>
+            <button class="action-card bg-[#151b2d] p-8 rounded-2xl border border-[#1e293b] text-left transition-all group">
+                <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-400 mb-6 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-3xl font-bold">hub</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2">Vincular Novo Micro Polo</h4>
+                <p class="text-sm text-slate-400 leading-relaxed mb-6">Estabeleça uma nova unidade de tecnologia e conectividade em territórios ativos.</p>
+                <div class="flex items-center text-purple-400 text-xs font-bold uppercase tracking-widest gap-2">
+                    Configurar Polo
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </div>
+            </button>
+        </div>
+    </div>
+    <div class="bg-[#151b2d] rounded-2xl border border-[#1e293b] overflow-hidden">
+        <div class="p-6 border-b border-[#1e293b] flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+                <h3 class="text-sm font-bold text-white uppercase tracking-wider">Histórico Recente de Cadastros</h3>
+                <p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1">Monitoramento de entradas nos últimos 30 dias</p>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="relative">
+                    <span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-500 text-sm">search</span>
+                    <input class="bg-[#0b0f1a] border-[#1e293b] rounded-lg text-xs text-slate-300 pl-10 pr-4 py-2 w-64 focus:ring-accent focus:border-accent" placeholder="Buscar registros..." type="text"/>
+                </div>
+                <button class="flex items-center gap-2 px-3 py-2 bg-[#1e293b] border border-[#334155] rounded-lg text-xs font-bold uppercase tracking-wider text-slate-300 hover:bg-[#334155] transition-all">
+                    <span class="material-symbols-outlined text-sm">filter_list</span>
+                    Filtros
+                </button>
+            </div>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full text-left">
+                <thead>
+                    <tr class="bg-[#0f172a]/50 text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+                        <th class="px-6 py-4">Entidade</th>
+                        <th class="px-6 py-4">Tipo</th>
+                        <th class="px-6 py-4">Localização</th>
+                        <th class="px-6 py-4">Data Registro</th>
+                        <th class="px-6 py-4">Status</th>
+                        <th class="px-6 py-4 text-right">Ações</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-[#1e293b]">
+                    <tr class="hover:bg-white/5 transition-colors">
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded bg-accent/20 flex items-center justify-center text-accent text-xs font-bold">CZ</div>
+                                <div>
+                                    <p class="text-xs font-bold text-white">Cazenga Digital Hub</p>
+                                    <p class="text-[10px] text-slate-500">REF: HOR-9921</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase bg-[#1e293b] px-2 py-1 rounded">Micro Polo</span>
+                        </td>
+                        <td class="px-6 py-4">
+                            <p class="text-xs text-slate-300">Luanda, Cazenga</p>
+                        </td>
+                        <td class="px-6 py-4">
+                            <p class="text-xs text-slate-300">Hoje, 10:24</p>
+                        </td>
+                        <td class="px-6 py-4">
+                            <span class="px-2 py-1 bg-accent/10 border border-accent/20 rounded-full text-[10px] font-bold text-accent uppercase">Ativo</span>
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                            <button class="text-slate-500 hover:text-white"><span class="material-symbols-outlined text-lg">more_vert</span></button>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-white/5 transition-colors">
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded bg-blue-500/20 flex items-center justify-center text-blue-400 text-xs font-bold">FV</div>
+                                <div>
+                                    <p class="text-xs font-bold text-white">ONG Futuro Verde</p>
+                                    <p class="text-[10px] text-slate-500">REF: HOR-8872</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase bg-[#1e293b] px-2 py-1 rounded">ONG Parceira</span>
+                        </td>
+                        <td class="px-6 py-4">
+                            <p class="text-xs text-slate-300">Benguela, Centro</p>
+                        </td>
+                        <td class="px-6 py-4">
+                            <p class="text-xs text-slate-300">Ontem, 16:45</p>
+                        </td>
+                        <td class="px-6 py-4">
+                            <span class="px-2 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded-full text-[10px] font-bold text-yellow-500 uppercase">Pendente</span>
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                            <button class="text-slate-500 hover:text-white"><span class="material-symbols-outlined text-lg">more_vert</span></button>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-white/5 transition-colors">
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded bg-purple-500/20 flex items-center justify-center text-purple-400 text-xs font-bold">ST</div>
+                                <div>
+                                    <p class="text-xs font-bold text-white">Espaço Santa Tereza</p>
+                                    <p class="text-[10px] text-slate-500">REF: HOR-7711</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase bg-[#1e293b] px-2 py-1 rounded">Espaço Com.</span>
+                        </td>
+                        <td class="px-6 py-4">
+                            <p class="text-xs text-slate-300">Luanda, Samba</p>
+                        </td>
+                        <td class="px-6 py-4">
+                            <p class="text-xs text-slate-300">02 Out, 2023</p>
+                        </td>
+                        <td class="px-6 py-4">
+                            <span class="px-2 py-1 bg-accent/10 border border-accent/20 rounded-full text-[10px] font-bold text-accent uppercase">Ativo</span>
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                            <button class="text-slate-500 hover:text-white"><span class="material-symbols-outlined text-lg">more_vert</span></button>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-white/5 transition-colors">
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded bg-red-500/20 flex items-center justify-center text-red-400 text-xs font-bold">TC</div>
+                                <div>
+                                    <p class="text-xs font-bold text-white">Telecentro Viana</p>
+                                    <p class="text-[10px] text-slate-500">REF: HOR-6623</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase bg-[#1e293b] px-2 py-1 rounded">Micro Polo</span>
+                        </td>
+                        <td class="px-6 py-4">
+                            <p class="text-xs text-slate-300">Luanda, Viana</p>
+                        </td>
+                        <td class="px-6 py-4">
+                            <p class="text-xs text-slate-300">30 Set, 2023</p>
+                        </td>
+                        <td class="px-6 py-4">
+                            <span class="px-2 py-1 bg-red-500/10 border border-red-500/20 rounded-full text-[10px] font-bold text-red-400 uppercase">Inativo</span>
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                            <button class="text-slate-500 hover:text-white"><span class="material-symbols-outlined text-lg">more_vert</span></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="p-4 border-t border-[#1e293b] flex items-center justify-between">
+            <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Mostrando 4 de 128 registros</p>
+            <div class="flex items-center gap-2">
+                <button class="w-8 h-8 flex items-center justify-center rounded border border-[#1e293b] text-slate-500 hover:bg-white/5 transition-colors">
+                    <span class="material-symbols-outlined text-sm">chevron_left</span>
+                </button>
+                <button class="w-8 h-8 flex items-center justify-center rounded bg-accent/10 border border-accent/20 text-accent text-xs font-bold">1</button>
+                <button class="w-8 h-8 flex items-center justify-center rounded border border-[#1e293b] text-slate-500 hover:bg-white/5 transition-colors text-xs font-bold">2</button>
+                <button class="w-8 h-8 flex items-center justify-center rounded border border-[#1e293b] text-slate-500 hover:bg-white/5 transition-colors">
+                    <span class="material-symbols-outlined text-sm">chevron_right</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</HORIZONSystemLayout>

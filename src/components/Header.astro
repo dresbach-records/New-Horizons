@@ -76,23 +76,26 @@ const navLinks = [
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
     // Toggle mobile menu
-    mobileMenuButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-        menuIcon.classList.toggle("hidden");
-        closeIcon.classList.toggle("hidden");
-    });
+    if (mobileMenuButton) {
+        mobileMenuButton.addEventListener("click", () => {
+            if (mobileMenu) mobileMenu.classList.toggle("hidden");
+            if (menuIcon) menuIcon.classList.toggle("hidden");
+            if (closeIcon) closeIcon.classList.toggle("hidden");
+        });
+    }
 
     // Close mobile menu when a link is clicked
     mobileNavLinks.forEach(link => {
         link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            menuIcon.classList.remove('hidden');
-            closeIcon.classList.add('hidden');
+            if (mobileMenu) mobileMenu.classList.add('hidden');
+            if (menuIcon) menuIcon.classList.remove('hidden');
+            if (closeIcon) closeIcon.classList.add('hidden');
         });
     });
 
     // Change header background on scroll
     function handleScroll() {
+        if (!header) return;
         if (window.scrollY > 10) {
             header.classList.add("bg-dark/90", "backdrop-blur-sm", "shadow-lg");
         } else {
@@ -100,8 +103,9 @@ const navLinks = [
         }
     }
 
-    window.addEventListener("scroll", handleScroll);
-
-    // Run on page load
-    handleScroll();
+    if (header) {
+        window.addEventListener("scroll", handleScroll);
+        // Run on page load
+        handleScroll();
+    }
 </script>

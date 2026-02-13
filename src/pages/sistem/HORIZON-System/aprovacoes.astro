@@ -1,0 +1,91 @@
+---
+import HORIZONSystemLayout from "@layouts/HORIZONSystemLayout.astro";
+
+const pendingApprovals = [
+    {
+        id: "APV-001",
+        type: "Cadastro de ONG",
+        title: "Associação \"Crescer Feliz\"",
+        requester: "Maria da Conceição",
+        date: "2024-03-20",
+        details: "Nova ONG solicita entrada no projeto.",
+    },
+    {
+        id: "APV-002",
+        type: "Uso de Espaço",
+        title: "Reserva do Salão Comunitário do Cazenga",
+        requester: "ONG \"Arte na Rua\"",
+        date: "2024-03-19",
+        details: "Solicitação para evento no dia 05/04/2024.",
+    },
+    {
+        id: "APV-003",
+        type: "Cadastro de Voluntário",
+        title: "Pedro Almeira",
+        requester: "Recursos Humanos",
+        date: "2024-03-18",
+        details: "Novo voluntário para o polo de Viana.",
+    },
+    {
+        id: "APV-004",
+        type: "Relatório de Atividade",
+        title: "Relatório Mensal - Polo Móvel Cidadania",
+        requester: "Ana Costa",
+        date: "2024-03-17",
+        details: "Submissão do relatório de atividades de Fevereiro.",
+    },
+];
+
+const getTypeInfo = (type) => {
+    switch (type) {
+        case "Cadastro de ONG":
+            return { icon: "corporate_fare", color: "text-cyan-400", bg: "bg-cyan-500/10" };
+        case "Uso de Espaço":
+            return { icon: "meeting_room", color: "text-amber-400", bg: "bg-amber-500/10" };
+        case "Cadastro de Voluntário":
+            return { icon: "person_add", color: "text-violet-400", bg: "bg-violet-500/10" };
+        case "Relatório de Atividade":
+            return { icon: "assessment", color: "text-rose-400", bg: "bg-rose-500/10" };
+        default:
+            return { icon: "pending_actions", color: "text-slate-400", bg: "bg-slate-500/10" };
+    }
+};
+---
+
+<HORIZONSystemLayout>
+    <div class="mb-8">
+        <h2 class="text-2xl font-bold text-white">Central de Aprovações</h2>
+        <p class="text-sm text-slate-400 mt-1">Revise e aprove as solicitações pendentes no sistema.</p>
+    </div>
+
+    <div class="bg-[#151b2d] rounded-2xl border border-[#1e293b] shadow-2xl">
+        <div class="p-6 border-b border-[#1e293b]">
+            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Itens Pendentes</h3>
+        </div>
+        <div class="divide-y divide-[#1e293b]">
+            {pendingApprovals.map(item => {
+                const typeInfo = getTypeInfo(item.type);
+                return (
+                    <div class="flex items-center gap-6 p-6 hover:bg-white/5 transition-colors group">
+                        <div class={`w-12 h-12 rounded-lg flex items-center justify-center shrink-0 ${typeInfo.bg}`}>
+                            <span class={`material-symbols-outlined ${typeInfo.color}`}>{typeInfo.icon}</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h4 class="font-bold text-white">{item.title}</h4>
+                                <p class="text-xs text-slate-500 font-mono">{item.id}</p>
+                            </div>
+                            <p class={`text-xs font-bold uppercase tracking-wider ${typeInfo.color}`}>{item.type}</p>
+                            <p class="text-sm text-slate-400 mt-2">{item.details}</p>
+                            <p class="text-xs text-slate-500 mt-2">Solicitado por: <span class="font-semibold text-slate-400">{item.requester}</span> em {item.date}</p>
+                        </div>
+                        <div class="flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button class="px-3 py-2 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded-lg text-xs font-bold transition-colors">Recusar</button>
+                            <button class="px-3 py-2 bg-green-500/10 hover:bg-green-500/20 text-green-400 rounded-lg text-xs font-bold transition-colors">Aprovar</button>
+                        </div>
+                    </div>
+                )
+            })}
+        </div>
+    </div>
+</HORIZONSystemLayout>

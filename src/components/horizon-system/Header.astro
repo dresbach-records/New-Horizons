@@ -1,10 +1,167 @@
 ---
-// src/components/luanda/Header.astro
----
+// src/components/horizon-system/Header.astro
+const { pathname } = Astro.url;
+--- 
 
-<header class="bg-white shadow-md p-4 flex justify-between items-center">
-  <h1 class="text-xl font-semibold">Luanda Hub Dashboard</h1>
-  <div>
-    <button class="bg-blue-500 text-white px-4 py-2 rounded">Sair</button>
-  </div>
+<header class="h-20 bg-[#0f172a]/80 backdrop-blur-md border-b border-[#1e293b] flex items-center justify-between px-8 shrink-0 z-10">
+    {/* Default Header for Dashboard */}
+    {(!pathname.includes("cadastros") && !pathname.includes("ongs") && !pathname.includes("espacos") && !pathname.includes("micropolos") && !pathname.includes("captacao") && !pathname.includes("aprovacoes") && !pathname.includes("perfil")) && (
+        <>
+            <div>
+                <h2 class="text-xl font-bold text-white tracking-tight">HORIZON Dashboard Overview</h2>
+                <p class="text-xs text-slate-500 font-medium">Métricas de expansão territorial e inclusão digital.</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <span class="material-symbols-outlined text-slate-400">search</span>
+                </div>
+                <button class="w-10 h-10 flex items-center justify-center rounded-full bg-[#1e293b] text-slate-400 relative">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="absolute top-2 right-2 w-2 h-2 bg-accent rounded-full border-2 border-[#1e293b]"></span>
+                </button>
+                <div class="h-8 w-[1px] bg-[#1e293b]"></div>
+                <button class="px-4 py-2 bg-[#1e293b] text-xs font-bold uppercase rounded-lg border border-[#334155] text-slate-300">
+                    Configurações
+                </button>
+            </div>
+        </>
+    )}
+
+    {/* Header for Cadastros */}
+    {pathname.includes("cadastros") && (
+         <>
+            <div>
+                <h2 class="text-xl font-bold text-white tracking-tight">HORIZON Registration Hub</h2>
+                <p class="text-xs text-slate-500 font-medium">Gerenciamento centralizado de novos parceiros e unidades territoriais.</p>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="relative">
+                    <span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-500 text-sm">notifications</span>
+                    <div class="absolute top-2 right-2 w-2 h-2 bg-accent rounded-full border-2 border-[#0f172a]"></div>
+                    <button class="w-10 h-10 rounded-lg bg-[#1e293b] border border-[#334155] flex items-center justify-center hover:bg-[#334155] transition-all"></button>
+                </div>
+                <button class="flex items-center gap-2 px-4 py-2 bg-accent text-slate-900 rounded-lg text-xs font-bold uppercase tracking-wider shadow-lg shadow-accent/20 hover:brightness-110 transition-all">
+                    <span class="material-symbols-outlined text-sm">add_circle</span>
+                    Novo Registro Rápido
+                </button>
+            </div>
+        </>
+    )}
+
+    {/* Header for ONGs */}
+    {pathname.includes("ongs") && (
+        <>
+            <div class="flex flex-col">
+                <h2 class="text-xl font-bold text-white tracking-tight leading-tight">Gestão de ONGs</h2>
+                <nav class="flex items-center gap-2 text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-0.5">
+                    <span>Database</span>
+                    <span class="material-symbols-outlined text-[10px]">chevron_right</span>
+                    <span class="text-accent">Listagem Luanda</span>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="relative group">
+                    <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-sm">search</span>
+                    <input class="bg-[#151b2d] border-[#1e293b] text-slate-300 text-xs rounded-lg pl-9 pr-4 py-2.5 w-72 focus:ring-accent focus:border-accent transition-all group-hover:bg-[#1e293b]" placeholder="Pesquisar ONG..." type="text"/>
+                </div>
+                <button class="flex items-center gap-2 px-5 py-2.5 bg-accent text-slate-900 rounded-lg text-xs font-bold uppercase tracking-wider shadow-lg shadow-accent/20 hover:brightness-110 active:scale-95 transition-all">
+                    <span class="material-symbols-outlined text-lg">add_circle</span>
+                    Nova ONG
+                </button>
+            </div>
+        </>
+    )}
+    
+    {/* Header for Espaços */}
+    {pathname.includes("espacos") && (
+        <>
+            <div>
+                <h2 class="text-xl font-bold text-white tracking-tight">Diretório de Espaços Comunitários</h2>
+                <p class="text-xs text-slate-500 font-medium">Gestão de infraestrutura e hubs tecnológicos em comunidades.</p>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="relative">
+                    <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-lg">search</span>
+                    <input class="bg-[#1e293b] border-[#334155] rounded-lg text-xs text-slate-300 pl-10 pr-4 py-2 w-64 focus:ring-accent focus:border-accent" placeholder="Buscar espaços..." type="text"/>
+                </div>
+                <button class="flex items-center gap-2 px-4 py-2 bg-accent text-slate-900 rounded-lg text-xs font-bold uppercase tracking-wider shadow-lg shadow-accent/20 hover:brightness-110 transition-all">
+                    <span class="material-symbols-outlined text-sm">add</span>
+                    Novo Espaço
+                </button>
+            </div>
+        </>
+    )}
+
+    {/* Header for Micro Polos */}
+    {pathname.includes("micropolos") && (
+        <>
+            <div>
+                <h2 class="text-xl font-bold text-white tracking-tight">Gestão de Micro Polos</h2>
+                <p class="text-xs text-slate-500 font-medium">Monitoramento e ativação de hubs digitais por bairro.</p>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="relative group">
+                    <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-sm">search</span>
+                    <input class="bg-[#1e293b] border-[#334155] rounded-lg text-xs text-slate-300 pl-9 pr-4 py-2 w-64 focus:ring-accent focus:border-accent" placeholder="Buscar Hub..." type="text"/>
+                </div>
+                <button class="flex items-center gap-2 px-4 py-2 bg-accent text-slate-900 rounded-lg text-xs font-bold uppercase tracking-wider shadow-lg shadow-accent/20 hover:brightness-110 transition-all">
+                    <span class="material-symbols-outlined text-sm">add</span>
+                    Novo Micro Polo
+                </button>
+            </div>
+        </>
+    )}
+
+    {/* Header for Captação */}
+    {pathname.includes("captacao") && (
+        <>
+            <div>
+                <h2 class="text-xl font-bold text-white tracking-tight">Captação e Recursos</h2>
+                <p class="text-xs text-slate-500 font-medium">Gestão de fundraising e equipamentos para expansão tecnológica.</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="flex items-center gap-2 px-6 py-2.5 bg-accent text-slate-900 rounded-lg text-xs font-bold uppercase tracking-wider shadow-lg shadow-accent/20 hover:brightness-110 transition-all">
+                    <span class="material-symbols-outlined text-sm">add_circle</span>
+                    Nova Campanha
+                </button>
+            </div>
+        </>
+    )}
+
+    {/* Header for Aprovações */}
+    {pathname.includes("aprovacoes") && (
+        <>
+            <div>
+                <h2 class="text-xl font-bold text-white tracking-tight">HORIZON Unified Approvals Center</h2>
+                <p class="text-xs text-slate-500 font-medium">Gerenciamento centralizado de solicitações pendentes de ONGs, Espaços e Micro Polos.</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <span class="absolute top-0 right-0 w-2 h-2 bg-accent rounded-full border-2 border-[#0f172a]"></span>
+                    <span class="material-symbols-outlined text-slate-400">notifications</span>
+                </div>
+                <div class="h-8 w-px bg-[#1e293b]"></div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Fila de Espera:</span>
+                    <span class="bg-accent/20 text-accent text-xs font-bold px-2 py-0.5 rounded-full">14 Pendentes</span>
+                </div>
+            </div>
+        </>
+    )}
+
+    {/* Header for Perfil */}
+    {pathname.includes("perfil") && (
+        <>
+            <div>
+                <h2 class="text-xl font-bold text-white tracking-tight">Perfil e Configurações</h2>
+                <p class="text-xs text-slate-500 font-medium">Gerencie suas informações pessoais e preferências de segurança.</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2 px-3 py-1.5 bg-[#1e293b] rounded-full border border-[#334155]">
+                    <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                    <span class="text-[10px] font-bold text-slate-300 uppercase tracking-widest">Sessão Ativa</span>
+                </div>
+            </div>
+        </>
+    )}
 </header>
