@@ -126,6 +126,29 @@ frontend-app/
 
 ---
 
+## 3. Luanda Hub Dashboard (Astro.js)
+
+O **Luanda Hub** é um dashboard regional, construído com Astro.js, para a equipe local de Luanda. Ele fornece uma visão geral das operações, incluindo alunos, mentores e projetos específicos da região.
+
+### Estrutura de Arquivos
+
+```
+src/
+├── components/
+│   └── luanda/
+│       ├── Header.astro
+│       ├── Sidebar.astro
+│       └── Footer.astro
+├── layouts/
+│   └── LuandaHubLayout.astro
+└── pages/
+    └── sistem/
+        └── Luanda-Hub/
+            └── index.astro
+```
+
+---
+
 ## Como Executar
 
 ### Site Institucional (Astro)
