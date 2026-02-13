@@ -1,46 +1,306 @@
-# Astro Starter Kit: Basics
+🌍 PROJETO NOVOS HORIZONTE
+Plataforma de Inclusão Digital e Formação Tecnológica na África
+📌 Visão Geral
 
-```sh
-npm create astro@latest -- --template basics
-```
+O Projeto Novos Horizonte é uma plataforma educacional e institucional composta por:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+🌐 Site institucional (Astro)
 
-## 🚀 Project Structure
+🎓 Dashboard do Aluno (Angular)
 
-Inside of your Astro project, you'll see the following folders and files:
+👨‍🏫 Dashboard do Mentor (Angular)
 
-```text
-/
+🛡 Dashboard Administrativo (Angular)
+
+🚀 Backend robusto (NestJS + Prisma + PostgreSQL)
+
+🔐 Autenticação JWT
+
+📊 Sistema de métricas e ESG
+
+Arquitetura modular, escalável e preparada para crescimento continental.
+
+🏗 Arquitetura Geral
+novos-horizonte-platform/
+│
+├── frontend-site/     → Site institucional (Astro)
+├── frontend-app/      → Dashboards (Angular)
+├── backend/           → API (NestJS)
+│
+├── docker-compose.yml
+└── README.md
+
+🌐 FRONTEND 1 – SITE INSTITUCIONAL (ASTRO)
+
+Responsável por:
+
+Captação de investidores
+
+ESG & Transparência
+
+Landing Pages
+
+SEO
+
+Conteúdo institucional
+
+📁 Estrutura
+frontend-site/
+│
 ├── public/
+│   ├── images/
+│   ├── icons/
 │   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+│
+├── src/
+│   ├── components/
+│   │   ├── Header.astro
+│   │   ├── Footer.astro
+│   │   ├── Hero.astro
+│   │   ├── CTA.astro
+│   │   ├── CardImpact.astro
+│   │   └── SEO.astro
+│   │
+│   ├── layouts/
+│   │   └── BaseLayout.astro
+│   │
+│   ├── pages/
+│   │   ├── index.astro
+│   │   ├── sobre.astro
+│   │   ├── missao.astro
+│   │   ├── parcerias.astro
+│   │   ├── transparencia.astro
+│   │   ├── esg.astro
+│   │   ├── legal.astro
+│   │   ├── faq.astro
+│   │   └── contato.astro
+│   │
+│   ├── styles/
+│   │   └── global.css
+│   │
+│   └── config/
+│       └── site.ts
+│
+└── docs/
+    ├── BLUEPRINT.md
+    ├── ROUTES.md
+    ├── DESIGN_SYSTEM.md
+    └── SEO.md
+
+🎓 FRONTEND 2 – DASHBOARD (ANGULAR)
+
+Contém três áreas:
+
+Aluno
+
+Mentor
+
+Admin
+
+📁 Estrutura Angular
+frontend-app/
+│
+└── src/app/
+    │
+    ├── core/
+    │   ├── guards/
+    │   ├── interceptors/
+    │   └── services/
+    │
+    ├── shared/
+    │   ├── components/
+    │   │   ├── sidebar-student/
+    │   │   ├── sidebar-mentor/
+    │   │   ├── sidebar-admin/
+    │   │   └── header/
+    │   │
+    │   └── layouts/
+    │       ├── student-layout/
+    │       ├── mentor-layout/
+    │       └── admin-layout/
+    │
+    ├── modules/
+    │   │
+    │   ├── student/
+    │   │   ├── dashboard/
+    │   │   ├── cursos/
+    │   │   ├── aulas/
+    │   │   ├── biblioteca/
+    │   │   ├── progresso/
+    │   │   ├── mentorias/
+    │   │   ├── certificados/
+    │   │   ├── ranking/
+    │   │   ├── financeiro/
+    │   │   ├── notificacoes/
+    │   │   ├── perfil/
+    │   │   └── configuracoes/
+    │   │
+    │   ├── mentor/
+    │   │   ├── dashboard/
+    │   │   ├── turmas/
+    │   │   ├── alunos/
+    │   │   ├── projetos/
+    │   │   ├── agenda/
+    │   │   ├── relatorios/
+    │   │   ├── comunidade/
+    │   │   └── recursos/
+    │   │
+    │   └── admin/
+    │       ├── dashboard/
+    │       ├── usuarios/
+    │       ├── aprovacoes/
+    │       ├── hubs/
+    │       ├── bolsas/
+    │       ├── financeiro/
+    │       ├── relatorios/
+    │       ├── esg/
+    │       ├── metricas/
+    │       └── configuracoes/
+    │
+    └── app-routing.module.ts
+
+🚀 BACKEND – NESTJS + PRISMA + POSTGRESQL
+📁 Estrutura
+backend/
+│
+├── src/
+│   ├── modules/
+│   │   ├── auth/
+│   │   ├── users/
+│   │   ├── students/
+│   │   ├── mentors/
+│   │   ├── admin/
+│   │   ├── courses/
+│   │   ├── classes/
+│   │   ├── analytics/
+│   │   └── notifications/
+│   │
+│   ├── common/
+│   │   ├── guards/
+│   │   ├── decorators/
+│   │   └── filters/
+│   │
+│   ├── prisma/
+│   │   ├── prisma.service.ts
+│   │   └── schema.prisma
+│   │
+│   └── main.ts
+│
+├── prisma/
+│   └── schema.prisma
+│
+├── .env
 └── package.json
-```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+🔐 Autenticação
 
-## 🧞 Commands
+JWT
 
-All commands are run from the root of the project, from a terminal:
+Guards por Role
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Interceptors
 
-## 👀 Want to learn more?
+Refresh Token Strategy
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Roles:
+
+STUDENT
+MENTOR
+ADMIN
+SUPER_ADMIN
+
+🎨 INSTALAÇÃO CORRETA DO TAILWIND (SEM CDN)
+
+⚠️ NÃO utilizar:
+
+https://cdn.tailwindcss.com
+
+
+CDN gera estilo dinâmico em runtime e pode causar perda de estilo em produção.
+
+🔹 ASTRO
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+
+tailwind.config.js:
+
+export default {
+  content: ["./src/**/*.{astro,html,js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        primary: "#f27f0d",
+        "sidebar-dark": "#0f172a",
+        "header-blue": "#1e293b"
+      }
+    }
+  },
+  plugins: []
+}
+
+
+global.css:
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+🔹 ANGULAR
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+
+
+tailwind.config.js:
+
+module.exports = {
+  content: ["./src/**/*.{html,ts}"],
+  theme: { extend: {} },
+  plugins: []
+}
+
+
+styles.css:
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+🧠 Boas Práticas
+
+✔ Nunca usar CDN em produção
+✔ Separar site público do app
+✔ Manter docs internas
+✔ Versionar arquitetura
+✔ Isolar backend
+
+🐳 Docker (Opcional)
+docker-compose up -d
+
+
+Serviços:
+
+PostgreSQL
+
+Backend
+
+Frontend
+
+📊 Futuro da Plataforma
+
+IA para análise de performance
+
+Ranking continental
+
+Micro-certificações
+
+Integração com empresas globais
+
+ESG automático com dashboard público
+
+📌 Status do Projeto
+
+✔ Arquitetura definida
+✔ Estrutura modular
+✔ Separação frontend/backend
+✔ Base escalável# New-Horizons
