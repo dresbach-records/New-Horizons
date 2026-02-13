@@ -1,57 +1,26 @@
-🌍 PROJETO NOVOS HORIZONTE
-Plataforma de Inclusão Digital e Formação Tecnológica na África
-📌 Visão Geral
 
-O Projeto Novos Horizonte é uma plataforma educacional e institucional composta por:
+# Projeto New-Horizons
 
-🌐 Site institucional (Astro)
+Este repositório abriga o ecossistema de front-end do **Projeto New-Horizons**, uma iniciativa social focada no desenvolvimento e capacitação de jovens.
 
-🎓 Dashboard do Aluno (Angular)
+O projeto é composto por duas aplicações principais:
+1.  **Site Institucional:** Um site de conteúdo estático, construído com Astro.js, para apresentar o projeto ao público.
+2.  **Dashboard da Plataforma:** Uma Single Page Application (SPA) construída com Angular, servindo como a plataforma de interação para Alunos, Mentores e Administradores.
 
-👨‍🏫 Dashboard do Mentor (Angular)
+---
 
-🛡 Dashboard Administrativo (Angular)
+## 1. Frontend - Site Institucional (Astro.js)
 
-🚀 Backend robusto (NestJS + Prisma + PostgreSQL)
+O site institucional é a vitrine do projeto, projetado para ser extremamente rápido, otimizado para SEO e focado em conteúdo.
 
-🔐 Autenticação JWT
+### Estrutura de Arquivos
 
-📊 Sistema de métricas e ESG
-
-Arquitetura modular, escalável e preparada para crescimento continental.
-
-🏗 Arquitetura Geral
-novos-horizonte-platform/
-│
-├── frontend-site/     → Site institucional (Astro)
-├── frontend-app/      → Dashboards (Angular)
-├── backend/           → API (NestJS)
-│
-├── docker-compose.yml
-└── README.md
-
-🌐 FRONTEND 1 – SITE INSTITUCIONAL (ASTRO)
-
-Responsável por:
-
-Captação de investidores
-
-ESG & Transparência
-
-Landing Pages
-
-SEO
-
-Conteúdo institucional
-
-📁 Estrutura
+```
 frontend-site/
-│
 ├── public/
-│   ├── images/
-│   ├── icons/
-│   └── favicon.svg
-│
+│   └── images/
+│       └── icons/
+│           └── favicon.svg
 ├── src/
 │   ├── components/
 │   │   ├── Header.astro
@@ -60,10 +29,8 @@ frontend-site/
 │   │   ├── CTA.astro
 │   │   ├── CardImpact.astro
 │   │   └── SEO.astro
-│   │
 │   ├── layouts/
 │   │   └── BaseLayout.astro
-│   │
 │   ├── pages/
 │   │   ├── index.astro
 │   │   ├── sobre.astro
@@ -74,233 +41,109 @@ frontend-site/
 │   │   ├── legal.astro
 │   │   ├── faq.astro
 │   │   └── contato.astro
-│   │
-│   ├── styles/
-│   │   └── global.css
-│   │
-│   └── config/
-│       └── site.ts
-│
-└── docs/
-    ├── BLUEPRINT.md
-    ├── ROUTES.md
-    ├── DESIGN_SYSTEM.md
-    └── SEO.md
+│   └── styles/
+│       └── global.css
+├── config/
+│   └── site.ts
+├── docs/
+│   ├── BLUEPRINT.md
+│   ├── ROUTES.md
+│   ├── DESIGN_SYSTEM.md
+│   └── SEO.md
+└── astro.config.mjs
+```
 
-🎓 FRONTEND 2 – DASHBOARD (ANGULAR)
+### Tecnologias
+- **Framework:** Astro.js
+- **Styling:** Tailwind CSS
 
-Contém três áreas:
+---
 
-Aluno
+## 2. Frontend - Dashboard da Plataforma (Angular)
 
-Mentor
+O dashboard é o coração da plataforma, onde os usuários interagem com os recursos do projeto. Ele é dividido em três áreas de acesso distintas:
 
-Admin
+- **Aluno:** Acompanha progresso, acessa cursos, mentorias, certificados, etc.
+- **Mentor:** Gerencia turmas, projetos, agenda e interage com os alunos.
+- **Admin:** Visão geral da plataforma, gerenciamento de usuários, aprovações, hubs, etc.
 
-📁 Estrutura Angular
+### Estrutura de Arquivos
+
+```
 frontend-app/
-│
-└── src/app/
-    │
-    ├── core/
-    │   ├── guards/
-    │   ├── interceptors/
-    │   └── services/
-    │
-    ├── shared/
-    │   ├── components/
-    │   │   ├── sidebar-student/
-    │   │   ├── sidebar-mentor/
-    │   │   ├── sidebar-admin/
-    │   │   └── header/
-    │   │
-    │   └── layouts/
-    │       ├── student-layout/
-    │       ├── mentor-layout/
-    │       └── admin-layout/
-    │
-    ├── modules/
-    │   │
-    │   ├── student/
-    │   │   ├── dashboard/
-    │   │   ├── cursos/
-    │   │   ├── aulas/
-    │   │   ├── biblioteca/
-    │   │   ├── progresso/
-    │   │   ├── mentorias/
-    │   │   ├── certificados/
-    │   │   ├── ranking/
-    │   │   ├── financeiro/
-    │   │   ├── notificacoes/
-    │   │   ├── perfil/
-    │   │   └── configuracoes/
-    │   │
-    │   ├── mentor/
-    │   │   ├── dashboard/
-    │   │   ├── turmas/
-    │   │   ├── alunos/
-    │   │   ├── projetos/
-    │   │   ├── agenda/
-    │   │   ├── relatorios/
-    │   │   ├── comunidade/
-    │   │   └── recursos/
-    │   │
-    │   └── admin/
-    │       ├── dashboard/
-    │       ├── usuarios/
-    │       ├── aprovacoes/
-    │       ├── hubs/
-    │       ├── bolsas/
-    │       ├── financeiro/
-    │       ├── relatorios/
-    │       ├── esg/
-    │       ├── metricas/
-    │       └── configuracoes/
-    │
-    └── app-routing.module.ts
+└── src/
+    └── app/
+        ├── core/
+        │   ├── guards/
+        │   └── interceptors/
+        ├── services/
+        ├── shared/
+        │   ├── components/
+        │   ├── sidebar-student/
+        │   ├── sidebar-mentor/
+        │   ├── sidebar-admin/
+        │   └── header/
+        ├── layouts/
+        │   ├── student-layout/
+        │   ├── mentor-layout/
+        │   └── admin-layout/
+        └── modules/
+            ├── student/
+            │   ├── dashboard/
+            │   ├── cursos/
+            │   ├── aulas/
+            │   ├── biblioteca/
+            │   ├── progresso/
+            │   ├── mentorias/
+            │   ├── certificados/
+            │   ├── ranking/
+            │   ├── financeiro/
+            │   ├── notificacoes/
+            │   ├── perfil/
+            │   └── configuracoes/
+            ├── mentor/
+            │   ├── dashboard/
+            │   ├── turmas/
+            │   ├── alunos/
+            │   ├── projetos/
+            │   ├── agenda/
+            │   ├── relatorios/
+            │   ├── comunidade/
+            │   └── recursos/
+            └── admin/
+                ├── dashboard/
+                ├── usuarios/
+                ├── aprovacoes/
+                ├── hubs/
+                └── bolsas/
+```
+### Tecnologias
+- **Framework:** Angular
 
-🚀 BACKEND – NESTJS + PRISMA + POSTGRESQL
-📁 Estrutura
-backend/
-│
-├── src/
-│   ├── modules/
-│   │   ├── auth/
-│   │   ├── users/
-│   │   ├── students/
-│   │   ├── mentors/
-│   │   ├── admin/
-│   │   ├── courses/
-│   │   ├── classes/
-│   │   ├── analytics/
-│   │   └── notifications/
-│   │
-│   ├── common/
-│   │   ├── guards/
-│   │   ├── decorators/
-│   │   └── filters/
-│   │
-│   ├── prisma/
-│   │   ├── prisma.service.ts
-│   │   └── schema.prisma
-│   │
-│   └── main.ts
-│
-├── prisma/
-│   └── schema.prisma
-│
-├── .env
-└── package.json
+---
 
-🔐 Autenticação
+## Como Executar
 
-JWT
+### Site Institucional (Astro)
+```bash
+# Navegue até a pasta do projeto Astro
+cd frontend-site
 
-Guards por Role
+# Instale as dependências
+npm install
 
-Interceptors
+# Inicie o servidor de desenvolvimento
+npm run dev
+```
 
-Refresh Token Strategy
+### Dashboard (Angular)
+```bash
+# Navegue até a pasta do projeto Angular
+cd frontend-app
 
-Roles:
+# Instale as dependências
+npm install
 
-STUDENT
-MENTOR
-ADMIN
-SUPER_ADMIN
-
-🎨 INSTALAÇÃO CORRETA DO TAILWIND (SEM CDN)
-
-⚠️ NÃO utilizar:
-
-https://cdn.tailwindcss.com
-
-
-CDN gera estilo dinâmico em runtime e pode causar perda de estilo em produção.
-
-🔹 ASTRO
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-
-
-tailwind.config.js:
-
-export default {
-  content: ["./src/**/*.{astro,html,js,ts,jsx,tsx}"],
-  theme: {
-    extend: {
-      colors: {
-        primary: "#f27f0d",
-        "sidebar-dark": "#0f172a",
-        "header-blue": "#1e293b"
-      }
-    }
-  },
-  plugins: []
-}
-
-
-global.css:
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-🔹 ANGULAR
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init
-
-
-tailwind.config.js:
-
-module.exports = {
-  content: ["./src/**/*.{html,ts}"],
-  theme: { extend: {} },
-  plugins: []
-}
-
-
-styles.css:
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-🧠 Boas Práticas
-
-✔ Nunca usar CDN em produção
-✔ Separar site público do app
-✔ Manter docs internas
-✔ Versionar arquitetura
-✔ Isolar backend
-
-🐳 Docker (Opcional)
-docker-compose up -d
-
-
-Serviços:
-
-PostgreSQL
-
-Backend
-
-Frontend
-
-📊 Futuro da Plataforma
-
-IA para análise de performance
-
-Ranking continental
-
-Micro-certificações
-
-Integração com empresas globais
-
-ESG automático com dashboard público
-
-📌 Status do Projeto
-
-✔ Arquitetura definida
-✔ Estrutura modular
-✔ Separação frontend/backend
-✔ Base escalável# New-Horizons
+# Inicie o servidor de desenvolvimento
+ng serve
+```
