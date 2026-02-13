@@ -1,0 +1,18 @@
+---
+interface Props {
+	label: string;
+	variant?: 'primary' | 'secondary';
+}
+
+const { label, variant = 'primary' } = Astro.props;
+
+const baseClasses = "px-4 py-2 rounded-md font-semibold";
+const variantClasses = {
+	primary: "bg-blue-500 text-white hover:bg-blue-600",
+	secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300",
+};
+---
+
+<button class:list={[baseClasses, variantClasses[variant]]}>
+	{label}
+</button>

@@ -1,0 +1,19 @@
+---
+import AcademyLayout from 'src/layouts/AcademyLayout.astro';
+import ProgressBar from 'src/components/academy/ProgressBar.astro';
+---
+
+<AcademyLayout>
+  <h1 class="text-3xl font-bold mb-6">Meu Progresso</h1>
+  <div class="bg-white rounded-lg shadow-md p-6">
+    <h2 class="text-2xl font-bold mb-4">Progresso Geral</h2>
+    <div class="mb-4">
+      <h3 class="font-bold">Curso de Astro.js</h3>
+      <ProgressBar />
+    </div>
+    <div class="mb-4">
+      <h3 class="font-bold">Curso de React</h3>
+      <ProgressBar />
+    </div>
+  </div>
+</AcademyLayout>

@@ -1,0 +1,23 @@
+<div class="bg-white p-6 rounded-lg shadow-md">
+  <h2 class="text-xl font-semibold mb-4">Visão Geral de Atividades</h2>
+  <canvas id="activityChart"></canvas>
+</div>
+
+<script>
+  import Chart from 'chart.js/auto';
+
+  const ctx = document.getElementById('activityChart') as HTMLCanvasElement;
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho'],
+      datasets: [{
+        label: 'Novos Alunos',
+        data: [65, 59, 80, 81, 56, 55, 40],
+        fill: false,
+        borderColor: 'rgb(75, 192, 192)',
+        tension: 0.1
+      }]
+    }
+  });
+</script>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-PT"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Partner Dashboard - Luanda Hub | Projeto Novos Horizontes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee8c2b",
+                        "primary-dark": "#d97b1e",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221910",
+                        "deep-blue": "#101827",
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 antialiased">
+<!-- Wrapper -->
+<div class="flex min-h-screen">
+<!-- Sidebar -->
+<aside class="w-64 bg-deep-blue text-white flex flex-col fixed h-full z-50">
+<div class="p-6 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons text-white">grid_view</span>
+</div>
+<div class="leading-tight">
+<h1 class="font-extrabold text-sm tracking-tight uppercase text-white">Novos Horizontes</h1>
+<p class="text-[10px] text-slate-400 font-medium tracking-widest uppercase">Parceiros Regional</p>
+</div>
+</div>
+<nav class="flex-1 mt-4 px-3 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 border-l-4 border-primary text-white font-semibold" href="#">
+<span class="material-icons text-primary">dashboard</span>
+<span class="text-sm">Visão Geral</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-white/5 hover:text-white transition-all group" href="#">
+<span class="material-icons text-slate-500 group-hover:text-primary transition-colors">group</span>
+<span class="text-sm">Gestão de Alunos</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-white/5 hover:text-white transition-all group" href="#">
+<span class="material-icons text-slate-500 group-hover:text-primary transition-colors">domain</span>
+<span class="text-sm">Infraestrutura &amp; Labs</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-white/5 hover:text-white transition-all group" href="#">
+<span class="material-icons text-slate-500 group-hover:text-primary transition-colors">payments</span>
+<span class="text-sm">Contribuições</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-white/5 hover:text-white transition-all group" href="#">
+<span class="material-icons text-slate-500 group-hover:text-primary transition-colors">bar_chart</span>
+<span class="text-sm">Relatórios de Impacto</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-white/5 hover:text-white transition-all group" href="#">
+<span class="material-icons text-slate-500 group-hover:text-primary transition-colors">event</span>
+<span class="text-sm">Eventos Locais</span>
+</a>
+</nav>
+<div class="p-6 border-t border-white/10 mt-auto">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-8 h-8 rounded-full overflow-hidden border border-primary/50">
+<img class="w-full h-full object-cover" data-alt="User profile avatar of the partner representative" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0zX-smKBOeHKXuqd9knby7cbwpSKGa3dzHmGTH0_JFx6zocD3_ze0EivVaDUBCTTZbBD9fmbiNlHmhqKzSRTSXjEqNG9S0pCS3kwuvqoqvgbmoT_SfoB4rU3ztvc1HHn7To51KDG1DyJrDYotP0ZPJrHInR--7OC977DhQkHYFIOM1eK4zXwio0HXAErF59xNiBKq_eo-cXXlK0j0FhY7M5MblVw4Pv9Du9vF9JiMIEirUKrNmWLc3qBDJmOKu9mZdkvw2yn_xjY"/>
+</div>
+<div class="overflow-hidden">
+<p class="text-xs font-bold truncate">Partner Name</p>
+<p class="text-[10px] text-slate-400">Luanda Hub Mgr</p>
+</div>
+</div>
+<button class="flex items-center gap-2 text-xs text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons text-sm">logout</span>
+                    Sair do Sistema
+                </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 ml-64 p-8">
+<!-- Top Bar -->
+<header class="flex justify-between items-center mb-10">
+<div class="relative w-96">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-white rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary focus:border-transparent outline-none text-sm transition-all shadow-sm" placeholder="Procurar aluno, recurso ou evento..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative cursor-pointer group">
+<span class="material-icons text-slate-500 group-hover:text-primary transition-colors">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full border-2 border-background-light"></span>
+</div>
+<div class="h-8 w-px bg-slate-200"></div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="text-sm font-bold">Angola Telecom S.A.</p>
+<p class="text-xs text-slate-500">Parceiro Platinum</p>
+</div>
+<img class="w-10 h-10 rounded-lg object-contain bg-white border border-slate-100 p-1" data-alt="Corporate logo of Angola Telecom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKVQDtfg0A_uptGD3YD8OUyu-hizzlRv6Ffd2N2_VUcAX4kz022RW48qCt81_weyiuTK-2QIOk5K6hCGbgTmk5F4OT2Tui2e90gQNncpgdCUw0z2PAR5GpupOYy7Ts_CJZUQokiRWwep-2_ASWc43glNKfjLuFgjHR2NTMkO0QIYj_OsJKWz2MqiFd8oXukNP8UIDYGCXY19cGZpVayI7ZqGukwjybu7i48ccNJIBKqsPYeVOxnTPFia84yhdnCmYALeRrD1cTnLY"/>
+</div>
+</div>
+</header>
+<!-- Dashboard Header & Stats -->
+<section class="mb-10">
+<div class="flex justify-between items-end mb-6">
+<div>
+<h2 class="text-2xl font-extrabold text-slate-900 mb-1">Hub Luanda — Painel de Controle</h2>
+<p class="text-slate-500 text-sm">Acompanhamento em tempo real das métricas regionais e impacto social.</p>
+</div>
+<div class="flex gap-2">
+<button class="bg-white border border-slate-200 px-4 py-2 rounded-lg text-xs font-semibold hover:bg-slate-50 transition-colors flex items-center gap-2">
+<span class="material-icons text-sm">download</span> Exportar PDF
+                        </button>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+<div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm flex items-start justify-between group hover:border-primary/30 transition-all">
+<div>
+<p class="text-slate-500 text-xs font-bold uppercase tracking-wider mb-2">Alunos Ativos</p>
+<h3 class="text-3xl font-extrabold text-slate-900">450</h3>
+<div class="flex items-center gap-1 mt-2 text-emerald-600 font-bold text-xs">
+<span class="material-icons text-sm">trending_up</span> +12% vs mês ant.
+                            </div>
+</div>
+<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center text-blue-500">
+<span class="material-icons">school</span>
+</div>
+</div>
+<div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm flex items-start justify-between group hover:border-primary/30 transition-all">
+<div>
+<p class="text-slate-500 text-xs font-bold uppercase tracking-wider mb-2">Mentores Locais</p>
+<h3 class="text-3xl font-extrabold text-slate-900">12</h3>
+<div class="flex items-center gap-1 mt-2 text-slate-400 font-bold text-xs">
+<span class="material-icons text-sm">remove</span> Meta mensal atingida
+                            </div>
+</div>
+<div class="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center text-purple-500">
+<span class="material-icons">diversity_3</span>
+</div>
+</div>
+<div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm flex items-start justify-between group hover:border-primary/30 transition-all">
+<div>
+<p class="text-slate-500 text-xs font-bold uppercase tracking-wider mb-2">Laboratórios</p>
+<h3 class="text-3xl font-extrabold text-slate-900">3</h3>
+<div class="flex items-center gap-1 mt-2 text-primary font-bold text-xs">
+<span class="material-icons text-sm">construction</span> 1 em manutenção
+                            </div>
+</div>
+<div class="w-12 h-12 rounded-lg bg-orange-50 flex items-center justify-center text-primary">
+<span class="material-icons">computer</span>
+</div>
+</div>
+<div class="bg-white p-6 rounded-xl border border-primary/20 bg-primary/5 shadow-sm flex items-start justify-between group">
+<div>
+<p class="text-primary text-xs font-bold uppercase tracking-wider mb-2">Empregabilidade</p>
+<h3 class="text-3xl font-extrabold text-slate-900">72%</h3>
+<div class="flex items-center gap-1 mt-2 text-emerald-600 font-bold text-xs">
+<span class="material-icons text-sm">check_circle</span> Superior à média
+                            </div>
+</div>
+<div class="w-12 h-12 rounded-lg bg-primary text-white flex items-center justify-center">
+<span class="material-icons">work</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Panels -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Left: Student Success Tracker -->
+<div class="col-span-12 xl:col-span-8 space-y-6">
+<div class="bg-white rounded-xl border border-slate-100 shadow-sm overflow-hidden">
+<div class="p-6 border-b border-slate-100 flex justify-between items-center">
+<div>
+<h4 class="font-bold text-slate-900">Rastreador de Sucesso do Aluno</h4>
+<p class="text-xs text-slate-500">Top talentos prontos para o mercado remoto.</p>
+</div>
+<button class="text-primary text-xs font-bold hover:underline">Ver Todos</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-slate-50/50">
+<tr>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Aluno</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Curso</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Progresso</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase text-right">Pronto para Trabalho</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100">
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200">
+<img class="w-full h-full rounded-full object-cover" data-alt="Student profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtVAuT3y3cTht4ySyMp1u6f5neSGVJ5wCSb4thdDvr0u2UhwBliqu5CYx-Oi00moXzrE6IMsX1fInyjVn10ONe_YAevxSLydAxSzDStHy5tBCp_iWnCaGnKKBYI0tpJhh4imo5Vc9Xy-3C-0-OQOVU8rLW1AzGJOZvi-85DwW48WJyJ-FbYA2PAOIDbPMMGHXxOQ4iBefInvF8X3vUSRoV1oBC2_-6rhg0Uyf5gVutWxI9MQ3sWZJWLYvk3Ar_uhnZwazYKznfl_w"/>
+</div>
+<span class="text-sm font-semibold">Ana Paula Kassoma</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-600">Fullstack React</td>
+<td class="px-6 py-4">
+<div class="w-full bg-slate-100 h-2 rounded-full">
+<div class="bg-emerald-500 h-full rounded-full" style="width: 95%"></div>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<span class="inline-flex px-2 py-1 rounded bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-tighter">Imediato</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200">
+<img class="w-full h-full rounded-full object-cover" data-alt="Student profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcIRSEhUz5RLoZfqtnTeY5SvIcPffMsqyQCqq43lnjjmAz1IDugEP2v7OSlXkbKHMTi-4nSaejNkX9qSnqc7vpDXeID-76IYT65nTCSwS-tBwioc-a_dT_J7wjybOxgTbPG1Jmc0S6HTc0woxZAVHQOZIc6FwI04o-sgd4SqLZJlfJo4eGkytX5xAstPSMIboSqMYirSmOn_85qnKHNBjlTv0ZM_o4RFRF2yfaWqRbT3EwrmbNbcK3D_WTCy9AezcOG_1DnHGZ-Tg"/>
+</div>
+<span class="text-sm font-semibold">José Manuel Ndala</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-600">UI/UX Design</td>
+<td class="px-6 py-4">
+<div class="w-full bg-slate-100 h-2 rounded-full">
+<div class="bg-primary h-full rounded-full" style="width: 78%"></div>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<span class="inline-flex px-2 py-1 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-tighter">Em 3 Semanas</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200">
+<img class="w-full h-full rounded-full object-cover" data-alt="Student profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDau3D5OM7XopJS6xlOseZFP-EfSzcF15K6CwI5mOfkwxaUqhNKPer1kei5ruPbbg-U8g8dHeCBm8pvDT2EsIsxzPC_WLd81rCFy11hR1LAmQJgbzD3CsNAUD6NZCUYfixo8d6O6qMM0-Au9lW3QiYxmsJRvtYbpHWqPvjd5zbeHWIIB97BQyasH74vm2zXeP3Yc4D-LkPLYWiVXthxiYuqFNA-Fb_m8lL-UHFffRMjyoZy3U2Dc2DKhPIgd4549S0hhww4WaIugHI"/>
+</div>
+<span class="text-sm font-semibold">Catarina Luísa</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-600">Data Science</td>
+<td class="px-6 py-4">
+<div class="w-full bg-slate-100 h-2 rounded-full">
+<div class="bg-emerald-500 h-full rounded-full" style="width: 100%"></div>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<span class="inline-flex px-2 py-1 rounded bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-tighter">Contratada</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200">
+<img class="w-full h-full rounded-full object-cover" data-alt="Student profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeRkMdJDGemLsVA2i0mijERBZP7puDmdBo-hhc4GyQPpv26UaZLP0XJhNXRqBJ0WKNYdaxPhvnSuUION-BbpstgPvcnqSfSwhShxEwrpRQGjaPFdeRkqTVaoQ7JtZF3qUqZh0H6L29i2smwvXd9qYQc0KQao40eKdwqjnlE612TjkT9QrYfFsrpc-J-v-AspbjEjk_A_1eqM53OJJ1Akxs-fbhg8pk5vo4SOoY3hbf-DT6h3iVhVKqBeXWo-IDsoxEX6loAyT9gX0"/>
+</div>
+<span class="text-sm font-semibold">Samuel dos Santos</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-600">Cybersecurity</td>
+<td class="px-6 py-4">
+<div class="w-full bg-slate-100 h-2 rounded-full">
+<div class="bg-primary h-full rounded-full" style="width: 62%"></div>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<span class="inline-flex px-2 py-1 rounded bg-slate-100 text-slate-400 text-[10px] font-bold uppercase tracking-tighter">Em Treino</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Impact Chart (Mockup) -->
+<div class="bg-white rounded-xl border border-slate-100 shadow-sm p-6">
+<div class="flex justify-between items-center mb-6">
+<div>
+<h4 class="font-bold text-slate-900">Impacto e Crescimento de Renda</h4>
+<p class="text-xs text-slate-500">Média de rendimentos mensais dos graduados (últimos 12 meses).</p>
+</div>
+<div class="flex items-center gap-3 text-xs">
+<span class="flex items-center gap-1"><span class="w-3 h-3 bg-primary rounded-full"></span> Luanda Hub</span>
+<span class="flex items-center gap-1"><span class="w-3 h-3 bg-slate-200 rounded-full"></span> Média Nacional</span>
+</div>
+</div>
+<div class="h-64 relative w-full flex items-end gap-2 overflow-hidden px-4">
+<!-- Visual Chart Mockup Bars -->
+<div class="flex-1 bg-slate-100 rounded-t-lg h-[20%] relative group transition-all hover:bg-primary/20 cursor-help">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-slate-400 opacity-0 group-hover:opacity-100">JAN</div>
+</div>
+<div class="flex-1 bg-slate-100 rounded-t-lg h-[25%] relative group transition-all hover:bg-primary/20 cursor-help"></div>
+<div class="flex-1 bg-slate-100 rounded-t-lg h-[30%] relative group transition-all hover:bg-primary/20 cursor-help"></div>
+<div class="flex-1 bg-slate-100 rounded-t-lg h-[35%] relative group transition-all hover:bg-primary/20 cursor-help"></div>
+<div class="flex-1 bg-primary rounded-t-lg h-[45%] relative group transition-all hover:bg-primary-dark cursor-help"></div>
+<div class="flex-1 bg-primary rounded-t-lg h-[50%] relative group transition-all hover:bg-primary-dark cursor-help"></div>
+<div class="flex-1 bg-primary rounded-t-lg h-[65%] relative group transition-all hover:bg-primary-dark cursor-help"></div>
+<div class="flex-1 bg-primary rounded-t-lg h-[60%] relative group transition-all hover:bg-primary-dark cursor-help"></div>
+<div class="flex-1 bg-primary rounded-t-lg h-[75%] relative group transition-all hover:bg-primary-dark cursor-help"></div>
+<div class="flex-1 bg-primary rounded-t-lg h-[85%] relative group transition-all hover:bg-primary-dark cursor-help"></div>
+<div class="flex-1 bg-primary rounded-t-lg h-[92%] relative group transition-all hover:bg-primary-dark cursor-help"></div>
+<div class="flex-1 bg-primary rounded-t-lg h-full relative group transition-all hover:bg-primary-dark cursor-help">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary bg-primary/10 px-2 py-1 rounded">DEZ</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Infrastructure & Actions -->
+<div class="col-span-12 xl:col-span-4 space-y-6">
+<!-- Infrastructure Health -->
+<div class="bg-white rounded-xl border border-slate-100 shadow-sm p-6">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-icons text-slate-900">settings_input_component</span>
+<h4 class="font-bold text-slate-900">Status da Infraestrutura</h4>
+</div>
+<div class="space-y-5">
+<div class="flex items-center justify-between p-3 rounded-lg border border-slate-50 bg-slate-50/30">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
+<span class="material-icons text-sm">wifi</span>
+</div>
+<div>
+<p class="text-xs font-bold">Estabilidade da Internet</p>
+<p class="text-[10px] text-slate-500">Unitel Fiber Optics</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-xs font-extrabold text-emerald-600">98% UP</span>
+<div class="flex gap-0.5 mt-1">
+<span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>
+<span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>
+<span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg border border-slate-50 bg-slate-50/30">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
+<span class="material-icons text-sm">devices</span>
+</div>
+<div>
+<p class="text-xs font-bold">Estado do Hardware</p>
+<p class="text-[10px] text-slate-500">60 Estações de Trabalho</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-xs font-extrabold text-emerald-600">ÓPTIMO</span>
+<div class="flex gap-0.5 mt-1">
+<span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>
+<span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>
+<span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg border border-slate-50 bg-slate-50/30">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-icons text-sm">battery_charging_full</span>
+</div>
+<div>
+<p class="text-xs font-bold">Energia (Backup)</p>
+<p class="text-[10px] text-slate-500">Gerador &amp; Solar UPS</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-xs font-extrabold text-primary">ACTIVO</span>
+<div class="flex gap-0.5 mt-1">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+<span class="w-1.5 h-1.5 bg-slate-200 rounded-full"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Center -->
+<div class="bg-deep-blue rounded-xl p-6 shadow-xl relative overflow-hidden group">
+<!-- Abstract pattern background -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl group-hover:bg-primary/30 transition-all"></div>
+<h4 class="font-bold text-white mb-6 flex items-center gap-2 relative z-10">
+<span class="material-icons text-primary">rocket_launch</span>
+                            Centro de Ação
+                        </h4>
+<div class="space-y-3 relative z-10">
+<button class="w-full bg-primary hover:bg-primary-dark text-white py-3 px-4 rounded-lg font-bold text-sm transition-all flex items-center justify-between shadow-lg shadow-primary/20">
+<span>Abrir Novo Laboratório</span>
+<span class="material-icons text-lg">add_circle_outline</span>
+</button>
+<button class="w-full bg-white/10 hover:bg-white/20 text-white py-3 px-4 rounded-lg font-bold text-sm transition-all border border-white/5 flex items-center justify-between">
+<span>Patrocinar Nova Turma</span>
+<span class="material-icons text-lg">star</span>
+</button>
+<button class="w-full bg-white/10 hover:bg-white/20 text-white py-3 px-4 rounded-lg font-bold text-sm transition-all border border-white/5 flex items-center justify-between">
+<span>Agendar Visita Técnica</span>
+<span class="material-icons text-lg">event_available</span>
+</button>
+</div>
+</div>
+<!-- Map Location Mockup -->
+<div class="bg-white rounded-xl border border-slate-100 shadow-sm p-6 overflow-hidden relative min-h-[160px]">
+<div class="relative z-10">
+<h4 class="font-bold text-slate-900 text-sm mb-1">Localização do Hub</h4>
+<p class="text-xs text-slate-500">Talatona, Sector B, Luanda</p>
+</div>
+<!-- Mock Map Background -->
+<div class="absolute inset-0 z-0 opacity-40 grayscale hover:grayscale-0 transition-all duration-700 bg-cover bg-center" data-location="Luanda, Angola" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCe_OqbKpwkZSlIAJ3EObAdTmzZimPpuj1pKAAh1aDbtrgnkNLQZeTRKNJTEIK5LSUQiOCjIMK3_oJe4HUt0bZPbbr10pxh94MS1-jXLm7xcjGRd8Ero75zA3Ras8v3mfe0yGBxvdw5843Pf6Egsfn_l4gkv4mJtej0PatSAd9UwVPMyfLDpTQ6JnkDvX4UeBdM-epdVEzDiNl55Eif4UljsxA25AC9hA6tuYgst0kLyo3TqKCAiMjb-UANR0021JI3u_SSxTL3VUY')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent z-1"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+<div class="w-4 h-4 bg-primary rounded-full border-2 border-white animate-ping absolute"></div>
+<div class="w-4 h-4 bg-primary rounded-full border-2 border-white relative"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="mt-12 pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center text-slate-400 text-xs">
+<p>© 2024 Projeto Novos Horizontes. Hub de Luanda operado em parceria com Angola Telecom.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-primary" href="#">Termos de Uso</a>
+<a class="hover:text-primary" href="#">Política de Privacidade</a>
+<a class="hover:text-primary" href="#">Ajuda &amp; Suporte</a>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,13 @@
+---
+const { course } = Astro.props;
+---
+
+<div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between">
+    <div>
+        <h3 class="text-lg font-bold">{course.title}</h3>
+        <p class="text-gray-600">{course.students} alunos</p>
+    </div>
+    <div>
+        <a href={`/sistema/academy-instrutor/cursos/${course.id}`} class="text-blue-500 hover:underline">Ver Detalhes</a>
+    </div>
+</div>

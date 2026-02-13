@@ -1,0 +1,27 @@
+---
+import MainLayout from 'src/layouts/MainLayout.astro';
+---
+
+<MainLayout title="Login">
+  <div class="flex justify-center items-center min-h-screen bg-gray-100">
+    <div class="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
+      <h1 class="text-2xl font-bold text-center">Login</h1>
+      <form>
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700">Email</label>
+          <input type="email" id="email" class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
+        </div>
+        <div class="mb-4">
+          <label for="password" class="block text-gray-700">Senha</label>
+          <input type="password" id="password" class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
+        </div>
+        <div class="flex items-center justify-between">
+          <a href="/esqueceu-senha" class="text-sm text-blue-600 hover:underline">Esqueceu a senha?</a>
+        </div>
+        <div class="mt-6">
+          <button type="submit" class="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</MainLayout>

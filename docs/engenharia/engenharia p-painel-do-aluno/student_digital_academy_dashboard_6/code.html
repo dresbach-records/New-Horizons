@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Student Digital Academy Dashboard | Projeto Novos Horizonte</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ee8c2b",
+            "background-light": "#f8f7f6",
+            "background-dark": "#221910",
+            "accent-blue": "#1e293b",
+          },
+          fontFamily: {
+            "display": ["Lexend"]
+          },
+          borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Lexend', sans-serif;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #e5e7eb;
+      border-radius: 10px;
+    }
+    .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #3f3f46;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 min-h-screen flex font-display">
+<!-- Sidebar -->
+<aside class="w-72 bg-white dark:bg-zinc-900 border-r border-primary/10 flex flex-col h-screen sticky top-0">
+<div class="p-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-icons-round">rocket_launch</span>
+</div>
+<div class="flex flex-col">
+<span class="text-lg font-bold tracking-tight leading-none text-accent-blue dark:text-white">NOVOS</span>
+<span class="text-xs uppercase tracking-[0.2em] font-semibold text-primary">Horizonte</span>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 bg-primary/10 text-primary font-semibold rounded-xl transition-all" href="#">
+<span class="material-icons-round">dashboard</span>
+        Dashboard
+      </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">library_books</span>
+        Meus Cursos
+      </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">calendar_today</span>
+        Calendário
+      </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">folder_special</span>
+        Projetos
+      </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">verified</span>
+        Certificações
+      </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">forum</span>
+        Comunidade
+      </a>
+</nav>
+<div class="p-6">
+<div class="bg-primary/5 rounded-2xl p-4 border border-primary/20">
+<p class="text-xs text-slate-500 mb-2">Plano Pro Premium</p>
+<div class="flex items-center justify-between mb-3">
+<span class="font-bold text-accent-blue dark:text-white">Ativo até Dez 24</span>
+<span class="material-icons-round text-primary text-sm">stars</span>
+</div>
+<button class="w-full py-2 bg-white dark:bg-zinc-800 text-xs font-bold rounded-lg border border-primary/30 text-primary">Gerenciar Plano</button>
+</div>
+</div>
+<div class="p-4 border-t border-slate-100 dark:border-zinc-800 flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Profile photo of a male student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD6t93a5ESdZg7OPSgo36jBrp-sNO7ZjeKUH4tgGFqzQ6TKHCrjKC1hSeDMrAXiWNmkhTXcZ1gPTF7KAKaZMaWnh8uA-cDkHRV78eV5UxWzgvMwB1V4q6bz2D3SyH0-F_XS4v9YIe4qPD03huX6smpC5qLBzWLzPfnbJJvAfV0tq3yKk8STxCI5QWO2AoXW1rTyLzewcWLBUW6dfgH3Lq7-I7co8cpBSbq6z7hvrRtV3lqZ6sRSKaAi19l1tAMqWcNsaWoAX_aSac"/>
+<div class="flex-1">
+<p class="text-sm font-bold truncate">Marcos Silva</p>
+<p class="text-xs text-slate-500">marcos@novos.edu</p>
+</div>
+<button class="text-slate-400 hover:text-red-500"><span class="material-icons-round">logout</span></button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col h-screen overflow-hidden">
+<!-- Top Bar -->
+<header class="h-20 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md px-8 flex items-center justify-between border-b border-primary/10 z-10 sticky top-0">
+<div class="relative w-96">
+<span class="material-icons-round absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-background-light dark:bg-zinc-800 border-none rounded-full pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary/50 transition-all" placeholder="Pesquisar aulas, materiais ou mentorias..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons-round">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full ring-2 ring-white dark:ring-zinc-900"></span>
+</button>
+<div class="h-8 w-[1px] bg-slate-200 dark:bg-zinc-800"></div>
+<div class="flex items-center gap-3 bg-slate-100 dark:bg-zinc-800 px-3 py-1.5 rounded-full">
+<span class="material-icons-round text-primary text-sm">local_fire_department</span>
+<span class="text-sm font-bold">12 Dias seguidos</span>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="flex-1 overflow-y-auto p-8 custom-scrollbar">
+<!-- Welcome Header -->
+<section class="flex flex-col md:flex-row items-center justify-between gap-8 mb-10">
+<div class="flex-1">
+<h1 class="text-3xl font-bold text-accent-blue dark:text-white mb-2">Olá, Marcos! 👋</h1>
+<p class="text-slate-500 text-lg">Pronto para sua próxima aula de <span class="text-primary font-semibold">Full-Stack Development</span>?</p>
+</div>
+<div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-zinc-800 flex items-center gap-6">
+<div class="relative w-20 h-20">
+<svg class="w-20 h-20 -rotate-90">
+<circle class="text-slate-100 dark:text-zinc-800" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-dasharray="213.6" stroke-dashoffset="74.76" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-lg font-bold">65%</span>
+</div>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Progresso Geral</p>
+<p class="text-xl font-bold text-accent-blue dark:text-white">Faltam 12 módulos</p>
+<p class="text-sm text-green-500 font-medium">Bom ritmo esta semana!</p>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Main Feed (2 Columns) -->
+<div class="lg:col-span-2 space-y-8">
+<!-- Resume Learning Card -->
+<div class="relative overflow-hidden bg-accent-blue rounded-3xl p-8 text-white min-h-[240px] flex flex-col justify-between group">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+<div class="absolute inset-0 bg-gradient-to-br from-primary via-transparent to-transparent"></div>
+<div class="absolute bottom-0 right-0 w-64 h-64 bg-primary blur-[80px] rounded-full translate-x-1/2 translate-y-1/2"></div>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 text-primary text-sm font-bold uppercase tracking-widest mb-4">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                Continue de onde parou
+              </div>
+<h2 class="text-2xl font-bold mb-2">Módulo 4: Arquitetura de APIs Modernas</h2>
+<p class="text-slate-300 max-w-md">Próximo vídeo: Implementação de Autenticação JWT com Node.js e Middleware de segurança.</p>
+</div>
+<div class="relative z-10 flex items-center gap-4">
+<button class="bg-primary hover:bg-orange-600 px-8 py-3 rounded-xl font-bold transition-all flex items-center gap-2 group-hover:scale-105">
+<span class="material-icons-round">play_circle</span>
+                Retomar Aula
+              </button>
+<div class="text-sm text-slate-400">
+<span class="font-bold text-white">18 min</span> restantes
+              </div>
+</div>
+</div>
+<!-- Courses Grid -->
+<div>
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xl font-bold text-accent-blue dark:text-white">Meus Cursos em Andamento</h3>
+<button class="text-primary font-semibold text-sm hover:underline">Ver todos</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Course Card 1 -->
+<div class="bg-white dark:bg-zinc-900 p-5 rounded-2xl border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-md transition-shadow">
+<div class="h-32 rounded-xl bg-slate-100 dark:bg-zinc-800 mb-4 overflow-hidden relative">
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-zinc-900/90 px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">UI/UX Design</div>
+<div class="w-full h-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center">
+<span class="material-icons-round text-white text-4xl">brush</span>
+</div>
+</div>
+<h4 class="font-bold mb-1 truncate">UI/UX Design: Princípios Avançados</h4>
+<div class="flex items-center gap-2 mb-4">
+<div class="flex-1 h-1.5 bg-slate-100 dark:bg-zinc-800 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[45%]"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-400">45%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-icons-round text-slate-400 text-sm">schedule</span>
+<span class="text-xs text-slate-500">4h restantes</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-slate-50 dark:bg-zinc-800 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-icons-round text-lg">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="bg-white dark:bg-zinc-900 p-5 rounded-2xl border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-md transition-shadow">
+<div class="h-32 rounded-xl bg-slate-100 dark:bg-zinc-800 mb-4 overflow-hidden relative">
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-zinc-900/90 px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">Computação</div>
+<div class="w-full h-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+<span class="material-icons-round text-white text-4xl">code</span>
+</div>
+</div>
+<h4 class="font-bold mb-1 truncate">Algoritmos Avançados &amp; Estrutura</h4>
+<div class="flex items-center gap-2 mb-4">
+<div class="flex-1 h-1.5 bg-slate-100 dark:bg-zinc-800 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[82%]"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-400">82%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-icons-round text-slate-400 text-sm">schedule</span>
+<span class="text-xs text-slate-500">1h restante</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-slate-50 dark:bg-zinc-800 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-icons-round text-lg">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Course Card 3 -->
+<div class="bg-white dark:bg-zinc-900 p-5 rounded-2xl border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-md transition-shadow">
+<div class="h-32 rounded-xl bg-slate-100 dark:bg-zinc-800 mb-4 overflow-hidden relative">
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-zinc-900/90 px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">Idiomas</div>
+<div class="w-full h-full bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center">
+<span class="material-icons-round text-white text-4xl">language</span>
+</div>
+</div>
+<h4 class="font-bold mb-1 truncate">Inglês para Tecnologia</h4>
+<div class="flex items-center gap-2 mb-4">
+<div class="flex-1 h-1.5 bg-slate-100 dark:bg-zinc-800 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[15%]"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-400">15%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-icons-round text-slate-400 text-sm">schedule</span>
+<span class="text-xs text-slate-500">12h restantes</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-slate-50 dark:bg-zinc-800 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-icons-round text-lg">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="bg-slate-100/50 dark:bg-zinc-900/50 p-5 rounded-2xl border-2 border-dashed border-slate-200 dark:border-zinc-800 flex flex-col items-center justify-center group cursor-pointer hover:bg-white dark:hover:bg-zinc-900 transition-all">
+<div class="w-12 h-12 rounded-full bg-white dark:bg-zinc-800 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors">
+<span class="material-icons-round">add</span>
+</div>
+<p class="mt-2 text-sm font-bold text-slate-400 group-hover:text-primary">Explorar novos cursos</p>
+</div>
+</div>
+</div>
+<!-- Learning Stats -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-slate-100 dark:border-zinc-800 shadow-sm">
+<h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+<span class="material-icons-round text-primary">bar_chart</span>
+                Horas Estudadas
+              </h3>
+<div class="flex items-end justify-between h-32 gap-2">
+<div class="w-full bg-slate-100 dark:bg-zinc-800 rounded-t-lg h-[40%] hover:bg-primary/40 transition-all cursor-pointer relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 text-[10px] font-bold bg-accent-blue text-white px-1.5 py-0.5 rounded">2h</div>
+</div>
+<div class="w-full bg-slate-100 dark:bg-zinc-800 rounded-t-lg h-[65%] hover:bg-primary/40 transition-all cursor-pointer relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 text-[10px] font-bold bg-accent-blue text-white px-1.5 py-0.5 rounded">4h</div>
+</div>
+<div class="w-full bg-slate-100 dark:bg-zinc-800 rounded-t-lg h-[85%] hover:bg-primary/40 transition-all cursor-pointer relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 text-[10px] font-bold bg-accent-blue text-white px-1.5 py-0.5 rounded">6h</div>
+</div>
+<div class="w-full bg-primary rounded-t-lg h-[100%] cursor-pointer relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 opacity-100 text-[10px] font-bold bg-accent-blue text-white px-1.5 py-0.5 rounded">8h</div>
+</div>
+<div class="w-full bg-slate-100 dark:bg-zinc-800 rounded-t-lg h-[50%] hover:bg-primary/40 transition-all cursor-pointer relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 text-[10px] font-bold bg-accent-blue text-white px-1.5 py-0.5 rounded">3h</div>
+</div>
+<div class="w-full bg-slate-100 dark:bg-zinc-800 rounded-t-lg h-[30%] hover:bg-primary/40 transition-all cursor-pointer relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 text-[10px] font-bold bg-accent-blue text-white px-1.5 py-0.5 rounded">1h</div>
+</div>
+</div>
+<div class="flex justify-between mt-3 text-[10px] font-bold text-slate-400 uppercase tracking-tighter">
+<span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-slate-100 dark:border-zinc-800 shadow-sm">
+<h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+<span class="material-icons-round text-primary">auto_awesome</span>
+                Skills Adquiridas
+              </h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold border border-primary/20">React Native</span>
+<span class="px-4 py-2 bg-accent-blue/5 dark:bg-zinc-800 text-slate-500 rounded-full text-xs font-bold border border-slate-200 dark:border-zinc-700">Figma Mastery</span>
+<span class="px-4 py-2 bg-accent-blue/5 dark:bg-zinc-800 text-slate-500 rounded-full text-xs font-bold border border-slate-200 dark:border-zinc-700">Node.js API</span>
+<span class="px-4 py-2 bg-accent-blue/5 dark:bg-zinc-800 text-slate-500 rounded-full text-xs font-bold border border-slate-200 dark:border-zinc-700">TypeScript</span>
+<span class="px-4 py-2 bg-accent-blue/5 dark:bg-zinc-800 text-slate-500 rounded-full text-xs font-bold border border-slate-200 dark:border-zinc-700">SQL Basics</span>
+<span class="px-4 py-2 bg-accent-blue/5 dark:bg-zinc-800 text-slate-500 rounded-full text-xs font-bold border border-slate-200 dark:border-zinc-700">Agile Kanban</span>
+</div>
+<div class="mt-8 pt-6 border-t border-slate-50 dark:border-zinc-800 flex items-center justify-between">
+<div>
+<p class="text-[10px] text-slate-400 font-bold uppercase">Nível atual</p>
+<p class="font-bold">Intermediário II</p>
+</div>
+<div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-icons-round">trending_up</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Widgets (1 Column) -->
+<div class="space-y-8">
+<!-- Calendar/Deadlines -->
+<div class="bg-white dark:bg-zinc-900 rounded-3xl p-6 border border-slate-100 dark:border-zinc-800 shadow-sm">
+<h3 class="text-lg font-bold mb-6">Próximos Prazos</h3>
+<div class="space-y-6">
+<div class="flex gap-4 relative">
+<div class="flex flex-col items-center">
+<div class="w-2 h-2 rounded-full bg-red-500 mt-1.5"></div>
+<div class="w-[1px] h-full bg-slate-100 dark:bg-zinc-800 mt-2"></div>
+</div>
+<div>
+<p class="text-xs font-bold text-red-500 uppercase tracking-wider mb-1">Hoje, 23:59</p>
+<p class="font-bold text-accent-blue dark:text-white leading-tight">Entrega de Projeto Final: Redesign Hub</p>
+<p class="text-xs text-slate-500 mt-1">Módulo 4: UI/UX Design</p>
+</div>
+</div>
+<div class="flex gap-4 relative">
+<div class="flex flex-col items-center">
+<div class="w-2 h-2 rounded-full bg-primary mt-1.5"></div>
+<div class="w-[1px] h-full bg-slate-100 dark:bg-zinc-800 mt-2"></div>
+</div>
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-wider mb-1">Amanhã, 19:00</p>
+<p class="font-bold text-accent-blue dark:text-white leading-tight">Mentoria ao Vivo: Carreira &amp; LinkedIn</p>
+<p class="text-xs text-slate-500 mt-1">Com Tutor Bruno Souza</p>
+<button class="mt-3 text-[10px] bg-primary text-white font-bold py-1.5 px-3 rounded-lg flex items-center gap-1">
+<span class="material-icons-round text-sm">videocam</span>
+                    Adicionar ao Agenda
+                  </button>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-2 h-2 rounded-full bg-slate-300 mt-1.5"></div>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Sexta, 15 Out</p>
+<p class="font-bold text-accent-blue dark:text-white leading-tight">Quiz de Algoritmos Nível 2</p>
+<p class="text-xs text-slate-500 mt-1">Liberação do conteúdo</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Mentorship Promo -->
+<div class="bg-gradient-to-br from-primary to-orange-600 rounded-3xl p-6 text-white shadow-lg shadow-primary/20">
+<span class="material-icons-round text-4xl mb-4">psychology</span>
+<h3 class="text-xl font-bold mb-2">Dúvidas no código?</h3>
+<p class="text-white/80 text-sm mb-6">Agende uma sessão individual de 15 minutos com um mentor sênior hoje mesmo.</p>
+<button class="w-full py-3 bg-white text-primary font-bold rounded-xl hover:bg-slate-50 transition-colors">Agendar Agora</button>
+</div>
+<!-- Community/Leaderboard Mini -->
+<div class="bg-white dark:bg-zinc-900 rounded-3xl p-6 border border-slate-100 dark:border-zinc-800 shadow-sm">
+<h3 class="text-lg font-bold mb-4">Leaderboard Semanal</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="text-sm font-bold text-slate-400 w-4">1</span>
+<img class="w-8 h-8 rounded-full border border-primary/20" data-alt="Female student profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6_YhcB5oNnX_oJaWsU9StSPYsfXujvK9WhrOkC727W1wkhMqz3dLdGfxnSZodpCgJ2NRmC0zN7ZAhANcVMA9P1hkIoouessnyh9LPahSs-RE36631hLKAbmPR9Xk2Yt-W5y3D7pEFHltS93fxldMB_COYKFHpwDbFzi-nxjbFGF33OT-ranJcP3uUV9t_acWMv0HMar44diVr86-AuURcXikOwmRNUGa5Rj9yB24dTdMTh3_ZkeRfzRX8cE18XiEibrd9Qcbv_CI"/>
+<span class="text-sm font-medium flex-1">Ana Julia</span>
+<span class="text-xs font-bold text-primary">2,450 XP</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-bold text-slate-400 w-4">2</span>
+<img class="w-8 h-8 rounded-full" data-alt="Male student profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQnlAnM_4nROygGzyUdKws3LQFV_2uHWrGO0nfrH76h0Ch5EKZSR31kW9-I60E7XZvG3W384BECReomW7PFTZvpUgwF-uUfj7sNiakAAQMCUgV-i-p9WoBeAvPTx5rHASjy5dcya_KImeYif16LA2wv0d2N-vI3-2uHp5lsPaVm8Op8ruswBQMAriArM9x5gizAKKRmAwKjwNdZJIli4LZ-PAW-mMDzHdl8ii19bJBGyVnEF2C7olH6jn22lNcPUpEkrSCIiHx6Sc"/>
+<span class="text-sm font-medium flex-1">Pedro Santos</span>
+<span class="text-xs font-bold text-primary">2,120 XP</span>
+</div>
+<div class="flex items-center gap-3 bg-primary/5 -mx-2 px-2 py-1.5 rounded-xl border border-primary/10">
+<span class="text-sm font-bold text-primary w-4">3</span>
+<img class="w-8 h-8 rounded-full ring-2 ring-primary" data-alt="Current user profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsONUVOR4EXqsRj5xuIY7KeDdsSxp5GZNRmJoGHKrjL6tc6_6gVZ5pZl47wuQ335Ozfb7mGz6DPFl4IHXD89MLm8M6pM4lFW95P2iZ4MTiY8Ev93g1q0ToEXKmv_XRXD2wBpF8OP5hxIaU9YuJSWdf0ZjFc1m0gOy0M9ZgFZXDxvOQOtjJ43GC3s2vmH_1qDD5NSboW4RUrc7qsJKUkd51160jhjrwji9W34v56scVGnR61KDCq1FLlnl_sEcUjwcZH3DMIb49jhc"/>
+<span class="text-sm font-bold flex-1">Você</span>
+<span class="text-xs font-bold text-primary">1,980 XP</span>
+</div>
+</div>
+<button class="w-full mt-6 py-2 text-xs font-bold text-slate-500 hover:text-primary transition-colors">Ver ranking completo</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

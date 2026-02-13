@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "accent-orange": "#FF6B00",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                        "neutral-light": "#e2e8f0",
+                        "neutral-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .roadmap-line {
+            height: 4px;
+            background: #FF6B00;
+            position: absolute;
+            top: 24px;
+            left: 0;
+            right: 0;
+            z-index: 0;
+        }
+        .roadmap-node {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-primary dark:text-neutral-light font-display selection:bg-accent-orange selection:text-white">
+<!-- Roadmap Section -->
+<section class="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-primary dark:text-white mb-4">
+                Nossa Jornada: 3 Anos de Impacto
+            </h2>
+<p class="text-lg text-primary/70 dark:text-neutral-light/70 max-w-2xl mx-auto">
+                Uma visão clara do crescimento sustentável e do impacto social que estamos construindo passo a passo.
+            </p>
+</div>
+<div class="relative mt-20">
+<!-- Connecting Line -->
+<div class="roadmap-line opacity-30 dark:opacity-20 hidden md:block"></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+<!-- Milestone 1 -->
+<div class="roadmap-node group text-center md:text-left">
+<div class="flex flex-col items-center md:items-start">
+<div class="w-12 h-12 bg-accent-orange rounded-full flex items-center justify-center text-white mb-6 shadow-lg shadow-accent-orange/20 ring-4 ring-background-light dark:ring-background-dark">
+<span class="material-icons">flag</span>
+</div>
+<div class="space-y-3">
+<span class="text-accent-orange font-bold uppercase tracking-wider text-sm">Fase 01</span>
+<h3 class="text-2xl font-bold text-primary dark:text-white">Ano 1: Projeto Piloto</h3>
+<p class="text-primary/70 dark:text-neutral-light/70 leading-relaxed">
+                                Estabelecimento das fundações, parcerias locais e validação do modelo educacional com as primeiras turmas.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Milestone 2 -->
+<div class="roadmap-node group text-center md:text-left">
+<div class="flex flex-col items-center md:items-start">
+<div class="w-12 h-12 bg-accent-orange rounded-full flex items-center justify-center text-white mb-6 shadow-lg shadow-accent-orange/20 ring-4 ring-background-light dark:ring-background-dark">
+<span class="material-icons">trending_up</span>
+</div>
+<div class="space-y-3">
+<span class="text-accent-orange font-bold uppercase tracking-wider text-sm">Fase 02</span>
+<h3 class="text-2xl font-bold text-primary dark:text-white">Ano 2: Expansão Regional</h3>
+<p class="text-primary/70 dark:text-neutral-light/70 leading-relaxed">
+                                Ampliação para múltiplos estados brasileiros, integrando novas tecnologias e refinando o currículo técnico.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="roadmap-node group text-center md:text-left">
+<div class="flex flex-col items-center md:items-start">
+<div class="w-12 h-12 bg-accent-orange rounded-full flex items-center justify-center text-white mb-6 shadow-lg shadow-accent-orange/20 ring-4 ring-background-light dark:ring-background-dark">
+<span class="material-icons">public</span>
+</div>
+<div class="space-y-3">
+<span class="text-accent-orange font-bold uppercase tracking-wider text-sm">Fase 03</span>
+<h3 class="text-2xl font-bold text-primary dark:text-white">Ano 3: Escala Continental</h3>
+<p class="text-primary/70 dark:text-neutral-light/70 leading-relaxed">
+                                Consolidação como referência na América Latina, exportando o modelo de impacto para comunidades globais.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mentors Recruitment Section -->
+<section class="py-24 bg-white dark:bg-neutral-dark/30 border-y border-neutral-light dark:border-white/5">
+<div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<!-- Left: Persuasion Content -->
+<div>
+<h2 class="text-4xl font-extrabold text-primary dark:text-white mb-6 leading-tight">
+                        Ensine, Inspire e Transforme o Futuro da Tecnologia
+                    </h2>
+<p class="text-lg text-primary/70 dark:text-neutral-light/70 mb-10 leading-relaxed">
+                        Buscamos desenvolvedores e designers seniores que desejam compartilhar conhecimento e mentorar a próxima geração de talentos, impulsionando a inclusão digital com excelência técnica.
+                    </p>
+<!-- Benefits Grid -->
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 dark:bg-primary/30 flex items-center justify-center text-primary dark:text-accent-orange">
+<span class="material-icons">payments</span>
+</div>
+<div>
+<h4 class="font-bold text-primary dark:text-white">Remuneração competitiva</h4>
+<p class="text-primary/60 dark:text-neutral-light/60">Valorizamos seu tempo e experiência com pacotes atrativos de mentoria.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 dark:bg-primary/30 flex items-center justify-center text-primary dark:text-accent-orange">
+<span class="material-icons">language</span>
+</div>
+<div>
+<h4 class="font-bold text-primary dark:text-white">Networking global</h4>
+<p class="text-primary/60 dark:text-neutral-light/60">Conecte-se com especialistas internacionais e empresas de ponta no setor tech.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 dark:bg-primary/30 flex items-center justify-center text-primary dark:text-accent-orange">
+<span class="material-icons">insights</span>
+</div>
+<div>
+<h4 class="font-bold text-primary dark:text-white">Participação estratégica</h4>
+<p class="text-primary/60 dark:text-neutral-light/60">Influencie diretamente a evolução do currículo e a metodologia do projeto.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: CTA Card -->
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-accent-orange rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+<div class="relative bg-white dark:bg-background-dark p-8 md:p-12 rounded-xl border border-neutral-light dark:border-white/10 shadow-2xl flex flex-col items-center text-center">
+<div class="w-24 h-24 mb-8 rounded-full overflow-hidden border-4 border-primary/10">
+<img alt="Mentora Profissional" class="w-full h-full object-cover" data-alt="Professional woman mentor smiling confidently" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCXEqByHQRrTiFGpZrRHiOpj5kFnm_iO5WpBv4XrcAy-T7t8HoolMAXlk11qDSqdAbIb77vtjrStFIi4YPFU3ovRTv51n-nUPXU7rOHbCjvCX_LVCFuH7xqHtnqT9oH4_SVo3l19e10c3ulekftvc-PYTK0jFMFhKkL14C-nABmWjCA0jMe1egesjywGF-6nYlYxfRiaMt1GIrGudfgnJy26ADrpuA2T2hak0T6_YsMqkmZs_eBk9zRAwarVmWzFC90Qno7rAMeMI"/>
+</div>
+<h3 class="text-2xl font-bold text-primary dark:text-white mb-4">Pronto para começar?</h3>
+<p class="text-primary/60 dark:text-neutral-light/60 mb-8">
+                            Seja parte fundamental de um ecossistema que está redesenhando o futuro da educação tecnológica no Brasil.
+                        </p>
+<button class="w-full py-4 px-8 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-all transform hover:-translate-y-1 shadow-xl hover:shadow-primary/20 flex items-center justify-center gap-2">
+<span>Enviar Candidatura</span>
+<span class="material-icons text-sm">send</span>
+</button>
+<p class="mt-4 text-xs text-primary/40 dark:text-neutral-light/40">
+                            Processo de seleção contínuo • Resposta em até 5 dias úteis
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Sub-bar -->
+<div class="bg-primary py-8 overflow-hidden relative">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
+</div>
+<div class="max-w-7xl mx-auto px-6 text-center">
+<p class="text-white/80 font-medium tracking-wide">
+                FAÇA PARTE DA ELITE TECH. <span class="text-accent-orange font-bold">+50 MENTORES</span> JÁ ESTÃO IMPACTANDO MILHARES DE VIDAS.
+            </p>
+</div>
+</div>
+</body></html>

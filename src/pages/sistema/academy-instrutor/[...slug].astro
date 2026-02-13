@@ -1,0 +1,32 @@
+---
+import InstructorLayout from '../../../../layouts/InstructorLayout.astro';
+import Dashboard from '../../../../components/academy/instructor/Dashboard.astro';
+import MyCourses from '../../../../components/academy/instructor/MyCourses.astro';
+import Financial from '../../../../components/academy/instructor/Financial.astro';
+import Settings from '../../../../components/academy/instructor/Settings.astro';
+
+const { slug } = Astro.params;
+
+let component;
+switch (slug) {
+    case 'dashboard':
+        component = Dashboard;
+        break;
+    case 'cursos':
+        component = MyCourses;
+        break;
+    case 'financeiro':
+        component = Financial;
+        break;
+    case 'configuracoes':
+        component = Settings;
+        break;
+    default:
+        // Renderiza o Dashboard por padrão ou uma página 404
+        component = Dashboard;
+}
+---
+
+<InstructorLayout>
+    <svelte:component this={component} />
+</InstructorLayout>

@@ -1,0 +1,19 @@
+---
+import Card from '../dashboard/Card.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+  <Card title="Total de Alunos" value="1,250">
+    <Icon name="ic:round-people" class="h-8 w-8 text-blue-500" />
+  </Card>
+  <Card title="Novos Alunos (Mês)" value="150">
+    <Icon name="ic:round-person-add" class="h-8 w-8 text-green-500" />
+  </Card>
+  <Card title="Cursos Ativos" value="25">
+    <Icon name="ic:round-class" class="h-8 w-8 text-yellow-500" />
+  </Card>
+  <Card title="Receita (Mês)" value="R$ 12.500,00">
+    <Icon name="ic:round-attach-money" class="h-8 w-8 text-red-500" />
+  </Card>
+</div>

@@ -1,0 +1,13 @@
+---
+import AcademyInstructorLayout from '../../../../layouts/AcademyInstructorLayout.astro';
+import StatsCard from '../../../../components/academy/instructor/StatsCard.astro';
+---
+
+<AcademyInstructorLayout>
+    <div class="dashboard-grid">
+        <StatsCard title="Alunos Ativos" value="1,250" icon="fa-solid fa-user-graduate" />
+        <StatsCard title="Cursos Publicados" value="25" icon="fa-solid fa-chalkboard-teacher" />
+        <StatsCard title="Novos Alunos" value="150" icon="fa-solid fa-user-plus" />
+        <StatsCard title="Ganhos Mensais" value="R$ 12,500" icon="fa-solid fa-dollar-sign" />
+    </div>
+</AcademyInstructorLayout>

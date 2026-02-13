@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>E-mail Enviado | Projeto Novos Horizonte</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee8c2b",
+                        "primary-dark": "#d47a22",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221910",
+                        "accent-blue": "#1e293b",
+                        "deep-blue": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .registration-split {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 45% 55%;
+        }
+        @media (max-width: 1024px) {
+            .registration-split {
+                grid-template-columns: 1fr;
+            }
+            .left-branding {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 font-display overflow-hidden">
+<div class="registration-split">
+<div class="left-branding bg-deep-blue relative overflow-hidden flex flex-col justify-between p-12">
+<div class="absolute top-0 right-0 w-full h-full opacity-20 pointer-events-none">
+<div class="absolute inset-0 bg-gradient-to-br from-primary via-transparent to-transparent"></div>
+<div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary blur-[120px] rounded-full translate-x-1/2 translate-y-1/2"></div>
+</div>
+<div class="relative z-10 flex items-center gap-3">
+<div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/20">
+<span class="material-icons-round text-2xl">rocket_launch</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-bold tracking-tight leading-none text-white">NOVOS</span>
+<span class="text-xs uppercase tracking-[0.2em] font-semibold text-primary">Horizonte</span>
+</div>
+</div>
+<div class="relative z-10">
+<h1 class="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">Recupere seu <span class="text-primary">acesso.</span></h1>
+<p class="text-slate-400 text-lg max-w-md leading-relaxed">
+                Não se preocupe, estamos aqui para ajudar você a voltar à sua jornada de evolução digital.
+            </p>
+</div>
+<div class="relative z-10 pt-8 border-t border-white/10">
+<p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Educação de Alto Nível</p>
+</div>
+</div>
+<div class="bg-background-light flex items-center justify-center p-8 lg:p-16 overflow-y-auto">
+<div class="w-full max-w-md text-center">
+<div class="mb-8">
+<div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center mb-8 mx-auto shadow-xl shadow-primary/30">
+<span class="material-icons-round text-white text-5xl">mail</span>
+</div>
+<h2 class="text-3xl font-bold text-accent-blue mb-4">E-mail enviado com sucesso!</h2>
+<p class="text-slate-500 leading-relaxed text-base">
+                    Enviamos as instruções de recuperação para o e-mail: <br/>
+<span class="font-bold text-slate-700">seu-email@dominio.com</span>. <br/>
+                    Por favor, verifique sua caixa de entrada e a pasta de spam.
+                </p>
+</div>
+<div class="space-y-6">
+<a class="block w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-0.5 active:scale-[0.98]" href="#">
+                    Abrir E-mail
+                </a>
+<p class="text-sm text-slate-500">
+                    Não recebeu o e-mail? 
+                    <a class="text-primary font-bold hover:underline decoration-2 underline-offset-4 ml-1" href="#">Reenviar link</a>
+</p>
+</div>
+<div class="mt-12">
+<a class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-icons-round text-lg">arrow_back</span>
+                    Voltar para o Login
+                </a>
+</div>
+<div class="mt-20">
+<p class="text-[10px] text-slate-400 leading-relaxed uppercase tracking-widest font-medium">
+                    Projeto Novos Horizonte © 2024
+                </p>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

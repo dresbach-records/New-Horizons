@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Novos Horizonte Academy - Individual Student Performance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f27f0d",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#111827",
+                        "sidebar-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Inter', sans-serif; }
+        .metric-card:hover { transform: translateY(-2px); transition: all 0.2s ease; }
+        .gauge-svg { transform: rotate(-90deg); }
+        .radar-grid { clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
+        .timeline-dot { position: relative; }
+        .timeline-dot::after { content: ''; position: absolute; top: 100%; left: 50%; width: 2px; height: 100%; background: #e2e8f0; transform: translateX(-50%); }
+        .timeline-dot:last-child::after { display: none; }
+    </style>
+</head>
+<body class="bg-background-light text-slate-800 min-h-screen flex">
+<aside class="w-64 bg-sidebar-dark text-white flex flex-col fixed h-full z-50">
+<div class="p-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons-round text-white text-xl">school</span>
+</div>
+<span class="font-bold text-lg tracking-tight">Novos Horizonte</span>
+</div>
+<nav class="flex-1 px-4 py-6 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-icons-round text-primary">arrow_back</span>
+<span class="font-medium">Voltar para Turma</span>
+</a>
+<div class="pt-4 pb-2 px-4 text-[10px] font-bold text-slate-500 uppercase tracking-wider">Gestão do Aluno</div>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary/10 text-primary border-r-4 border-primary rounded-r-none rounded-lg transition-all" href="#">
+<span class="material-icons-round">analytics</span>
+<span class="font-medium">Relatório Desempenho</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-icons-round">history</span>
+<span class="font-medium">Histórico Acadêmico</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-icons-round">mail</span>
+<span class="font-medium">Contatar Aluno</span>
+</a>
+</nav>
+<div class="p-4 mt-auto">
+<div class="bg-white/5 rounded-xl p-4 flex items-center gap-3">
+<img alt="Mentor Profile" class="w-10 h-10 rounded-full border-2 border-primary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd0sxz3EItUuzCra1t1yfIMifiLjN7niC-XgLBZne4c17JFUM-wmKaZuqh02DXxtwrneLqMIXzahyhMBO4auiH3Kjg9c-qJV5MGypZDeymdMdd6ROzbzVH8VRHU0uPe739igdGS7By7CNfMuUkv_sqeNaOW0j6JMnQ1NrAHcCZG09b_5_vfWl81bvi0UpVpshLAlIYxUjHwN1mivWi0MwsKrO-fSXImK9KMoE7WxV72ZW4YOKldikmKaHj5k-tTe7iHGpCRh-Per8"/>
+<div class="overflow-hidden">
+<p class="text-sm font-semibold truncate">Ricardo Mendes</p>
+<p class="text-xs text-slate-500 truncate">Mentor Responsável</p>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 ml-64 p-8">
+<header class="mb-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-8">
+<div class="relative">
+<img alt="Student Profile" class="w-32 h-32 rounded-2xl object-cover border-4 border-white shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwO_Zm0u1cB_ykWDxMiM0A8JNihJLSwrk8264cXY2paYlwXalsI67tW8UK5EfS2dB4OzWVS3P9bC0Sq25BLTHKRZR3pPE7qn5NvFJ6Zbg74tnPawfvNv4YdPBxM5JzvNfiTlSA55RBRsP3VF82s6q0-vbqdYg5z0yjnqBXFuANSZ9vih5fQjODb95SmiNhuHqI23t6U4HaEYH4hw3_0hnW7W41zjA8exjfFVhszwsrg1p5T-cCMCJV6OCnPICrDsMCLX0eVKi256Y"/>
+<div class="absolute -bottom-2 -right-2 bg-green-500 w-6 h-6 rounded-full border-4 border-white"></div>
+</div>
+<div>
+<div class="flex items-center gap-3 mb-1">
+<h1 class="text-3xl font-bold text-slate-900">João Luanda</h1>
+<span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full">BOLSISTA</span>
+</div>
+<p class="text-slate-500 font-medium">Curso: <span class="text-slate-900">Product Design Masterclass</span></p>
+<p class="text-slate-500 font-medium">Módulo Atual: <span class="text-slate-900">Módulo 04 - Visual Interface Avançado</span></p>
+<div class="flex gap-4 mt-4">
+<button class="px-4 py-2 bg-sidebar-dark text-white rounded-lg text-sm font-medium hover:bg-slate-800">Ver Portfólio</button>
+<button class="px-4 py-2 border border-slate-200 rounded-lg text-sm font-medium hover:bg-slate-50">Configurações</button>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col items-center justify-center relative overflow-hidden">
+<div class="relative w-32 h-32 flex items-center justify-center">
+<svg class="w-full h-full gauge-svg" viewBox="0 0 100 100">
+<circle class="text-slate-100" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-width="10"></circle>
+<circle class="text-primary" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="37.68" stroke-linecap="round" stroke-width="10"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-2xl font-bold">85%</span>
+</div>
+</div>
+<p class="mt-2 font-bold text-slate-800">Engajamento Global</p>
+<p class="text-xs text-slate-400">Acima da média da turma (72%)</p>
+</div>
+</header>
+<div class="grid grid-cols-1 xl:grid-cols-4 gap-6">
+<div class="xl:col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="metric-card bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+<div class="flex items-center justify-between mb-4">
+<div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center">
+<span class="material-icons-round">grade</span>
+</div>
+<span class="text-green-500 text-xs font-bold">+5% vs mês ant.</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Média de Notas</p>
+<h3 class="text-2xl font-bold">9.2 / 10</h3>
+</div>
+<div class="metric-card bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+<div class="flex items-center justify-between mb-4">
+<div class="w-10 h-10 bg-orange-50 text-primary rounded-lg flex items-center justify-center">
+<span class="material-icons-round">event_available</span>
+</div>
+<span class="text-slate-400 text-xs font-bold">Consistente</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Frequência nas Aulas</p>
+<h3 class="text-2xl font-bold">98%</h3>
+</div>
+<div class="metric-card bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+<div class="flex items-center justify-between mb-4">
+<div class="w-10 h-10 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center">
+<span class="material-icons-round">task_alt</span>
+</div>
+<span class="text-slate-400 text-xs font-bold">12 totais</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Projetos Concluídos</p>
+<h3 class="text-2xl font-bold">11</h3>
+</div>
+<div class="metric-card bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+<div class="flex items-center justify-between mb-4">
+<div class="w-10 h-10 bg-green-50 text-green-600 rounded-lg flex items-center justify-center">
+<span class="material-icons-round">forum</span>
+</div>
+<span class="text-primary text-xs font-bold">Top Contribuidor</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Participação na Comunidade</p>
+<h3 class="text-2xl font-bold">Alta</h3>
+</div>
+</div>
+<div class="xl:col-span-2 bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-bold text-lg flex items-center gap-2">
+<span class="material-icons-round text-primary">hub</span>
+                    Mapeamento de Competências
+                </h2>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Hard vs Soft Skills</span>
+</div>
+<div class="relative h-64 flex items-center justify-center">
+<div class="absolute inset-0 flex items-center justify-center opacity-20">
+<div class="w-56 h-56 border border-slate-400 radar-grid"></div>
+<div class="absolute w-40 h-40 border border-slate-400 radar-grid"></div>
+<div class="absolute w-24 h-24 border border-slate-400 radar-grid"></div>
+</div>
+<svg class="w-56 h-56 z-10 overflow-visible" viewBox="0 0 100 100">
+<polygon fill="rgba(242, 127, 13, 0.3)" points="50,10 85,35 90,75 50,90 20,70 15,30" stroke="#f27f0d" stroke-width="2"></polygon>
+<text class="text-[6px] font-bold fill-slate-500" text-anchor="middle" x="50" y="-5">CODING</text>
+<text class="text-[6px] font-bold fill-slate-500" text-anchor="start" x="100" y="30">UI DESIGN</text>
+<text class="text-[6px] font-bold fill-slate-500" text-anchor="start" x="100" y="80">TEAMWORK</text>
+<text class="text-[6px] font-bold fill-slate-500" text-anchor="middle" x="50" y="105">PROBLEM SOLVING</text>
+<text class="text-[6px] font-bold fill-slate-500" text-anchor="end" x="-5" y="80">COMMUNICATION</text>
+<text class="text-[6px] font-bold fill-slate-500" text-anchor="end" x="-5" y="30">UX RESEARCH</text>
+</svg>
+</div>
+</div>
+<div class="xl:col-span-2 bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+<div class="p-6 border-b border-slate-100 flex justify-between items-center">
+<h2 class="font-bold text-lg flex items-center gap-2">
+<span class="material-icons-round text-primary">folder</span>
+                    Histórico de Projetos
+                </h2>
+<button class="text-primary text-xs font-bold hover:underline">Ver Todos</button>
+</div>
+<div class="flex-1 overflow-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-slate-50 text-[10px] font-bold text-slate-400 uppercase">
+<th class="px-6 py-3">Projeto</th>
+<th class="px-6 py-3">Data Entrega</th>
+<th class="px-6 py-3 text-center">Nota</th>
+<th class="px-6 py-3 text-right">Feedback</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100">
+<tr class="hover:bg-slate-50">
+<td class="px-6 py-4">
+<p class="text-sm font-semibold">User Research Case</p>
+<p class="text-[10px] text-slate-400 uppercase font-medium">Módulo 01</p>
+</td>
+<td class="px-6 py-4 text-xs text-slate-600">12 Out 2023</td>
+<td class="px-6 py-4 text-center">
+<span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded">9.5</span>
+</td>
+<td class="px-6 py-4 text-right">
+<a class="text-primary text-xs font-bold flex items-center justify-end gap-1" href="#">
+<span class="material-icons-round text-sm">visibility</span> Ver
+                                </a>
+</td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="px-6 py-4">
+<p class="text-sm font-semibold">Wireframing Prototypes</p>
+<p class="text-[10px] text-slate-400 uppercase font-medium">Módulo 02</p>
+</td>
+<td class="px-6 py-4 text-xs text-slate-600">28 Out 2023</td>
+<td class="px-6 py-4 text-center">
+<span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded">8.8</span>
+</td>
+<td class="px-6 py-4 text-right">
+<a class="text-primary text-xs font-bold flex items-center justify-end gap-1" href="#">
+<span class="material-icons-round text-sm">visibility</span> Ver
+                                </a>
+</td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="px-6 py-4">
+<p class="text-sm font-semibold">Design System 01</p>
+<p class="text-[10px] text-slate-400 uppercase font-medium">Módulo 03</p>
+</td>
+<td class="px-6 py-4 text-xs text-slate-600">15 Nov 2023</td>
+<td class="px-6 py-4 text-center">
+<span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded">10.0</span>
+</td>
+<td class="px-6 py-4 text-right">
+<a class="text-primary text-xs font-bold flex items-center justify-end gap-1" href="#">
+<span class="material-icons-round text-sm">visibility</span> Ver
+                                </a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="xl:col-span-2 bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-bold text-lg flex items-center gap-2">
+<span class="material-icons-round text-primary">calendar_month</span>
+                    Linha do Tempo de Presença
+                </h2>
+<div class="flex items-center gap-4 text-xs">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-green-500"></span> Presente</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-red-500"></span> Falta</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex gap-4">
+<div class="flex flex-col items-center timeline-dot">
+<div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-600 border-2 border-green-200">
+<span class="material-icons-round text-sm">check</span>
+</div>
+</div>
+<div class="pb-6">
+<p class="text-sm font-bold">Aula ao Vivo #14</p>
+<p class="text-xs text-slate-500">22 Nov • Design Typography &amp; Grids</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center timeline-dot">
+<div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center text-red-600 border-2 border-red-200">
+<span class="material-icons-round text-sm">close</span>
+</div>
+</div>
+<div class="pb-6">
+<p class="text-sm font-bold">Sessão Individual (1-on-1)</p>
+<p class="text-xs text-slate-500">20 Nov • Revisão de Portfólio (Justificado)</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center timeline-dot">
+<div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-600 border-2 border-green-200">
+<span class="material-icons-round text-sm">check</span>
+</div>
+</div>
+<div class="pb-6">
+<p class="text-sm font-bold">Aula ao Vivo #13</p>
+<p class="text-xs text-slate-500">18 Nov • Introdução a Tokens de Design</p>
+</div>
+</div>
+</div>
+</div>
+<div class="xl:col-span-2 bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-bold text-lg flex items-center gap-2">
+<span class="material-icons-round text-primary">note_alt</span>
+                    Observações do Mentor
+                </h2>
+<span class="material-symbols-outlined text-slate-300">lock</span>
+</div>
+<div class="flex-1 bg-slate-50 rounded-xl p-4 border border-dashed border-slate-200 relative">
+<p class="text-xs text-slate-600 italic leading-relaxed">
+                    "O João demonstra uma facilidade excepcional com ferramentas de prototipagem de alta fidelidade. Tem um olhar apurado para micro-interações. No entanto, ainda precisa desenvolver melhor a argumentação teórica por trás das suas escolhas de design. Em termos de potencial de carreira, vejo-o como um excelente candidato para vagas de UI Engineer ou Product Designer focado em Design Systems."
+                </p>
+<div class="mt-4 flex items-center gap-2 pt-4 border-t border-slate-200">
+<span class="text-[10px] font-bold text-slate-400 uppercase">Última atualização: Hoje, 10:45</span>
+</div>
+</div>
+<button class="mt-4 w-full py-3 border-2 border-primary/20 text-primary text-sm font-bold rounded-xl hover:bg-primary/5 transition-colors flex items-center justify-center gap-2">
+<span class="material-icons-round text-lg">add_comment</span>
+                Nova Anotação Privada
+            </button>
+</div>
+</div>
+</main>
+
+</body></html>

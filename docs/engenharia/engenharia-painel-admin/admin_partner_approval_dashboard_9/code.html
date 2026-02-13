@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Investor Relations Portal - Projeto Novos Horizontes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "accent": "#F39C12",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                        "investor-gold": "#C5A059"
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Public Sans', sans-serif; }
+        .sidebar-item-active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #F39C12;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 flex h-screen overflow-hidden">
+<aside class="w-72 bg-primary text-white flex flex-col shrink-0 shadow-xl z-20">
+<div class="p-6 border-b border-white/10 flex items-center gap-3">
+<div class="w-10 h-10 bg-investor-gold rounded-lg flex items-center justify-center">
+<span class="material-icons text-white">handshake</span>
+</div>
+<div>
+<h1 class="font-bold text-lg leading-none uppercase tracking-wider">Novos Horizontes</h1>
+<span class="text-[10px] opacity-70">Investor Relations Portal</span>
+</div>
+</div>
+<nav class="flex-1 py-6 overflow-y-auto custom-scrollbar">
+<div class="px-4 mb-4 text-[11px] uppercase tracking-widest text-white/40 font-bold">Gestão de Ativos</div>
+<a class="flex items-center gap-3 px-6 py-3 sidebar-item-active" href="#">
+<span class="material-icons text-sm">monitoring</span>
+<span class="text-sm font-medium">Portfolio Performance</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">history</span>
+<span class="text-sm font-medium">Histórico de Aportes</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">account_balance</span>
+<span class="text-sm font-medium">Dividendos &amp; ROI</span>
+</a>
+<div class="px-4 mt-8 mb-4 text-[11px] uppercase tracking-widest text-white/40 font-bold">Documentação &amp; Comunicação</div>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">receipt_long</span>
+<span class="text-sm font-medium">Documentos Fiscais</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">forum</span>
+<span class="text-sm font-medium">Canal Direto (Conselho)</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">newspaper</span>
+<span class="text-sm font-medium">Relatórios Trimestrais</span>
+</a>
+</nav>
+<div class="p-4 mt-auto border-t border-white/10">
+<div class="bg-white/5 rounded-lg p-3 flex items-center gap-3">
+<img alt="Admin Profile" class="w-10 h-10 rounded-full border border-white/20 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOReo_e19_4yoog43QfGwr-Jw4INr9ARXr2MuQk3yzVwtgBPKjCuqp65VSP58kT38tV8LaLs-ZMfb_AbXTu0-wsO7LmzKt237wB85YMqVAt29TNe1t_xPDwZizIABK4SUBzvbj6zChFWBIs92h5Ei2IwFHvX-_v6kH1bKlRMWKZYm-C7yPRgKXi0Y0_pjQk8oCKXrZUKxQQilPFgzDucleEypf43_LP5uP9xHBIwmraRq-A7DsfDklhflkGOOktffJpBpqn5gBtDQ"/>
+<div class="overflow-hidden">
+<p class="text-sm font-semibold truncate text-white">Diretoria Global</p>
+<p class="text-[11px] text-white/50 truncate">Acesso Administrativo</p>
+</div>
+<button class="ml-auto text-white/40 hover:text-white">
+<span class="material-icons text-lg">settings</span>
+</button>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-4">
+<div class="flex items-center text-xs font-medium text-slate-400 gap-2">
+<span>Painel Admin</span>
+<span class="material-icons text-xs">chevron_right</span>
+<span class="text-primary dark:text-white font-bold uppercase tracking-tight">Relações com Investidores</span>
+</div>
+<div class="h-6 w-[1px] bg-slate-200 dark:bg-slate-700 mx-2"></div>
+<div class="relative">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="pl-10 pr-4 py-1.5 bg-slate-50 dark:bg-slate-800 border-none rounded-lg text-sm w-96 focus:ring-2 focus:ring-primary/20" placeholder="Buscar investidor ou transação..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-xs font-bold hover:bg-primary/90 transition-colors">
+<span class="material-icons text-sm">add_card</span>
+                NOVO APORTE
+            </button>
+<div class="h-8 w-[1px] bg-slate-200 dark:bg-slate-700 mx-2"></div>
+<button class="w-10 h-10 flex items-center justify-center text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full relative">
+<span class="material-icons">chat_bubble_outline</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-accent rounded-full border-2 border-white dark:border-slate-900"></span>
+</button>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8 space-y-8 custom-scrollbar">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-6">
+<div>
+<h2 class="text-2xl font-bold text-slate-800 dark:text-white">Perfil do Investidor: Alpha Strategic Fund</h2>
+<p class="text-sm text-slate-500 flex items-center gap-2">
+<span class="material-icons text-xs text-investor-gold">verified</span>
+                    Tier Platinum · Investidor desde Outubro 2021 · Sede: Luxemburgo
+                </p>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-600 dark:text-slate-300 flex items-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-800">
+<span class="material-icons text-sm text-investor-gold">mail</span>
+                    CONTATO DIRETO
+                </button>
+<button class="px-4 py-2 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-600 dark:text-slate-300 flex items-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-800">
+<span class="material-icons text-sm">file_download</span>
+                    DOSSIÊ COMPLETO
+                </button>
+</div>
+</div>
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Total Investido (AUM)</p>
+<h3 class="text-2xl font-bold text-primary dark:text-white">$ 4.500.000</h3>
+<div class="flex items-center gap-1 mt-4">
+<span class="text-green-600 text-xs font-bold flex items-center">+12.5% <span class="material-icons text-xs">arrow_upward</span></span>
+<span class="text-[10px] text-slate-400">vs. YTD</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm border-l-4 border-l-investor-gold">
+<p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">ROI Projetado (Annualized)</p>
+<h3 class="text-2xl font-bold text-accent">14.8%</h3>
+<div class="flex items-center gap-1 mt-4">
+<span class="text-slate-400 text-xs font-bold">Meta: 12.0%</span>
+<div class="flex-1 h-1 bg-slate-100 dark:bg-slate-800 rounded-full ml-2">
+<div class="h-full bg-accent w-[100%] rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Dividendos Distribuídos</p>
+<h3 class="text-2xl font-bold">$ 582.400</h3>
+<div class="flex items-center gap-1 mt-4">
+<span class="text-green-600 text-xs font-bold flex items-center">Pago em 15/05</span>
+<span class="material-icons text-xs text-green-600">check_circle</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Score de Impacto ESG</p>
+<h3 class="text-2xl font-bold text-primary dark:text-white">96/100</h3>
+<div class="flex items-center gap-1 mt-4">
+<span class="text-accent text-xs font-bold flex items-center">Top 3% <span class="material-icons text-xs">star</span></span>
+<span class="text-[10px] text-slate-400">Benchmarking Global</span>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h4 class="font-bold text-slate-800 dark:text-white uppercase text-sm tracking-tight">Performance Histórica de ROI</h4>
+<p class="text-xs text-slate-400">Análise de retorno sobre capital alocado por trimestre</p>
+</div>
+<select class="text-xs border-slate-200 dark:border-slate-700 bg-transparent rounded-lg font-bold text-slate-600">
+<option>Últimos 24 meses</option>
+<option>Desde o Início</option>
+</select>
+</div>
+<div class="h-72 flex items-end justify-between relative pt-6 px-4 gap-4">
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full flex justify-center items-end h-full">
+<div class="w-10 bg-slate-100 dark:bg-slate-800 h-[60%] rounded-t-lg relative group">
+<div class="w-full bg-primary/40 h-[80%] absolute bottom-0 rounded-t-lg transition-all hover:bg-primary/60"></div>
+</div>
+</div>
+<span class="text-[10px] text-slate-500 font-bold uppercase">Q1 '23</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full flex justify-center items-end h-full">
+<div class="w-10 bg-slate-100 dark:bg-slate-800 h-[75%] rounded-t-lg relative group">
+<div class="w-full bg-primary/40 h-[85%] absolute bottom-0 rounded-t-lg transition-all hover:bg-primary/60"></div>
+</div>
+</div>
+<span class="text-[10px] text-slate-500 font-bold uppercase">Q2 '23</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full flex justify-center items-end h-full">
+<div class="w-10 bg-slate-100 dark:bg-slate-800 h-[85%] rounded-t-lg relative group">
+<div class="w-full bg-investor-gold h-[95%] absolute bottom-0 rounded-t-lg transition-all hover:opacity-80"></div>
+</div>
+</div>
+<span class="text-[10px] text-slate-500 font-bold uppercase">Q3 '23</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full flex justify-center items-end h-full">
+<div class="w-10 bg-slate-100 dark:bg-slate-800 h-[95%] rounded-t-lg relative group">
+<div class="w-full bg-primary h-full absolute bottom-0 rounded-t-lg transition-all"></div>
+</div>
+</div>
+<span class="text-[10px] text-slate-500 font-bold uppercase">Q4 '23</span>
+</div>
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none pb-8 opacity-20">
+<div class="w-full border-t border-slate-400"></div>
+<div class="w-full border-t border-slate-400"></div>
+<div class="w-full border-t border-slate-400"></div>
+<div class="w-full border-t border-slate-400"></div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-bold text-slate-800 dark:text-white uppercase text-sm tracking-tight">Documentação Fiscal</h4>
+<span class="material-icons text-slate-400">verified_user</span>
+</div>
+<div class="space-y-3">
+<div class="p-3 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-icons text-red-500">picture_as_pdf</span>
+<div>
+<p class="text-xs font-bold">Relatório Anual 2023</p>
+<p class="text-[10px] text-slate-400">PDF · 4.2 MB</p>
+</div>
+</div>
+<button class="p-1 hover:bg-slate-200 dark:hover:bg-slate-700 rounded transition-colors">
+<span class="material-icons text-sm">download</span>
+</button>
+</div>
+<div class="p-3 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-icons text-blue-500">description</span>
+<div>
+<p class="text-xs font-bold">Comprovante de Retenção</p>
+<p class="text-[10px] text-slate-400">XML/PDF · 1.1 MB</p>
+</div>
+</div>
+<button class="p-1 hover:bg-slate-200 dark:hover:bg-slate-700 rounded transition-colors">
+<span class="material-icons text-sm">download</span>
+</button>
+</div>
+<div class="p-3 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-icons text-green-500">fact_check</span>
+<div>
+<p class="text-xs font-bold">Certificado ESG Platinum</p>
+<p class="text-[10px] text-slate-400">PDF · 2.5 MB</p>
+</div>
+</div>
+<button class="p-1 hover:bg-slate-200 dark:hover:bg-slate-700 rounded transition-colors">
+<span class="material-icons text-sm">download</span>
+</button>
+</div>
+</div>
+<div class="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Status de Compliance</span>
+<span class="text-[10px] font-bold text-green-600">REGULARIZADO</span>
+</div>
+<div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-green-500 w-full"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+<div class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+<h4 class="font-bold text-slate-800 dark:text-white uppercase text-sm tracking-tight">Histórico de Transações de Capital</h4>
+<div class="flex gap-2">
+<button class="flex items-center gap-2 px-3 py-1.5 border border-slate-200 dark:border-slate-700 rounded text-xs font-bold text-slate-500">
+<span class="material-icons text-sm">filter_alt</span> FILTRAR
+                    </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50 text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+<th class="px-6 py-4">Data da Transação</th>
+<th class="px-6 py-4">Tipo de Aporte</th>
+<th class="px-6 py-4">Valor (USD)</th>
+<th class="px-6 py-4">Status Transacional</th>
+<th class="px-6 py-4">Alocação Regional</th>
+<th class="px-6 py-4 text-right">Recibo</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+<td class="px-6 py-4 text-xs font-bold">12 Mai 2024</td>
+<td class="px-6 py-4">
+<span class="text-xs font-medium px-2 py-0.5 bg-primary/10 text-primary rounded">Aporte Adicional</span>
+</td>
+<td class="px-6 py-4 text-sm font-bold">$ 1.200.000,00</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-[10px] font-bold text-slate-600 dark:text-slate-300">CONCLUÍDO</span>
+</div>
+</td>
+<td class="px-6 py-4 text-xs font-medium">Pan-Africa Expansion</td>
+<td class="px-6 py-4 text-right">
+<button class="text-primary dark:text-blue-400 material-icons text-lg hover:opacity-70">receipt</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+<td class="px-6 py-4 text-xs font-bold">08 Jan 2024</td>
+<td class="px-6 py-4">
+<span class="text-xs font-medium px-2 py-0.5 bg-accent/10 text-accent rounded">Reinvestimento ROI</span>
+</td>
+<td class="px-6 py-4 text-sm font-bold">$ 450.000,00</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-[10px] font-bold text-slate-600 dark:text-slate-300">CONCLUÍDO</span>
+</div>
+</td>
+<td class="px-6 py-4 text-xs font-medium">Hub Luanda Operacional</td>
+<td class="px-6 py-4 text-right">
+<button class="text-primary dark:text-blue-400 material-icons text-lg hover:opacity-70">receipt</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+<td class="px-6 py-4 text-xs font-bold">22 Out 2023</td>
+<td class="px-6 py-4">
+<span class="text-xs font-medium px-2 py-0.5 bg-primary/10 text-primary rounded">Equity round B</span>
+</td>
+<td class="px-6 py-4 text-sm font-bold">$ 2.850.000,00</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-[10px] font-bold text-slate-600 dark:text-slate-300">CONCLUÍDO</span>
+</div>
+</td>
+<td class="px-6 py-4 text-xs font-medium">Global Headquarters</td>
+<td class="px-6 py-4 text-right">
+<button class="text-primary dark:text-blue-400 material-icons text-lg hover:opacity-70">receipt</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 text-center border-t border-slate-200 dark:border-slate-800">
+<button class="text-xs font-bold text-slate-500 hover:text-primary transition-colors">VER HISTÓRICO COMPLETO DE CAPITAL</button>
+</div>
+</section>
+<section class="bg-primary text-white p-8 rounded-2xl shadow-2xl relative overflow-hidden">
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="max-w-xl">
+<h3 class="text-xl font-bold mb-2">Canal Direto com o Conselho Global</h3>
+<p class="text-white/70 text-sm leading-relaxed">
+                        Como investidor Platinum, você tem acesso prioritário à nossa diretoria executiva para consultas estratégicas, esclarecimentos de governança ou solicitações personalizadas.
+                    </p>
+</div>
+<button class="bg-investor-gold text-white px-8 py-4 rounded-xl font-bold text-sm shadow-lg hover:brightness-110 transition-all flex items-center gap-3">
+<span class="material-icons">send</span>
+                    INICIAR MENSAGEM DIRETA
+                </button>
+</div>
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-32 h-32 bg-accent/10 rounded-full -ml-16 -mb-16"></div>
+</section>
+</div>
+<footer class="h-14 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-8 flex items-center justify-between shrink-0">
+<div class="flex items-center gap-2 text-slate-400 text-xs">
+<span class="material-icons text-sm">lock</span>
+            Criptografia de ponta-a-ponta ativada. Portal restrito a acionistas e diretoria global.
+        </div>
+<div class="flex items-center gap-4 text-xs font-bold text-slate-500">
+<span>Server Time: 24/05/2024 14:30 GMT</span>
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 bg-green-500 rounded-full"></div>
+<span>Sistemas Operacionais</span>
+</div>
+</div>
+</footer>
+</main>
+
+</body></html>

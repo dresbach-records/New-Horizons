@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Criar Conta | Projeto Novos Horizonte</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee8c2b",
+                        "primary-dark": "#d47a22",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221910",
+                        "accent-blue": "#1e293b",
+                        "deep-blue": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .registration-split {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 45% 55%;
+        }
+        @media (max-width: 1024px) {
+            .registration-split {
+                grid-template-columns: 1fr;
+            }
+            .left-branding {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 font-display overflow-hidden">
+<div class="registration-split">
+<div class="left-branding bg-deep-blue relative overflow-hidden flex flex-col justify-between p-12">
+<div class="absolute top-0 right-0 w-full h-full opacity-20 pointer-events-none">
+<div class="absolute inset-0 bg-gradient-to-br from-primary via-transparent to-transparent"></div>
+<div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary blur-[120px] rounded-full translate-x-1/2 translate-y-1/2"></div>
+</div>
+<div class="relative z-10 flex items-center gap-3">
+<div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/20">
+<span class="material-icons-round text-2xl">rocket_launch</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-bold tracking-tight leading-none text-white">NOVOS</span>
+<span class="text-xs uppercase tracking-[0.2em] font-semibold text-primary">Horizonte</span>
+</div>
+</div>
+<div class="relative z-10">
+<h1 class="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">Sua evolução digital começa <span class="text-primary">aqui.</span></h1>
+<p class="text-slate-400 text-lg max-w-md leading-relaxed">
+                Junte-se à maior comunidade de talentos do futuro e acelere sua carreira com mentorias exclusivas e projetos reais.
+            </p>
+<div class="mt-12 space-y-6">
+<div class="flex items-center gap-4 text-white/80">
+<div class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
+<span class="material-icons-round text-primary text-sm">check_circle</span>
+</div>
+<span class="text-sm">Acesso a +50 cursos especializados</span>
+</div>
+<div class="flex items-center gap-4 text-white/80">
+<div class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
+<span class="material-icons-round text-primary text-sm">check_circle</span>
+</div>
+<span class="text-sm">Networking com líderes do mercado</span>
+</div>
+<div class="flex items-center gap-4 text-white/80">
+<div class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
+<span class="material-icons-round text-primary text-sm">check_circle</span>
+</div>
+<span class="text-sm">Certificações reconhecidas</span>
+</div>
+</div>
+</div>
+<div class="relative z-10 pt-8 border-t border-white/10">
+<p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Educação de Alto Nível</p>
+</div>
+</div>
+<div class="bg-background-light flex items-center justify-center p-8 lg:p-16 overflow-y-auto">
+<div class="w-full max-w-md">
+<div class="flex items-center p-1 bg-slate-200/50 rounded-xl mb-10">
+<button class="flex-1 py-3 text-sm font-bold text-slate-500 rounded-lg transition-all">Entrar</button>
+<button class="flex-1 py-3 text-sm font-bold bg-white text-accent-blue rounded-lg shadow-sm">Criar Conta</button>
+</div>
+<div class="mb-10 text-center lg:text-left">
+<h2 class="text-3xl font-bold text-accent-blue mb-2">Seja bem-vindo!</h2>
+<p class="text-slate-500">Preencha seus dados para criar sua conta gratuita.</p>
+</div>
+<form class="space-y-6">
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" for="fullname">Nome Completo</label>
+<div class="relative">
+<span class="material-icons-round absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm">person</span>
+<input class="w-full bg-white border-slate-200 rounded-xl pl-11 pr-4 py-3.5 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" id="fullname" placeholder="Como deseja ser chamado?" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" for="email">E-mail Institucional ou Pessoal</label>
+<div class="relative">
+<span class="material-icons-round absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm">alternate_email</span>
+<input class="w-full bg-white border-slate-200 rounded-xl pl-11 pr-4 py-3.5 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" id="email" placeholder="exemplo@email.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" for="profile">Qual seu Perfil?</label>
+<div class="relative">
+<span class="material-icons-round absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm">badge</span>
+<select class="w-full bg-white border-slate-200 rounded-xl pl-11 pr-10 py-3.5 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all appearance-none" id="profile">
+<option disabled="" selected="" value="">Selecione seu papel</option>
+<option value="aluno">Aluno</option>
+<option value="mentor">Mentor</option>
+<option value="investidor">Investidor</option>
+</select>
+<span class="material-icons-round absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" for="password">Criar Senha</label>
+<div class="relative">
+<span class="material-icons-round absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm">lock</span>
+<input class="w-full bg-white border-slate-200 rounded-xl pl-11 pr-4 py-3.5 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" id="password" placeholder="Mínimo 8 caracteres" type="password"/>
+</div>
+<div class="mt-3">
+<div class="flex gap-1 h-1">
+<div class="flex-1 bg-primary rounded-full"></div>
+<div class="flex-1 bg-primary rounded-full"></div>
+<div class="flex-1 bg-slate-200 rounded-full"></div>
+<div class="flex-1 bg-slate-200 rounded-full"></div>
+</div>
+<div class="flex justify-between items-center mt-2">
+<p class="text-[10px] font-bold text-primary uppercase">Força: Média</p>
+<p class="text-[10px] text-slate-400">Use números e símbolos</p>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-0.5 active:scale-[0.98] mt-4">
+                    Começar Minha Jornada
+                </button>
+<div class="relative py-4">
+<div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-200"></div></div>
+<div class="relative flex justify-center text-xs uppercase"><span class="bg-background-light px-2 text-slate-400 font-medium">Ou cadastre-se com</span></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 bg-white border border-slate-200 py-3 rounded-xl hover:bg-slate-50 transition-colors" type="button">
+<img alt="Google" class="w-4 h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgG3sZZxoagvbxxzwax8dFWEF4JYbIynvGWIqQonMKaD9LrAMdabKXWWskBJFpy0ykv7RQ0SLO1RjEEfviGIrSaFPUN3NoGazXWc-Xrq5Rculu8LwOaZ2jDL8TTmyaEF7n0FKBoBtn71OE336s_MWvaaG2VCGqhuhIDig60Wxay7adGojheAD6e90iGn4l2wcLYcB26mYExVBzqIy72uSVZe_-Q1JdTFQ8RiQFqd-JpO6kKg3_xeA27OBZig3H54QVewYlLO3kXQI"/>
+<span class="text-sm font-semibold">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 bg-white border border-slate-200 py-3 rounded-xl hover:bg-slate-50 transition-colors" type="button">
+<img alt="LinkedIn" class="w-4 h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpFSn91hzKabvTw0vYVKDFAyPg0COYp-t2okiV7kw1tkHiAiSC6lcho_DPlmpMEoWZsRianWBbKJAE7Fs07OfYY03BNytfCEr9RfJSuJT4jKHxxwO3uFhTQ7SMADV3k35IYWt5OM4EO-vZ-hakKwofFARnQTmM3VMpcO-1bCgMd9IXg1MKkssaQdSlVmNeW6wHIQ7cM3IQYTv7CXP34VLIMMzxqt6FriYlJoJVeL1I_4GgpH6t_AfLtlvXRF_XzDu26gXb_SlJj_E"/>
+<span class="text-sm font-semibold">LinkedIn</span>
+</button>
+</div>
+</form>
+<p class="text-center mt-10 text-sm text-slate-500">
+                Já tem uma conta? 
+                <a class="text-primary font-bold hover:underline ml-1" href="#">Entrar</a>
+</p>
+<div class="mt-12 text-center">
+<p class="text-[10px] text-slate-400 leading-relaxed">
+                    Ao se cadastrar, você concorda com nossos <br/>
+<a class="underline" href="#">Termos de Serviço</a> e <a class="underline" href="#">Política de Privacidade</a>.
+                </p>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

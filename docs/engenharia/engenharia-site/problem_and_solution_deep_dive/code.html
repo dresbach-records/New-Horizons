@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Visão Estratégica: O Problema e a Solução | Projeto Novos Horizonte</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(43, 140, 238, 0.4);
+        }
+        .bg-noise {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<!-- Header Navigation -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons text-white">explore</span>
+</div>
+<span class="font-extrabold text-xl tracking-tight">NOVOS<span class="text-primary">HORIZONTE</span></span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-medium">
+<a class="hover:text-primary transition-colors" href="#problema">O Problema</a>
+<a class="hover:text-primary transition-colors" href="#ponte">A Ponte</a>
+<a class="hover:text-primary transition-colors" href="#solucao">A Solução</a>
+<a class="hover:text-primary transition-colors" href="#impacto">Impacto</a>
+<button class="bg-primary text-white px-6 py-2.5 rounded-lg font-bold hover:brightness-110 transition-all shadow-lg shadow-primary/25">
+                    Participar da Missão
+                </button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="pt-32 pb-20 px-6">
+<div class="max-w-5xl mx-auto text-center">
+<span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-bold mb-4 tracking-wider uppercase">Deep Dive Estratégico</span>
+<h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+                    Visão Estratégica:<br/><span class="text-primary">O Problema e a Solução</span>
+</h1>
+<p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                    Uma análise profunda sobre o abismo socioeconômico e tecnológico na África e como o Projeto Novos Horizonte está construindo a ponte para um futuro digital global.
+                </p>
+</div>
+</section>
+<!-- Section 1: The Problem (Dark Theme) -->
+<section class="relative bg-slate-950 text-white py-24 px-6 overflow-hidden" id="problema">
+<div class="absolute inset-0 bg-noise pointer-events-none"></div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="text-4xl font-bold mb-4 flex items-center gap-3">
+<span class="text-red-500 material-icons text-4xl">warning</span>
+                            O Abismo (The Gap)
+                        </h2>
+<p class="text-slate-400 text-lg">
+                            Dados alarmantes que definem a urgência da nossa intervenção. O descompasso entre potencial humano e oportunidade estrutural.
+                        </p>
+</div>
+<div class="text-right">
+<span class="text-6xl font-black text-red-500/20 block">01</span>
+</div>
+</div>
+<!-- Problem Infographics Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Infographic 1: Unemployment -->
+<div class="bg-slate-900 border border-slate-800 p-8 rounded-xl hover:border-red-500/50 transition-colors">
+<div class="mb-6">
+<span class="text-sm font-bold text-red-500 uppercase tracking-widest">Mercado de Trabalho</span>
+<h3 class="text-2xl font-bold mt-2 text-white">Desemprego Juvenil</h3>
+</div>
+<div class="relative h-48 flex items-end gap-2 mb-6">
+<div class="flex-1 bg-slate-800 rounded-t-lg h-[40%] relative group">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">Global</div>
+</div>
+<div class="flex-1 bg-red-600 rounded-t-lg h-[85%] relative group shadow-[0_-10px_20px_rgba(220,38,38,0.3)]">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold">África Subsaariana</div>
+</div>
+<div class="flex-1 bg-slate-800 rounded-t-lg h-[55%] relative group">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">Emergentes</div>
+</div>
+</div>
+<p class="text-slate-400 text-sm">A taxa de desemprego entre jovens qualificados é 3x maior que a média global em regiões específicas.</p>
+</div>
+<!-- Infographic 2: Infrastructure -->
+<div class="bg-slate-900 border border-slate-800 p-8 rounded-xl hover:border-red-500/50 transition-colors">
+<div class="mb-6">
+<span class="text-sm font-bold text-red-500 uppercase tracking-widest">Infraestrutura</span>
+<h3 class="text-2xl font-bold mt-2">Déficit Tecnológico</h3>
+</div>
+<div class="flex items-center justify-center py-4">
+<div class="relative w-32 h-32">
+<svg class="w-full h-full" viewbox="0 0 36 36">
+<path class="text-slate-800 stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3"></path>
+<path class="text-red-600 stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="25, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-2xl font-bold">25%</span>
+<span class="text-[10px] text-slate-500 uppercase">Acesso Digital</span>
+</div>
+</div>
+</div>
+<p class="text-slate-400 text-sm mt-4">Apenas 1 em cada 4 talentos em potencial possui hardware ou conectividade estável para trabalho remoto.</p>
+</div>
+<!-- Infographic 3: Talent Shortage -->
+<div class="bg-slate-900 border border-slate-800 p-8 rounded-xl hover:border-red-500/50 transition-colors">
+<div class="mb-6">
+<span class="text-sm font-bold text-red-500 uppercase tracking-widest">Economia Global</span>
+<h3 class="text-2xl font-bold mt-2">Fuga de Cérebros</h3>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="p-2 bg-red-500/10 rounded">
+<span class="material-icons text-red-500">trending_up</span>
+</div>
+<div>
+<div class="text-xs text-slate-500 uppercase">Demanda Global Tech</div>
+<div class="font-bold text-xl">+85M Vagas até 2030</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="p-2 bg-red-500/10 rounded">
+<span class="material-icons text-red-500">block</span>
+</div>
+<div>
+<div class="text-xs text-slate-500 uppercase">Conexão África-Vagas</div>
+<div class="font-bold text-xl">Menos de 2%</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Bridge Transition -->
+<section class="relative py-20 bg-background-light dark:bg-background-dark overflow-hidden" id="ponte">
+<div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-slate-950 to-transparent"></div>
+<div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+<div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary text-white shadow-xl shadow-primary/40 mb-8">
+<span class="material-icons text-3xl">link</span>
+</div>
+<h2 class="text-4xl md:text-5xl font-black mb-8 italic uppercase tracking-tighter">
+                    A Ponte: <span class="text-primary not-italic">Novos Horizonte</span>
+</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="text-left space-y-6">
+<div class="flex gap-4">
+<div class="w-1 bg-primary rounded-full"></div>
+<div>
+<h4 class="text-xl font-bold mb-2">Treinamento com Mentores</h4>
+<p class="text-slate-600 dark:text-slate-400">Não apenas cursos, mas acompanhamento real por profissionais que já atuam no mercado global.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-1 bg-primary rounded-full"></div>
+<div>
+<h4 class="text-xl font-bold mb-2">Ecossistema de Job Placement</h4>
+<p class="text-slate-600 dark:text-slate-400">Conexão direta com empresas na Europa e EUA que buscam talentos remotos qualificados.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-1 bg-primary rounded-full"></div>
+<div>
+<h4 class="text-xl font-bold mb-2">Infraestrutura Local</h4>
+<p class="text-slate-600 dark:text-slate-400">Hubs físicos equipados para garantir que o hardware não seja uma barreira.</p>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+<img alt="The Bridge Infrastructure" class="relative rounded-xl shadow-2xl w-full object-cover aspect-video" data-alt="Team of diverse tech students collaborating in a modern workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb8T0kUJk3nAI1i3_WwVgblEk2md0nNEOUnf6NHxITexmyWIJSd8f5Lf2Nj1bNFMyrkqwPA5Me-bHb4WWw2jhjx9IPhs8oMoQQCq7jJYeTzZpuA7hPve1YPUPGf8RBxa7GknPizIvHIbePX4Dc-hXybW3ADumV_XdNHmXln6A5zKWcr4zBzkZTXaCmKwwSXPA68rwCh1p9FTH2Lm8F7AeO-MMydf81OAZ6-_SPP5ysG-PG2kNCkLl6qyXVewgNsmKxX0dmdDixa6o"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: The Solution (Light/Vibrant Theme) -->
+<section class="py-24 px-6 bg-white dark:bg-slate-900" id="solucao">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="text-4xl font-bold mb-4 flex items-center gap-3">
+<span class="text-primary material-icons text-4xl">verified</span>
+                            A Solução de Impacto
+                        </h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg">
+                            Transformando vulnerabilidade em vantagem competitiva através da excelência técnica e cultural.
+                        </p>
+</div>
+<div class="text-right">
+<span class="text-6xl font-black text-primary/10 block">02</span>
+</div>
+</div>
+<!-- Before/After Comparison Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Before Card -->
+<div class="bg-background-light dark:bg-slate-950 p-8 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-4 mb-8">
+<span class="bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">Cenário Atual</span>
+<div class="flex-1 h-px bg-slate-200 dark:bg-slate-800"></div>
+</div>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-icons text-slate-400 mt-1">remove_circle_outline</span>
+<div>
+<span class="font-bold block">Talento Subutilizado</span>
+<p class="text-slate-500 text-sm">Graduados trabalhando em setores informais por falta de acesso ao mercado tech.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-icons text-slate-400 mt-1">remove_circle_outline</span>
+<div>
+<span class="font-bold block">Isolamento Econômico</span>
+<p class="text-slate-500 text-sm">Dependência exclusiva da economia local volátil e limitada.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-icons text-slate-400 mt-1">remove_circle_outline</span>
+<div>
+<span class="font-bold block">Gap de Soft Skills</span>
+<p class="text-slate-500 text-sm">Dificuldade de adaptação aos padrões de trabalho corporativos globais.</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- After Card -->
+<div class="bg-primary/5 p-8 rounded-xl border-2 border-primary/20 shadow-xl shadow-primary/5">
+<div class="flex items-center gap-4 mb-8">
+<span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">Com Novos Horizonte</span>
+<div class="flex-1 h-px bg-primary/20"></div>
+</div>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-icons text-primary mt-1">check_circle</span>
+<div>
+<span class="font-bold block text-slate-900 dark:text-white">Carreira Global de Alta Renda</span>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Inserção em times de desenvolvimento internacionais com salários competitivos.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-icons text-primary mt-1">check_circle</span>
+<div>
+<span class="font-bold block text-slate-900 dark:text-white">Injeção de Capital Local</span>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Riqueza gerada externamente que circula e fortalece a comunidade de origem.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-icons text-primary mt-1">check_circle</span>
+<div>
+<span class="font-bold block text-slate-900 dark:text-white">Liderança Tecnológica</span>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Mentores que se tornam multiplicadores de conhecimento em suas regiões.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Impact Metrics -->
+<section class="py-24 px-6 bg-background-light dark:bg-background-dark" id="impacto">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4">Projeções de Impacto (2025-2027)</h2>
+<p class="text-slate-600 dark:text-slate-400">Metas baseadas em dados reais de escalabilidade do nosso modelo mentor-led.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-slate-900 p-8 rounded-xl text-center border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="text-4xl font-black text-primary mb-2">5,000+</div>
+<div class="text-slate-500 uppercase text-xs font-bold tracking-widest">Alunos Formados</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-8 rounded-xl text-center border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="text-4xl font-black text-primary mb-2">85%</div>
+<div class="text-slate-500 uppercase text-xs font-bold tracking-widest">Taxa de Empregabilidade</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-8 rounded-xl text-center border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="text-4xl font-black text-primary mb-2">$12M</div>
+<div class="text-slate-500 uppercase text-xs font-bold tracking-widest">PIB Local Gerado</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-8 rounded-xl text-center border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="text-4xl font-black text-primary mb-2">20+</div>
+<div class="text-slate-500 uppercase text-xs font-bold tracking-widest">Hubs Tecnológicos</div>
+</div>
+</div>
+<!-- Final CTA -->
+<div class="mt-24 bg-primary rounded-2xl p-12 text-center text-white relative overflow-hidden group">
+<div class="absolute inset-0 bg-noise pointer-events-none"></div>
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-white/10 rounded-full blur-3xl group-hover:scale-110 transition-transform duration-700"></div>
+<h3 class="text-3xl md:text-5xl font-extrabold mb-6 relative z-10">Faça parte desta transformação histórica.</h3>
+<p class="text-xl text-white/80 mb-10 max-w-2xl mx-auto relative z-10">Estamos recrutando mentores, parceiros corporativos e investidores sociais para expandir a ponte.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
+<button class="bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-slate-100 transition-all flex items-center justify-center gap-2">
+<span>Seja um Mentor</span>
+<span class="material-icons">person_add</span>
+</button>
+<button class="bg-primary/20 backdrop-blur-sm border-2 border-white/40 text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+<span>Investir na Missão</span>
+<span class="material-icons">monetization_on</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="py-12 px-6 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white text-sm">explore</span>
+</div>
+<span class="font-extrabold text-lg">NOVOS<span class="text-primary">HORIZONTE</span></span>
+</div>
+<p class="text-slate-500 text-sm">© 2024 Projeto Novos Horizonte. Todos os direitos reservados. Conectando talentos africanos ao mundo digital.</p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-icons">language</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-icons">mail</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-icons">groups</span></a>
+</div>
+</div>
+</footer>
+</body></html>

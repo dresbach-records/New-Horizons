@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Support &amp; Engagement | Projeto Novos Horizontes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+              "neutral-subtle": "#f1f5f9",
+              "neutral-muted": "#64748b",
+            },
+            fontFamily: {
+              "display": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .faq-toggle:checked ~ .faq-content { max-height: 500px; opacity: 1; padding-top: 1rem; }
+        .faq-content { max-height: 0; opacity: 0; overflow: hidden; transition: all 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<!-- Navigation Header -->
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons text-white">explore</span>
+</div>
+<span class="font-extrabold text-xl tracking-tight text-primary">Novos Horizontes</span>
+</div>
+<div class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider">
+<a class="hover:text-primary transition-colors" href="#faq">FAQ</a>
+<a class="hover:text-primary transition-colors" href="#contact">Contact</a>
+<a class="hover:text-primary transition-colors" href="#press">Press Room</a>
+<a class="bg-primary text-white px-6 py-2 rounded-full hover:shadow-lg hover:shadow-primary/30 transition-all" href="#donations">Support Now</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative py-20 bg-white dark:bg-slate-900 overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-0 left-1/4 w-96 h-96 bg-primary rounded-full filter blur-3xl"></div>
+<div class="absolute bottom-0 right-1/4 w-64 h-64 bg-primary/40 rounded-full filter blur-3xl"></div>
+</div>
+<div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+<h1 class="text-4xl md:text-5xl font-extrabold mb-6">How can we help you today?</h1>
+<p class="text-lg text-neutral-muted mb-10 max-w-2xl mx-auto">Find answers to common questions, get in touch with our global team, or learn how to support our mission of transformative education.</p>
+<div class="relative max-w-xl mx-auto">
+<input class="w-full pl-12 pr-4 py-4 rounded-xl border-slate-200 dark:border-slate-700 bg-background-light dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Search for questions, keywords, or topics..." type="text"/>
+<span class="material-icons absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-16 space-y-24">
+<!-- FAQ Section -->
+<section class="scroll-mt-24" id="faq">
+<div class="text-center mb-12">
+<span class="text-primary font-bold tracking-widest uppercase text-sm">Knowledge Base</span>
+<h2 class="text-3xl font-bold mt-2">Frequently Asked Questions</h2>
+</div>
+<div class="grid md:grid-cols-2 gap-12">
+<div>
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-icons text-primary">payments</span> For Investors
+                    </h3>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="border border-slate-200 dark:border-slate-800 rounded-xl p-4 bg-white dark:bg-slate-900">
+<input class="faq-toggle hidden" id="faq-1" type="checkbox"/>
+<label class="flex justify-between items-center cursor-pointer font-semibold hover:text-primary" for="faq-1">
+                                What are the tax benefits for institutional investors?
+                                <span class="material-icons text-slate-400">expand_more</span>
+</label>
+<div class="faq-content text-neutral-muted text-sm leading-relaxed">
+                                Our project is registered as a 501(c)(3) equivalent, allowing most corporate and private investors to claim significant tax deductions based on regional regulations. Contact our legal department for specific documentation.
+                            </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="border border-slate-200 dark:border-slate-800 rounded-xl p-4 bg-white dark:bg-slate-900">
+<input class="faq-toggle hidden" id="faq-2" type="checkbox"/>
+<label class="flex justify-between items-center cursor-pointer font-semibold hover:text-primary" for="faq-2">
+                                How is the ROI measured for educational impact?
+                                <span class="material-icons text-slate-400">expand_more</span>
+</label>
+<div class="faq-content text-neutral-muted text-sm leading-relaxed">
+                                We track long-term employment rates, salary increases post-graduation, and social mobility indices. We provide quarterly impact reports to all major investors.
+                            </div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-icons text-primary">school</span> For Mentors
+                    </h3>
+<div class="space-y-4">
+<!-- FAQ Item 3 -->
+<div class="border border-slate-200 dark:border-slate-800 rounded-xl p-4 bg-white dark:bg-slate-900">
+<input class="faq-toggle hidden" id="faq-3" type="checkbox"/>
+<label class="flex justify-between items-center cursor-pointer font-semibold hover:text-primary" for="faq-3">
+                                What is the minimum weekly commitment?
+                                <span class="material-icons text-slate-400">expand_more</span>
+</label>
+<div class="faq-content text-neutral-muted text-sm leading-relaxed">
+                                We recommend at least 2 hours per week for effective mentorship. This includes a 1-hour 1:1 session and 1 hour of asynchronous review of student progress.
+                            </div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="border border-slate-200 dark:border-slate-800 rounded-xl p-4 bg-white dark:bg-slate-900">
+<input class="faq-toggle hidden" id="faq-4" type="checkbox"/>
+<label class="flex justify-between items-center cursor-pointer font-semibold hover:text-primary" for="faq-4">
+                                Do I need teaching experience?
+                                <span class="material-icons text-slate-400">expand_more</span>
+</label>
+<div class="faq-content text-neutral-muted text-sm leading-relaxed">
+                                No prior teaching experience is required. We provide a full onboarding toolkit and curriculum guides to help you share your industry expertise effectively.
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="scroll-mt-24" id="contact">
+<div class="bg-white dark:bg-slate-900 rounded-2xl shadow-xl shadow-slate-200/50 dark:shadow-none overflow-hidden flex flex-col lg:flex-row">
+<!-- Form Side -->
+<div class="lg:w-3/5 p-8 lg:p-12">
+<h2 class="text-3xl font-bold mb-2">Get in touch</h2>
+<p class="text-neutral-muted mb-8">Send us a message and we'll get back to you within 24 hours.</p>
+<form class="space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-semibold mb-2">Full Name</label>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-background-light dark:bg-slate-800 focus:ring-primary" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2">Email Address</label>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-background-light dark:bg-slate-800 focus:ring-primary" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2">Type of Inquiry</label>
+<select class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-background-light dark:bg-slate-800 focus:ring-primary">
+<option>General Information</option>
+<option>Investor Relations</option>
+<option>Mentorship Program</option>
+<option>Press &amp; Media</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2">Message</label>
+<textarea class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-background-light dark:bg-slate-800 focus:ring-primary" placeholder="How can we help?" rows="5"></textarea>
+</div>
+<button class="bg-primary text-white font-bold py-4 px-8 rounded-lg hover:bg-primary/90 transition-colors w-full md:w-auto">Send Message</button>
+</form>
+</div>
+<!-- Info Side -->
+<div class="lg:w-2/5 bg-primary text-white p-8 lg:p-12 flex flex-col justify-between">
+<div>
+<h3 class="text-2xl font-bold mb-8">Contact Information</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-icons p-2 bg-white/10 rounded-lg">location_on</span>
+<div>
+<p class="font-bold">Global Headquarters</p>
+<p class="text-white/80 text-sm">123 Innovation Drive, Tech District<br/>São Paulo, SP 01000-000, Brazil</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-icons p-2 bg-white/10 rounded-lg">mail</span>
+<div>
+<p class="font-bold">Email Us</p>
+<p class="text-white/80 text-sm">hello@novoshorizontes.org<br/>press@novoshorizontes.org</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-icons p-2 bg-white/10 rounded-lg">phone</span>
+<div>
+<p class="font-bold">Call Us</p>
+<p class="text-white/80 text-sm">+55 (11) 4004-9000</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<div class="w-full h-48 rounded-xl overflow-hidden grayscale contrast-125 opacity-70">
+<img alt="Map Location" class="w-full h-full object-cover" data-alt="Satellite map view of urban tech district" data-location="Sao Paulo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_l9YDvnJdWKCh4QBoV24LwKEqYCU80b-VQ7eQG1aESvG2Ll2VEjQzR3oMjgV6dW0OsPJXMz9PkYGPBq4jV2gSxXfcPXp78Kh_rVwQ8KubaJlXc0uvj2Fo0N4NeSc3078DsqlKwbnCg9Cdour0PAfaqG50HJMQBsk-7vmFcy3MMhAm2Aw-1wh0xBSCwvF2H7NToQcFas3mUc9_CfFlWvatZj2yWb0CteVB2TTFhG8nKXtFBf0mpSbH460og9e5F8i7vdDB5lFuBA8"/>
+</div>
+<div class="mt-6 flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all" href="#"><i class="material-icons text-sm">facebook</i></a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all" href="#"><i class="material-icons text-sm">link</i></a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all" href="#"><i class="material-icons text-sm">share</i></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Press Room -->
+<section class="scroll-mt-24" id="press">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-xl">
+<span class="text-primary font-bold tracking-widest uppercase text-sm">Media Relations</span>
+<h2 class="text-3xl font-bold mt-2">Press Room</h2>
+<p class="text-neutral-muted mt-4">Access our official assets, brand guidelines, and stay updated with the latest news mentions from across the globe.</p>
+</div>
+<button class="flex items-center gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold px-6 py-3 rounded-xl hover:opacity-90 transition-all">
+<span class="material-icons">download</span> Download Media Kit
+                </button>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- News Card 1 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all group">
+<div class="h-48 relative overflow-hidden">
+<img alt="News Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Newspaper and coffee on a table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1X6rLe36FbXlnkbBIV_bAQpuhPEKH55m9U8G_uo_DcNAML5Lt3X57ZJ8ip95EDDHvQSikINE5a7vzT18BRp_6naylLBL305ZvjxVU3X-ptjDT-0WAIICa1YP48cV8GoCqMwQt4EAoyMsiHNH8NxoEDIMk0c0l81Tbi4MgZT26rgkaDrfYOtyHxAzGUdrs9mO_fbg1xHiqRdrwK3c7aFJIZY20nE28ulB6zxBQSxaf7XZHsKqLsOf5YvK3N2QhSzToHAfKh_gWhK4"/>
+<div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-2 py-1 rounded">Forbes</div>
+</div>
+<div class="p-6">
+<span class="text-xs text-neutral-muted">Oct 12, 2023</span>
+<h4 class="font-bold text-lg mt-2 mb-4 leading-tight">How Novos Horizontes is redefining social mobility in Brazil</h4>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="#">
+                            Read Article <span class="material-icons text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- News Card 2 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all group">
+<div class="h-48 relative overflow-hidden">
+<img alt="News Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Stock market charts on a digital screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYHoQi8orubYTiWKDY_MfHgdg1VCHwnBbuAafvp2_PG-r6L6hBxIGHqXtsiRLjpeJXxIRwS9whVfYCg6_qlFXDXGjqIROX7JxNor4NtpfTlMBj9f8gM9d74JvBRTQplSznrbkT60rFBaOfU1xrKmCYSReR26Fytxcbe6wpD10nUc0B_maqNRSnKvbQuOl0y4Xn-JTnyPHElUOMjCxE9GO6K8pZ_WAKMqlsxPYuW6Bitm9oSFyTx1-OkmoczO-N7IRlTUuVDthyDy8"/>
+<div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-2 py-1 rounded">TechCrunch</div>
+</div>
+<div class="p-6">
+<span class="text-xs text-neutral-muted">Sep 28, 2023</span>
+<h4 class="font-bold text-lg mt-2 mb-4 leading-tight">Investment rounds hit record highs for educational non-profits</h4>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="#">
+                            Read Article <span class="material-icons text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- News Card 3 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all group">
+<div class="h-48 relative overflow-hidden">
+<img alt="News Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Corporate office with plants and glass walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqrYm3feAvQhhN4mSc4KDRaKb_nVVSzCsSfxwOxbQsgFX5VvJOet-6IS-dRilpOegwcVLJq2i4Dg2V3JZn3KnsyHxRw_eSlsT1Q2YpeG9kd5Bd_jBlpPQGaick3LbDDo3dq2VylSv0z2-KpdHv__2Xt9lNVtii5fdMYgFbuQNeq2jWwa_2jJh2KXWXSNtDQ2UGIHDPubztEFWHnhUdqYoLHzkkzqZsV_jksPfGp2KiloOyJYyg50LrMh4By8VT3Ao2FL0KD98zPzo"/>
+<div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-2 py-1 rounded">The Guardian</div>
+</div>
+<div class="p-6">
+<span class="text-xs text-neutral-muted">Aug 15, 2023</span>
+<h4 class="font-bold text-lg mt-2 mb-4 leading-tight">1,000 students graduate from pioneering tech bootcamp</h4>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="#">
+                            Read Article <span class="material-icons text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Donations Section -->
+<section class="scroll-mt-24" id="donations">
+<div class="bg-primary/5 dark:bg-primary/10 rounded-3xl p-8 md:p-16 border border-primary/20">
+<div class="max-w-5xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+<div class="lg:w-1/2">
+<span class="text-primary font-bold tracking-widest uppercase text-sm">Make an Impact</span>
+<h2 class="text-4xl font-extrabold mt-4 mb-6 leading-tight">Empower a Student's Future Today</h2>
+<p class="text-neutral-muted text-lg mb-8">Every contribution directly funds scholarships, hardware, and internet access for talented students in underserved communities. 100% of donations go to student resources.</p>
+<div class="flex flex-wrap gap-4 mb-8">
+<div class="flex items-center gap-2 bg-white dark:bg-slate-800 px-4 py-3 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+<span class="material-icons text-green-500">verified</span>
+<span class="text-sm font-semibold">Secure Payment</span>
+</div>
+<div class="flex items-center gap-2 bg-white dark:bg-slate-800 px-4 py-3 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+<span class="material-icons text-primary">volunteer_activism</span>
+<span class="text-sm font-semibold">Tax Deductible</span>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 w-full bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-xl shadow-primary/10">
+<div class="flex justify-center mb-8">
+<div class="bg-background-light dark:bg-slate-800 p-1 rounded-full flex gap-1">
+<button class="px-6 py-2 rounded-full font-bold text-sm bg-primary text-white">One-time</button>
+<button class="px-6 py-2 rounded-full font-bold text-sm text-neutral-muted hover:text-slate-900 dark:hover:text-white transition-colors">Monthly</button>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-4 mb-8">
+<button class="py-4 border-2 border-slate-200 dark:border-slate-700 rounded-xl font-bold hover:border-primary hover:text-primary transition-all">$25</button>
+<button class="py-4 border-2 border-primary bg-primary/10 rounded-xl font-bold text-primary">$50</button>
+<button class="py-4 border-2 border-slate-200 dark:border-slate-700 rounded-xl font-bold hover:border-primary hover:text-primary transition-all">$100</button>
+</div>
+<div class="relative mb-8">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 font-bold text-slate-400">$</span>
+<input class="w-full pl-10 py-4 rounded-xl border-slate-200 dark:border-slate-700 bg-background-light dark:bg-slate-800 focus:ring-primary" placeholder="Custom Amount" type="number"/>
+</div>
+<button class="w-full bg-primary text-white font-extrabold py-5 rounded-xl text-lg hover:shadow-lg hover:shadow-primary/40 transition-all flex items-center justify-center gap-2">
+                            Support Scholarships <span class="material-icons">favorite</span>
+</button>
+<p class="text-center text-xs text-neutral-muted mt-4">By donating, you agree to our Terms of Service and Privacy Policy.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-20 pb-10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white text-sm">explore</span>
+</div>
+<span class="font-extrabold text-xl text-primary">Novos Horizontes</span>
+</div>
+<p class="text-neutral-muted max-w-sm mb-8">Creating pathways to success through technology, mentorship, and community-driven educational programs.</p>
+<div class="flex gap-4">
+<a class="text-neutral-muted hover:text-primary" href="#"><i class="material-icons">facebook</i></a>
+<a class="text-neutral-muted hover:text-primary" href="#"><i class="material-icons">language</i></a>
+<a class="text-neutral-muted hover:text-primary" href="#"><i class="material-icons">alternate_email</i></a>
+</div>
+</div>
+<div>
+<h5 class="font-bold mb-6">Support</h5>
+<ul class="space-y-4 text-sm text-neutral-muted">
+<li><a class="hover:text-primary" href="#faq">FAQ</a></li>
+<li><a class="hover:text-primary" href="#contact">Help Center</a></li>
+<li><a class="hover:text-primary" href="#donations">Donation Portal</a></li>
+<li><a class="hover:text-primary" href="#">Scholarship Info</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Company</h5>
+<ul class="space-y-4 text-sm text-neutral-muted">
+<li><a class="hover:text-primary" href="#">About Us</a></li>
+<li><a class="hover:text-primary" href="#press">Press Room</a></li>
+<li><a class="hover:text-primary" href="#">Legal</a></li>
+<li><a class="hover:text-primary" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-100 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-neutral-muted">
+<p>© 2023 Projeto Novos Horizontes. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-slate-900 dark:hover:text-white" href="#">Cookie Policy</a>
+<a class="hover:text-slate-900 dark:hover:text-white" href="#">Accessibility Statement</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

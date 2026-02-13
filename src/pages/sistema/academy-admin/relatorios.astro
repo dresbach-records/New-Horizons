@@ -1,0 +1,30 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import Button from '../../../components/academy-admin/ui/Button.astro';
+---
+
+<AdminLayout title="Relatórios - Academy Admin">
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-3xl font-bold">Central de Relatórios</h1>
+    <Button label="Exportar como PDF" />
+  </div>
+
+  <div class="bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-xl font-semibold mb-4">Gerar Novos Relatórios</h2>
+    <form class="space-y-4">
+      <div>
+        <label for="reportType" class="block text-sm font-medium text-gray-700">Tipo de Relatório</label>
+        <select id="reportType" name="reportType" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+          <option>Relatório de Vendas</option>
+          <option>Relatório de Alunos</option>
+          <option>Relatório de Engajamento</option>
+        </select>
+      </div>
+      <div>
+        <label for="dateRange" class="block text-sm font-medium text-gray-700">Período</label>
+        <input type="date" id="dateRange" name="dateRange" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+      </div>
+      <Button label="Gerar Relatório" />
+    </form>
+  </div>
+</AdminLayout>

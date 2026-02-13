@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-PT"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recuperação de Senha | Projeto Novos Horizontes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee8c2b",
+                        "primary-dark": "#d97b1e",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221910",
+                        "deep-blue": "#101827",
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-[#f8f7f6] font-display antialiased;
+            }
+        }
+        .bg-pattern {
+            background-color: #101827;
+            background-image: radial-gradient(#ee8c2b 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            background-position: 0 0;
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4 overflow-hidden relative">
+<div class="absolute inset-0 bg-deep-blue z-0"></div>
+<div class="absolute inset-0 bg-pattern z-10"></div>
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-[100px] z-10"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-[100px] z-10"></div>
+<main class="w-full max-w-[480px] z-20">
+<div class="flex flex-col items-center mb-10">
+<div class="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-primary/20">
+<span class="material-icons text-white text-3xl">grid_view</span>
+</div>
+<h1 class="font-extrabold text-xl tracking-tight uppercase text-white">Novos Horizontes</h1>
+<p class="text-xs text-slate-400 font-medium tracking-[0.2em] uppercase mt-1">Portal do Parceiro</p>
+</div>
+<div class="bg-white rounded-2xl shadow-2xl border border-white/10 overflow-hidden">
+<div class="p-8 md:p-10">
+<div class="mb-8">
+<h2 class="text-2xl font-extrabold text-slate-900 mb-2">Recuperar Senha</h2>
+<p class="text-slate-500 text-sm leading-relaxed">
+                        Insira o seu e-mail corporativo associado à conta de parceiro regional. Enviaremos um link seguro para a redefinição da sua senha.
+                    </p>
+</div>
+<form class="space-y-6">
+<div>
+<label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2" for="email">E-mail Corporativo</label>
+<div class="relative group">
+<span class="material-icons absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">alternate_email</span>
+<input class="w-full pl-12 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none text-sm transition-all placeholder:text-slate-400" id="email" name="email" placeholder="exemplo@empresa.co.ao" required="" type="email"/>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary-dark text-white py-4 px-6 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 shadow-xl shadow-primary/20 group" type="submit">
+<span>Enviar Link de Recuperação</span>
+<span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">send</span>
+</button>
+</form>
+<div class="mt-10 pt-8 border-t border-slate-100">
+<div class="flex flex-col gap-4">
+<div class="flex items-start gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
+<span class="material-icons text-primary text-xl">contact_support</span>
+<div>
+<p class="text-xs font-bold text-slate-800 mb-1">Não consegue aceder ao e-mail?</p>
+<p class="text-[11px] text-slate-500 mb-2">Se o seu e-mail corporativo está indisponível ou se esqueceu as credenciais de acesso institucional.</p>
+<a class="text-xs font-bold text-deep-blue hover:text-primary underline transition-colors" href="#">
+                                    Contactar Suporte Institucional
+                                </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-slate-50 px-8 py-4 border-t border-slate-100 flex justify-between items-center">
+<a class="flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-icons text-sm">arrow_back</span>
+                    Voltar ao Login
+                </a>
+<span class="text-[10px] font-medium text-slate-400 uppercase tracking-widest">Acesso Seguro</span>
+</div>
+</div>
+<footer class="mt-10 text-center">
+<p class="text-slate-400 text-xs">
+                © 2024 Projeto Novos Horizontes. Todos os direitos reservados.
+            </p>
+<div class="flex justify-center gap-4 mt-3">
+<a class="text-[10px] font-bold text-slate-500 hover:text-primary uppercase tracking-tighter" href="#">Políticas</a>
+<span class="text-slate-700">•</span>
+<a class="text-[10px] font-bold text-slate-500 hover:text-primary uppercase tracking-tighter" href="#">Segurança</a>
+</div>
+</footer>
+</main>
+
+</body></html>

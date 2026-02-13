@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Dashboard Overview - Projeto Novos Horizontes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "accent": "#F39C12",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">body {
+    font-family: "Public Sans", sans-serif
+    }
+.sidebar-item-active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #F39C12
+    }
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px
+    }
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent
+    }
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.map-container {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDbYQ4wcUC9iIMxrsFOZIMBQ16qRuiNfAGHHBAlQcFEUHfcoevU6s-j9diytH9fJt8OeZ3Fecr3yN0dzr9x6IuMn1keB2CiNBPYiMT4tZ_XQ2Fm3b56mjVJmH7mnX71eE_2qND_EYVQ4hrIzV1rNnFmVTOpUHdU1K5AC_kASKaxpdjRi_qKG8jE15VsXYqOY4zn5vGuECwbb_9kVKWJQ_GAxuOAhEsmQcTt1ZK54ukY6C3JeNMyueRyUti9-eM_X8iKPL5rjHErIoE);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    min-height: 450px
+    }
+.pulse-marker {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #F39C12;
+    border-radius: 50%;
+    border: 2px solid white
+    }</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 flex h-screen overflow-hidden">
+<aside class="w-72 bg-primary text-white flex flex-col shrink-0 shadow-xl z-20">
+<div class="p-6 border-b border-white/10 flex items-center gap-3">
+<div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+<span class="material-icons text-white">explore</span>
+</div>
+<div>
+<h1 class="font-bold text-lg leading-none uppercase tracking-wider">Novos Horizontes</h1>
+<span class="text-[10px] opacity-70">Sede Global / Dashboard</span>
+</div>
+</div>
+<nav class="flex-1 py-6 overflow-y-auto custom-scrollbar">
+<div class="px-4 mb-2 text-[11px] uppercase tracking-widest text-white/40 font-bold">Monitoramento</div>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">account_balance_wallet</span>
+<span class="text-sm font-medium">Fluxo de Caixa</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">verified_user</span>
+<span class="text-sm font-medium">Auditoria</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">trending_up</span>
+<span class="text-sm font-medium">Investimentos</span>
+</a>
+<div class="px-4 mt-6 mb-2 text-[11px] uppercase tracking-widest text-white/40 font-bold">Governança</div>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">gavel</span>
+<span class="text-sm font-medium">Compliance</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">description</span>
+<span class="text-sm font-medium">Relatórios ESG</span>
+</a>
+<div class="px-4 mt-6 mb-2 text-[11px] uppercase tracking-widest text-white/40 font-bold">Gestão</div>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">handshake</span>
+<span class="text-sm font-medium">Parceiros</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">hub</span>
+<span class="text-sm font-medium">Hubs</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">school</span>
+<span class="text-sm font-medium">Alunos</span>
+</a>
+<div class="px-4 mt-6 mb-2 text-[11px] uppercase tracking-widest text-white/40 font-bold">Sistema</div>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">settings</span>
+<span class="text-sm font-medium">Configurações</span>
+</a>
+</nav>
+<div class="p-4 mt-auto border-t border-white/10">
+<div class="bg-white/5 rounded-lg p-3 flex items-center gap-3">
+<img alt="Admin Profile" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOReo_e19_4yoog43QfGwr-Jw4INr9ARXr2MuQk3yzVwtgBPKjCuqp65VSP58kT38tV8LaLs-ZMfb_AbXTu0-wsO7LmzKt237wB85YMqVAt29TNe1t_xPDwZizIABK4SUBzvbj6zChFWBIs92h5Ei2IwFHvX-_v6kH1bKlRMWKZYm-C7yPRgKXi0Y0_pjQk8oCKXrZUKxQQilPFgzDucleEypf43_LP5uP9xHBIwmraRq-A7DsfDklhflkGOOktffJpBpqn5gBtDQ"/>
+<div class="overflow-hidden">
+<p class="text-sm font-semibold truncate text-white">Diretor Administrativo</p>
+<p class="text-[11px] text-white/50 truncate">Headquarters Global</p>
+</div>
+<button class="ml-auto text-white/40 hover:text-white">
+<span class="material-icons text-lg">logout</span>
+</button>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-4">
+<div class="flex items-center text-xs font-medium text-slate-400 gap-2">
+<span>Painel Admin</span>
+<span class="material-icons text-xs">chevron_right</span>
+<span class="text-primary dark:text-white font-bold">Visão Geral</span>
+</div>
+<div class="h-6 w-[1px] bg-slate-200 dark:bg-slate-700 mx-2"></div>
+<div class="relative">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="pl-10 pr-4 py-1.5 bg-slate-50 dark:bg-slate-800 border-none rounded-lg text-sm w-80 focus:ring-2 focus:ring-primary/20" placeholder="Pesquisar projetos, hubs ou alunos..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-3 py-1.5 bg-accent/10 border border-accent/20 rounded-lg text-xs font-bold text-accent">
+<span class="material-icons text-sm">add</span>
+                NOVO PROJETO
+            </button>
+<div class="h-8 w-[1px] bg-slate-200 dark:bg-slate-700 mx-2"></div>
+<button class="w-10 h-10 flex items-center justify-center text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full relative">
+<span class="material-icons">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+</button>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8 space-y-8 custom-scrollbar">
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center gap-4">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+<span class="material-icons text-2xl">groups</span>
+</div>
+<div>
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Total de Alunos (África)</p>
+<h3 class="text-2xl font-bold text-slate-800 dark:text-white">42.500</h3>
+<p class="text-[10px] text-green-600 font-bold mt-1 flex items-center">
+<span class="material-icons text-xs mr-1">trending_up</span> +12% este mês
+                    </p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center gap-4">
+<div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-accent">
+<span class="material-icons text-2xl">hub</span>
+</div>
+<div>
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Hubs Ativos</p>
+<h3 class="text-2xl font-bold text-slate-800 dark:text-white">18</h3>
+<p class="text-[10px] text-slate-400 font-medium mt-1">Em 12 países diferentes</p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center gap-4">
+<div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center text-green-600">
+<span class="material-icons text-2xl">work_outline</span>
+</div>
+<div>
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Taxa de Empregabilidade</p>
+<h3 class="text-2xl font-bold text-slate-800 dark:text-white">78.4%</h3>
+<p class="text-[10px] text-accent font-bold mt-1">Acima da meta global</p>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h4 class="font-bold text-slate-800 dark:text-white">Mapa de Impacto</h4>
+<p class="text-xs text-slate-400">Distribuição geográfica de projetos e hubs</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 text-[10px] font-bold uppercase">
+<span class="w-2 h-2 rounded-full bg-accent"></span> Hub Ativo
+                        </div>
+</div>
+</div>
+<div class="map-container relative">
+<div class="pulse-marker top-[65%] left-[51%]" title="Luanda, Angola"></div>
+<div class="absolute top-[65%] left-[52%] bg-white/90 dark:bg-slate-800 p-2 rounded shadow-lg text-[10px] font-bold border border-slate-200 dark:border-slate-700">
+                        HUB LUANDA
+                    </div>
+<div class="pulse-marker top-[48%] left-[45%]" title="Lagos, Nigéria"></div>
+<div class="absolute top-[48%] left-[34%] bg-white/90 dark:bg-slate-800 p-2 rounded shadow-lg text-[10px] font-bold border border-slate-200 dark:border-slate-700 text-right">
+                        HUB LAGOS
+                    </div>
+<div class="pulse-marker top-[55%] left-[62%]" title="Nairobi, Quênia"></div>
+<div class="absolute top-[55%] left-[63%] bg-white/90 dark:bg-slate-800 p-2 rounded shadow-lg text-[10px] font-bold border border-slate-200 dark:border-slate-700">
+                        HUB NAIROBI
+                    </div>
+<div class="pulse-marker top-[48%] left-[42%]"></div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col h-full">
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-bold text-slate-800 dark:text-white">Atividade em Tempo Real</h4>
+<span class="flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-accent opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+</span>
+</div>
+<div class="flex-1 space-y-6 overflow-y-auto custom-scrollbar pr-2">
+<div class="flex gap-4">
+<div class="mt-1">
+<div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+<span class="material-icons text-blue-600 text-sm">handshake</span>
+</div>
+</div>
+<div>
+<p class="text-sm font-bold">Novo Parceiro: Global Tech Corp</p>
+<p class="text-xs text-slate-500">Adesão ao Hub Nairobi concluída com sucesso.</p>
+<span class="text-[10px] text-slate-400 font-medium">Há 5 min</span>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="mt-1">
+<div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
+<span class="material-icons text-green-600 text-sm">task_alt</span>
+</div>
+</div>
+<div>
+<p class="text-sm font-bold">Projeto Aprovado: Digital Lab</p>
+<p class="text-xs text-slate-500">Expansão de infraestrutura em Luanda aprovada pela diretoria.</p>
+<span class="text-[10px] text-slate-400 font-medium">Há 42 min</span>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="mt-1">
+<div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center">
+<span class="material-icons text-orange-600 text-sm">person_add</span>
+</div>
+</div>
+<div>
+<p class="text-sm font-bold">Novos Alunos Registrados</p>
+<p class="text-xs text-slate-500">+120 alunos iniciaram o curso de Cloud em Lagos.</p>
+<span class="text-[10px] text-slate-400 font-medium">Há 2 horas</span>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="mt-1">
+<div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center">
+<span class="material-icons text-purple-600 text-sm">description</span>
+</div>
+</div>
+<div>
+<p class="text-sm font-bold">Relatório ESG Q1 Publicado</p>
+<p class="text-xs text-slate-500">Transparência global atualizada com novos índices de impacto.</p>
+<span class="text-[10px] text-slate-400 font-medium">Há 5 horas</span>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="mt-1">
+<div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
+<span class="material-icons text-slate-600 text-sm">sync</span>
+</div>
+</div>
+<div>
+<p class="text-sm font-bold">Auditoria Semestral</p>
+<p class="text-xs text-slate-500">Sincronização de dados financeiros concluída para o Hub Accra.</p>
+<span class="text-[10px] text-slate-400 font-medium">Há 8 horas</span>
+</div>
+</div>
+</div>
+<button class="mt-6 w-full py-2 bg-slate-50 dark:bg-slate-800 text-xs font-bold rounded hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                    VER TODA ATIVIDADE
+                </button>
+</div>
+</div>
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">Impacto Ambiental</p>
+<div class="flex items-end justify-between">
+<h3 class="text-xl font-bold">A+ Rating</h3>
+<span class="text-green-600 text-xs font-bold">ESG Global</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">Parceiros Globais</p>
+<div class="flex items-end justify-between">
+<h3 class="text-xl font-bold">84</h3>
+<span class="text-slate-400 text-xs font-bold">Corporativos</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">Novos Hubs (Pipeline)</p>
+<div class="flex items-end justify-between">
+<h3 class="text-xl font-bold">04</h3>
+<span class="text-accent text-xs font-bold">Em implantação</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">Satisfação Alunos</p>
+<div class="flex items-end justify-between">
+<h3 class="text-xl font-bold">9.2/10</h3>
+<span class="text-primary dark:text-blue-400 text-xs font-bold">NPS Global</span>
+</div>
+</div>
+</section>
+</div>
+<footer class="h-14 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-8 flex items-center justify-between shrink-0">
+<div class="flex items-center gap-2 text-slate-400 text-xs">
+<span class="material-icons text-sm">security</span>
+            Interface Administrativa Global - Acesso Restrito e Criptografado.
+        </div>
+<div class="flex items-center gap-4 text-xs font-bold text-slate-500">
+<span>Server Status: Global HQ (Luanda/Lisboa)</span>
+<div class="w-2 h-2 bg-green-500 rounded-full"></div>
+</div>
+</footer>
+</main>
+
+</body></html>

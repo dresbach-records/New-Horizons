@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projeto Novos Horizonte | Inclusão Digital na África</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#F39C12",
+                        secondary: "#003366",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0B1120",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.75rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.85)), url('https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200">
+<nav class="fixed w-full z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-20 items-center">
+<div class="flex items-center gap-3">
+<img alt="Projeto Novos Horizonte Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbin36LcMGGyo6nb-w3sibwCU78Ijmf3FQ4Gy1jOZGPea80vCdIEnulqz-TSfkXoJyccg7ar04a9qESyjl6B5XJltIVYFGoi2BeeBClPhSN0lyOlM3BPfX7hpd-FoBTK0r65pRjhFN1Vi9Pz7pjjOSp35Z672VVQB-rFEwrNEVZwzSufM_Zn6_MD3LoNXpMoaeNSLaKBTLvXcO0PS5wxpaKFVsc7bD__XIuc8kDjrtM2UYYJEq63s3IgE13qCRA-jXIPFQYMMgSck"/>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#problema">O Problema</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#solucao">Solução</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#investidores">Investidores</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#mentores">Mentores</a>
+<div class="flex items-center border-l border-slate-300 dark:border-slate-700 pl-8 space-x-2">
+<button class="text-xs font-bold text-primary">PT</button>
+<span class="text-slate-400">/</span>
+<button class="text-xs font-bold hover:text-primary transition-colors">EN</button>
+</div>
+</div>
+<div class="md:hidden">
+<span class="material-icons-outlined text-3xl">menu</span>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative min-h-screen flex items-center hero-gradient pt-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+<div class="max-w-3xl">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary font-bold text-sm tracking-wide mb-6">
+                    IMPACTO SOCIAL MENSURÁVEL
+                </span>
+<h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-8">
+                    Construindo o <span class="text-primary">Futuro Digital</span> da África
+                </h1>
+<p class="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
+                    Capacitando a nova geração de talentos africanos em Programação, Design e Empregabilidade Digital para o mercado global.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary hover:bg-orange-600 text-white px-8 py-4 rounded font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-orange-500/20">
+                        Quero Investir
+                    </button>
+<button class="border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded font-bold text-lg transition-all bg-white/5 backdrop-blur-sm">
+                        Quero Ser Mentor
+                    </button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full glass-card border-t-0 py-8">
+<div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center">
+<p class="text-primary text-3xl font-bold">10k+</p>
+<p class="text-slate-400 text-xs uppercase tracking-widest mt-1">Alunos Formados</p>
+</div>
+<div class="text-center">
+<p class="text-primary text-3xl font-bold">85%</p>
+<p class="text-slate-400 text-xs uppercase tracking-widest mt-1">Taxa de Empregabilidade</p>
+</div>
+<div class="text-center">
+<p class="text-primary text-3xl font-bold">15+</p>
+<p class="text-slate-400 text-xs uppercase tracking-widest mt-1">Países Atendidos</p>
+</div>
+<div class="text-center">
+<p class="text-primary text-3xl font-bold">50+</p>
+<p class="text-slate-400 text-xs uppercase tracking-widest mt-1">Parceiros Globais</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-background-dark" id="problema">
+<div class="max-w-7xl mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-3">O Desafio Atual</h2>
+<h3 class="text-3xl md:text-4xl font-extrabold text-secondary dark:text-white">Por que o Projeto Novos Horizonte?</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all group">
+<div class="w-14 h-14 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-icons-outlined text-red-600 dark:text-red-400 text-3xl">trending_up</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Alto Desemprego</h4>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Milhares de jovens sem oportunidades no mercado de trabalho tradicional africano.</p>
+</div>
+<div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all group">
+<div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-icons-outlined text-blue-600 dark:text-blue-400 text-3xl">terminal</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Gap Técnico</h4>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Escassez de formação prática em tecnologias de ponta e linguagens de programação.</p>
+</div>
+<div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all group">
+<div class="w-14 h-14 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-icons-outlined text-primary text-3xl">public_off</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Desconexão Global</h4>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Dificuldade de acesso a vagas remotas internacionais por falta de certificação.</p>
+</div>
+<div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all group">
+<div class="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-icons-outlined text-green-600 dark:text-green-400 text-3xl">wifi_off</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Falta de Acesso</h4>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Infraestrutura digital limitada impedindo o crescimento de novos talentos.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-light dark:bg-slate-900 overflow-hidden" id="solucao">
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-1/2 relative">
+<div class="absolute -top-10 -left-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+<img alt="Mentor ensinando alunos" class="rounded-2xl shadow-2xl relative z-10 w-full object-cover aspect-video lg:aspect-square" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdnI71fJIRD_fWskr2WnFm7fbw5L96cP968_Qq5kHH-VZxn_-fNCP9VMknHoHo_5xkOog4f376bWwJC8MJt8iIbn4_D9YtkfvSs6m2n_X90sSxgzZo8QS24sM0rf6yCLTfOMRi6tqlrW3twXtBUHkYK_GFi2_p54zoK1hn3DzUkW_YBASKLMdmD9SZq9cxd3uefy0YZ5Qd7M19MKuGbBQkpIKeHO5Qr7JmSufxNJswgOVaMGbjreSGJSNmVI48wnvCuy9UcG6C0xQ"/>
+<div class="absolute -bottom-6 -right-6 bg-white dark:bg-slate-800 p-6 rounded shadow-xl z-20 hidden sm:block">
+<div class="flex items-center gap-4">
+<span class="material-icons-outlined text-primary text-4xl">verified</span>
+<div>
+<p class="text-xs uppercase font-bold text-slate-500">Credibilidade</p>
+<p class="font-bold">Certificação Global</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2">
+<h2 class="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-3">Nossa Solução Estratégica</h2>
+<h3 class="text-4xl font-extrabold text-secondary dark:text-white mb-8">Metodologia de Impacto 360°</h3>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary dark:bg-primary flex items-center justify-center text-white">
+<span class="material-icons-outlined">school</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Mentoria com Experts Globais</h4>
+<p class="text-slate-600 dark:text-slate-400">Profissionais das maiores Big Techs do mundo doando conhecimento e criando redes de networking.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary dark:bg-primary flex items-center justify-center text-white">
+<span class="material-icons-outlined">work</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Projetos Reais (Hands-on)</h4>
+<p class="text-slate-600 dark:text-slate-400">Os alunos trabalham em desafios reais de empresas parceiras, criando um portfólio sólido desde o dia 1.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary dark:bg-primary flex items-center justify-center text-white">
+<span class="material-icons-outlined">language</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Foco em Empregabilidade Remota</h4>
+<p class="text-slate-600 dark:text-slate-400">Preparação completa para o mercado internacional, incluindo aulas de inglês técnico e soft skills.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-background-dark" id="investidores">
+<div class="max-w-7xl mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-3">Modelo Sustentável e Escalável</h2>
+<h3 class="text-3xl md:text-4xl font-extrabold text-secondary dark:text-white">Gerando Valor para Investidores e Parceiros</h3>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div class="bg-slate-50 dark:bg-slate-900 rounded-3xl p-10 border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 bg-secondary rounded flex items-center justify-center text-white">
+<span class="material-icons-outlined">insights</span>
+</div>
+<h4 class="text-2xl font-bold">Investidores &amp; VCs</h4>
+</div>
+<ul class="space-y-6">
+<li class="flex items-start gap-3">
+<span class="material-icons-outlined text-green-500 mt-1">check_circle</span>
+<div>
+<span class="font-bold block">Modelo de Receita SaaS</span>
+<span class="text-slate-600 dark:text-slate-400">Recorrência através de plataforma de contratação e talent sourcing para empresas globais.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-outlined text-green-500 mt-1">check_circle</span>
+<div>
+<span class="font-bold block">Forte Critério ESG</span>
+<span class="text-slate-600 dark:text-slate-400">Impacto direto nos ODS da ONU, perfeito para fundos com foco em impacto social e diversidade.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-outlined text-green-500 mt-1">check_circle</span>
+<div>
+<span class="font-bold block">Equity e Escalabilidade</span>
+<span class="text-slate-600 dark:text-slate-400">Operação ágil com capacidade de expansão para todo o continente africano e outros mercados emergentes.</span>
+</div>
+</li>
+</ul>
+<button class="w-full mt-10 py-4 bg-secondary text-white font-bold rounded-lg hover:bg-slate-800 transition-colors">
+                        Solicitar Pitch Deck
+                    </button>
+</div>
+<div class="bg-slate-50 dark:bg-slate-900 rounded-3xl p-10 border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-icons-outlined">handshake</span>
+</div>
+<h4 class="text-2xl font-bold">Parceiros Estratégicos</h4>
+</div>
+<ul class="space-y-6">
+<li class="flex items-start gap-3">
+<span class="material-icons-outlined text-green-500 mt-1">check_circle</span>
+<div>
+<span class="font-bold block">Programas de Bolsas</span>
+<span class="text-slate-600 dark:text-slate-400">Empresas podem patrocinar turmas inteiras e ter prioridade na contratação dos melhores talentos.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-outlined text-green-500 mt-1">check_circle</span>
+<div>
+<span class="font-bold block">Parcerias Governamentais</span>
+<span class="text-slate-600 dark:text-slate-400">Cooperação técnica para digitalização de serviços públicos e formação de base tecnológica nacional.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-outlined text-green-500 mt-1">check_circle</span>
+<div>
+<span class="font-bold block">Employer Branding</span>
+<span class="text-slate-600 dark:text-slate-400">Posicionamento da sua marca como referência em responsabilidade social e fomento à tecnologia.</span>
+</div>
+</li>
+</ul>
+<button class="w-full mt-10 py-4 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all">
+                        Seja um Parceiro
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-secondary text-white py-20">
+<div class="max-w-7xl mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<img alt="Projeto Novos Horizonte Logo" class="h-16 w-auto mb-6 brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy_5Ll9iWLpLOnkLXxHXtJulx6KwyQNqruVwMRUP5ipIgO5ulT64bToCtoGpMSuWkUmLiuHlkkswwWiagOGCKTUyeqiLLTyvrKCm8C8qu6S9H1GSndmf-Oy6k4NIEP1Ga-euo3MnyRp0oZCiuIxouRvmhbu8n5pJZ7Q8xYZEUtpfm4lx0KpN6lo36rRqrdy0-6AMyTLKQjeeuDlH6OkbsAN1g_9aiWFJt9qDrIgGFQDHaYQQCSD65ZLrSszp5lPMgdBERqmgMv9iI"/>
+<p class="text-slate-400 text-sm leading-relaxed">
+                        Transformando o futuro da África através da educação tecnológica e conexão com o mercado global.
+                    </p>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-6">Menu</h5>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Sobre Nós</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">O Problema</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Solução</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Equipe</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-6">Investidores</h5>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Relatório ESG</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Pitch Deck</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Modelos de Parceria</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQs</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-6">Contato</h5>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li class="flex items-center gap-3">
+<span class="material-icons-outlined text-primary">email</span>
+                            contato@projetonovoshorizonte.org
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-icons-outlined text-primary">location_on</span>
+                            São Paulo / Luanda / Lagos
+                        </li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+<p>© 2024 Projeto Novos Horizonte. Todos os direitos reservados.</p>
+<div class="flex gap-6">
+<a class="hover:text-white" href="#">Privacidade</a>
+<a class="hover:text-white" href="#">Termos</a>
+<a class="hover:text-white" href="#">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+<div class="hidden" id="mentores"></div> 
+
+</body></html>

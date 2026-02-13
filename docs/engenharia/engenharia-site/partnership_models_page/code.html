@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Modelos de Parceria | Projeto Novos Horizontes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "accent-orange": "#f97316",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .partnership-card {
+            transition: transform 0.2s ease-in-out;
+        }
+        .partnership-card:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased font-display">
+<!-- Header / Navigation -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-icons-outlined">explore</span>
+</div>
+<span class="font-extrabold text-xl tracking-tight text-primary uppercase">Novos Horizontes</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center text-sm font-semibold uppercase tracking-wider">
+<a class="hover:text-primary transition-colors" href="#">Início</a>
+<a class="text-primary border-b-2 border-primary" href="#">Parcerias</a>
+<a class="hover:text-primary transition-colors" href="#">Projetos</a>
+<a class="bg-primary text-white px-6 py-2.5 rounded-lg hover:bg-primary/90 transition-all" href="#contato">Seja um Parceiro</a>
+</nav>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative py-20 overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 -z-10"></div>
+<div class="max-w-7xl mx-auto px-6 text-center">
+<h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-6">
+                Modelos de <span class="text-primary">Parceria</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+                Conectamos organizações, governos e comunidades para criar impacto real. Escolha o modelo que melhor se adapta à visão da sua instituição.
+            </p>
+</div>
+</section>
+<!-- Partnership Models Grid -->
+<section class="py-16">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Tier 1: Corporate -->
+<div class="partnership-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col shadow-sm">
+<div class="p-8 border-t-4 border-primary">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-icons-outlined text-primary text-3xl">business</span>
+</div>
+<h3 class="text-2xl font-bold mb-2">Parceiro Corporativo</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 uppercase font-bold tracking-widest">Foco: Visibilidade e Talento</p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-icons-outlined text-accent-orange text-xl">check_circle</span>
+<span class="text-slate-700 dark:text-slate-300">Branding em hubs de inovação</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-outlined text-accent-orange text-xl">check_circle</span>
+<span class="text-slate-700 dark:text-slate-300">Acesso prioritário a talentos</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-outlined text-accent-orange text-xl">check_circle</span>
+<span class="text-slate-700 dark:text-slate-300">Kits de mídia e PR exclusivos</span>
+</li>
+</ul>
+</div>
+<div class="mt-auto p-8 bg-slate-50 dark:bg-slate-800/50">
+<a class="block text-center w-full bg-primary/10 hover:bg-primary/20 text-primary font-bold py-3 rounded-lg transition-colors" href="#contato">
+                            Selecionar Modelo
+                        </a>
+</div>
+</div>
+<!-- Tier 2: Strategic (Highlighted) -->
+<div class="partnership-card bg-white dark:bg-slate-900 border-2 border-primary rounded-xl overflow-hidden flex flex-col shadow-xl relative z-10 scale-105">
+<div class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Mais Procurado</div>
+<div class="p-8">
+<div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-6">
+<span class="material-icons-outlined text-white text-3xl">hub</span>
+</div>
+<h3 class="text-2xl font-bold mb-2">Parceiro Estratégico</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 uppercase font-bold tracking-widest">Foco: Inovação e Escala</p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-icons-outlined text-accent-orange text-xl">check_circle</span>
+<span class="text-slate-700 dark:text-slate-300">Joint ventures em novos projetos</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-outlined text-accent-orange text-xl">check_circle</span>
+<span class="text-slate-700 dark:text-slate-300">Co-criação de currículos técnicos</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-outlined text-accent-orange text-xl">check_circle</span>
+<span class="text-slate-700 dark:text-slate-300">Relacionamento governamental</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-outlined text-accent-orange text-xl">check_circle</span>
+<span class="text-slate-700 dark:text-slate-300">Assento no comitê consultivo</span>
+</li>
+</ul>
+</div>
+<div class="mt-auto p-8 bg-primary/5">
+<a class="block text-center w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg shadow-lg shadow-primary/20 transition-all" href="#contato">
+                            Começar Agora
+                        </a>
+</div>
+</div>
+<!-- Tier 3: Institutional -->
+<div class="partnership-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col shadow-sm">
+<div class="p-8 border-t-4 border-primary">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-icons-outlined text-primary text-3xl">volunteer_activism</span>
+</div>
+<h3 class="text-2xl font-bold mb-2">Institucional / ONG</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 uppercase font-bold tracking-widest">Foco: Impacto e Execução</p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-icons-outlined text-accent-orange text-xl">check_circle</span>
+<span class="text-slate-700 dark:text-slate-300">Suporte operacional em campo</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-outlined text-accent-orange text-xl">check_circle</span>
+<span class="text-slate-700 dark:text-slate-300">Capilaridade em comunidades</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-outlined text-accent-orange text-xl">check_circle</span>
+<span class="text-slate-700 dark:text-slate-300">Selo de certificação social</span>
+</li>
+</ul>
+</div>
+<div class="mt-auto p-8 bg-slate-50 dark:bg-slate-800/50">
+<a class="block text-center w-full bg-primary/10 hover:bg-primary/20 text-primary font-bold py-3 rounded-lg transition-colors" href="#contato">
+                            Selecionar Modelo
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Lead Form Section -->
+<section class="py-24 bg-slate-50 dark:bg-slate-900/50" id="contato">
+<div class="max-w-4xl mx-auto px-6">
+<div class="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl p-8 md:p-12 border border-primary/10">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Seja um Parceiro</h2>
+<p class="text-slate-600 dark:text-slate-400">Preencha os dados abaixo e nossa equipe de parcerias estratégicas entrará em contato em até 48 horas.</p>
+</div>
+<form action="#" class="space-y-6" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-semibold mb-2 text-slate-700 dark:text-slate-300">Nome Completo</label>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary px-4 py-3 outline-none" placeholder="Ex: João Silva" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2 text-slate-700 dark:text-slate-300">E-mail Corporativo</label>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary px-4 py-3 outline-none" placeholder="joao@empresa.com.br" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-semibold mb-2 text-slate-700 dark:text-slate-300">Organização</label>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary px-4 py-3 outline-none" placeholder="Nome da sua empresa/ONG" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2 text-slate-700 dark:text-slate-300">Modelo de Interesse</label>
+<select class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary px-4 py-3 outline-none">
+<option>Corporativo</option>
+<option selected="">Estratégico</option>
+<option>Institucional / ONG</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2 text-slate-700 dark:text-slate-300">Como podemos colaborar?</label>
+<textarea class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary px-4 py-3 outline-none" placeholder="Descreva brevemente seus objetivos com a parceria..." rows="4"></textarea>
+</div>
+<div class="flex items-center gap-2 mb-4">
+<input class="rounded border-slate-300 text-primary focus:ring-primary" id="privacy" type="checkbox"/>
+<label class="text-xs text-slate-500 dark:text-slate-400" for="privacy">Aceito os termos de uso e política de privacidade do Projeto Novos Horizontes.</label>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-xl shadow-primary/20 transition-all uppercase tracking-widest" type="submit">
+                        Enviar Proposta de Parceria
+                    </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 py-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-icons-outlined text-sm">explore</span>
+</div>
+<span class="font-extrabold text-lg text-primary uppercase">Novos Horizontes</span>
+</div>
+<div class="flex gap-6 text-slate-500 dark:text-slate-400 text-sm">
+<a class="hover:text-primary" href="#">LinkedIn</a>
+<a class="hover:text-primary" href="#">Instagram</a>
+<a class="hover:text-primary" href="#">Twitter</a>
+<a class="hover:text-primary" href="#">Relatório de Impacto</a>
+</div>
+<p class="text-slate-400 text-xs">
+                    © 2024 Projeto Novos Horizontes. Todos os direitos reservados.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

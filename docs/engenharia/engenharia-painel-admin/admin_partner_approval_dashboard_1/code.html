@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login - Portal de Gestão Global | Projeto Novos Horizontes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "accent": "#F39C12",
+                        "background-light": "#f5f7f8",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body { font-family: 'Public Sans', sans-serif; }
+        }
+        .branding-overlay {
+            background: linear-gradient(to bottom, rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.95));
+        }
+        .input-focus-accent:focus {
+            border-color: #F39C12;
+            ring-color: rgba(243, 156, 18, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background-light font-display text-slate-800 h-screen overflow-hidden">
+<div class="flex h-full w-full">
+<section class="hidden lg:flex lg:w-1/2 relative bg-primary overflow-hidden">
+<img alt="Futuristic digital map of Africa" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40 scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACzuYzjfoW56RUUwbAZBxbUpyeRM7hiQlJ5eo37Q5emcMg7EFS5Wc287U_HDy4UFGdZyEyF3vnSAVccJlDTChRnu1QpK5jjeJA7xSkig3t0eEJ4egSvNr-wgnlhEahRSH3hwajuHhzeCxWZpFLOBD6-Eswa3MfWHmOpBI9ZVpfIPnGoeKW1-GfQ6CrHMTlsgGzo9MmsNCBV4ZDVRkna5iw6EPqFZSCiB8VxWXUoPrwO223NMTMKcq4XTNt3JgamdNpXGj75h646gI"/>
+<div class="relative z-10 flex flex-col justify-between p-16 w-full branding-overlay">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center shadow-lg">
+<span class="material-icons text-white text-3xl">explore</span>
+</div>
+<div>
+<h1 class="font-bold text-2xl leading-none uppercase tracking-widest text-white">Novos Horizontes</h1>
+<span class="text-xs opacity-80 text-white font-medium tracking-tight">Expandindo Fronteiras Digitais</span>
+</div>
+</div>
+<div class="max-w-md">
+<h2 class="text-4xl font-bold text-white leading-tight mb-6">
+                        Portal de Gestão Global
+                    </h2>
+<p class="text-xl text-white/80 font-light border-l-4 border-accent pl-6">
+                        Conectando talentos ao futuro através de infraestrutura digital e parcerias estratégicas.
+                    </p>
+</div>
+<div class="flex items-center gap-2 text-white/50 text-sm">
+<span class="material-icons text-sm">public</span>
+<span>Sede Global Operacional • Acesso Restrito</span>
+</div>
+</div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-white/5 rounded-full blur-2xl"></div>
+</section>
+<section class="w-full lg:w-1/2 bg-white flex flex-col justify-center items-center px-8 sm:px-16 lg:px-24">
+<div class="w-full max-w-md">
+<div class="flex items-center gap-3 lg:hidden mb-12">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons text-white">explore</span>
+</div>
+<h1 class="font-bold text-xl uppercase tracking-wider text-primary">Novos Horizontes</h1>
+</div>
+<div class="mb-10">
+<h3 class="text-3xl font-bold text-slate-900 mb-2">Entrar no Portal</h3>
+<p class="text-slate-500">Bem-vindo à central administrativa. Identifique-se para continuar.</p>
+</div>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-semibold text-slate-700 mb-2" for="email">E-mail Corporativo</label>
+<div class="relative">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">alternate_email</span>
+<input class="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all" id="email" name="email" placeholder="exemplo@novoshorizontes.com" required="" type="email"/>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="block text-sm font-semibold text-slate-700" for="password">Senha</label>
+<a class="text-xs font-semibold text-primary hover:text-accent transition-colors" href="#">Esqueci minha senha</a>
+</div>
+<div class="relative">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">lock</span>
+<input class="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 text-accent border-slate-300 rounded focus:ring-accent" id="remember-me" name="remember-me" type="checkbox"/>
+<label class="ml-2 block text-sm text-slate-600" for="remember-me">Manter conectado neste dispositivo</label>
+</div>
+<button class="w-full bg-accent hover:bg-[#e69510] text-white font-bold py-3.5 rounded-lg shadow-lg shadow-accent/20 transition-all transform active:scale-[0.98] flex items-center justify-center gap-2" type="submit">
+<span>Entrar</span>
+<span class="material-icons text-lg">login</span>
+</button>
+</form>
+<div class="mt-12 pt-8 border-t border-slate-100">
+<p class="text-center text-sm text-slate-500">
+                        Interessado em se tornar um parceiro? 
+                        <a class="text-primary font-bold hover:underline" href="#">Solicitar Adesão</a>
+</p>
+</div>
+</div>
+<div class="mt-auto py-8 text-[11px] text-slate-400 uppercase tracking-widest text-center">
+                © 2024 Projeto Novos Horizontes • Todos os direitos reservados
+            </div>
+</section>
+</div>
+
+</body></html>

@@ -1,0 +1,24 @@
+---
+import Sidebar from '../components/academy/instructor/Sidebar.astro';
+import Header from '../components/academy/instructor/Header.astro';
+---
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy Instructor</title>
+    <link rel="stylesheet" href="/styles/academy.css">
+</head>
+<body>
+    <div class="academy-instructor-layout">
+        <Sidebar />
+        <main class="main-content">
+            <Header />
+            <div class="content">
+                <slot />
+            </div>
+        </main>
+    </div>
+</body>
+</html>

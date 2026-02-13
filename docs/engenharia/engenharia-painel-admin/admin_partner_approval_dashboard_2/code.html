@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Finanças e Auditoria Global - Projeto Novos Horizontes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "accent": "#F39C12",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Public Sans', sans-serif; }
+        .sidebar-item-active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #F39C12;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 flex h-screen overflow-hidden">
+<aside class="w-72 bg-primary text-white flex flex-col shrink-0 shadow-xl z-20">
+<div class="p-6 border-b border-white/10 flex items-center gap-3">
+<div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+<span class="material-icons text-white">account_balance</span>
+</div>
+<div>
+<h1 class="font-bold text-lg leading-none uppercase tracking-wider">Novos Horizontes</h1>
+<span class="text-[10px] opacity-70">Sede Global / Finanças</span>
+</div>
+</div>
+<nav class="flex-1 py-6 overflow-y-auto custom-scrollbar">
+<div class="px-4 mb-4 text-[11px] uppercase tracking-widest text-white/40 font-bold">Monitoramento</div>
+<a class="flex items-center gap-3 px-6 py-3 sidebar-item-active" href="#">
+<span class="material-icons text-sm">account_balance_wallet</span>
+<span class="text-sm font-medium">Fluxo de Caixa</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">verified_user</span>
+<span class="text-sm font-medium">Auditoria de Hubs</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">trending_up</span>
+<span class="text-sm font-medium">Investimentos</span>
+</a>
+<div class="px-4 mt-8 mb-4 text-[11px] uppercase tracking-widest text-white/40 font-bold">Governança</div>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">gavel</span>
+<span class="text-sm font-medium">Compliance</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">description</span>
+<span class="text-sm font-medium">Relatórios ESG</span>
+</a>
+</nav>
+<div class="p-4 mt-auto border-t border-white/10">
+<div class="bg-white/5 rounded-lg p-3 flex items-center gap-3">
+<img alt="Admin Profile" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOReo_e19_4yoog43QfGwr-Jw4INr9ARXr2MuQk3yzVwtgBPKjCuqp65VSP58kT38tV8LaLs-ZMfb_AbXTu0-wsO7LmzKt237wB85YMqVAt29TNe1t_xPDwZizIABK4SUBzvbj6zChFWBIs92h5Ei2IwFHvX-_v6kH1bKlRMWKZYm-C7yPRgKXi0Y0_pjQk8oCKXrZUKxQQilPFgzDucleEypf43_LP5uP9xHBIwmraRq-A7DsfDklhflkGOOktffJpBpqn5gBtDQ"/>
+<div class="overflow-hidden">
+<p class="text-sm font-semibold truncate text-white">Diretor Financeiro</p>
+<p class="text-[11px] text-white/50 truncate">Headquarters Global</p>
+</div>
+<button class="ml-auto text-white/40 hover:text-white">
+<span class="material-icons text-lg">settings</span>
+</button>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-4">
+<div class="flex items-center text-xs font-medium text-slate-400 gap-2">
+<span>Painel Admin</span>
+<span class="material-icons text-xs">chevron_right</span>
+<span class="text-primary dark:text-white font-bold">Finanças</span>
+</div>
+<div class="h-6 w-[1px] bg-slate-200 dark:bg-slate-700 mx-2"></div>
+<div class="relative">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="pl-10 pr-4 py-1.5 bg-slate-50 dark:bg-slate-800 border-none rounded-lg text-sm w-80 focus:ring-2 focus:ring-primary/20" placeholder="Buscar por hub, aporte ou auditoria..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-3 py-1.5 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-600 dark:text-slate-300">
+<span class="material-icons text-sm">download</span>
+                EXPORTAR DADOS
+            </button>
+<div class="h-8 w-[1px] bg-slate-200 dark:bg-slate-700 mx-2"></div>
+<button class="w-10 h-10 flex items-center justify-center text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full relative">
+<span class="material-icons">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+</button>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8 space-y-8 custom-scrollbar">
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Saldo Global em Conta</p>
+<h3 class="text-2xl font-bold text-primary dark:text-white">$ 12.450.800</h3>
+<div class="flex items-center gap-1 mt-4">
+<span class="text-green-600 text-xs font-bold flex items-center">+4.2% <span class="material-icons text-xs">trending_up</span></span>
+<span class="text-[10px] text-slate-400">vs. mês anterior</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Aportes Totais (Trimestral)</p>
+<h3 class="text-2xl font-bold text-accent">$ 3.120.000</h3>
+<div class="flex items-center gap-1 mt-4">
+<span class="text-slate-400 text-xs font-bold">Meta: $ 3.5M</span>
+<div class="flex-1 h-1 bg-slate-100 dark:bg-slate-800 rounded-full ml-2">
+<div class="h-full bg-accent w-[89%] rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Custo Operacional Consolidado</p>
+<h3 class="text-2xl font-bold">$ 842.150</h3>
+<div class="flex items-center gap-1 mt-4">
+<span class="text-green-600 text-xs font-bold flex items-center">-2.1% <span class="material-icons text-xs">trending_down</span></span>
+<span class="text-[10px] text-slate-400">Otimização de custos em hubs</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">ROI Social Projetado</p>
+<h3 class="text-2xl font-bold text-primary dark:text-white">4.8x</h3>
+<div class="flex items-center gap-1 mt-4">
+<span class="text-accent text-xs font-bold flex items-center">+0.5 <span class="material-icons text-xs">add</span></span>
+<span class="text-[10px] text-slate-400">Crescimento de impacto regional</span>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h4 class="font-bold text-slate-800 dark:text-white">Receita Global vs. Desembolsos Regionais</h4>
+<p class="text-xs text-slate-400">Fluxo consolidado dos principais Hubs Africanos</p>
+</div>
+<div class="flex gap-4 text-[10px] font-bold uppercase tracking-wider">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary"></span> Investimentos</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-accent"></span> Desembolsos</span>
+</div>
+</div>
+<div class="h-64 flex items-end justify-between relative pt-6 px-4 gap-6">
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full flex justify-center gap-1 items-end h-full">
+<div class="w-6 bg-primary/20 h-[85%] rounded-t-sm relative group cursor-pointer hover:bg-primary/40 transition-colors">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100">$2.1M</div>
+<div class="w-full bg-primary h-full absolute bottom-0 rounded-t-sm"></div>
+</div>
+<div class="w-6 bg-accent h-[45%] rounded-t-sm relative group cursor-pointer hover:bg-accent/80 transition-colors">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100">$0.9M</div>
+</div>
+</div>
+<span class="text-[10px] text-slate-500 font-bold">LUANDA</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full flex justify-center gap-1 items-end h-full">
+<div class="w-6 bg-primary h-[70%] rounded-t-sm"></div>
+<div class="w-6 bg-accent h-[55%] rounded-t-sm"></div>
+</div>
+<span class="text-[10px] text-slate-500 font-bold">LAGOS</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full flex justify-center gap-1 items-end h-full">
+<div class="w-6 bg-primary h-[95%] rounded-t-sm"></div>
+<div class="w-6 bg-accent h-[40%] rounded-t-sm"></div>
+</div>
+<span class="text-[10px] text-slate-500 font-bold">NAIROBI</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full flex justify-center gap-1 items-end h-full">
+<div class="w-6 bg-primary h-[60%] rounded-t-sm"></div>
+<div class="w-6 bg-accent h-[30%] rounded-t-sm"></div>
+</div>
+<span class="text-[10px] text-slate-500 font-bold">ACCRA</span>
+</div>
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none pb-8">
+<div class="w-full border-t border-slate-100 dark:border-slate-800"></div>
+<div class="w-full border-t border-slate-100 dark:border-slate-800"></div>
+<div class="w-full border-t border-slate-100 dark:border-slate-800"></div>
+<div class="w-full border-t border-slate-100 dark:border-slate-800"></div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-bold text-slate-800 dark:text-white">Compliance &amp; ESG</h4>
+<span class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded">A+ RATING</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center py-4">
+<div class="w-32 h-32 rounded-full border-[12px] border-slate-100 dark:border-slate-800 relative flex items-center justify-center">
+<div class="absolute inset-0 rounded-full border-[12px] border-accent border-t-transparent border-l-transparent rotate-[15deg]"></div>
+<div class="flex flex-col items-center">
+<span class="text-3xl font-bold text-primary dark:text-white">94%</span>
+<span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Adherence</span>
+</div>
+</div>
+</div>
+<div class="mt-6 space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-icons text-primary text-lg">check_circle</span>
+<span class="text-xs font-medium">IFRS Standards</span>
+</div>
+<span class="text-xs font-bold">100%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-icons text-accent text-lg">radio_button_checked</span>
+<span class="text-xs font-medium">Sustentabilidade ESG</span>
+</div>
+<span class="text-xs font-bold">88%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-icons text-slate-300 text-lg">check_circle</span>
+<span class="text-xs font-medium">Transparência Fiscal</span>
+</div>
+<span class="text-xs font-bold">95%</span>
+</div>
+</div>
+<button class="mt-6 w-full py-2 bg-slate-50 dark:bg-slate-800 text-xs font-bold rounded hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                    VER RELATÓRIO COMPLETO
+                </button>
+</div>
+</section>
+<section class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+<div class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+<h4 class="font-bold text-slate-800 dark:text-white">Status de Auditoria Regional</h4>
+<div class="flex gap-2">
+<button class="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors">
+<span class="material-icons text-lg text-slate-400">filter_list</span>
+</button>
+<button class="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors">
+<span class="material-icons text-lg text-slate-400">more_vert</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50 text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+<th class="px-6 py-4">Regional Hub</th>
+<th class="px-6 py-4">Última Auditoria</th>
+<th class="px-6 py-4">Status</th>
+<th class="px-6 py-4">Financial Health</th>
+<th class="px-6 py-4 text-right">Ações</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">LU</div>
+<div>
+<p class="text-sm font-bold">Hub Luanda</p>
+<p class="text-[10px] text-slate-400">Angola, Central-West Africa</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-xs font-medium">12 Jan 2024</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-green-100 text-green-700 text-[10px] font-bold rounded-full">SINCRONIZADO</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-slate-700 dark:text-slate-300">9.2</span>
+<div class="w-24 h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-green-500 w-[92%]"></div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-primary dark:text-blue-400 text-xs font-bold hover:underline">Ver Detalhes</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">LA</div>
+<div>
+<p class="text-sm font-bold">Hub Lagos</p>
+<p class="text-[10px] text-slate-400">Nigeria, West Africa</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-xs font-medium">05 Jan 2024</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-amber-100 text-amber-700 text-[10px] font-bold rounded-full">EM REVISÃO</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-slate-700 dark:text-slate-300">8.5</span>
+<div class="w-24 h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-accent w-[85%]"></div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-primary dark:text-blue-400 text-xs font-bold hover:underline">Ver Detalhes</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">NA</div>
+<div>
+<p class="text-sm font-bold">Hub Nairobi</p>
+<p class="text-[10px] text-slate-400">Kenya, East Africa</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-xs font-medium">Aguardando</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-red-100 text-red-700 text-[10px] font-bold rounded-full">PENDENTE</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-slate-700 dark:text-slate-300">N/A</span>
+<div class="w-24 h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-slate-300 w-0"></div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-primary dark:text-blue-400 text-xs font-bold hover:underline">Ver Detalhes</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 text-center">
+<button class="text-xs font-bold text-slate-500 hover:text-primary transition-colors">CARREGAR MAIS REGIONAIS</button>
+</div>
+</section>
+</div>
+<footer class="h-14 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-8 flex items-center justify-between shrink-0">
+<div class="flex items-center gap-2 text-slate-400 text-xs">
+<span class="material-icons text-sm">lock</span>
+            Sessão segura com encriptação AES-256. Acesso restrito à diretoria.
+        </div>
+<div class="flex items-center gap-4 text-xs font-bold text-slate-500">
+<span>Última atualização: 24/05/2024 14:30 GMT</span>
+<div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+</div>
+</footer>
+</main>
+
+</body></html>

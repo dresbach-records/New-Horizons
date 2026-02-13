@@ -1,0 +1,17 @@
+---
+import AcademyLayout from 'src/layouts/AcademyLayout.astro';
+import UserProfile from 'src/components/academy/UserProfile.astro';
+import EditProfileForm from 'src/components/academy/EditProfileForm.astro';
+---
+
+<AcademyLayout>
+  <h1 class="text-3xl font-bold mb-6">Meu Perfil</h1>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div class="lg:col-span-1">
+      <UserProfile />
+    </div>
+    <div class="lg:col-span-2">
+      <EditProfileForm />
+    </div>
+  </div>
+</AcademyLayout>

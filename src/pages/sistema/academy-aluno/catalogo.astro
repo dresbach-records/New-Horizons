@@ -1,0 +1,16 @@
+---
+import StudentLayout from 'src/layouts/StudentLayout.astro';
+import CourseCard from 'src/components/academy/student/CourseCard.astro';
+---
+
+<StudentLayout>
+  <h1 class="text-3xl font-bold mb-6">Catálogo de Cursos</h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <CourseCard />
+    <CourseCard />
+    <CourseCard />
+    <CourseCard />
+    <CourseCard />
+    <CourseCard />
+  </div>
+</StudentLayout>

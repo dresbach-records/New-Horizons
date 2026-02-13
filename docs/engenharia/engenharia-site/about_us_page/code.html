@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="pt"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sobre Nós | Projeto Novos Horizontes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .text-shadow-lg {
+            text-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2b8cee;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-display">
+<!-- Header / Navigation -->
+<nav class="fixed w-full z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<div class="text-2xl font-800 tracking-tighter text-primary">NOVOS <span class="text-slate-900 dark:text-white">HORIZONTES</span></div>
+<div class="hidden md:flex space-x-8 font-medium text-sm">
+<a class="hover:text-primary transition-colors" href="#">Início</a>
+<a class="text-primary font-bold" href="#">Sobre Nós</a>
+<a class="hover:text-primary transition-colors" href="#">Projetos</a>
+<a class="hover:text-primary transition-colors" href="#">Impacto</a>
+<a class="bg-primary text-white px-5 py-2 rounded-full hover:bg-primary/90 transition-all" href="#">Contato</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[80vh] flex items-center justify-center overflow-hidden">
+<img alt="Group of African tech professionals collaborating" class="absolute inset-0 w-full h-full object-cover" data-alt="Professional team collaborating in a modern office space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUY-CHjcc8Ge6oGr9pDHW7uCtT8xwdjTFcmIB8koEkX5FVJSsQRWNo9mVjSnntVn3yGZwNf_6HL2WTu3x8ABHYIOypP7D-7Q6QqJYuFGYpXwZZmb5Z6_h5TOGqTwyx0_gKmVrE1oT8Jq1YueG4xR1xxlbPWh3_6tCYbMeCKMq6jRW-WvKeBjN_h-6PupUptsc9gZ-MtZJqk877CN1ojnFCBvBqdLToUw5QUevM5o-g95v7_D2yGWXu2UMma3Ok5XkeQPVHcG59URU"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark/80 via-background-dark/40 to-transparent"></div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+<div class="max-w-2xl">
+<h1 class="text-6xl md:text-7xl font-800 text-white mb-6 leading-tight">Sobre Nós</h1>
+<p class="text-xl md:text-2xl text-slate-200 font-light leading-relaxed">
+                    Transformando o futuro digital de África através da educação, tecnologia e empoderamento comunitário.
+                </p>
+<div class="mt-8 flex gap-4">
+<span class="w-20 h-1 bg-primary rounded-full"></span>
+</div>
+</div>
+</div>
+</section>
+<!-- Our History Section -->
+<section class="py-24 bg-white dark:bg-slate-900/20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-2 gap-16 items-start">
+<div class="sticky top-32">
+<span class="text-primary font-bold tracking-widest uppercase text-sm block mb-4">A Jornada</span>
+<h2 class="text-4xl md:text-5xl font-800 mb-8 leading-tight">Nossa História</h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                        O Projeto Novos Horizontes nasceu da visão de que a tecnologia não é apenas uma ferramenta, mas um direito fundamental que pode elevar nações inteiras.
+                    </p>
+<div class="aspect-video rounded-xl overflow-hidden shadow-2xl relative">
+<img alt="Community gathering in rural Africa" class="w-full h-full object-cover" data-alt="Gathering of community members discussing development project" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5FTP4gDFhpcSzEiD2avdxOVfU-VB5uN5g58lzKRCk1CWezzKF6G0sUj7phcIz2lRfdmM8kONoWr6jrJnpq8RY7_OmpIYd39d1cf43ZN_jOgYq4ukhZPAXG9EiRKxbosicUofjcLMWjg3QOOTdjF-3qaTJZ0cYRIO35H3trvnnywi9I6rHLFHHrDt0WcAV1nrS1JTIQZKlC8y1WNhiGlEBXOSZublccJmz1tcHfWHQ6eWL8SxoU55ghWsMDnDpvRHsUDwLga9tR9I"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+</div>
+<div class="space-y-12 pl-8 border-l-2 border-primary/20 relative">
+<!-- Timeline Items -->
+<div class="relative">
+<div class="absolute -left-[37px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-white dark:ring-slate-900"></div>
+<h3 class="text-2xl font-bold mb-4">2018: A Semente</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Começamos como um pequeno hub tecnológico em Luanda, focado em ensinar competências básicas de programação a jovens talentos locais. Percebemos rapidamente que o potencial era maior do que as nossas instalações.
+                        </p>
+</div>
+<div class="relative">
+<div class="absolute -left-[37px] top-0 w-4 h-4 rounded-full bg-primary/40 ring-4 ring-white dark:ring-slate-900"></div>
+<h3 class="text-2xl font-bold mb-4">2020: Resiliência Digital</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Durante os desafios globais, expandimos nossa infraestrutura para o digital, alcançando mais de 12 regiões remotas. Criamos parcerias estratégicas para garantir conectividade em áreas onde o sinal mal chegava.
+                        </p>
+</div>
+<div class="relative">
+<div class="absolute -left-[37px] top-0 w-4 h-4 rounded-full bg-primary/40 ring-4 ring-white dark:ring-slate-900"></div>
+<h3 class="text-2xl font-bold mb-4">2022: Impacto Continental</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            O projeto atravessou fronteiras, estabelecendo centros de excelência em três países diferentes. Fomos reconhecidos como uma das iniciativas mais inovadoras em educação tecnológica na África Subsariana.
+                        </p>
+</div>
+<div class="relative">
+<div class="absolute -left-[37px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-white dark:ring-slate-900 shadow-[0_0_15px_rgba(43,140,238,0.5)]"></div>
+<h3 class="text-2xl font-bold mb-4 text-primary">Hoje e Além</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Atualmente servimos milhares de estudantes anualmente, conectando-os ao mercado global de trabalho e incentivando o empreendedorismo local que resolve problemas reais do nosso continente.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Values Section -->
+<section class="py-24 bg-slate-50 dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto mb-20">
+<h2 class="text-4xl font-800 mb-6">Nossos Valores</h2>
+<p class="text-slate-600 dark:text-slate-400">
+                    O que nos guia todos os dias em nossa missão de democratizar o acesso à tecnologia e inovação.
+                </p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Value 1 -->
+<div class="bg-white dark:bg-slate-800/50 p-8 rounded-xl border border-primary/5 hover:border-primary/30 transition-all hover:shadow-xl group">
+<div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-icons text-primary group-hover:text-white transition-colors">people_outline</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Inclusão</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Acreditamos que o talento é distribuído uniformemente, mas a oportunidade não. Trabalhamos para fechar esse gap.
+                    </p>
+</div>
+<!-- Value 2 -->
+<div class="bg-white dark:bg-slate-800/50 p-8 rounded-xl border border-primary/5 hover:border-primary/30 transition-all hover:shadow-xl group">
+<div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-icons text-primary group-hover:text-white transition-colors">lightbulb</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Inovação</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Não apenas seguimos tendências; criamos soluções locais que ressoam com a realidade das nossas comunidades.
+                    </p>
+</div>
+<!-- Value 3 -->
+<div class="bg-white dark:bg-slate-800/50 p-8 rounded-xl border border-primary/5 hover:border-primary/30 transition-all hover:shadow-xl group">
+<div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-icons text-primary group-hover:text-white transition-colors">verified_user</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Integridade</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Operamos com transparência radical e responsabilidade perante nossos parceiros, doadores e beneficiários.
+                    </p>
+</div>
+<!-- Value 4 -->
+<div class="bg-white dark:bg-slate-800/50 p-8 rounded-xl border border-primary/5 hover:border-primary/30 transition-all hover:shadow-xl group">
+<div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-icons text-primary group-hover:text-white transition-colors">auto_graph</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Impacto</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Cada ação que tomamos é medida pelo impacto positivo e duradouro na vida das pessoas que servimos.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Cultural Manifesto -->
+<section class="py-32 relative overflow-hidden bg-primary">
+<div class="absolute inset-0 opacity-10">
+<svg class="h-full w-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0 100 L100 0 L100 100 Z" fill="white"></path>
+</svg>
+</div>
+<div class="max-w-5xl mx-auto px-6 relative z-10 text-center">
+<span class="text-white/70 font-bold tracking-[0.3em] uppercase mb-8 block">Manifesto Cultural</span>
+<h2 class="text-4xl md:text-6xl font-900 text-white leading-tight mb-12">
+                "O futuro digital de África não será escrito por outros. <br/>
+<span class="bg-white text-primary px-4 py-1 mt-4 inline-block">Será codificado aqui.</span>"
+            </h2>
+<div class="grid md:grid-cols-2 gap-12 text-left text-white/90">
+<p class="text-lg font-medium leading-relaxed">
+                    Rejeitamos a ideia de que somos apenas consumidores de tecnologia. Somos criadores, arquitetos e líderes. O Manifesto Novos Horizontes é um compromisso com a soberania digital e a excelência técnica.
+                </p>
+<p class="text-lg font-medium leading-relaxed">
+                    Empoderamos cada jovem a ver o teclado como uma ferramenta de libertação e o código como uma linguagem de progresso. Nossa cultura é de audácia, resiliência e colaboração sem fronteiras.
+                </p>
+</div>
+</div>
+</section>
+<!-- Regions Served / Image Section -->
+<section class="py-24 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
+<div class="max-w-xl">
+<h2 class="text-4xl font-800 mb-4">Regiões Atendidas</h2>
+<p class="text-slate-600 dark:text-slate-400">Expandindo horizontes de Luanda ao Cairo, conectando comunidades ao redor do continente.</p>
+</div>
+<div class="flex gap-4">
+<div class="p-4 bg-white dark:bg-slate-800 rounded-lg shadow-sm">
+<div class="text-3xl font-800 text-primary">15+</div>
+<div class="text-xs uppercase font-bold text-slate-400">Centros</div>
+</div>
+<div class="p-4 bg-white dark:bg-slate-800 rounded-lg shadow-sm">
+<div class="text-3xl font-800 text-primary">50k+</div>
+<div class="text-xs uppercase font-bold text-slate-400">Alunos</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-[500px]">
+<div class="md:col-span-2 relative rounded-xl overflow-hidden group">
+<img alt="African landscape and city" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Stunning aerial view of a vibrant African city at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_TxbzeRTXXyvg_4eWXtiqlVKWQGmGueJFUISevT_l-4IIONmip-NNPpi_MLFrhk4yxWwQRq1wxBYgzJr7iRzITx_aLCapi2rQvYdw1fHops44ng6pQqV7-zL7utdDQrM_HRWqf2ZG1UoC1vRoRkGgI-gRd1b-tI0Elyu2DvyaKmRhwe4Z8K1iLD1K-Clz9XEZs9YEiJ58TIE5vtc2poZgLTSB5i9rhVvBsgELoRsyNQm8Lji3P0CCgIcoMTabrY71nb-AaaWC1v8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
+<div class="text-white">
+<h4 class="text-2xl font-bold">Nossos Polos Tecnológicos</h4>
+<p class="text-white/80">Infraestrutura de ponta em ambientes acolhedores.</p>
+</div>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden group">
+<img alt="Smiling students with laptops" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Diverse group of happy students working on laptops" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3j5cJH9RqG9_1MyVXmIVRhKm6lrr_pj_eWY2heT3Qo_nLr2B4c1ujdf4bObDePulMVyfweWdh8wOOMYr9EU9xSyNYxJYSEr5wWdh8rDsQhyXUJXFLjUBe3FfCc0uR5Qeh0H4HXuWPiEE53oiU8SmYO1pvE0W5O8UR5sciEETQIT3kBOwfuF8zq0OxmnEqd0FA_JRorNvv_QlW3jMcalY7BKP38hw3VEY2Bm62P5ib6WzFI7ZII5vdRdzGvqtGHoerZCG_B3oxFfY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-60"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-900 text-white py-16">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="text-2xl font-800 tracking-tighter text-primary mb-6">NOVOS HORIZONTES</div>
+<p class="text-slate-400 text-sm leading-relaxed">
+                        Construindo a ponte entre o potencial humano e as oportunidades da economia digital global.
+                    </p>
+</div>
+<div>
+<h4 class="font-bold mb-6">Navegação</h4>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">História</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Manifesto</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Equipe</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Relatórios de Impacto</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Suporte</h4>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Doe Agora</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Seja um Mentor</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Parcerias</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Carreiras</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Localização</h4>
+<div class="text-slate-400 text-sm" data-location="Luanda, Angola" style="">
+                        Edifício Horizonte, Rua da Tecnologia, 123<br/>
+                        Luanda, Angola
+                    </div>
+<div class="mt-6 flex space-x-4">
+<a class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-all" href="#">
+<span class="material-icons text-xs">facebook</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-all" href="#">
+<span class="material-icons text-xs">camera_alt</span>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 uppercase tracking-widest">
+<p>© 2024 Projeto Novos Horizontes. Todos os direitos reservados.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a class="hover:text-white transition-colors" href="#">Privacidade</a>
+<a class="hover:text-white transition-colors" href="#">Termos</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

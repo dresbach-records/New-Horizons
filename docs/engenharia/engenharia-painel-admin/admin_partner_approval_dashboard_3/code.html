@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Configurações e Permissões - Projeto Novos Horizontes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "accent": "#F39C12",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Public Sans', sans-serif; }
+        .sidebar-item-active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #F39C12;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .toggle-checkbox:checked {
+            @apply right-0 border-green-400;
+            right: 0;
+            border-color: #10B981;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            @apply bg-green-400;
+            background-color: #10B981;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 flex h-screen overflow-hidden">
+<aside class="w-72 bg-primary text-white flex flex-col shrink-0 shadow-xl z-20">
+<div class="p-6 border-b border-white/10 flex items-center gap-3">
+<div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+<span class="material-icons text-white">admin_panel_settings</span>
+</div>
+<div>
+<h1 class="font-bold text-lg leading-none uppercase tracking-wider">Novos Horizontes</h1>
+<span class="text-[10px] opacity-70 text-accent">Sede Global / Administração</span>
+</div>
+</div>
+<nav class="flex-1 py-6 overflow-y-auto custom-scrollbar">
+<div class="px-4 mb-4 text-[11px] uppercase tracking-widest text-white/40 font-bold">Gerenciamento</div>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">people</span>
+<span class="text-sm font-medium">Usuários e Permissões</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 sidebar-item-active" href="#">
+<span class="material-icons text-sm">settings_suggest</span>
+<span class="text-sm font-medium">Configurações do Sistema</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">hub</span>
+<span class="text-sm font-medium">Gestão de Hubs</span>
+</a>
+<div class="px-4 mt-8 mb-4 text-[11px] uppercase tracking-widest text-white/40 font-bold">Segurança &amp; API</div>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">security</span>
+<span class="text-sm font-medium">Protocolos de Rede</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">terminal</span>
+<span class="text-sm font-medium">Logs e Integrações</span>
+</a>
+<div class="px-4 mt-8 mb-4 text-[11px] uppercase tracking-widest text-white/40 font-bold">Personalização</div>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">palette</span>
+<span class="text-sm font-medium">White-labeling</span>
+</a>
+</nav>
+<div class="p-4 mt-auto border-t border-white/10">
+<div class="bg-white/5 rounded-lg p-3 flex items-center gap-3">
+<img alt="Admin Profile" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOReo_e19_4yoog43QfGwr-Jw4INr9ARXr2MuQk3yzVwtgBPKjCuqp65VSP58kT38tV8LaLs-ZMfb_AbXTu0-wsO7LmzKt237wB85YMqVAt29TNe1t_xPDwZizIABK4SUBzvbj6zChFWBIs92h5Ei2IwFHvX-_v6kH1bKlRMWKZYm-C7yPRgKXi0Y0_pjQk8oCKXrZUKxQQilPFgzDucleEypf43_LP5uP9xHBIwmraRq-A7DsfDklhflkGOOktffJpBpqn5gBtDQ"/>
+<div class="overflow-hidden">
+<p class="text-sm font-semibold truncate text-white">Administrador Global</p>
+<p class="text-[11px] text-white/50 truncate">ID: HQ-99420</p>
+</div>
+<button class="ml-auto text-white/40 hover:text-white">
+<span class="material-icons text-lg">logout</span>
+</button>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-4">
+<div class="flex items-center text-xs font-medium text-slate-400 gap-2">
+<span>Painel Admin</span>
+<span class="material-icons text-xs">chevron_right</span>
+<span class="text-primary dark:text-white font-bold">Configurações e Permissões</span>
+</div>
+<div class="h-6 w-[1px] bg-slate-200 dark:bg-slate-700 mx-2"></div>
+<div class="relative">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="pl-10 pr-4 py-1.5 bg-slate-50 dark:bg-slate-800 border-none rounded-lg text-sm w-80 focus:ring-2 focus:ring-primary/20" placeholder="Buscar configurações ou usuários..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-xs font-bold hover:bg-opacity-90 transition-all shadow-sm">
+<span class="material-icons text-sm">save</span>
+                SALVAR ALTERAÇÕES
+            </button>
+<div class="h-8 w-[1px] bg-slate-200 dark:bg-slate-700 mx-2"></div>
+<button class="w-10 h-10 flex items-center justify-center text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full relative">
+<span class="material-icons">help_outline</span>
+</button>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8 space-y-8 custom-scrollbar">
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Status 2FA Network</p>
+<span class="px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold rounded">ATIVO</span>
+</div>
+<h3 class="text-2xl font-bold text-primary dark:text-white">98.5%</h3>
+<p class="text-[10px] text-slate-400 mt-2">Adesão obrigatória em todos os hubs</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<p class="text-xs font-bold text-slate-500 uppercase tracking-wider">API Integrations</p>
+<span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-[10px] font-bold rounded">OPERACIONAL</span>
+</div>
+<h3 class="text-2xl font-bold text-accent">12/12</h3>
+<p class="text-[10px] text-slate-400 mt-2">Endpoints de auditoria sincronizados</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Logs de Acesso (24h)</p>
+<span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] font-bold rounded">ESTÁVEL</span>
+</div>
+<h3 class="text-2xl font-bold">1.240</h3>
+<p class="text-[10px] text-slate-400 mt-2">Zero tentativas de acesso não autorizado</p>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-8">
+<section class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+<div class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+<div>
+<h4 class="font-bold text-slate-800 dark:text-white">Matriz de Permissões de Usuários</h4>
+<p class="text-xs text-slate-400">Defina os níveis de acesso por função administrativa</p>
+</div>
+<button class="text-primary text-xs font-bold hover:underline flex items-center gap-1">
+<span class="material-icons text-sm">add_circle_outline</span> NOVO CARGO
+                        </button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50 text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+<th class="px-6 py-4">Nível de Acesso</th>
+<th class="px-6 py-4">Usuários</th>
+<th class="px-6 py-4">Financeiro</th>
+<th class="px-6 py-4">Auditoria</th>
+<th class="px-6 py-4">Config.</th>
+<th class="px-6 py-4 text-right">Ações</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-icons text-sm">stars</span>
+</div>
+<div>
+<p class="text-sm font-bold">Admin Global</p>
+<p class="text-[10px] text-slate-400">HQ Headquarters</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-xs font-medium">04</td>
+<td class="px-6 py-4"><span class="material-icons text-green-500 text-sm">check_circle</span></td>
+<td class="px-6 py-4"><span class="material-icons text-green-500 text-sm">check_circle</span></td>
+<td class="px-6 py-4"><span class="material-icons text-green-500 text-sm">check_circle</span></td>
+<td class="px-6 py-4 text-right">
+<button class="text-slate-400 hover:text-primary"><span class="material-icons text-sm">edit</span></button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-slate-100 flex items-center justify-center text-slate-500">
+<span class="material-icons text-sm">location_city</span>
+</div>
+<div>
+<p class="text-sm font-bold">Hub Managers</p>
+<p class="text-[10px] text-slate-400">Regional Leaders</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-xs font-medium">18</td>
+<td class="px-6 py-4"><span class="material-icons text-slate-300 text-sm">remove_circle_outline</span></td>
+<td class="px-6 py-4"><span class="material-icons text-green-500 text-sm">check_circle</span></td>
+<td class="px-6 py-4"><span class="material-icons text-slate-300 text-sm">remove_circle_outline</span></td>
+<td class="px-6 py-4 text-right">
+<button class="text-slate-400 hover:text-primary"><span class="material-icons text-sm">edit</span></button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-slate-100 flex items-center justify-center text-slate-500">
+<span class="material-icons text-sm">school</span>
+</div>
+<div>
+<p class="text-sm font-bold">Mentors</p>
+<p class="text-[10px] text-slate-400">Local Volunteers</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-xs font-medium">142</td>
+<td class="px-6 py-4"><span class="material-icons text-slate-300 text-sm">remove_circle_outline</span></td>
+<td class="px-6 py-4"><span class="material-icons text-slate-300 text-sm">remove_circle_outline</span></td>
+<td class="px-6 py-4"><span class="material-icons text-slate-300 text-sm">remove_circle_outline</span></td>
+<td class="px-6 py-4 text-right">
+<button class="text-slate-400 hover:text-primary"><span class="material-icons text-sm">edit</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm p-6">
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-bold text-slate-800 dark:text-white">Logs do Sistema</h4>
+<button class="text-xs font-bold text-slate-400 hover:text-primary">VER TUDO</button>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4 py-3 border-b border-slate-100 dark:border-slate-800 last:border-0">
+<span class="text-[10px] font-mono text-slate-400">14:22:10</span>
+<span class="px-2 py-0.5 bg-blue-50 text-blue-600 text-[10px] font-bold rounded">USER_LOGIN</span>
+<p class="text-xs text-slate-600 dark:text-slate-300 flex-1">Diretor Financeiro (ID: 552) acessou via Hub Luanda.</p>
+<span class="text-[10px] text-slate-400">IP: 197.231.xx.xx</span>
+</div>
+<div class="flex items-center gap-4 py-3 border-b border-slate-100 dark:border-slate-800 last:border-0">
+<span class="text-[10px] font-mono text-slate-400">13:05:45</span>
+<span class="px-2 py-0.5 bg-amber-50 text-amber-600 text-[10px] font-bold rounded">PERM_CHANGE</span>
+<p class="text-xs text-slate-600 dark:text-slate-300 flex-1">Permissão de 'Auditoria' atualizada para Mentores em Nairobi.</p>
+<span class="text-[10px] text-slate-400">IP: 41.203.xx.xx</span>
+</div>
+<div class="flex items-center gap-4 py-3 border-b border-slate-100 dark:border-slate-800 last:border-0">
+<span class="text-[10px] font-mono text-slate-400">11:15:02</span>
+<span class="px-2 py-0.5 bg-purple-50 text-purple-600 text-[10px] font-bold rounded">API_SYNC</span>
+<p class="text-xs text-slate-600 dark:text-slate-300 flex-1">Sincronização automática com ERP Regional Lagos concluída.</p>
+<span class="text-[10px] text-slate-400">Server: AWS-EU-1</span>
+</div>
+</div>
+</section>
+</div>
+<div class="space-y-8">
+<section class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<h4 class="font-bold text-slate-800 dark:text-white mb-6">Configurações de Segurança</h4>
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<div>
+<p class="text-xs font-bold text-slate-800 dark:text-white">Autenticação 2FA Forçada</p>
+<p class="text-[10px] text-slate-400">Exigir em toda a rede global</p>
+</div>
+<div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer" id="toggle2fa" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer" for="toggle2fa"></label>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<p class="text-xs font-bold text-slate-800 dark:text-white">Restrição de IP Geográfica</p>
+<p class="text-[10px] text-slate-400">Bloquear acessos fora de regiões permitidas</p>
+</div>
+<div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer" id="toggleip" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer" for="toggleip"></label>
+</div>
+</div>
+<div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+<p class="text-xs font-bold text-slate-800 dark:text-white mb-2">Expiração de Sessão Admin</p>
+<select class="w-full text-xs bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg p-2 focus:ring-primary/20">
+<option>15 minutos de inatividade</option>
+<option selected="">30 minutos de inatividade</option>
+<option>1 hora de inatividade</option>
+</select>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<h4 class="font-bold text-slate-800 dark:text-white mb-6">White-labeling &amp; Hub Branding</h4>
+<p class="text-[11px] text-slate-500 mb-6">Configure identidades visuais específicas para parceiros regionais.</p>
+<div class="space-y-4">
+<div>
+<label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Hub Selecionado</label>
+<select class="w-full text-xs bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg p-2">
+<option>Padrão (Projeto Novos Horizontes)</option>
+<option>Hub Luanda Partner (Angola)</option>
+<option>Lagos Tech Coalition (Nigeria)</option>
+</select>
+</div>
+<div>
+<label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Logo Customizada</label>
+<div class="border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-lg p-4 flex flex-col items-center justify-center bg-slate-50/50 dark:bg-slate-800/20">
+<span class="material-icons text-slate-300 mb-2">cloud_upload</span>
+<span class="text-[10px] text-slate-500">Arraste a logo PNG ou SVG</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Cor Primária</label>
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded border border-slate-200" style="background-color: #003366"></div>
+<input class="text-[10px] bg-transparent border-none p-0 w-16 uppercase font-mono" type="text" value="#003366"/>
+</div>
+</div>
+<div>
+<label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Cor de Destaque</label>
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded border border-slate-200" style="background-color: #F39C12"></div>
+<input class="text-[10px] bg-transparent border-none p-0 w-16 uppercase font-mono" type="text" value="#F39C12"/>
+</div>
+</div>
+</div>
+<button class="w-full mt-2 py-2 border border-primary text-primary text-[10px] font-bold rounded hover:bg-primary hover:text-white transition-all uppercase tracking-wider">
+                            Visualizar Interface do Hub
+                        </button>
+</div>
+</section>
+</div>
+</div>
+</div>
+<footer class="h-14 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-8 flex items-center justify-between shrink-0">
+<div class="flex items-center gap-2 text-slate-400 text-xs">
+<span class="material-icons text-sm">shield</span>
+            Modo de Configuração Global Ativo. Todas as alterações são auditadas.
+        </div>
+<div class="flex items-center gap-4 text-xs font-bold text-slate-500">
+<span>Última Auditoria de Sistema: 24/05/2024 10:15 GMT</span>
+<div class="w-2 h-2 bg-green-500 rounded-full"></div>
+</div>
+</footer>
+</main>
+
+</body></html>

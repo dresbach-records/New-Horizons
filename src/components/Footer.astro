@@ -1,0 +1,81 @@
+---
+const menuLinks = [
+    { href: "/sobre", text: "Sobre Nós" },
+    { href: "#problema", text: "O Problema" },
+    { href: "#solucao", text: "Solução" },
+    { href: "/equipe", text: "Equipe" },
+];
+
+const investorLinks = [
+    { href: "/relatorio-esg", text: "Relatório ESG" },
+    { href: "#investidores", text: "Pitch Deck" },
+    { href: "/parcerias", text: "Modelos de Parceria" },
+    { href: "/faq", text: "FAQs" },
+];
+
+const socialLinks = [
+    { href: "#", icon: "logo_linkedin" },
+    { href: "#", icon: "logo_instagram" },
+    { href: "#", icon: "logo_facebook" },
+]
+--- 
+
+<footer class="bg-dark text-white pt-20 pb-8">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <!-- Logo & Description -->
+            <div class="lg:col-span-1">
+                 <a href="/" class="flex items-center gap-3 mb-4">
+                    <img alt="Projeto Novos Horizonte Logo" class="h-10 w-auto" src="/logosemfundo.png" />
+                 </a>
+                <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                    Transformando o futuro na África através da educação tecnológica e conexão com o mercado global.
+                </p>
+            </div>
+
+            <!-- Menu Links -->
+            <div>
+                <h5 class="font-bold text-white text-base mb-4">Menu</h5>
+                <ul class="space-y-3">
+                    {menuLinks.map(link => (
+                        <li><a href={link.href} class="text-slate-300 hover:text-white transition-colors text-sm">{link.text}</a></li>
+                    ))}
+                </ul>
+            </div>
+
+            <!-- Investor Links -->
+            <div>
+                <h5 class="font-bold text-white text-base mb-4">Investidores</h5>
+                <ul class="space-y-3">
+                    {investorLinks.map(link => (
+                        <li><a href={link.href} class="text-slate-300 hover:text-white transition-colors text-sm">{link.text}</a></li>
+                    ))}
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h5 class="font-bold text-white text-base mb-4">Contato</h5>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5">mail</span>
+                        <a href="mailto:contato@projetonovoshorizonte.org" class="text-slate-300 hover:text-white transition-colors text-sm">contato@projetonovoshorizonte.org</a>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5">location_on</span>
+                        <span class="text-slate-300 text-sm">São Paulo / Luanda / Lagos</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-slate-800 pt-8 flex flex-col-reverse sm:flex-row justify-between items-center gap-4">
+            <p class="text-sm text-slate-500">© 2024 Projeto Novos Horizontes. Todos os direitos reservados.</p>
+            <div class="flex items-center gap-6">
+                <a href="/privacidade" class="text-sm text-slate-400 hover:text-white">Privacidade</a>
+                <a href="/termos" class="text-sm text-slate-400 hover:text-white">Termos</a>
+                <a href="/cookies" class="text-sm text-slate-400 hover:text-white">Cookies</a>
+            </div>
+        </div>
+    </div>
+</footer>

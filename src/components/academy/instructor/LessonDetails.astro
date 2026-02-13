@@ -1,0 +1,22 @@
+---
+const { aulaId } = Astro.params;
+---
+
+<div>
+    <h1 class="text-2xl font-bold mb-4">Detalhes da Aula {aulaId}</h1>
+
+    <div class="aspect-w-16 aspect-h-9 mb-8">
+        <iframe 
+            class="w-full h-full"
+            src="https://www.youtube.com/embed/videoseries?list=PL_2i3_z9_X1_m_Q_3_z_y_f_w_e_a_e"
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+    </div>
+
+    <div>
+        <h2 class="text-xl font-bold mb-2">Descrição da Aula</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+    </div>
+</div>

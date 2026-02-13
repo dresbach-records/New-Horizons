@@ -1,0 +1,29 @@
+---
+const { cursoId } = Astro.params;
+
+const lessons = [
+    { id: 1, title: 'Aula 1: Introdução' },
+    { id: 2, title: 'Aula 2: Configurando o Ambiente' },
+    { id: 3, title: 'Aula 3: Criando a Primeira Página' },
+];
+---
+
+<div>
+    <h1 class="text-2xl font-bold mb-4">Detalhes do Curso {cursoId}</h1>
+
+    <div class="mb-8">
+        <h2 class="text-xl font-bold mb-4">Aulas</h2>
+        <ul class="space-y-2">
+            {lessons.map(lesson => (
+                <li class="flex items-center justify-between bg-white p-3 rounded-md shadow-sm">
+                    <span>{lesson.title}</span>
+                    <a href={`/sistema/academy-instrutor/cursos/${cursoId}/aulas/${lesson.id}`} class="text-blue-500 hover:underline">Ver Aula</a>
+                </li>
+            ))}
+        </ul>
+    </div>
+
+    <div>
+        <a href={`/sistema/academy-instrutor/cursos/${cursoId}/aulas/nova`} class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Adicionar Nova Aula</a>
+    </div>
+</div>

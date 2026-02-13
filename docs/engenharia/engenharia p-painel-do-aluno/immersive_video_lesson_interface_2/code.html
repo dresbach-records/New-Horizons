@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.symbols.outlined/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee8c2b",
+                        "brand-blue": "#0a192f",
+                        "brand-blue-light": "#112240",
+                        "background-light": "#f8f9fa",
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Lexend', sans-serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #ee8c2b; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(238, 140, 43, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light text-slate-900 min-h-screen flex flex-col">
+<header class="h-16 border-b border-slate-200 bg-white flex items-center justify-between px-8 sticky top-0 z-50">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 group cursor-pointer">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-icons-round text-white text-xl">landscape</span>
+</div>
+<span class="font-bold text-lg tracking-tight text-brand-blue">Novos Horizontes</span>
+</div>
+<nav class="flex items-center gap-2 text-sm font-medium text-slate-400">
+<span class="hover:text-primary cursor-pointer transition-colors">Cursos</span>
+<span class="material-icons-round text-xs">chevron_right</span>
+<span class="hover:text-primary cursor-pointer transition-colors">UI Design</span>
+<span class="material-icons-round text-xs text-primary">chevron_right</span>
+<span class="text-brand-blue font-semibold">Materiais: Configuração de Variáveis</span>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-500 hover:text-primary transition-colors">
+<span class="material-icons-round">notifications_none</span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBrkruc3uYAXdcUFi6MsUo0S1b037KQ6mDldsFTNETUDN8oe4cxoSZ_e81-UVgxhdOXB16n_8RcSo0e3x9hbl2a1MlWYK6ukmOk9W3rLMUYK5Ntp_4oShFw8gyRsbrYpvZrMBGHSlYe7C7feRVy9XFXRufFM6wFZBgjHarzi2L2K5sU_KoNo6vjenT-elDW_0TpBRC3sOmh_Uk9XoIlaucajvoP-LZdGF9EaCXNlH7MgKnqI0bI5gnMtQzu1rPT6YUferGvU-G1iM"/>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full px-8 py-10">
+<div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="text-primary font-bold text-sm uppercase tracking-widest mb-2 block">Módulo 04 • Aula 12</span>
+<h1 class="text-4xl font-extrabold text-brand-blue leading-tight">Materiais da Aula:<br/>Configuração de Variáveis</h1>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-xl border-2 border-slate-200 hover:border-primary/50 text-slate-600 hover:text-primary transition-all font-semibold">
+<span class="material-icons-round text-lg">arrow_back</span>
+                Voltar para Aula
+            </button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+<div class="group bg-white rounded-2xl shadow-sm border border-slate-100 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all overflow-hidden flex flex-col">
+<div class="h-48 bg-slate-100 relative overflow-hidden">
+<img alt="Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6fMf3I2EbsmF3Xn6LhmVZUaLRLD5Nqv_QvG_zM52vlcG0WfbIh01UHnnGJnmLkHdEF-aPCZp3baeTvttwfkuIOi-HNHZIJc8PJWRbY7L0IMph89hzPD0yLY0TgO_XZRk9QnN1j2jKU4EmQN7qltnxsUdqN7zGwlaehwOZmbLBABstgtrBvLA-yDOZlkvGDodruiy54wS49h3e7yuJQvDJroWLZktXmBhefj62-LrUpOEIysXwOQ12eyDpK56qfLFgWvcPdXsonRI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex items-center gap-2">
+<span class="bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded">PDF</span>
+<span class="text-white text-xs font-medium">12 páginas</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="font-bold text-lg text-brand-blue mb-2">Guia de Referência: Design Tokens</h3>
+<p class="text-slate-500 text-sm mb-6 flex-1">Documentação completa sobre a nomenclatura e estrutura de tokens para escalabilidade.</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-xs font-bold text-slate-400">4.2 MB</span>
+<button class="flex items-center gap-2 bg-brand-blue hover:bg-primary text-white px-6 py-3 rounded-xl font-bold transition-colors w-full justify-center">
+<span class="material-icons-round text-lg">download</span>
+                        Download
+                    </button>
+</div>
+</div>
+</div>
+<div class="group bg-white rounded-2xl shadow-sm border border-slate-100 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all overflow-hidden flex flex-col">
+<div class="h-48 bg-slate-900 flex items-center justify-center relative">
+<span class="material-icons-round text-6xl text-white/20">code</span>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-icons-round text-5xl text-white group-hover:scale-110 transition-transform">terminal</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex items-center gap-2 mb-2">
+<h3 class="font-bold text-lg text-brand-blue">GitHub Repository</h3>
+<span class="bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Public</span>
+</div>
+<p class="text-slate-500 text-sm mb-6 flex-1">Acesse o código-fonte dos exemplos mostrados em aula, incluindo configurações do Tailwind.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-xs text-slate-400">
+<span class="flex items-center gap-1"><span class="material-icons-round text-sm">account_tree</span> main</span>
+<span class="flex items-center gap-1"><span class="material-icons-round text-sm">update</span> 2 dias atrás</span>
+</div>
+<button class="flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-brand-blue px-6 py-3 rounded-xl font-bold transition-colors w-full justify-center border border-slate-200">
+<span class="material-icons-round text-lg">open_in_new</span>
+                        Acessar Repositório
+                    </button>
+</div>
+</div>
+</div>
+<div class="group bg-white rounded-2xl shadow-sm border border-slate-100 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all overflow-hidden flex flex-col">
+<div class="h-48 bg-purple-50 flex items-center justify-center relative">
+<img alt="Figma Background" class="w-full h-full object-cover mix-blend-overlay opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6fMf3I2EbsmF3Xn6LhmVZUaLRLD5Nqv_QvG_zM52vlcG0WfbIh01UHnnGJnmLkHdEF-aPCZp3baeTvttwfkuIOi-HNHZIJc8PJWRbY7L0IMph89hzPD0yLY0TgO_XZRk9QnN1j2jKU4EmQN7qltnxsUdqN7zGwlaehwOZmbLBABstgtrBvLA-yDOZlkvGDodruiy54wS49h3e7yuJQvDJroWLZktXmBhefj62-LrUpOEIysXwOQ12eyDpK56qfLFgWvcPdXsonRI"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-purple-600">
+<span class="material-icons-round text-5xl mb-2">grid_view</span>
+<span class="text-xs font-bold uppercase tracking-widest">Community File</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="font-bold text-lg text-brand-blue mb-2">Figma Community File</h3>
+<p class="text-slate-500 text-sm mb-6 flex-1">O arquivo base com todas as variáveis configuradas para você praticar e duplicar no seu editor.</p>
+<button class="flex items-center gap-2 bg-white hover:border-primary border-2 border-slate-100 text-slate-700 hover:text-primary px-6 py-3 rounded-xl font-bold transition-all w-full justify-center">
+<span class="material-symbols-outlined text-lg">layers</span>
+                    Duplicar no Figma
+                </button>
+</div>
+</div>
+</div>
+<div class="bg-brand-blue rounded-3xl p-10 text-white relative overflow-hidden mb-12">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-icons-round">auto_stories</span>
+</div>
+<h2 class="text-2xl font-bold">Leituras Recomendadas pelo Mentor</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<a class="group flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/40 transition-all" href="#">
+<div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-primary font-bold">01</div>
+<div class="flex-1">
+<p class="font-bold group-hover:text-primary transition-colors">Naming Convention em Design Systems</p>
+<p class="text-sm text-slate-400">Artigo • 8 min de leitura</p>
+</div>
+<span class="material-icons-round text-slate-500 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="group flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/40 transition-all" href="#">
+<div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-primary font-bold">02</div>
+<div class="flex-1">
+<p class="font-bold group-hover:text-primary transition-colors">W3C Design Tokens Community Group</p>
+<p class="text-sm text-slate-400">Documentação Oficial • Externo</p>
+</div>
+<span class="material-icons-round text-slate-500 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="group flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/40 transition-all" href="#">
+<div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-primary font-bold">03</div>
+<div class="flex-1">
+<p class="font-bold group-hover:text-primary transition-colors">Do Base ao Alias: Escalonando Tokens</p>
+<p class="text-sm text-slate-400">Medium • 12 min de leitura</p>
+</div>
+<span class="material-icons-round text-slate-500 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="group flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/40 transition-all" href="#">
+<div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-primary font-bold">04</div>
+<div class="flex-1">
+<p class="font-bold group-hover:text-primary transition-colors">Diferença entre Variáveis e Estilos</p>
+<p class="text-sm text-slate-400">Vídeo • 15 min</p>
+</div>
+<span class="material-icons-round text-slate-500 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-8 right-8 w-80 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden group z-[60]">
+<div class="relative aspect-video">
+<img alt="Video recap" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6fMf3I2EbsmF3Xn6LhmVZUaLRLD5Nqv_QvG_zM52vlcG0WfbIh01UHnnGJnmLkHdEF-aPCZp3baeTvttwfkuIOi-HNHZIJc8PJWRbY7L0IMph89hzPD0yLY0TgO_XZRk9QnN1j2jKU4EmQN7qltnxsUdqN7zGwlaehwOZmbLBABstgtrBvLA-yDOZlkvGDodruiy54wS49h3e7yuJQvDJroWLZktXmBhefj62-LrUpOEIysXwOQ12eyDpK56qfLFgWvcPdXsonRI"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center">
+<span class="material-icons-round">play_arrow</span>
+</button>
+</div>
+<div class="absolute top-2 left-2 px-2 py-1 rounded bg-black/60 text-[10px] text-white font-bold uppercase tracking-wider backdrop-blur-sm">
+            Recapitulação da Aula
+        </div>
+<button class="absolute top-2 right-2 text-white opacity-60 hover:opacity-100">
+<span class="material-icons-round text-sm">close</span>
+</button>
+<div class="absolute bottom-0 left-0 h-1 bg-primary" style="width: 45%"></div>
+</div>
+<div class="p-4 flex items-center justify-between">
+<div>
+<p class="text-xs font-bold text-brand-blue truncate">Aula 12: Configuração de Variáveis</p>
+<p class="text-[10px] text-slate-500">Continuar de 10:45</p>
+</div>
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons-round">open_in_full</span>
+</button>
+</div>
+</div>
+<div class="lg:hidden fixed bottom-0 left-0 right-0 h-16 bg-white border-t border-slate-200 flex items-center justify-around z-50">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">play_circle</span>
+<span class="text-[10px] font-medium">Aula</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons-round">folder_open</span>
+<span class="text-[10px] font-bold">Materiais</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">chat_bubble_outline</span>
+<span class="text-[10px] font-medium">Chat</span>
+</button>
+</div>
+
+</body></html>

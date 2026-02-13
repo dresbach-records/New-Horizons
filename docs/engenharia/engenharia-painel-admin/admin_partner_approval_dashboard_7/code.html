@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Criar Nova Senha - Projeto Novos Horizontes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "accent": "#F59E0B",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Public Sans', sans-serif; }
+        .strength-bar {
+            height: 4px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 h-screen overflow-hidden">
+<div class="flex h-full w-full">
+<div class="hidden lg:flex lg:w-1/2 bg-primary relative overflow-hidden flex-col p-12 justify-between">
+<div class="relative z-10">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-accent rounded-xl flex items-center justify-center shadow-lg shadow-accent/20">
+<span class="material-icons text-white text-3xl">explore</span>
+</div>
+<div>
+<h1 class="font-bold text-2xl leading-none uppercase tracking-widest text-white">Novos Horizontes</h1>
+<span class="text-xs opacity-70 text-white">Sede Global / Portal Admin</span>
+</div>
+</div>
+</div>
+<div class="relative z-10 max-w-lg">
+<h2 class="text-4xl font-bold text-white mb-6 leading-tight">Segurança em primeiro lugar na nossa rede global.</h2>
+<p class="text-white/70 text-lg">Crie uma senha forte para proteger o acesso aos dados de impacto social e operações globais.</p>
+</div>
+<div class="relative z-10 flex items-center gap-4 text-white/50 text-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">lock</span> Criptografia de ponta</span>
+<span class="w-1 h-1 bg-white/30 rounded-full"></span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">verified_user</span> ISO 27001 Compliant</span>
+</div>
+<div class="absolute top-0 right-0 w-full h-full opacity-20 pointer-events-none">
+<img alt="Global Map Overlay" class="w-full h-full object-cover mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACzuYzjfoW56RUUwbAZBxbUpyeRM7hiQlJ5eo37Q5emcMg7EFS5Wc287U_HDy4UFGdZyEyF3vnSAVccJlDTChRnu1QpK5jjeJA7xSkig3t0eEJ4egSvNr-wgnlhEahRSH3hwajuHhzeCxWZpFLOBD6-Eswa3MfWHmOpBI9ZVpfIPnGoeKW1-GfQ6CrHMTlsgGzo9MmsNCBV4ZDVRkna5iw6EPqFZSCiB8VxWXUoPrwO223NMTMKcq4XTNt3JgamdNpXGj75h646gI"/>
+</div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-accent/20 rounded-full blur-3xl"></div>
+</div>
+<main class="w-full lg:w-1/2 flex items-center justify-center p-8 bg-white dark:bg-slate-900">
+<div class="w-full max-w-md space-y-8">
+<div class="text-center lg:text-left">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white">Criar Nova Senha</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-2">Sua nova senha deve ser diferente das utilizadas anteriormente.</p>
+</div>
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300" for="new-password">Nova Senha</label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all pr-12" id="new-password" placeholder="••••••••" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+<div class="pt-2">
+<div class="flex gap-1 mb-2">
+<div class="strength-bar flex-1 bg-green-500"></div>
+<div class="strength-bar flex-1 bg-green-500"></div>
+<div class="strength-bar flex-1 bg-slate-200 dark:bg-slate-700"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Força da Senha</span>
+<span class="text-xs font-bold text-green-600 uppercase">Média</span>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300" for="confirm-password">Confirmar Nova Senha</label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all pr-12" id="confirm-password" placeholder="••••••••" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-lg border border-slate-100 dark:border-slate-800">
+<h4 class="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-3">Requisitos Mínimos</h4>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400">
+<span class="material-icons text-green-500 text-sm">check_circle</span>
+                                Pelo menos 8 caracteres
+                            </li>
+<li class="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400">
+<span class="material-icons text-green-500 text-sm">check_circle</span>
+                                Um caractere especial e um número
+                            </li>
+<li class="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400">
+<span class="material-icons text-slate-300 dark:text-slate-600 text-sm">radio_button_unchecked</span>
+                                Letras maiúsculas e minúsculas
+                            </li>
+</ul>
+</div>
+<button class="w-full bg-accent hover:bg-amber-600 text-primary font-bold py-4 rounded-lg shadow-lg shadow-accent/20 transition-all transform active:scale-[0.98] uppercase tracking-wider" type="submit">
+                        Redefinir e Acessar
+                    </button>
+<div class="text-center pt-4">
+<a class="text-sm font-semibold text-primary dark:text-blue-400 hover:underline inline-flex items-center gap-1" href="#">
+<span class="material-icons text-sm">arrow_back</span>
+                            Voltar para o login
+                        </a>
+</div>
+</form>
+</div>
+</main>
+</div>
+
+</body></html>

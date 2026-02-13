@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Termos de Uso";
+--- 
+<BaseLayout title={pageTitle}>
+  <main class="max-w-7xl mx-auto px-6 py-12">
+    <div class="flex gap-12">
+      <article class="flex-1 max-w-3xl mx-auto lg:mx-0">
+        <header class="mb-12">
+          <h1 class="text-4xl font-extrabold text-white mb-4">Legal & Compliance</h1>
+          <div class="flex items-center gap-4 text-sm text-slate-500">
+            <span class="flex items-center gap-1"><span class="material-icons text-sm">schedule</span> Última atualização: 24 de Outubro de 2023</span>
+            <span class="flex items-center gap-1"><span class="material-icons text-sm">history</span> Versão 2.4.0</span>
+          </div>
+        </header>
+        <div class="legal-content">
+          <section id="terms-of-use">
+            <h2 class="dark:text-white text-3xl font-bold mb-6">Termos de Uso</h2>
+            <p class="text-slate-400 leading-relaxed mb-4">Estes termos regem o seu acesso e uso do software e dos serviços do Projeto Novos Horizontes. Ao acessar nossa plataforma, você concorda em ficar vinculado por estes termos.</p>
+            <h3 class="dark:text-white text-2xl font-bold mt-8 mb-4">1. Responsabilidades do Usuário</h3>
+            <p class="text-slate-400 leading-relaxed mb-4">Os usuários são responsáveis por manter a confidencialidade de suas credenciais de conta e por todas as atividades que ocorrem em sua conta. Você concorda em nos notificar imediatamente sobre qualquer uso não autorizado.</p>
+            <h3 class="dark:text-white text-2xl font-bold mt-8 mb-4">2. Propriedade Intelectual</h3>
+            <p class="text-slate-400 leading-relaxed mb-4">Todo o conteúdo, recursos e funcionalidades do serviço são de propriedade do Projeto Novos Horizontes e são protegidos por leis internacionais de direitos autorais, marcas registradas e outras leis de propriedade intelectual.</p>
+            <div class="my-8 p-6 bg-slate-800/50 border-l-4 border-primary rounded-r-lg">
+              <p class="font-bold text-white mb-1">Nota Importante</p>
+              <p class="text-sm italic m-0 text-slate-300">O uso comercial dos dados da plataforma sem consentimento explícito por escrito é estritamente proibido pela Seção 4.b do nosso contrato principal.</p>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+</BaseLayout>

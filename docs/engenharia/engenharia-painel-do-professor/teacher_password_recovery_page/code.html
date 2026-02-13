@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recuperar Acesso do Mentor | Portal do Professor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#f48c25",
+                "background-light": "#f8f7f5",
+                "background-dark": "#221910",
+              },
+              fontFamily: {
+                "display": ["Public Sans", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen">
+<div class="flex min-h-screen flex-col lg:flex-row">
+<!-- Left Side: Visual Panel -->
+<div class="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-primary/10">
+<div class="absolute inset-0 z-0">
+<img alt="Professor ensinando em uma sala moderna" class="w-full h-full object-cover" data-alt="Modern classroom with a teacher mentoring students" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqcWzA9b7a7EIGiynE5oLvcB543lfC8Sc05i_fGKjib_ccHga2YrdW-9Na1GNQzd4tNcP2l4gn1sd2-eAqmR4M_8J5jy6dYUfI11_Xi_CkU3q9hUYQm8WjbhfF_id7VIsgtLXo3UUFQrIL6p5bMBWWCllOnbD8GRxKE-EA6kRJ8JRk44hwtcgaTl7bVYPdPWcrgc7Gt44IsKtDBd-3P7Pvml4ecnJvNwf_1lEg3s2dWfUYeG3TlJbBLxjE4qFHjvNmISvo2HSWj9E"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/60 to-transparent mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 p-16 flex flex-col justify-between text-white w-full">
+<div class="flex items-center gap-2">
+<div class="bg-white p-2 rounded-lg">
+<span class="material-icons text-primary text-3xl">school</span>
+</div>
+<span class="text-2xl font-bold tracking-tight">EduPortal Mentor</span>
+</div>
+<div class="max-w-md">
+<h2 class="text-4xl font-bold mb-6">Inspirando o futuro através da educação.</h2>
+<p class="text-lg text-white/90 leading-relaxed">
+                        Nossa plataforma ajuda mentores a gerenciar suas aulas e acompanhar o progresso dos alunos de forma intuitiva.
+                    </p>
+</div>
+<div class="flex gap-4">
+<div class="h-1 w-12 bg-white rounded-full"></div>
+<div class="h-1 w-12 bg-white/30 rounded-full"></div>
+<div class="h-1 w-12 bg-white/30 rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Right Side: Recovery Form -->
+<div class="flex-1 flex items-center justify-center p-8 lg:p-24 bg-white dark:bg-background-dark">
+<div class="w-full max-w-md">
+<!-- Mobile Logo (Visible only on small screens) -->
+<div class="lg:hidden flex items-center gap-2 mb-12">
+<span class="material-icons text-primary text-4xl">school</span>
+<span class="text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-100">EduPortal</span>
+</div>
+<div class="mb-10">
+<h1 class="text-3xl font-bold text-neutral-900 dark:text-neutral-50 mb-3">
+                        Recuperar Acesso do Mentor
+                    </h1>
+<p class="text-neutral-500 dark:text-neutral-400">
+                        Insira seu e-mail institucional para redefinir sua senha.
+                    </p>
+</div>
+<form class="space-y-6" onsubmit="return false;">
+<div>
+<label class="block text-sm font-semibold text-neutral-700 dark:text-neutral-300 mb-2" for="email">
+                            E-mail Institucional
+                        </label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-icons text-neutral-400 text-xl">mail_outline</span>
+</div>
+<input class="block w-full pl-10 pr-4 py-3 border border-neutral-200 dark:border-neutral-700 rounded-lg bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200" id="email" name="email" placeholder="exemplo@instituicao.edu.br" required="" type="email"/>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3.5 px-6 rounded-lg shadow-lg shadow-primary/20 transition-all duration-200 flex items-center justify-center gap-2 group" type="submit">
+<span>Enviar Instruções</span>
+<span class="material-icons text-xl group-hover:translate-x-1 transition-transform">send</span>
+</button>
+</form>
+<div class="mt-10 pt-8 border-t border-neutral-100 dark:border-neutral-800 flex flex-col items-center">
+<a class="flex items-center gap-2 text-primary font-medium hover:underline group" href="#">
+<span class="material-icons text-lg group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                        Voltar para o Login
+                    </a>
+</div>
+<!-- Assistance Note -->
+<div class="mt-12 p-4 bg-primary/5 dark:bg-primary/10 rounded-xl border border-primary/10">
+<div class="flex gap-3">
+<span class="material-icons text-primary">info</span>
+<div>
+<p class="text-sm font-medium text-neutral-800 dark:text-neutral-200">Precisa de ajuda adicional?</p>
+<p class="text-xs text-neutral-500 dark:text-neutral-400 mt-1">
+                                Entre em contato com o suporte de TI da sua instituição caso não tenha acesso ao seu e-mail.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Pattern Decoration for light mode -->
+<div class="fixed bottom-0 right-0 -z-10 opacity-5 pointer-events-none">
+<svg fill="none" height="400" viewbox="0 0 400 400" width="400" xmlns="http://www.w3.org/2000/svg">
+<circle cx="400" cy="400" r="300" stroke="#f48c25" stroke-width="2"></circle>
+<circle cx="400" cy="400" r="250" stroke="#f48c25" stroke-width="2"></circle>
+<circle cx="400" cy="400" r="200" stroke="#f48c25" stroke-width="2"></circle>
+</svg>
+</div>
+</body></html>

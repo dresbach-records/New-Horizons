@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Novos Horizonte Academy - Dashboard do Mentor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f27f0d",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221910",
+                        "sidebar-dark": "#0f172a", // Deep Navy for premium feel
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(4px); }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 min-h-screen flex">
+<!-- Sidebar -->
+<aside class="w-64 bg-sidebar-dark text-white flex flex-col fixed h-full z-50">
+<div class="p-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons-round text-white text-xl">school</span>
+</div>
+<span class="font-bold text-lg tracking-tight">Novos Horizonte</span>
+</div>
+<nav class="flex-1 px-4 py-6 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 bg-primary/10 text-primary border-r-4 border-primary rounded-r-none rounded-lg transition-all" href="#">
+<span class="material-icons-round">dashboard</span>
+<span class="font-medium">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-icons-round">groups</span>
+<span class="font-medium">Minhas Turmas</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-icons-round">assignment_turned_in</span>
+<span class="font-medium">Correção de Projetos</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-icons-round">calendar_today</span>
+<span class="font-medium">Agenda de Mentorias</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-icons-round">forum</span>
+<span class="font-medium">Comunidade</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-icons-round">folder_special</span>
+<span class="font-medium">Recursos Docentes</span>
+</a>
+</nav>
+<div class="p-4 mt-auto">
+<div class="bg-white/5 rounded-xl p-4 flex items-center gap-3">
+<img alt="Mentor Profile" class="w-10 h-10 rounded-full border-2 border-primary/50" data-alt="Profile photo of a professional male mentor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd0sxz3EItUuzCra1t1yfIMifiLjN7niC-XgLBZne4c17JFUM-wmKaZuqh02DXxtwrneLqMIXzahyhMBO4auiH3Kjg9c-qJV5MGypZDeymdMdd6ROzbzVH8VRHU0uPe739igdGS7By7CNfMuUkv_sqeNaOW0j6JMnQ1NrAHcCZG09b_5_vfWl81bvi0UpVpshLAlIYxUjHwN1mivWi0MwsKrO-fSXImK9KMoE7WxV72ZW4YOKldikmKaHj5k-tTe7iHGpCRh-Per8"/>
+<div class="overflow-hidden">
+<p class="text-sm font-semibold truncate">Ricardo Mendes</p>
+<p class="text-xs text-slate-500 truncate">Sênior UI Designer</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 ml-64 p-8">
+<!-- Welcome Header -->
+<header class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+<div>
+<h1 class="text-3xl font-bold text-slate-900 dark:text-white">Bem-vindo, Mentor Ricardo!</h1>
+<p class="text-slate-500 dark:text-slate-400 mt-1">Você tem <span class="text-primary font-semibold">3 mentorias</span> agendadas para hoje.</p>
+</div>
+<div class="flex items-center gap-4 bg-primary/10 border border-primary/20 p-2 pr-6 rounded-full group cursor-pointer hover:bg-primary/20 transition-all">
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white animate-pulse">
+<span class="material-icons-round">videocam</span>
+</div>
+<div>
+<p class="text-xs font-semibold text-primary uppercase tracking-wider">Próxima Sessão</p>
+<p class="text-sm font-bold text-slate-800 dark:text-white">14:00 • Mariana Lima (UX Strategy)</p>
+</div>
+<span class="material-icons-round text-primary ml-4 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</header>
+<!-- KPI Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<div class="bg-white dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-600">
+<span class="material-icons-round">school</span>
+</div>
+<span class="text-xs font-bold text-green-600 bg-green-100 px-2 py-1 rounded">+12%</span>
+</div>
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-medium">Alunos Mentorados</h3>
+<p class="text-2xl font-bold text-slate-900 dark:text-white mt-1">128</p>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+<span class="material-icons-round">bolt</span>
+</div>
+<span class="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">Meta atingida</span>
+</div>
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-medium">Média de Engajamento</h3>
+<p class="text-2xl font-bold text-slate-900 dark:text-white mt-1">94.2%</p>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 bg-amber-100 dark:bg-amber-900/30 rounded-lg flex items-center justify-center text-amber-600">
+<span class="material-icons-round">pending_actions</span>
+</div>
+<div class="flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</div>
+</div>
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-medium">Projetos Pendentes</h3>
+<p class="text-2xl font-bold text-slate-900 dark:text-white mt-1">08</p>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-600">
+<span class="material-icons-round">star</span>
+</div>
+<span class="text-xs font-bold text-purple-600 bg-purple-100 px-2 py-1 rounded">Top 5%</span>
+</div>
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-medium">Avaliação Média</h3>
+<p class="text-2xl font-bold text-slate-900 dark:text-white mt-1">4.9/5.0</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Column: Pending Evaluations & Progress -->
+<div class="lg:col-span-2 space-y-8">
+<!-- Pending Evaluations List -->
+<section class="bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
+<div class="p-6 border-b border-slate-100 dark:border-slate-700 flex justify-between items-center">
+<h2 class="font-bold text-lg">Projetos Pendentes de Avaliação</h2>
+<button class="text-primary text-sm font-semibold hover:underline">Ver todos</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-slate-50 dark:bg-slate-900/50 text-slate-500 text-xs uppercase font-semibold">
+<tr>
+<th class="px-6 py-4">Estudante</th>
+<th class="px-6 py-4">Curso / Módulo</th>
+<th class="px-6 py-4">Enviado em</th>
+<th class="px-6 py-4 text-right">Ação</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-700">
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-700/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img alt="Avatar" data-alt="Portrait of a female student with a smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1GePMIp4l5GN1SeW93Z-dTpWPnNzLEVFaIE9DZ8KIm76vV9AdlN3MwZuaZZ1fUZaTZ8eJzvrbc0okcr0rkcuD2aZiRTNk2Cl87UUPNj0nyMTp3O1E9x_wHcRdzk_uB0bLJA36I8EUAxDTqAVTY44lduS9ucG7qYyajrMo9_H-DA97_evCp6GKG0qETpkS9SFzCg_h43vAgRySW2s2LZ-VYmBnb_bi2VGKpeszXLOyzkG39xv3RXjilJiESF-UglnNaAtSvik3leQ"/>
+</div>
+<span class="font-medium text-sm">Beatriz Santos</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Product Design - Mod 3</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Há 2 horas</td>
+<td class="px-6 py-4 text-right">
+<button class="bg-primary text-white text-xs font-bold py-2 px-4 rounded-lg hover:bg-orange-600 transition-colors">Avaliar Agora</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-700/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img alt="Avatar" data-alt="Portrait of a male student looking confident" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZlpDUMYp47nkZaJguB4tx4wXeYZxYFEFgPjYmx31NoQIvQ-7h3hR-LHmPPF0LRu8Asivtfd_n8E2VDJB70eLUCubCEWKfB1qLTVogDBobU1_5Ju8NYUw7t7RCVZR6kO9SPAWS0ovRyAphNLMUmRWnQKo0Jn3H6PfwwUJ1O58zLoSMexLe55Nbt73vgCh5M4_1uRPwxq4kfkbDsLmvX3LUEeqS-3qx8W02fkr-XmVHUvXG4SDsTD2q7cSpd9eAiRVRJ_jwu15Iknk"/>
+</div>
+<span class="font-medium text-sm">Lucas Oliveira</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">UI Architecture - Mod 1</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Há 5 horas</td>
+<td class="px-6 py-4 text-right">
+<button class="bg-primary text-white text-xs font-bold py-2 px-4 rounded-lg hover:bg-orange-600 transition-colors">Avaliar Agora</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-700/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img alt="Avatar" data-alt="Portrait of a serious female student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwO_Zm0u1cB_ykWDxMiM0A8JNihJLSwrk8264cXY2paYlwXalsI67tW8UK5EfS2dB4OzWVS3P9bC0Sq25BLTHKRZR3pPE7qn5NvFJ6Zbg74tnPawfvNv4YdPBxM5JzvNfiTlSA55RBRsP3VF82s6q0-vbqdYg5z0yjnqBXFuANSZ9vih5fQjODb95SmiNhuHqI23t6U4HaEYH4hw3_0hnW7W41zjA8exjfFVhszwsrg1p5T-cCMCJV6OCnPICrDsMCLX0eVKi256Y"/>
+</div>
+<span class="font-medium text-sm">Carla Ferreira</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Design Systems - Mod 2</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Ontem</td>
+<td class="px-6 py-4 text-right">
+<button class="bg-primary text-white text-xs font-bold py-2 px-4 rounded-lg hover:bg-orange-600 transition-colors">Avaliar Agora</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Progress Insights -->
+<section class="bg-white dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-bold text-lg">Curva de Aprendizado - Turma Alpha</h2>
+<div class="flex gap-2">
+<span class="flex items-center gap-1 text-xs font-medium text-slate-500">
+<span class="w-3 h-3 rounded-full bg-primary"></span> Turma atual
+                            </span>
+<span class="flex items-center gap-1 text-xs font-medium text-slate-500">
+<span class="w-3 h-3 rounded-full bg-slate-200 dark:bg-slate-600"></span> Média Academy
+                            </span>
+</div>
+</div>
+<!-- Mock Chart Visualization -->
+<div class="h-48 flex items-end justify-between gap-2 px-2">
+<div class="flex-1 bg-primary/20 rounded-t-lg relative group h-[40%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary rounded-t-lg h-[80%] group-hover:opacity-80 transition-opacity"></div>
+</div>
+<div class="flex-1 bg-primary/20 rounded-t-lg relative group h-[55%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary rounded-t-lg h-[85%] group-hover:opacity-80 transition-opacity"></div>
+</div>
+<div class="flex-1 bg-primary/20 rounded-t-lg relative group h-[45%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary rounded-t-lg h-[75%] group-hover:opacity-80 transition-opacity"></div>
+</div>
+<div class="flex-1 bg-primary/20 rounded-t-lg relative group h-[70%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary rounded-t-lg h-[90%] group-hover:opacity-80 transition-opacity"></div>
+</div>
+<div class="flex-1 bg-primary/20 rounded-t-lg relative group h-[85%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary rounded-t-lg h-[95%] group-hover:opacity-80 transition-opacity"></div>
+</div>
+<div class="flex-1 bg-primary/20 rounded-t-lg relative group h-[95%]">
+<div class="absolute inset-x-0 bottom-0 bg-primary rounded-t-lg h-[100%] group-hover:opacity-80 transition-opacity"></div>
+</div>
+</div>
+<div class="flex justify-between mt-4 px-2 text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+<span>Semana 01</span>
+<span>Semana 02</span>
+<span>Semana 03</span>
+<span>Semana 04</span>
+<span>Semana 05</span>
+<span>Semana 06</span>
+</div>
+</section>
+</div>
+<!-- Right Column: Mentorship Schedule -->
+<div class="space-y-8">
+<section class="bg-white dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col h-full">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-bold text-lg">Agenda de Hoje</h2>
+<span class="text-xs bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded-full font-bold">24 Mai</span>
+</div>
+<div class="space-y-6 flex-1">
+<!-- Session 1 -->
+<div class="relative pl-6 border-l-2 border-primary pb-2">
+<div class="absolute -left-[9px] top-0 w-4 h-4 bg-primary rounded-full border-4 border-white dark:border-slate-800"></div>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<p class="text-sm font-bold">14:00 - 14:45</p>
+<span class="text-[10px] bg-green-100 text-green-700 font-bold px-2 py-0.5 rounded uppercase">Confirmada</span>
+</div>
+<div class="flex items-center gap-3">
+<img alt="Mariana Lima" class="w-10 h-10 rounded-lg" data-alt="Portrait of a smiling young student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtvc31sX82kYrjOon2_qwxmeVDeRnlKhrPJV-8iMwLkxkYkztUmmVj320rrqDEOFoZsn-YKIjZgl6vCfWqUtT4xGmmho1vISFUxMdieTUWZlxKZ2lkztZzEGlarWxc7n8_k3nMDccv1L36QMlrLbhO7KINFP6SYi5wI164jABMJi8eZkD4ZG011jVSEyS2CWA0u_BPke8qnaqiGtVzLf0jyiNTXw5_Inrr7Vep6P3M2EKhySK4PU57SvqEKknGrEOR0KoQLnpxX0w"/>
+<div>
+<p class="text-sm font-semibold">Mariana Lima</p>
+<p class="text-xs text-slate-500">UX Strategy Review</p>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-2 w-full py-2 bg-primary text-white text-xs font-bold rounded-lg shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform" href="#">
+<span class="material-icons-round text-sm">video_call</span>
+                                    Entrar na Sala
+                                </a>
+</div>
+</div>
+<!-- Session 2 -->
+<div class="relative pl-6 border-l-2 border-slate-200 dark:border-slate-700 pb-2">
+<div class="absolute -left-[9px] top-0 w-4 h-4 bg-slate-200 dark:bg-slate-700 rounded-full border-4 border-white dark:border-slate-800"></div>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<p class="text-sm font-bold text-slate-500">15:30 - 16:15</p>
+<span class="text-[10px] bg-slate-100 text-slate-500 font-bold px-2 py-0.5 rounded uppercase">Agendado</span>
+</div>
+<div class="flex items-center gap-3 opacity-80">
+<img alt="Rodrigo Alves" class="w-10 h-10 rounded-lg" data-alt="Portrait of a young male professional student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxMGkxpc4q-5eAsn86XpdddUku644U9zfgSKS5dJXKWfO-Rs4-2niOpuZzJOTQyy7ixSvYQV9CRR2APozpQu9oIlQuD_wphCczEgejUp9Odjjocva0LgTA2yoS2s5aU5y_vDAgi93a8QaitK6rUtjPxTn4FNDrsRV5EcMsoQyiwGoVE8SFii947dQwSNE17xrfWrxfHzuP995E3ad9a2aWMWJZHrftVkiRUlXxCKj5WFIOGtmjDFYpbnpaTRXioa0Ox_hGKMXrrEI"/>
+<div>
+<p class="text-sm font-semibold">Rodrigo Alves</p>
+<p class="text-xs text-slate-500">Feedback de Portfólio</p>
+</div>
+</div>
+<button class="inline-flex items-center justify-center gap-2 w-full py-2 bg-slate-100 dark:bg-slate-700 text-slate-400 text-xs font-bold rounded-lg cursor-not-allowed" disabled="">
+                                    Disponível em 1h
+                                </button>
+</div>
+</div>
+<!-- Session 3 -->
+<div class="relative pl-6 border-l-2 border-slate-200 dark:border-slate-700">
+<div class="absolute -left-[9px] top-0 w-4 h-4 bg-slate-200 dark:bg-slate-700 rounded-full border-4 border-white dark:border-slate-800"></div>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<p class="text-sm font-bold text-slate-500">17:00 - 17:45</p>
+<span class="text-[10px] bg-slate-100 text-slate-500 font-bold px-2 py-0.5 rounded uppercase">Agendado</span>
+</div>
+<div class="flex items-center gap-3 opacity-80">
+<img alt="Julia Costa" class="w-10 h-10 rounded-lg" data-alt="Portrait of a cheerful female student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQsX9WyQy-XOk_TQuf5_pw45WbZ66Xrr1F8Cg3iBMM6DYeCm_GwrpWiXId6GQHyZL8hX2s_cgl3bDPoWz0Que5SI-L-5sTmj_Ofs3j3l0sbLl_OPUSE9NGLWxpkKZghcbF8zqDOSVdxLGPhZd51p-idDmbalu3LlNZhr6dB7rkY0n4cDbS6QOO5SvcpNGkdvnMlqJKHvtqC3NwTkoQck63wdN1ZddAu9eC7QQPJ0e_LE0hwpWKu84e70Q7w7SFT-RIPKtlEo0hWgg"/>
+<div>
+<p class="text-sm font-semibold">Julia Costa</p>
+<p class="text-xs text-slate-500">Preparação Técnica</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-700">
+<button class="w-full flex items-center justify-center gap-2 text-primary font-bold text-sm">
+<span class="material-icons-round">calendar_month</span>
+                            Ver agenda completa
+                        </button>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Map Location Data for reference as requested -->
+<div data-location="São Paulo, Brazil" style="display:none;"></div>
+</body></html>

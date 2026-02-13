@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projeto Novos Horizonte - Construindo o Futuro Digital</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#003366",
+              "accent": "#F39C12",
+              "background-light": "#f5f7f8",
+              "background-dark": "#0f1923",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(0, 51, 102, 0.9) 0%, rgba(0, 51, 102, 0.4) 100%);
+        }
+        .map-texture {
+            mask-image: url('https://www.transparenttextures.com/patterns/world-map.png');
+            opacity: 0.15;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 antialiased font-display">
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+<span class="text-white font-bold text-xl">NH</span>
+</div>
+<span class="text-xl font-extrabold tracking-tight text-primary dark:text-white">Novos Horizonte</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#problema">O Problema</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#solucao">Solução</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#investidores">Investidores</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#mentores">Mentores</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-1 text-xs font-bold uppercase tracking-widest px-3 py-1.5 border border-slate-200 dark:border-slate-700 rounded-full hover:bg-slate-50 transition-all">
+<span>PT</span>
+<span class="material-icons text-sm">expand_more</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[700px] flex items-center overflow-hidden pt-20">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<img alt="Tech students in Africa" class="w-full h-full object-cover" data-alt="Young African tech students working on computers together" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCURW8WnTNHlOrJF3JEiFHZ4JBN_-Nv0rONiX2j0gB2ALcGaMyvkkOtf61Eq1RmY2x43S_FJc_8skJBzdt4VqmWOx9KMJ8WpPR4Ov2Jdv-GajSUeGxzzH0AOlVG10k6SKKdGoDX80DevzlUf4fNhEJjHnsSIHdSm4b73RqD2GWocd-cTfLp0gurTHUniZsUDYrIWUS_vGvM4JRzgcpoEu3YvanWymDwcFvjjtN7uwbimjHWFUnCFR9hQhKI4Dkx2fnWxkhlGjRwK7A"/>
+<div class="absolute inset-0 hero-overlay"></div>
+<div class="absolute inset-0 map-texture bg-white"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 bg-accent/20 border border-accent/30 px-4 py-1.5 rounded-full mb-6">
+<span class="w-2 h-2 bg-accent rounded-full"></span>
+<span class="text-accent text-xs font-bold uppercase tracking-widest">Educação &amp; Tecnologia</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-extrabold text-white leading-[1.1] mb-6">
+                    Construindo o <br/> <span class="text-accent">Futuro Digital</span> da África
+                </h1>
+<p class="text-xl text-white/90 font-medium mb-10 max-w-2xl leading-relaxed">
+                    Formação em Programação, Design e Empregabilidade Digital com impacto social mensurável. Conectando talentos locais ao mercado global.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-accent hover:bg-accent/90 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-xl shadow-accent/20 transition-transform active:scale-95">
+                        Quero Investir
+                    </button>
+<button class="bg-transparent border-2 border-white/40 hover:border-white text-white px-10 py-4 rounded-xl font-bold text-lg backdrop-blur-sm transition-all active:scale-95">
+                        Quero Ser Mentor
+                    </button>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50">
+<span class="text-[10px] uppercase tracking-[0.3em] font-bold">Descobrir</span>
+<div class="w-px h-12 bg-gradient-to-b from-white/50 to-transparent"></div>
+</div>
+</section>
+<!-- Problem Section -->
+<section class="py-24 bg-background-light dark:bg-background-dark" id="problema">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-16">
+<div class="w-12 h-1 bg-accent mb-6"></div>
+<h2 class="text-4xl md:text-5xl font-extrabold text-primary dark:text-white mb-4">
+                    O Desafio Atual
+                </h2>
+<p class="text-slate-500 dark:text-slate-400 max-w-2xl text-lg">
+                    Apesar do potencial humano imenso, barreiras sistêmicas impedem que milhares de jovens africanos participem da economia digital global.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-white dark:bg-primary/5 p-8 rounded-2xl border border-primary/5 hover:border-primary/20 hover:shadow-2xl hover:shadow-primary/5 transition-all group">
+<div class="w-14 h-14 bg-primary/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+<span class="material-icons text-3xl">trending_down</span>
+</div>
+<h3 class="text-xl font-bold text-primary dark:text-white mb-3">Alta taxa de desemprego</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Milhões de jovens talentosos enfrentam a falta de oportunidades formais de trabalho em suas comunidades locais.
+                    </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-white dark:bg-primary/5 p-8 rounded-2xl border border-primary/5 hover:border-primary/20 hover:shadow-2xl hover:shadow-primary/5 transition-all group">
+<div class="w-14 h-14 bg-primary/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+<span class="material-icons text-3xl">terminal</span>
+</div>
+<h3 class="text-xl font-bold text-primary dark:text-white mb-3">Falta de formação técnica</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Currículos educacionais desatualizados que não atendem às demandas reais das empresas de tecnologia globais.
+                    </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-white dark:bg-primary/5 p-8 rounded-2xl border border-primary/5 hover:border-primary/20 hover:shadow-2xl hover:shadow-primary/5 transition-all group">
+<div class="w-14 h-14 bg-primary/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+<span class="material-icons text-3xl">public_off</span>
+</div>
+<h3 class="text-xl font-bold text-primary dark:text-white mb-3">Desconexão global</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        A falta de infraestrutura e networking dificulta a entrada de talentos no mercado internacional de trabalho remoto.
+                    </p>
+</div>
+<!-- Card 4 -->
+<div class="bg-white dark:bg-primary/5 p-8 rounded-2xl border border-primary/5 hover:border-primary/20 hover:shadow-2xl hover:shadow-primary/5 transition-all group">
+<div class="w-14 h-14 bg-primary/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+<span class="material-icons text-3xl">lock_open</span>
+</div>
+<h3 class="text-xl font-bold text-primary dark:text-white mb-3">Talento sem acesso</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Potencial brilhante sendo desperdiçado devido à falta de orientação, mentoria e ferramentas adequadas de aprendizado.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Context Section (Subtle) -->
+<section class="py-12 bg-white dark:bg-background-dark/50 border-y border-primary/5 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="flex-1">
+<span class="text-accent font-bold text-sm tracking-tighter uppercase block mb-2">Foco Geográfico</span>
+<h3 class="text-3xl font-bold text-primary dark:text-white mb-4 italic">Onde estamos começando.</h3>
+<p class="text-slate-600 dark:text-slate-400">Nossa primeira fase foca em hubs tecnológicos emergentes no Oeste da África, estabelecendo as bases para uma expansão continental escalável.</p>
+</div>
+<div class="flex-1 w-full relative h-48 md:h-64 rounded-3xl overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl">
+<img alt="Map of expansion regions" class="w-full h-full object-cover grayscale opacity-50" data-alt="Monochrome aerial map view of a coastal African city" data-location="West Africa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJjO0__xemO1YaBRdvq9OMRoZ8V1_uQCGq6vN5dNjWEp_btw_a92rw1t433tEMwH1gOAdgxMnMG-0Jtb5Js7FmOLf0xBnIOtWsfVX-sJIY99vQ-KtFLwS2zRw9kTS-rEVzYK3Q1WIDEzWfO4d5PW7I-IcrymeyVQkISvGicvZp9l44UdXANNd7-FghcadniDxPozTl00clkIMl9b6Oo0H5mH3_dPy2pfMOGkamHG9HPc8001VCqGf6YCokpXvgH8EFRDWtE1CY2AQ"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+<div class="absolute top-1/2 left-1/3 w-4 h-4 bg-accent rounded-full animate-pulse shadow-[0_0_20px_rgba(243,156,18,0.8)]"></div>
+</div>
+</div>
+</section>
+<!-- Footer Credit -->
+<footer class="py-10 text-center border-t border-primary/5">
+<p class="text-slate-400 text-sm font-medium">© 2024 Projeto Novos Horizonte. Impacto social através da excelência tecnológica.</p>
+</footer>
+</body></html>

@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "FAQs";
+--- 
+<BaseLayout title={pageTitle}>
+  <header class="relative py-20 bg-slate-900 overflow-hidden">
+    <div class="absolute inset-0 opacity-10 pointer-events-none">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary rounded-full filter blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-64 h-64 bg-primary/40 rounded-full filter blur-3xl"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-white">Como podemos ajudar?</h1>
+      <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">Encontre respostas para as perguntas mais comuns sobre nossa atuação, programas e formas de apoio.</p>
+      <div class="relative max-w-xl mx-auto">
+        <input class="w-full pl-12 pr-4 py-4 rounded-xl border-slate-700 bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent text-white" placeholder="Pesquise por perguntas, palavras-chave ou tópicos..." type="text"/>
+        <span class="material-icons absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-16 space-y-24">
+    <section class="scroll-mt-24" id="faq">
+      <div class="text-center mb-12">
+        <span class="text-primary font-bold tracking-widest uppercase text-sm">Base de Conhecimento</span>
+        <h2 class="text-3xl font-bold mt-2 text-white">Perguntas Frequentes</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-xl font-bold mb-6 flex items-center gap-2 text-white">
+            <span class="material-icons text-primary">payments</span> Para Investidores
+          </h3>
+          <div class="space-y-4">
+            <div class="border border-slate-800 rounded-xl p-4 bg-slate-800/50">
+              <input class="faq-toggle hidden" id="faq-1" type="checkbox"/>
+              <label class="flex justify-between items-center cursor-pointer font-semibold hover:text-primary text-white" for="faq-1">
+                Quais são os benefícios fiscais para investidores institucionais?
+                <span class="material-icons text-slate-400">expand_more</span>
+              </label>
+              <div class="faq-content text-slate-400 text-sm leading-relaxed">
+                Nosso projeto é registrado como um equivalente a 501(c)(3), permitindo que a maioria dos investidores corporativos e privados solicitem deduções fiscais significativas com base nas regulamentações regionais. Entre em contato com nosso departamento jurídico para obter a documentação específica.
+              </div>
+            </div>
+            <div class="border border-slate-800 rounded-xl p-4 bg-slate-800/50">
+              <input class="faq-toggle hidden" id="faq-2" type="checkbox"/>
+              <label class="flex justify-between items-center cursor-pointer font-semibold hover:text-primary text-white" for="faq-2">
+                Como o ROI é medido para o impacto educacional?
+                <span class="material-icons text-slate-400">expand_more</span>
+              </label>
+              <div class="faq-content text-slate-400 text-sm leading-relaxed">
+                Nós rastreamos as taxas de emprego a longo prazo, os aumentos salariais após a graduação e os índices de mobilidade social. Fornecemos relatórios de impacto trimestrais a todos os principais investidores.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-6 flex items-center gap-2 text-white">
+            <span class="material-icons text-primary">school</span> Para Mentores
+          </h3>
+          <div class="space-y-4">
+            <div class="border border-slate-800 rounded-xl p-4 bg-slate-800/50">
+              <input class="faq-toggle hidden" id="faq-3" type="checkbox"/>
+              <label class="flex justify-between items-center cursor-pointer font-semibold hover:text-primary text-white" for="faq-3">
+                Qual é o compromisso semanal mínimo?
+                <span class="material-icons text-slate-400">expand_more</span>
+              </label>
+              <div class="faq-content text-slate-400 text-sm leading-relaxed">
+                Recomendamos pelo menos 2 horas por semana para uma mentoria eficaz. Isso inclui uma sessão individual de 1 hora e 1 hora de revisão assíncrona do progresso do aluno.
+              </div>
+            </div>
+            <div class="border border-slate-800 rounded-xl p-4 bg-slate-800/50">
+              <input class="faq-toggle hidden" id="faq-4" type="checkbox"/>
+              <label class="flex justify-between items-center cursor-pointer font-semibold hover:text-primary text-white" for="faq-4">
+                Preciso de experiência em ensino?
+                <span class="material-icons text-slate-400">expand_more</span>
+              </label>
+              <div class="faq-content text-slate-400 text-sm leading-relaxed">
+                Nenhuma experiência prévia de ensino é necessária. Fornecemos um kit de integração completo e guias curriculares para ajudá-lo a compartilhar sua experiência no setor de forma eficaz.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

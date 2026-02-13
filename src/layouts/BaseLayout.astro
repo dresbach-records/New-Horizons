@@ -1,0 +1,41 @@
+---
+import '../styles/global.css'; // Importa os estilos globais do Tailwind
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+const { title } = Astro.props;
+--- 
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | Projeto Novos Horizontes</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/logosemfundo.png">
+
+    <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+    <style is:global>
+      body {
+        font-family: 'Manrope', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+
+  </head>
+  <body class="font-display bg-light text-dark">
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

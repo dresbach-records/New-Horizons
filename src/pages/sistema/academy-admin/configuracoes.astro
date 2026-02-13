@@ -1,0 +1,32 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import Input from '../../../components/academy-admin/ui/Input.astro';
+import Button from '../../../components/academy-admin/ui/Button.astro';
+---
+
+<AdminLayout title="Configurações - Academy Admin">
+  <h1 class="text-3xl font-bold mb-6">Configurações da Plataforma</h1>
+
+  <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+    <h2 class="text-xl font-semibold mb-4">Configurações Gerais</h2>
+    <form class="space-y-4">
+      <Input label="Nome da Academia" name="academyName" placeholder="Minha Academia Online" />
+      <Input label="Email de Contato" name="contactEmail" type="email" placeholder="contato@minhaacademia.com" />
+      <div>
+        <label for="academyLogo" class="block text-sm font-medium text-gray-700">Logo da Academia</label>
+        <input type="file" id="academyLogo" name="academyLogo" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"/>
+      </div>
+      <Button label="Salvar Alterações" />
+    </form>
+  </div>
+
+  <div class="bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-xl font-semibold mb-4">Configurações de Segurança</h2>
+    <form class="space-y-4">
+      <Input label="Senha Atual" name="currentPassword" type="password" />
+      <Input label="Nova Senha" name="newPassword" type="password" />
+      <Input label="Confirmar Nova Senha" name="confirmNewPassword" type="password" />
+      <Button label="Alterar Senha" />
+    </form>
+  </div>
+</AdminLayout>

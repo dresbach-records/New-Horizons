@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Transparência e Impacto - Projeto Novos Horizontes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .chart-gradient-1 { background: linear-gradient(180deg, #137fec 0%, rgba(19, 127, 236, 0.2) 100%); }
+        .chart-gradient-2 { background: linear-gradient(180deg, #3b82f6 0%, rgba(59, 130, 246, 0.2) 100%); }
+        .chart-gradient-3 { background: linear-gradient(180deg, #60a5fa 0%, rgba(96, 165, 250, 0.2) 100%); }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons text-white">insights</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-primary">Novos Horizontes</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Sobre Nós</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Programas</a>
+<a class="text-sm font-medium text-primary" href="#">Transparência</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contato</a>
+<button class="bg-primary text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                    Seja Parceiro
+                </button>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 py-12">
+<!-- Header Section -->
+<header class="mb-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="max-w-2xl">
+<div class="flex items-center gap-2 mb-4">
+<span class="h-1 w-12 bg-primary rounded-full"></span>
+<span class="text-primary font-bold tracking-widest uppercase text-xs">Relatório de Governança</span>
+</div>
+<h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight">
+                        Transparência e <br/><span class="text-primary">Impacto Social</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                        Compromisso com a integridade e resultados reais. Acompanhe como transformamos investimentos em oportunidades para milhares de jovens brasileiros.
+                    </p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 border border-primary/20 rounded-lg hover:bg-primary/5 transition-colors">
+<span class="material-icons text-primary text-sm">file_download</span>
+<span class="text-sm font-semibold">Relatório Anual 2023 (PDF)</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Real-time Stats -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+<div class="bg-white dark:bg-slate-900 p-8 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-2">Alunos Ativos</p>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-extrabold text-primary">1.542</span>
+<span class="text-emerald-500 text-xs font-bold flex items-center"><span class="material-icons text-xs">trending_up</span> +12%</span>
+</div>
+<div class="mt-4 w-full bg-primary/5 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[78%]"></div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-8 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-2">Empresas Parceiras</p>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-extrabold text-primary">48</span>
+<span class="text-emerald-500 text-xs font-bold flex items-center"><span class="material-icons text-xs">trending_up</span> +5</span>
+</div>
+<div class="mt-4 w-full bg-primary/5 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[65%]"></div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-8 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-2">Horas de Formação</p>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-extrabold text-primary">12.8k</span>
+<span class="text-slate-400 text-xs font-bold">Total Acumulado</span>
+</div>
+<div class="mt-4 w-full bg-primary/5 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[90%]"></div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-8 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-2">Custo por Aluno/Ano</p>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-extrabold text-primary">R$ 4.2k</span>
+<span class="text-emerald-500 text-xs font-bold flex items-center"><span class="material-icons text-xs">keyboard_arrow_down</span> -3%</span>
+</div>
+<div class="mt-4 w-full bg-primary/5 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[45%]"></div>
+</div>
+</div>
+</section>
+<!-- Data Visualization Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+<!-- Allocation Chart Card -->
+<div class="lg:col-span-1 bg-white dark:bg-slate-900 p-8 rounded-xl border border-primary/10 shadow-sm">
+<h3 class="text-xl font-bold mb-8">Alocação de Investimentos</h3>
+<div class="relative w-48 h-48 mx-auto mb-10">
+<!-- Simple CSS Donut Chart Simulation -->
+<div class="w-full h-full rounded-full border-[18px] border-primary/10 flex items-center justify-center">
+<div class="text-center">
+<span class="block text-3xl font-extrabold text-primary">R$ 2.4M</span>
+<span class="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Total 2023</span>
+</div>
+</div>
+<!-- Overlay segments (simulated) -->
+<div class="absolute inset-0 border-[18px] border-transparent border-t-primary border-r-primary rounded-full"></div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-3 rounded-lg bg-primary/5">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-sm font-semibold">Educação e Treinamento</span>
+</div>
+<span class="text-sm font-bold">45%</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg border border-primary/10">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-blue-400"></span>
+<span class="text-sm font-semibold">Infraestrutura</span>
+</div>
+<span class="text-sm font-bold">30%</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg border border-primary/10">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-blue-200"></span>
+<span class="text-sm font-semibold">Operações</span>
+</div>
+<span class="text-sm font-bold">25%</span>
+</div>
+</div>
+</div>
+<!-- Impact Growth Card -->
+<div class="lg:col-span-2 bg-white dark:bg-slate-900 p-8 rounded-xl border border-primary/10 shadow-sm">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-xl font-bold">Crescimento do Impacto (2020 - 2023)</h3>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-xs font-medium text-slate-500">Investimento</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="text-xs font-medium text-slate-500">Alunos Formados</span>
+</div>
+</div>
+</div>
+<!-- Simulated Bar Chart -->
+<div class="relative h-[300px] flex items-end justify-between gap-4 pt-4 border-b border-slate-100 dark:border-slate-800">
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full flex justify-center gap-1 items-end h-full">
+<div class="w-6 chart-gradient-1 rounded-t h-[40%]"></div>
+<div class="w-6 bg-emerald-400/40 rounded-t h-[30%]"></div>
+</div>
+<span class="text-xs font-bold text-slate-400 mt-2">2020</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full flex justify-center gap-1 items-end h-full">
+<div class="w-6 chart-gradient-1 rounded-t h-[55%]"></div>
+<div class="w-6 bg-emerald-400/50 rounded-t h-[45%]"></div>
+</div>
+<span class="text-xs font-bold text-slate-400 mt-2">2021</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full flex justify-center gap-1 items-end h-full">
+<div class="w-6 chart-gradient-1 rounded-t h-[75%]"></div>
+<div class="w-6 bg-emerald-400/70 rounded-t h-[65%]"></div>
+</div>
+<span class="text-xs font-bold text-slate-400 mt-2">2022</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full flex justify-center gap-1 items-end h-full">
+<div class="w-6 chart-gradient-1 rounded-t h-[95%]"></div>
+<div class="w-6 bg-emerald-400 rounded-t h-[88%]"></div>
+</div>
+<span class="text-xs font-bold text-slate-400 mt-2 text-primary">2023</span>
+</div>
+</div>
+<div class="mt-8 grid grid-cols-2 gap-8">
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Meta para 2024</p>
+<p class="text-2xl font-bold">2.000 Alunos</p>
+<p class="text-sm text-slate-500 mt-1">Expansão para 3 novas regiões</p>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Eficiência Operacional</p>
+<p class="text-2xl font-bold">+18%</p>
+<p class="text-sm text-slate-500 mt-1">Otimização de custos de sede</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Report Repository Section -->
+<section class="mb-16">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h2 class="text-2xl font-bold">Central de Relatórios</h2>
+<p class="text-slate-500 text-sm mt-1">Acesse nossos documentos oficiais e prestações de contas.</p>
+</div>
+<button class="text-primary font-bold text-sm hover:underline">Ver todo o histórico</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Report Card -->
+<div class="group bg-white dark:bg-slate-900 border border-primary/10 rounded-xl overflow-hidden hover:border-primary/40 transition-all">
+<div class="aspect-video bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+<img class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" data-alt="Blue business report with professional charts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADAP2ar6NN9cOjU1p1pGU50yEjVfXlqqd7RDMR5zVOe4n-A6UEhWedPIqgB6UImsllJODc6-6DciB3RaeS9RPzaormyiRL3J_ngODhJdv7bkMCpNoHgtQl7zr8-odbrUuENHFi2d7qtZ0njBIJcIMR7bDWajY3w9qrModoSk9_-BBGpv67CYrry6AZiSi8a0JARBUZqy25YO6J-nxpN3uzCRbewOrkv5mvfzyjeGmi9hckneRX7Fh4SbMj-yBXFbtzJwd0mAtp1eo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+<span class="absolute bottom-3 left-3 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded">DESTAQUE</span>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="font-bold text-lg mb-1">Relatório Anual 2023</h4>
+<p class="text-xs text-slate-500 uppercase tracking-wider">PDF • 12.4 MB</p>
+</div>
+<span class="material-icons text-primary bg-primary/5 p-2 rounded-lg">description</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 mb-6 line-clamp-2">
+                            Análise completa de resultados, demonstrações financeiras auditadas e histórias de sucesso.
+                        </p>
+<button class="w-full flex items-center justify-center gap-2 bg-slate-900 dark:bg-primary text-white py-3 rounded-lg font-bold text-sm group-hover:bg-primary transition-colors">
+<span class="material-icons text-sm">download</span>
+                            Baixar Agora
+                        </button>
+</div>
+</div>
+<!-- Report Card -->
+<div class="group bg-white dark:bg-slate-900 border border-primary/10 rounded-xl overflow-hidden hover:border-primary/40 transition-all">
+<div class="aspect-video bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+<img class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" data-alt="Close up of financial document with charts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGSk1V0RcI2JRyn-2jAW0lATBoolA8q45k4CyZYd2wEmxg5_KOcToEFuNp8bbwLfoQpFtvECYc5t6mritofiHB5LCTjeDRIlYIiJs0RMECHngy8lxWgn1h2HUyn05FNP6I-jm4ghhMJQtElUGo9d26CtHEOz8ey9IQOowj11THEc4_pcY4Oron6_s4NZDdn6Rpwnr9Mhf_2lCkNoHwGcZOyZ93MrYEAdiBmdOdx-MFTyuwgo5X6zJneSkBSPbnDvXvybd5dbVNqp4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="font-bold text-lg mb-1">Impacto Socioeconômico</h4>
+<p class="text-xs text-slate-500 uppercase tracking-wider">PDF • 8.1 MB</p>
+</div>
+<span class="material-icons text-primary bg-primary/5 p-2 rounded-lg">analytics</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 mb-6 line-clamp-2">
+                            Estudo sobre o retorno social do investimento e inserção no mercado de trabalho.
+                        </p>
+<button class="w-full flex items-center justify-center gap-2 border border-slate-200 dark:border-slate-700 py-3 rounded-lg font-bold text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-icons text-sm text-primary">download</span>
+                            Baixar Agora
+                        </button>
+</div>
+</div>
+<!-- Report Card -->
+<div class="group bg-white dark:bg-slate-900 border border-primary/10 rounded-xl overflow-hidden hover:border-primary/40 transition-all">
+<div class="aspect-video bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+<img class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" data-alt="Corporate governance meeting with blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuJCWhs8U0j8HERwQRjJoaouf0GgkJnEiyvUKnWbco93YaD5EtPNAjMl7vu4nqgzWf70jcs8-z7QTPmDJepCX0V6R5gVwZj0SPfV-81wmPm7lZsopk793p_SpnIMHf6fTepbSAd1T2nhooMyPCBDRHeY_2h2zoQXf5WJA3MTjPj1p1rjA4F6kYvHsAuLXbSjDfIVnt0OozBiNvuztTeZn8MpWswNqXZ2606g2gGwfE8rhXolZ7UeUJrnVOm8SywVGvKZsqCDbWPEE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="font-bold text-lg mb-1">Estatuto e Governança</h4>
+<p class="text-xs text-slate-500 uppercase tracking-wider">PDF • 2.5 MB</p>
+</div>
+<span class="material-icons text-primary bg-primary/5 p-2 rounded-lg">gavel</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 mb-6 line-clamp-2">
+                            Nossas diretrizes éticas, regimento interno e estrutura de conselho administrativo.
+                        </p>
+<button class="w-full flex items-center justify-center gap-2 border border-slate-200 dark:border-slate-700 py-3 rounded-lg font-bold text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-icons text-sm text-primary">download</span>
+                            Baixar Agora
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Verification/Trust Section -->
+<section class="bg-primary/5 rounded-2xl p-8 md:p-12 border border-primary/10 flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/3 flex flex-col items-center">
+<div class="w-32 h-32 bg-white dark:bg-slate-900 rounded-full border-4 border-primary/20 flex items-center justify-center mb-6">
+<span class="material-icons text-primary text-5xl">verified</span>
+</div>
+<div class="text-center">
+<p class="font-extrabold text-xl">Selo de Transparência</p>
+<p class="text-primary font-bold text-sm">AUDITADO 2023</p>
+</div>
+</div>
+<div class="md:w-2/3">
+<h3 class="text-2xl font-bold mb-4">Ética e Compliance como Base</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                    O Projeto Novos Horizontes é submetido a auditorias externas anuais para garantir que cada centavo investido chegue ao seu destino final: o desenvolvimento do jovem. Nossas contas estão abertas para consulta pública e somos certificados pelas principais agências de fomento social.
+                </p>
+<div class="flex flex-wrap gap-4">
+<div class="bg-white dark:bg-slate-900 px-4 py-2 rounded-lg border border-primary/10 flex items-center gap-2">
+<span class="material-icons text-emerald-500 text-sm">check_circle</span>
+<span class="text-xs font-bold uppercase tracking-wide">Auditoria Independente</span>
+</div>
+<div class="bg-white dark:bg-slate-900 px-4 py-2 rounded-lg border border-primary/10 flex items-center gap-2">
+<span class="material-icons text-emerald-500 text-sm">check_circle</span>
+<span class="text-xs font-bold uppercase tracking-wide">ISO 9001 Certificada</span>
+</div>
+<div class="bg-white dark:bg-slate-900 px-4 py-2 rounded-lg border border-primary/10 flex items-center gap-2">
+<span class="material-icons text-emerald-500 text-sm">check_circle</span>
+<span class="text-xs font-bold uppercase tracking-wide">Conselho Ativo</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="mt-20 border-t border-primary/10 bg-white dark:bg-slate-950 py-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white text-sm">insights</span>
+</div>
+<span class="text-lg font-bold tracking-tight text-primary">Novos Horizontes</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 max-w-sm mb-6">
+                        Trabalhando para reduzir a desigualdade através da educação tecnológica e inserção profissional de excelência.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-icons text-xl">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-icons text-xl">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-bold mb-6">Transparência</h5>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary" href="#">Estatutos</a></li>
+<li><a class="hover:text-primary" href="#">Atas de Reunião</a></li>
+<li><a class="hover:text-primary" href="#">Demonstrações</a></li>
+<li><a class="hover:text-primary" href="#">Código de Ética</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Contato</h5>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li class="flex items-start gap-2">
+<span class="material-icons text-xs text-primary mt-1">location_on</span>
+                            Av. Paulista, 1000 - São Paulo, SP
+                        </li>
+<li class="flex items-center gap-2">
+<span class="material-icons text-xs text-primary">phone</span>
+                            +55 (11) 4004-0000
+                        </li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-slate-400">© 2024 Projeto Novos Horizontes. Todos os direitos reservados.</p>
+<div class="flex gap-6">
+<a class="text-xs text-slate-400 hover:text-primary" href="#">Privacidade</a>
+<a class="text-xs text-slate-400 hover:text-primary" href="#">Termos de Uso</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

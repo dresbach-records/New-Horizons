@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recuperar Acesso - Projeto Novos Horizontes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "accent": "#F59E0B",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Public Sans', sans-serif; }
+        .split-bg {
+            background: linear-gradient(135deg, #003366 0%, #001a33 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 h-screen overflow-hidden">
+<div class="flex h-full w-full">
+<div class="hidden lg:flex lg:w-1/2 split-bg relative overflow-hidden items-center justify-center p-12">
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-accent/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-400/10 rounded-full blur-[120px]"></div>
+<div class="relative z-10 max-w-lg text-center">
+<div class="w-20 h-20 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-2xl shadow-accent/20">
+<span class="material-icons text-white text-5xl">explore</span>
+</div>
+<h1 class="text-4xl font-bold text-white mb-6 tracking-tight uppercase">Projeto Novos Horizontes</h1>
+<p class="text-blue-100/80 text-lg leading-relaxed">
+                    Expandindo as fronteiras do impacto social através da conectividade e gestão inteligente de parceiros globais.
+                </p>
+<div class="mt-12 grid grid-cols-2 gap-6">
+<div class="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-xl text-left">
+<span class="material-icons text-accent mb-2">security</span>
+<h3 class="text-white font-semibold">Segurança Global</h3>
+<p class="text-white/40 text-xs">Protocolos de nível corporativo para proteção de dados.</p>
+</div>
+<div class="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-xl text-left">
+<span class="material-icons text-accent mb-2">public</span>
+<h3 class="text-white font-semibold">Rede Integrada</h3>
+<p class="text-white/40 text-xs">Conectando hubs e parceiros em tempo real.</p>
+</div>
+</div>
+</div>
+<img alt="Global Network" class="absolute inset-0 w-full h-full object-cover opacity-10 mix-blend-overlay pointer-events-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACzuYzjfoW56RUUwbAZBxbUpyeRM7hiQlJ5eo37Q5emcMg7EFS5Wc287U_HDy4UFGdZyEyF3vnSAVccJlDTChRnu1QpK5jjeJA7xSkig3t0eEJ4egSvNr-wgnlhEahRSH3hwajuHhzeCxWZpFLOBD6-Eswa3MfWHmOpBI9ZVpfIPnGoeKW1-GfQ6CrHMTlsgGzo9MmsNCBV4ZDVRkna5iw6EPqFZSCiB8VxWXUoPrwO223NMTMKcq4XTNt3JgamdNpXGj75h646gI"/>
+</div>
+<div class="w-full lg:w-1/2 flex items-center justify-center p-8 bg-white dark:bg-slate-900">
+<div class="w-full max-w-md">
+<div class="lg:hidden flex items-center gap-3 mb-12">
+<div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+<span class="material-icons text-white">explore</span>
+</div>
+<h2 class="font-bold text-primary dark:text-white text-xl tracking-tight uppercase">Novos Horizontes</h2>
+</div>
+<div class="mb-10">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-3">Recuperar Acesso</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Insira seu e-mail corporativo para receber as instruções de redefinição.
+                    </p>
+</div>
+<form class="space-y-6">
+<div>
+<label class="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-2" for="email">E-mail Corporativo</label>
+<div class="relative">
+<span class="material-icons absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">alternate_email</span>
+<input class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all dark:text-white" id="email" name="email" placeholder="exemplo@novoshorizontes.org" required="" type="email"/>
+</div>
+</div>
+<button class="w-full py-4 bg-accent hover:bg-amber-600 text-white font-bold rounded-xl shadow-lg shadow-accent/20 transition-all flex items-center justify-center gap-2 group" type="submit">
+<span>Enviar Link de Recuperação</span>
+<span class="material-icons text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</form>
+<div class="mt-10 pt-8 border-t border-slate-100 dark:border-slate-800 text-center">
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-primary dark:text-blue-400 hover:text-accent transition-colors group" href="#">
+<span class="material-icons text-base group-hover:-translate-x-1 transition-transform">keyboard_backspace</span>
+                        Voltar para o Login
+                    </a>
+</div>
+<div class="mt-20 flex items-center justify-center gap-6 opacity-30 grayscale">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Secure Access</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">language</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Global HQ</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Novos Horizonte Academy - Minhas Turmas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f27f0d",
+                        "background-light": "#f8f9fc",
+                        "sidebar-dark": "#0f172a",
+                        "header-blue": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body { @apply font-display text-slate-800 bg-background-light; }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex">
+<aside class="w-64 bg-sidebar-dark text-white flex flex-col fixed h-full z-50">
+<div class="p-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons-round text-white text-xl">school</span>
+</div>
+<span class="font-bold text-lg tracking-tight">Novos Horizonte</span>
+</div>
+<nav class="flex-1 px-4 py-6 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-icons-round">dashboard</span>
+<span class="font-medium">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary/10 text-primary border-r-4 border-primary rounded-r-none rounded-lg transition-all" href="#">
+<span class="material-icons-round">groups</span>
+<span class="font-medium">Minhas Turmas</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-icons-round">assignment_turned_in</span>
+<span class="font-medium">Correção de Projetos</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-icons-round">calendar_today</span>
+<span class="font-medium">Agenda de Mentorias</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-icons-round">forum</span>
+<span class="font-medium">Comunidade</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-icons-round">folder_special</span>
+<span class="font-medium">Recursos Docentes</span>
+</a>
+</nav>
+<div class="p-4 mt-auto">
+<div class="bg-white/5 rounded-xl p-4 flex items-center gap-3">
+<img alt="Mentor Profile" class="w-10 h-10 rounded-full border-2 border-primary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd0sxz3EItUuzCra1t1yfIMifiLjN7niC-XgLBZne4c17JFUM-wmKaZuqh02DXxtwrneLqMIXzahyhMBO4auiH3Kjg9c-qJV5MGypZDeymdMdd6ROzbzVH8VRHU0uPe739igdGS7By7CNfMuUkv_sqeNaOW0j6JMnQ1NrAHcCZG09b_5_vfWl81bvi0UpVpshLAlIYxUjHwN1mivWi0MwsKrO-fSXImK9KMoE7WxV72ZW4YOKldikmKaHj5k-tTe7iHGpCRh-Per8"/>
+<div class="overflow-hidden">
+<p class="text-sm font-semibold truncate">Ricardo Mendes</p>
+<p class="text-xs text-slate-500 truncate">Sênior UI Designer</p>
+</div>
+</div>
+</div>
+</aside>
+<div class="flex-1 ml-64 flex flex-col min-h-screen">
+<header class="h-20 bg-white border-b border-slate-200 sticky top-0 z-40 px-8 flex items-center justify-between">
+<div class="flex items-center gap-6 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-icons-round absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none text-sm transition-all" placeholder="Buscar alunos ou turmas..." type="text"/>
+</div>
+<div class="h-8 w-[1px] bg-slate-200"></div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-medium text-slate-500">Filtrar por Curso:</span>
+<select class="bg-slate-50 border-none rounded-lg text-sm font-semibold text-slate-700 py-2 pl-3 pr-10 focus:ring-0 cursor-pointer">
+<option>Product Design - Alpha</option>
+<option>Full-Stack - Beta</option>
+<option>UX Research - Gamma</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100 text-slate-600 relative">
+<span class="material-icons-round">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
+</button>
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 hover:bg-orange-600 transition-colors">
+<span class="material-icons-round text-sm">add</span>
+                Nova Chamada
+            </button>
+</div>
+</header>
+<main class="p-8 space-y-8">
+<section>
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold text-header-blue">Visão Geral das Turmas</h2>
+<button class="text-primary text-sm font-semibold hover:underline">Gerenciar todas</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-[10px] uppercase font-bold text-primary tracking-wider px-2 py-0.5 bg-orange-50 rounded">Design</span>
+<h3 class="text-lg font-bold text-slate-900 mt-1">Product Design - Alpha</h3>
+</div>
+<span class="material-icons-round text-slate-300">more_vert</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div>
+<p class="text-xs text-slate-400 font-medium">Total Alunos</p>
+<p class="text-lg font-bold">42</p>
+</div>
+<div>
+<p class="text-xs text-slate-400 font-medium">Status do Módulo</p>
+<p class="text-sm font-bold text-green-600">Módulo 04/08</p>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex justify-between text-xs font-bold mb-1">
+<span class="text-slate-500">Progresso Médio</span>
+<span class="text-primary">68%</span>
+</div>
+<div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 68%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-slate-100">
+<div class="flex items-center gap-2">
+<span class="material-icons-round text-slate-400 text-sm">schedule</span>
+<span class="text-xs text-slate-500 font-medium">Próxima Aula: <span class="text-slate-800">Amanhã, 19:00</span></span>
+</div>
+<button class="text-primary text-xs font-bold hover:underline">Ver Turma</button>
+</div>
+</div>
+<div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-[10px] uppercase font-bold text-blue-500 tracking-wider px-2 py-0.5 bg-blue-50 rounded">Dev</span>
+<h3 class="text-lg font-bold text-slate-900 mt-1">Full-Stack - Beta</h3>
+</div>
+<span class="material-icons-round text-slate-300">more_vert</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div>
+<p class="text-xs text-slate-400 font-medium">Total Alunos</p>
+<p class="text-lg font-bold">38</p>
+</div>
+<div>
+<p class="text-xs text-slate-400 font-medium">Status do Módulo</p>
+<p class="text-sm font-bold text-amber-600">Módulo 02/12</p>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex justify-between text-xs font-bold mb-1">
+<span class="text-slate-500">Progresso Médio</span>
+<span class="text-primary">24%</span>
+</div>
+<div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 24%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-slate-100">
+<div class="flex items-center gap-2">
+<span class="material-icons-round text-slate-400 text-sm">schedule</span>
+<span class="text-xs text-slate-500 font-medium">Próxima Aula: <span class="text-slate-800">Hoje, 20:30</span></span>
+</div>
+<button class="text-primary text-xs font-bold hover:underline">Ver Turma</button>
+</div>
+</div>
+<div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-[10px] uppercase font-bold text-purple-500 tracking-wider px-2 py-0.5 bg-purple-50 rounded">Research</span>
+<h3 class="text-lg font-bold text-slate-900 mt-1">UX Research - Gamma</h3>
+</div>
+<span class="material-icons-round text-slate-300">more_vert</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div>
+<p class="text-xs text-slate-400 font-medium">Total Alunos</p>
+<p class="text-lg font-bold">25</p>
+</div>
+<div>
+<p class="text-xs text-slate-400 font-medium">Status do Módulo</p>
+<p class="text-sm font-bold text-green-600">Finalizando</p>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex justify-between text-xs font-bold mb-1">
+<span class="text-slate-500">Progresso Médio</span>
+<span class="text-primary">92%</span>
+</div>
+<div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-slate-100">
+<div class="flex items-center gap-2">
+<span class="material-icons-round text-slate-400 text-sm">schedule</span>
+<span class="text-xs text-slate-500 font-medium">Próxima Aula: <span class="text-slate-800">Quinta, 18:00</span></span>
+</div>
+<button class="text-primary text-xs font-bold hover:underline">Ver Turma</button>
+</div>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+<div class="lg:col-span-3">
+<section class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+<div class="p-6 border-b border-slate-100 flex justify-between items-center bg-white">
+<div>
+<h2 class="text-lg font-bold text-header-blue">Lista de Alunos</h2>
+<p class="text-sm text-slate-500">Product Design - Turma Alpha</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
+<span class="material-icons-round text-slate-600">filter_list</span>
+</button>
+<button class="p-2 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
+<span class="material-icons-round text-slate-600">file_download</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-slate-50 text-slate-500 text-[11px] uppercase font-bold tracking-wider">
+<tr>
+<th class="px-6 py-4">Estudante</th>
+<th class="px-6 py-4">Engajamento</th>
+<th class="px-6 py-4">Presença</th>
+<th class="px-6 py-4">Média Geral</th>
+<th class="px-6 py-4">Status</th>
+<th class="px-6 py-4 text-right">Ação</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100">
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<img alt="Beatriz" class="w-9 h-9 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1GePMIp4l5GN1SeW93Z-dTpWPnNzLEVFaIE9DZ8KIm76vV9AdlN3MwZuaZZ1fUZaTZ8eJzvrbc0okcr0rkcuD2aZiRTNk2Cl87UUPNj0nyMTp3O1E9x_wHcRdzk_uB0bLJA36I8EUAxDTqAVTY44lduS9ucG7qYyajrMo9_H-DA97_evCp6GKG0qETpkS9SFzCg_h43vAgRySW2s2LZ-VYmBnb_bi2VGKpeszXLOyzkG39xv3RXjilJiESF-UglnNaAtSvik3leQ"/>
+<div>
+<p class="text-sm font-bold text-slate-800">Beatriz Santos</p>
+<p class="text-[11px] text-slate-500">beatriz.s@exemplo.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="w-24 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="bg-green-500 h-full" style="width: 95%"></div>
+</div>
+</td>
+<td class="px-6 py-4 text-sm font-medium text-slate-600">98%</td>
+<td class="px-6 py-4">
+<span class="text-sm font-bold text-slate-800">9.2</span>
+</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-bold uppercase">Ativo</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="bg-slate-100 text-slate-600 text-xs font-bold py-1.5 px-3 rounded-lg hover:bg-slate-200 transition-colors">Ver Perfil</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<img alt="Lucas" class="w-9 h-9 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZlpDUMYp47nkZaJguB4tx4wXeYZxYFEFgPjYmx31NoQIvQ-7h3hR-LHmPPF0LRu8Asivtfd_n8E2VDJB70eLUCubCEWKfB1qLTVogDBobU1_5Ju8NYUw7t7RCVZR6kO9SPAWS0ovRyAphNLMUmRWnQKo0Jn3H6PfwwUJ1O58zLoSMexLe55Nbt73vgCh5M4_1uRPwxq4kfkbDsLmvX3LUEeqS-3qx8W02fkr-XmVHUvXG4SDsTD2q7cSpd9eAiRVRJ_jwu15Iknk"/>
+<div>
+<p class="text-sm font-bold text-slate-800">Lucas Oliveira</p>
+<p class="text-[11px] text-slate-500">lucas.oli@exemplo.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="w-24 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full" style="width: 45%"></div>
+</div>
+</td>
+<td class="px-6 py-4 text-sm font-medium text-slate-600">72%</td>
+<td class="px-6 py-4">
+<span class="text-sm font-bold text-slate-800">6.8</span>
+</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-amber-100 text-amber-700 rounded-full text-[10px] font-bold uppercase">Atenção</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="bg-slate-100 text-slate-600 text-xs font-bold py-1.5 px-3 rounded-lg hover:bg-slate-200 transition-colors">Ver Perfil</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<img alt="Carla" class="w-9 h-9 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwO_Zm0u1cB_ykWDxMiM0A8JNihJLSwrk8264cXY2paYlwXalsI67tW8UK5EfS2dB4OzWVS3P9bC0Sq25BLTHKRZR3pPE7qn5NvFJ6Zbg74tnPawfvNv4YdPBxM5JzvNfiTlSA55RBRsP3VF82s6q0-vbqdYg5z0yjnqBXFuANSZ9vih5fQjODb95SmiNhuHqI23t6U4HaEYH4hw3_0hnW7W41zjA8exjfFVhszwsrg1p5T-cCMCJV6OCnPICrDsMCLX0eVKi256Y"/>
+<div>
+<p class="text-sm font-bold text-slate-800">Carla Ferreira</p>
+<p class="text-[11px] text-slate-500">carla.f@exemplo.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="w-24 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 82%"></div>
+</div>
+</td>
+<td class="px-6 py-4 text-sm font-medium text-slate-600">85%</td>
+<td class="px-6 py-4">
+<span class="text-sm font-bold text-slate-800">8.5</span>
+</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-bold uppercase">Ativo</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="bg-slate-100 text-slate-600 text-xs font-bold py-1.5 px-3 rounded-lg hover:bg-slate-200 transition-colors">Ver Perfil</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<img alt="Mariana" class="w-9 h-9 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtvc31sX82kYrjOon2_qwxmeVDeRnlKhrPJV-8iMwLkxkYkztUmmVj320rrqDEOFoZsn-YKIjZgl6vCfWqUtT4xGmmho1vISFUxMdieTUWZlxKZ2lkztZzEGlarWxc7n8_k3nMDccv1L36QMlrLbhO7KINFP6SYi5wI164jABMJi8eZkD4ZG011jVSEyS2CWA0u_BPke8qnaqiGtVzLf0jyiNTXw5_Inrr7Vep6P3M2EKhySK4PU57SvqEKknGrEOR0KoQLnpxX0w"/>
+<div>
+<p class="text-sm font-bold text-slate-800">Mariana Lima</p>
+<p class="text-[11px] text-slate-500">mari.lima@exemplo.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="w-24 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="bg-red-500 h-full" style="width: 15%"></div>
+</div>
+</td>
+<td class="px-6 py-4 text-sm font-medium text-slate-600">42%</td>
+<td class="px-6 py-4">
+<span class="text-sm font-bold text-slate-800">4.1</span>
+</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-red-100 text-red-700 rounded-full text-[10px] font-bold uppercase">Risco</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="bg-slate-100 text-slate-600 text-xs font-bold py-1.5 px-3 rounded-lg hover:bg-slate-200 transition-colors">Ver Perfil</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500 uppercase tracking-widest">
+<span>Mostrando 4 de 42 alunos</span>
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded border border-slate-200 flex items-center justify-center bg-white hover:bg-slate-100"><span class="material-icons-round text-sm">chevron_left</span></button>
+<button class="w-8 h-8 rounded border border-slate-200 flex items-center justify-center bg-white hover:bg-slate-100"><span class="material-icons-round text-sm">chevron_right</span></button>
+</div>
+</div>
+</section>
+</div>
+<aside class="space-y-6">
+<section class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-icons-round text-red-500">warning</span>
+<h2 class="font-bold text-header-blue">Alunos em Risco</h2>
+</div>
+<p class="text-xs text-slate-500 mb-4 font-medium">Estes alunos apresentam baixo engajamento nas últimas 2 semanas.</p>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-3 bg-red-50 rounded-lg border border-red-100">
+<div class="flex items-center gap-3">
+<img alt="Mariana" class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtvc31sX82kYrjOon2_qwxmeVDeRnlKhrPJV-8iMwLkxkYkztUmmVj320rrqDEOFoZsn-YKIjZgl6vCfWqUtT4xGmmho1vISFUxMdieTUWZlxKZ2lkztZzEGlarWxc7n8_k3nMDccv1L36QMlrLbhO7KINFP6SYi5wI164jABMJi8eZkD4ZG011jVSEyS2CWA0u_BPke8qnaqiGtVzLf0jyiNTXw5_Inrr7Vep6P3M2EKhySK4PU57SvqEKknGrEOR0KoQLnpxX0w"/>
+<div>
+<p class="text-xs font-bold text-slate-900">Mariana Lima</p>
+<p class="text-[10px] text-red-600 font-bold uppercase">Engajamento: 15%</p>
+</div>
+</div>
+<button class="text-primary hover:text-orange-600">
+<span class="material-icons-round text-xl">chat</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-3 bg-red-50 rounded-lg border border-red-100">
+<div class="flex items-center gap-3">
+<img alt="Rodrigo" class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxMGkxpc4q-5eAsn86XpdddUku644U9zfgSKS5dJXKWfO-Rs4-2niOpuZzJOTQyy7ixSvYQV9CRR2APozpQu9oIlQuD_wphCczEgejUp9Odjjocva0LgTA2yoS2s5aU5y_vDAgi93a8QaitK6rUtjPxTn4FNDrsRV5EcMsoQyiwGoVE8SFii947dQwSNE17xrfWrxfHzuP995E3ad9a2aWMWJZHrftVkiRUlXxCKj5WFIOGtmjDFYpbnpaTRXioa0Ox_hGKMXrrEI"/>
+<div>
+<p class="text-xs font-bold text-slate-900">Rodrigo Alves</p>
+<p class="text-[10px] text-red-600 font-bold uppercase">Ausente há 4 dias</p>
+</div>
+</div>
+<button class="text-primary hover:text-orange-600">
+<span class="material-icons-round text-xl">chat</span>
+</button>
+</div>
+</div>
+<button class="w-full mt-6 py-2 border-2 border-primary text-primary text-xs font-bold rounded-lg hover:bg-primary hover:text-white transition-all">
+                        Enviar Alerta Geral
+                    </button>
+</section>
+<section class="bg-header-blue p-6 rounded-xl text-white shadow-sm">
+<h3 class="font-bold text-sm mb-2">Dica do Mentor</h3>
+<p class="text-xs text-slate-300 leading-relaxed mb-4">
+                        Turmas com feedbacks semanais personalizados apresentam engajamento 40% maior. Tente agendar uma conversa com os alunos em risco hoje.
+                    </p>
+<a class="text-primary text-xs font-bold hover:underline flex items-center gap-1" href="#">
+                        Ver templates de feedback <span class="material-icons-round text-sm">open_in_new</span>
+</a>
+</section>
+</aside>
+</div>
+</main>
+</div>
+
+</body></html>

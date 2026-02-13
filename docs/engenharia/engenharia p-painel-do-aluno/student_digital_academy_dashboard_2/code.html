@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projetos e Portfólio | Projeto Novos Horizonte</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee8c2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221910",
+                        "accent-blue": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e5e7eb;
+            border-radius: 10px;
+        }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #3f3f46;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 min-h-screen flex font-display">
+<aside class="w-72 bg-white dark:bg-zinc-900 border-r border-primary/10 flex flex-col h-screen sticky top-0">
+<div class="p-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-icons-round">rocket_launch</span>
+</div>
+<div class="flex flex-col">
+<span class="text-lg font-bold tracking-tight leading-none text-accent-blue dark:text-white">NOVOS</span>
+<span class="text-xs uppercase tracking-[0.2em] font-semibold text-primary">Horizonte</span>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">library_books</span>
+                Meus Cursos
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">calendar_today</span>
+                Calendário
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 bg-primary/10 text-primary font-semibold rounded-xl transition-all" href="#">
+<span class="material-icons-round">folder_special</span>
+                Projetos
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">verified</span>
+                Certificações
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">forum</span>
+                Comunidade
+            </a>
+</nav>
+<div class="p-4 border-t border-slate-100 dark:border-zinc-800 flex items-center gap-3">
+<img alt="Profile" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD6t93a5ESdZg7OPSgo36jBrp-sNO7ZjeKUH4tgGFqzQ6TKHCrjKC1hSeDMrAXiWNmkhTXcZ1gPTF7KAKaZMaWnh8uA-cDkHRV78eV5UxWzgvMwB1V4q6bz2D3SyH0-F_XS4v9YIe4qPD03huX6smpC5qLBzWLzPfnbJJvAfV0tq3yKk8STxCI5QWO2AoXW1rTyLzewcWLBUW6dfgH3Lq7-I7co8cpBSbq6z7hvrRtV3lqZ6sRSKaAi19l1tAMqWcNsaWoAX_aSac"/>
+<div class="flex-1">
+<p class="text-sm font-bold truncate">Marcos Silva</p>
+<p class="text-xs text-slate-500">marcos@novos.edu</p>
+</div>
+<button class="text-slate-400 hover:text-red-500"><span class="material-icons-round">logout</span></button>
+</div>
+</aside>
+<main class="flex-1 flex flex-col h-screen overflow-hidden">
+<header class="h-20 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md px-8 flex items-center justify-between border-b border-primary/10 z-10 sticky top-0">
+<div class="flex flex-col">
+<h2 class="text-xl font-bold text-accent-blue dark:text-white">Projetos e Portfólio</h2>
+<p class="text-xs text-slate-400">Gerencie e exiba suas melhores criações</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 bg-primary hover:bg-orange-600 text-white px-5 py-2.5 rounded-xl font-bold transition-all shadow-lg shadow-primary/20">
+<span class="material-icons-round text-lg">add_circle</span>
+                    Submeter Novo Projeto
+                </button>
+<div class="h-8 w-[1px] bg-slate-200 dark:bg-zinc-800"></div>
+<button class="p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons-round">share</span>
+</button>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8 custom-scrollbar">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-8 space-y-8">
+<section>
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-bold flex items-center gap-2 text-accent-blue dark:text-white">
+<span class="material-icons-round text-primary">pending_actions</span>
+                                Meus Projetos em Andamento
+                            </h3>
+<div class="flex gap-2">
+<button class="px-3 py-1 text-xs font-bold rounded-lg bg-white dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 text-slate-500">Todos</button>
+<button class="px-3 py-1 text-xs font-bold rounded-lg bg-primary/10 text-primary border border-primary/20">Ativos</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white dark:bg-zinc-900 rounded-2xl border border-slate-100 dark:border-zinc-800 p-5 shadow-sm hover:shadow-md transition-shadow">
+<div class="relative h-40 rounded-xl bg-slate-100 dark:bg-zinc-800 mb-4 overflow-hidden group">
+<img alt="E-commerce Redesign" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQnlAnM_4nROygGzyUdKws3LQFV_2uHWrGO0nfrH76h0Ch5EKZSR31kW9-I60E7XZvG3W384BECReomW7PFTZvpUgwF-uUfj7sNiakAAQMCUgV-i-p9WoBeAvPTx5rHASjy5dcya_KImeYif16LA2wv0d2N-vI3-2uHp5lsPaVm8Op8ruswBQMAriArM9x5gizAKKRmAwKjwNdZJIli4LZ-PAW-mMDzHdl8ii19bJBGyVnEF2C7olH6jn22lNcPUpEkrSCIiHx6Sc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute top-3 right-3 bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                                        Em Desenvolvimento
+                                    </span>
+</div>
+<h4 class="font-bold text-lg mb-1">E-commerce de Plantas: Redesign</h4>
+<p class="text-sm text-slate-500 mb-4 line-clamp-2">Criação de interface mobile-first focada em conversão para mercado botânico.</p>
+<div class="flex items-center justify-between pt-4 border-t border-slate-50 dark:border-zinc-800">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-zinc-900 bg-primary/20 flex items-center justify-center text-[10px] font-bold">PS</div>
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-zinc-900 bg-accent-blue/20 flex items-center justify-center text-[10px] font-bold">TS</div>
+</div>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline">
+                                        Editar <span class="material-icons-round text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 rounded-2xl border border-slate-100 dark:border-zinc-800 p-5 shadow-sm hover:shadow-md transition-shadow">
+<div class="relative h-40 rounded-xl bg-slate-100 dark:bg-zinc-800 mb-4 overflow-hidden group">
+<img alt="Dashboard API" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6_YhcB5oNnX_oJaWsU9StSPYsfXujvK9WhrOkC727W1wkhMqz3dLdGfxnSZodpCgJ2NRmC0zN7ZAhANcVMA9P1hkIoouessnyh9LPahSs-RE36631hLKAbmPR9Xk2Yt-W5y3D7pEFHltS93fxldMB_COYKFHpwDbFzi-nxjbFGF33OT-ranJcP3uUV9t_acWMv0HMar44diVr86-AuURcXikOwmRNUGa5Rj9yB24dTdMTh3_ZkeRfzRX8cE18XiEibrd9Qcbv_CI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute top-3 right-3 bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                                        Aguardando Feedback
+                                    </span>
+</div>
+<h4 class="font-bold text-lg mb-1">Dashboard Financeiro v2.0</h4>
+<p class="text-sm text-slate-500 mb-4 line-clamp-2">Sistema completo de gestão de APIs bancárias e visualização de dados com Chart.js.</p>
+<div class="flex items-center justify-between pt-4 border-t border-slate-50 dark:border-zinc-800">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-zinc-900 bg-green-500/20 flex items-center justify-center text-[10px] font-bold">NODE</div>
+</div>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline">
+                                        Ver Comentários <span class="material-icons-round text-sm">comment</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-bold flex items-center gap-2 text-accent-blue dark:text-white">
+<span class="material-icons-round text-primary">visibility</span>
+                                Preview do Portfólio Digital
+                            </h3>
+<button class="text-sm text-primary font-semibold flex items-center gap-1 hover:underline">
+                                Personalizar Layout <span class="material-symbols-outlined text-sm">settings</span>
+</button>
+</div>
+<div class="bg-slate-200 dark:bg-zinc-800 rounded-3xl p-1 shadow-inner border-8 border-slate-100 dark:border-zinc-900">
+<div class="bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden min-h-[400px]">
+<div class="bg-slate-50 dark:bg-zinc-800 px-6 py-3 border-b border-slate-200 dark:border-zinc-700 flex items-center justify-between">
+<div class="flex gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+</div>
+<div class="bg-white dark:bg-zinc-900 px-10 py-1 rounded-md text-[10px] text-slate-400 border border-slate-100 dark:border-zinc-700 flex items-center gap-2">
+<span class="material-icons-round text-[10px]">lock</span>
+                                        portfolio.novos.edu/marcos-silva
+                                    </div>
+<div class="w-10"></div>
+</div>
+<div class="p-8">
+<div class="max-w-3xl mx-auto">
+<div class="flex items-center gap-6 mb-10">
+<img alt="Marcos" class="w-20 h-20 rounded-full ring-4 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsONUVOR4EXqsRj5xuIY7KeDdsSxp5GZNRmJoGHKrjL6tc6_6gVZ5pZl47wuQ335Ozfb7mGz6DPFl4IHXD89MLm8M6pM4lFW95P2iZ4MTiY8Ev93g1q0ToEXKmv_XRXD2wBpF8OP5hxIaU9YuJSWdf0ZjFc1m0gOy0M9ZgFZXDxvOQOtjJ43GC3s2vmH_1qDD5NSboW4RUrc7qsJKUkd51160jhjrwji9W34v56scVGnR61KDCq1FLlnl_sEcUjwcZH3DMIb49jhc"/>
+<div>
+<h1 class="text-2xl font-bold">Marcos Silva</h1>
+<p class="text-slate-500 font-medium">Full Stack Developer Student @ Novos Horizonte</p>
+<div class="flex gap-3 mt-2">
+<span class="text-xs bg-slate-100 dark:bg-zinc-800 px-2 py-0.5 rounded text-slate-500">React</span>
+<span class="text-xs bg-slate-100 dark:bg-zinc-800 px-2 py-0.5 rounded text-slate-500">Tailwind</span>
+<span class="text-xs bg-slate-100 dark:bg-zinc-800 px-2 py-0.5 rounded text-slate-500">Node.js</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-video bg-slate-100 dark:bg-zinc-800 rounded-lg overflow-hidden relative">
+<img alt="Project" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6_YhcB5oNnX_oJaWsU9StSPYsfXujvK9WhrOkC727W1wkhMqz3dLdGfxnSZodpCgJ2NRmC0zN7ZAhANcVMA9P1hkIoouessnyh9LPahSs-RE36631hLKAbmPR9Xk2Yt-W5y3D7pEFHltS93fxldMB_COYKFHpwDbFzi-nxjbFGF33OT-ranJcP3uUV9t_acWMv0HMar44diVr86-AuURcXikOwmRNUGa5Rj9yB24dTdMTh3_ZkeRfzRX8cE18XiEibrd9Qcbv_CI"/>
+</div>
+<div class="aspect-video bg-slate-100 dark:bg-zinc-800 rounded-lg overflow-hidden relative">
+<img alt="Project" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQnlAnM_4nROygGzyUdKws3LQFV_2uHWrGO0nfrH76h0Ch5EKZSR31kW9-I60E7XZvG3W384BECReomW7PFTZvpUgwF-uUfj7sNiakAAQMCUgV-i-p9WoBeAvPTx5rHASjy5dcya_KImeYif16LA2wv0d2N-vI3-2uHp5lsPaVm8Op8ruswBQMAriArM9x5gizAKKRmAwKjwNdZJIli4LZ-PAW-mMDzHdl8ii19bJBGyVnEF2C7olH6jn22lNcPUpEkrSCIiHx6Sc"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="lg:col-span-4 space-y-8">
+<div class="bg-primary rounded-3xl p-6 text-white shadow-xl shadow-primary/30 relative overflow-hidden group">
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+<h3 class="text-xl font-bold mb-2">Finalizou um projeto?</h3>
+<p class="text-white/80 text-sm mb-6 leading-relaxed">Mostre seu progresso para o mundo e receba feedbacks valiosos dos instrutores.</p>
+<button class="w-full py-4 bg-white text-primary font-bold rounded-2xl hover:bg-slate-50 transition-all flex items-center justify-center gap-2 group-hover:scale-[1.02]">
+<span class="material-icons-round">publish</span>
+                            Submeter Novo Projeto
+                        </button>
+</div>
+<div class="bg-white dark:bg-zinc-900 rounded-3xl p-6 border border-slate-100 dark:border-zinc-800 shadow-sm">
+<h3 class="text-lg font-bold mb-4">Compartilhar Portfólio</h3>
+<p class="text-sm text-slate-500 mb-6">Envie o link do seu portfólio diretamente para recrutadores ou compartilhe nas redes sociais.</p>
+<div class="space-y-4">
+<div class="p-3 bg-slate-50 dark:bg-zinc-800 rounded-xl border border-dashed border-slate-200 dark:border-zinc-700 flex items-center justify-between">
+<span class="text-xs font-mono text-slate-500 truncate">novos.edu/p/marcos_2024</span>
+<button class="p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-icons-round text-sm">content_copy</span>
+</button>
+</div>
+<button class="w-full py-3 bg-accent-blue text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-slate-800 transition-colors">
+<span class="material-icons-round text-lg">share</span>
+                                Share Link
+                            </button>
+</div>
+<div class="mt-8 pt-6 border-t border-slate-50 dark:border-zinc-800">
+<h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Visitas no Portfólio</h4>
+<div class="flex items-center gap-4">
+<div class="flex-1">
+<div class="text-2xl font-bold">142</div>
+<p class="text-xs text-green-500 font-medium">+12% esta semana</p>
+</div>
+<div class="w-16 h-8 bg-primary/10 rounded overflow-hidden flex items-end gap-1 px-1">
+<div class="bg-primary/40 w-full h-[40%] rounded-t-sm"></div>
+<div class="bg-primary/40 w-full h-[60%] rounded-t-sm"></div>
+<div class="bg-primary w-full h-[90%] rounded-t-sm"></div>
+<div class="bg-primary/40 w-full h-[50%] rounded-t-sm"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 rounded-3xl p-6 border border-slate-100 dark:border-zinc-800 shadow-sm">
+<h3 class="text-lg font-bold mb-4">Últimas Interações</h3>
+<div class="space-y-4">
+<div class="flex gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-zinc-800 flex items-center justify-center">
+<span class="material-icons-round text-slate-400">visibility</span>
+</div>
+<div>
+<p class="text-sm font-bold">Empresa de Tech S.A.</p>
+<p class="text-xs text-slate-500">Visualizou seu portfólio</p>
+<p class="text-[10px] text-slate-400 mt-1">Há 2 horas</p>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-icons-round text-primary">star</span>
+</div>
+<div>
+<p class="text-sm font-bold">Instrutor Bruno</p>
+<p class="text-xs text-slate-500">Favoritou seu projeto "E-commerce"</p>
+<p class="text-[10px] text-slate-400 mt-1">Há 1 dia</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 py-2 text-xs font-bold text-slate-500 hover:text-primary transition-colors">Ver todas as notificações</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+</body></html>

@@ -1,0 +1,22 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import Button from '../../../components/academy-admin/ui/Button.astro';
+import Table from '../../../components/academy-admin/ui/Table.astro';
+
+const courses = [
+  { title: 'Astro.js para Iniciantes', students: 150, status: 'Publicado' },
+  { title: 'React com TypeScript', students: 250, status: 'Publicado' },
+  { title: 'Vue.js Avançado', students: 80, status: 'Em rascunho' },
+  { title: 'Node.js e GraphQL', students: 120, status: 'Publicado' },
+];
+---
+
+<AdminLayout title="Cursos - Academy Admin">
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-3xl font-bold">Gerenciamento de Cursos</h1>
+    <Button label="Novo Curso" />
+  </div>
+  <div class="bg-white p-6 rounded-lg shadow-md">
+    <Table headers={['Título do Curso', 'Alunos Inscritos', 'Status']} data={courses} />
+  </div>
+</AdminLayout>

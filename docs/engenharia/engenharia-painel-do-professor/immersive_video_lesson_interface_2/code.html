@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee8c2b",
+                        "brand-blue": "#0a192f",
+                        "background-dark": "#050a14",
+                        "surface-dark": "#0f172a",
+                        "panel-dark": "#161e2e",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Lexend', sans-serif; }
+        .canvas-grid {
+            background-color: #ffffff;
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .toolbar-pill {
+            @apply flex items-center justify-center w-12 h-12 rounded-xl transition-all duration-200;
+        }
+        .tool-active {
+            @apply bg-primary text-white shadow-lg shadow-primary/30;
+        }
+        .tool-inactive {
+            @apply text-slate-400 hover:bg-white/10 hover:text-white;
+        }
+        .glass-panel {
+            background: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col overflow-hidden">
+<header class="h-16 border-b border-slate-200 bg-white flex items-center justify-between px-6 z-50 shrink-0 shadow-sm">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<div class="bg-brand-blue p-1.5 rounded-lg">
+<span class="material-icons-round text-primary text-xl">gesture</span>
+</div>
+<div>
+<span class="font-bold text-sm tracking-tight text-brand-blue block leading-none">QUADRO BRANCO</span>
+<span class="text-[10px] text-slate-400 font-medium uppercase tracking-wider">Projeto Novos Horizontes</span>
+</div>
+</div>
+<div class="h-8 w-px bg-slate-200"></div>
+<div class="flex flex-col">
+<h1 class="text-sm font-semibold text-slate-700">Aula 12: Design Tokens - Brainstorming</h1>
+<div class="flex items-center gap-2">
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+<span class="text-[10px] font-bold text-slate-500">MENTOR ONLINE</span>
+</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 transition-all text-xs font-semibold">
+<span class="material-symbols-outlined text-lg">group_add</span>
+                Permitir edição de alunos
+            </button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 transition-all text-xs font-semibold">
+<span class="material-symbols-outlined text-lg">delete_sweep</span>
+                Limpar quadro
+            </button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-blue text-white hover:bg-slate-800 transition-all text-xs font-bold">
+<span class="material-symbols-outlined text-lg">download</span>
+                Salvar como PDF/Imagem
+            </button>
+</div>
+</header>
+<main class="flex-1 relative overflow-hidden flex bg-slate-50">
+<div class="flex-1 relative canvas-grid cursor-crosshair">
+<div class="absolute top-40 left-64 w-48 h-48 bg-yellow-200 shadow-lg rotate-2 p-4 flex flex-col justify-between border-t-4 border-yellow-300">
+<p class="text-slate-800 text-sm font-medium">Definir escala de cores primárias</p>
+<span class="text-[10px] font-bold text-yellow-600">POST-IT</span>
+</div>
+<div class="absolute top-32 left-[500px] w-48 h-48 bg-orange-200 shadow-lg -rotate-1 p-4 flex flex-col justify-between border-t-4 border-orange-300">
+<p class="text-slate-800 text-sm font-medium">Revisar contrastes (WCAG AA)</p>
+<span class="text-[10px] font-bold text-orange-600">POST-IT</span>
+</div>
+<div class="absolute top-72 left-[420px] w-48 h-48 bg-cyan-100 shadow-lg rotate-3 p-4 flex flex-col justify-between border-t-4 border-cyan-200">
+<p class="text-slate-800 text-sm font-medium">Documentação de spacing tokens</p>
+<span class="text-[10px] font-bold text-cyan-600">POST-IT</span>
+</div>
+<svg class="absolute inset-0 pointer-events-none">
+<rect fill="none" height="150" stroke="#0a192f" stroke-dasharray="8 8" stroke-width="2" width="300" x="200" y="100"></rect>
+<circle cx="800" cy="400" fill="none" r="60" stroke="#ee8c2b" stroke-width="3"></circle>
+</svg>
+</div>
+<div class="absolute left-6 top-1/2 -translate-y-1/2 flex flex-col gap-2 p-2 glass-panel rounded-2xl shadow-2xl z-40">
+<button class="toolbar-pill tool-active" title="Pincel">
+<span class="material-symbols-outlined">brush</span>
+</button>
+<button class="toolbar-pill tool-inactive" title="Borracha">
+<span class="material-symbols-outlined">ink_eraser</span>
+</button>
+<button class="toolbar-pill tool-inactive" title="Formas Geométricas">
+<span class="material-symbols-outlined">category</span>
+</button>
+<button class="toolbar-pill tool-inactive" title="Post-its Coloridos">
+<span class="material-symbols-outlined">sticky_note_2</span>
+</button>
+<button class="toolbar-pill tool-inactive" title="Texto">
+<span class="material-symbols-outlined">title</span>
+</button>
+<div class="w-8 h-px bg-white/10 mx-auto my-1"></div>
+<button class="toolbar-pill tool-inactive" title="Inserir Imagem">
+<span class="material-symbols-outlined">add_photo_alternate</span>
+</button>
+<button class="toolbar-pill tool-inactive" title="Mover">
+<span class="material-symbols-outlined">pan_tool</span>
+</button>
+</div>
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-6 px-6 py-3 glass-panel rounded-2xl shadow-2xl z-40">
+<div class="flex items-center gap-2">
+<button class="w-6 h-6 rounded-full bg-slate-900 border-2 border-white ring-2 ring-primary ring-offset-2 ring-offset-brand-blue"></button>
+<button class="w-6 h-6 rounded-full bg-red-500 hover:scale-110 transition-transform"></button>
+<button class="w-6 h-6 rounded-full bg-blue-500 hover:scale-110 transition-transform"></button>
+<button class="w-6 h-6 rounded-full bg-emerald-500 hover:scale-110 transition-transform"></button>
+<button class="w-6 h-6 rounded-full bg-primary hover:scale-110 transition-transform"></button>
+<button class="w-6 h-6 rounded-full bg-purple-500 hover:scale-110 transition-transform"></button>
+</div>
+<div class="h-8 w-px bg-white/10"></div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 text-sm">line_weight</span>
+<input class="w-24 h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-primary" max="20" min="1" type="range" value="4"/>
+</div>
+<div class="h-8 w-px bg-white/10"></div>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 flex items-center justify-center rounded bg-white/5 text-white hover:bg-white/10">
+<span class="material-symbols-outlined text-lg">undo</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded bg-white/5 text-white hover:bg-white/10">
+<span class="material-symbols-outlined text-lg">redo</span>
+</button>
+</div>
+</div>
+<div class="absolute bottom-6 right-6 w-56 aspect-video rounded-xl overflow-hidden border-2 border-primary/50 shadow-2xl ring-4 ring-black/20 z-40 group">
+<img class="w-full h-full object-cover" data-alt="Mentor camera feed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBrkruc3uYAXdcUFi6MsUo0S1b037KQ6mDldsFTNETUDN8oe4cxoSZ_e81-UVgxhdOXB16n_8RcSo0e3x9hbl2a1MlWYK6ukmOk9W3rLMUYK5Ntp_4oShFw8gyRsbrYpvZrMBGHSlYe7C7feRVy9XFXRufFM6wFZBgjHarzi2L2K5sU_KoNo6vjenT-elDW_0TpBRC3sOmh_Uk9XoIlaucajvoP-LZdGF9EaCXNlH7MgKnqI0bI5gnMtQzu1rPT6YUferGvU-G1iM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-2 py-0.5 rounded text-[8px] font-bold text-white uppercase tracking-tighter">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Mentor ao Vivo
+            </div>
+<div class="absolute top-2 right-2 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 bg-black/40 rounded text-white hover:bg-black/60"><span class="material-symbols-outlined text-xs">mic</span></button>
+<button class="p-1 bg-black/40 rounded text-white hover:bg-black/60"><span class="material-symbols-outlined text-xs">settings</span></button>
+</div>
+</div>
+<div class="absolute top-6 right-6 flex flex-col gap-2 z-40">
+<button class="w-10 h-10 bg-white border border-slate-200 rounded-lg shadow-sm flex items-center justify-center text-slate-600 hover:bg-slate-50">
+<span class="material-symbols-outlined">zoom_in</span>
+</button>
+<button class="w-10 h-10 bg-white border border-slate-200 rounded-lg shadow-sm flex items-center justify-center text-slate-600 hover:bg-slate-50">
+<span class="material-symbols-outlined">zoom_out</span>
+</button>
+<button class="w-10 h-10 bg-white border border-slate-200 rounded-lg shadow-sm flex items-center justify-center text-slate-600 hover:bg-slate-50" title="Ajustar à tela">
+<span class="material-symbols-outlined">fullscreen_exit</span>
+</button>
+</div>
+</main>
+<footer class="h-10 bg-brand-blue border-t border-white/5 flex items-center justify-between px-6 shrink-0 z-50">
+<div class="flex items-center gap-4">
+<span class="text-[10px] font-bold text-primary/80 uppercase tracking-widest">Atalhos: [B] Pincel [E] Borracha [Space] Mover</span>
+</div>
+<div class="flex items-center gap-4 text-slate-400">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">group</span>
+<span class="text-[10px] font-medium">12 Alunos visualizando</span>
+</div>
+</div>
+</footer>
+
+</body></html>

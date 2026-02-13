@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-PT"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Acesso do Parceiro | Projeto Novos Horizontes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee8c2b",
+                        "primary-dark": "#d97b1e",
+                        "deep-blue": "#101827",
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .bg-pattern {
+                background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+                background-size: 24px 24px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white font-display text-slate-900 antialiased overflow-hidden">
+<div class="flex min-h-screen">
+<div class="hidden lg:flex lg:w-1/2 relative bg-deep-blue overflow-hidden">
+<img alt="Professional workspace in Africa" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe_OqbKpwkZSlIAJ3EObAdTmzZimPpuj1pKAAh1aDbtrgnkNLQZeTRKNJTEIK5LSUQiOCjIMK3_oJe4HUt0bZPbbr10pxh94MS1-jXLm7xcjGRd8Ero75zA3Ras8v3mfe0yGBxvdw5843Pf6Egsfn_l4gkv4mJtej0PatSAd9UwVPMyfLDpTQ6JnkDvX4UeBdM-epdVEzDiNl55Eif4UljsxA25AC9hA6tuYgst0kLyo3TqKCAiMjb-UANR0021JI3u_SSxTL3VUY"/>
+<div class="absolute inset-0 bg-pattern opacity-30"></div>
+<div class="absolute inset-0 bg-gradient-to-tr from-deep-blue via-deep-blue/80 to-transparent"></div>
+<div class="relative z-10 flex flex-col justify-between p-16 w-full">
+<div>
+<div class="flex items-center gap-3 mb-12">
+<div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-icons text-white text-2xl">grid_view</span>
+</div>
+<div class="leading-tight">
+<h1 class="font-extrabold text-xl tracking-tight uppercase text-white">Novos Horizontes</h1>
+<p class="text-xs text-slate-400 font-medium tracking-widest uppercase">Projeto de Impacto Digital</p>
+</div>
+</div>
+<div class="max-w-md">
+<h2 class="text-5xl font-extrabold text-white leading-tight mb-6">Painel do Parceiro Regional</h2>
+<p class="text-lg text-slate-300 leading-relaxed">
+                        Gerencie hubs, acompanhe o progresso dos alunos e impulsione o desenvolvimento tecnológico local em sua região.
+                    </p>
+</div>
+</div>
+<div class="flex items-center gap-4 text-white/60 text-sm">
+<span class="flex items-center gap-2"><span class="material-icons text-primary text-sm">verified</span> Gestão de Hubs</span>
+<span class="h-1 w-1 bg-white/20 rounded-full"></span>
+<span class="flex items-center gap-2"><span class="material-icons text-primary text-sm">verified</span> Relatórios de Impacto</span>
+<span class="h-1 w-1 bg-white/20 rounded-full"></span>
+<span class="flex items-center gap-2"><span class="material-icons text-primary text-sm">verified</span> Suporte Regional</span>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 flex items-center justify-center p-8 bg-white">
+<div class="w-full max-w-md">
+<div class="mb-10 lg:hidden">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons text-white">grid_view</span>
+</div>
+<h1 class="font-extrabold text-lg tracking-tight uppercase text-deep-blue">Novos Horizontes</h1>
+</div>
+</div>
+<div class="mb-8">
+<h3 class="text-2xl font-extrabold text-slate-900 mb-2">Bem-vindo de volta</h3>
+<p class="text-slate-500">Acesse sua conta de parceiro para gerenciar seu hub regional.</p>
+</div>
+<div class="flex border-b border-slate-100 mb-8">
+<button class="px-6 py-4 text-sm font-bold border-b-2 border-primary text-primary">Entrar</button>
+<button class="px-6 py-4 text-sm font-semibold text-slate-400 hover:text-slate-600 transition-colors">Solicitar Parceria</button>
+</div>
+<form action="#" class="space-y-6">
+<div>
+<label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2" for="email">E-mail Corporativo</label>
+<div class="relative">
+<span class="material-icons absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg">mail_outline</span>
+<input class="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-400 text-sm" id="email" placeholder="nome@empresa.com.ao" required="" type="email"/>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="block text-xs font-bold text-slate-700 uppercase tracking-wider" for="password">Palavra-passe</label>
+<a class="text-xs font-bold text-primary hover:text-primary-dark transition-colors" href="#">Esqueci minha senha</a>
+</div>
+<div class="relative">
+<span class="material-icons absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg">lock_outline</span>
+<input class="w-full pl-12 pr-12 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-400 text-sm" id="password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors" type="button">
+<span class="material-icons text-lg">visibility_off</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 text-primary border-slate-300 rounded focus:ring-primary" id="remember" type="checkbox"/>
+<label class="text-sm text-slate-600 font-medium" for="remember">Lembrar este dispositivo</label>
+</div>
+<button class="w-full bg-deep-blue hover:bg-slate-800 text-white py-4 rounded-xl font-bold transition-all shadow-xl shadow-deep-blue/10 flex items-center justify-center gap-2" type="submit">
+                    Aceder ao Painel
+                    <span class="material-icons text-lg">arrow_forward</span>
+</button>
+</form>
+<div class="mt-12 pt-8 border-t border-slate-100">
+<p class="text-center text-sm text-slate-500">
+                    Ainda não é um parceiro regional? <a class="text-primary font-bold hover:underline" href="#">Saiba como colaborar</a>
+</p>
+<div class="mt-8 flex justify-center gap-6">
+<a class="text-slate-400 hover:text-slate-600 transition-colors" href="#"><span class="material-icons text-xl">help_outline</span></a>
+<a class="text-slate-400 hover:text-slate-600 transition-colors font-bold text-xs uppercase tracking-widest mt-1" href="#">Suporte</a>
+<a class="text-slate-400 hover:text-slate-600 transition-colors font-bold text-xs uppercase tracking-widest mt-1" href="#">Legal</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,14 @@
+---
+import AcademyLayout from 'src/layouts/AcademyLayout.astro';
+import VideoPlayer from 'src/components/academy/VideoPlayer.astro';
+import ProgressBar from 'src/components/academy/ProgressBar.astro';
+---
+
+<AcademyLayout>
+  <h1 class="text-3xl font-bold mb-6">Aula 1: Título da Aula</h1>
+  <VideoPlayer />
+  <div class="mt-6">
+    <h2 class="text-2xl font-bold mb-4">Progresso no Curso</h2>
+    <ProgressBar />
+  </div>
+</AcademyLayout>

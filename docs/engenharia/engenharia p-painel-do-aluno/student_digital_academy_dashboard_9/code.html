@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recuperar Senha | Projeto Novos Horizonte</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee8c2b",
+                        "primary-dark": "#d47a22",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221910",
+                        "accent-blue": "#1e293b",
+                        "deep-blue": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .registration-split {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 45% 55%;
+        }
+        @media (max-width: 1024px) {
+            .registration-split {
+                grid-template-columns: 1fr;
+            }
+            .left-branding {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 font-display overflow-hidden">
+<div class="registration-split">
+<div class="left-branding bg-deep-blue relative overflow-hidden flex flex-col justify-between p-12">
+<div class="absolute top-0 right-0 w-full h-full opacity-20 pointer-events-none">
+<div class="absolute inset-0 bg-gradient-to-br from-primary via-transparent to-transparent"></div>
+<div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary blur-[120px] rounded-full translate-x-1/2 translate-y-1/2"></div>
+</div>
+<div class="relative z-10 flex items-center gap-3">
+<div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/20">
+<span class="material-icons-round text-2xl">rocket_launch</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-bold tracking-tight leading-none text-white">NOVOS</span>
+<span class="text-xs uppercase tracking-[0.2em] font-semibold text-primary">Horizonte</span>
+</div>
+</div>
+<div class="relative z-10">
+<h1 class="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">Recupere seu <span class="text-primary">acesso.</span></h1>
+<p class="text-slate-400 text-lg max-w-md leading-relaxed">
+                Não se preocupe, estamos aqui para ajudar você a voltar à sua jornada de evolução digital.
+            </p>
+</div>
+<div class="relative z-10 pt-8 border-t border-white/10">
+<p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Educação de Alto Nível</p>
+</div>
+</div>
+<div class="bg-background-light flex items-center justify-center p-8 lg:p-16 overflow-y-auto">
+<div class="w-full max-w-md">
+<div class="mb-10 text-center lg:text-left">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto lg:mx-0">
+<span class="material-symbols-outlined text-primary text-3xl">lock_reset</span>
+</div>
+<h2 class="text-3xl font-bold text-accent-blue mb-3">Esqueceu sua senha?</h2>
+<p class="text-slate-500 leading-relaxed">
+                    Insira o e-mail associado à sua conta e enviaremos um link para redefinir sua senha.
+                </p>
+</div>
+<form class="space-y-6">
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" for="email">E-mail Cadastrado</label>
+<div class="relative">
+<span class="material-icons-round absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm">alternate_email</span>
+<input class="w-full bg-white border-slate-200 rounded-xl pl-11 pr-4 py-4 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" id="email" placeholder="seu-email@dominio.com" required="" type="email"/>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-0.5 active:scale-[0.98] mt-4" type="submit">
+                    Enviar Instruções
+                </button>
+</form>
+<div class="mt-12 text-center">
+<a class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-icons-round text-lg">arrow_back</span>
+                    Voltar para o Login
+                </a>
+</div>
+<div class="mt-16 text-center">
+<p class="text-[10px] text-slate-400 leading-relaxed uppercase tracking-widest font-medium">
+                    Projeto Novos Horizonte © 2024
+                </p>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academia Digital Novos Horizonte | Cursos e Currículo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1173d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+              "accent-orange": "#f97316",
+            },
+            fontFamily: {
+              "display": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- Header / Navigation -->
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons text-white">school</span>
+</div>
+<span class="text-xl font-extrabold tracking-tight text-primary">NOVOS <span class="text-slate-700 dark:text-slate-200">HORIZONTE</span></span>
+</div>
+<nav class="hidden md:flex space-x-8 items-center">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Cursos</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Currículo</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Certificações</a>
+<div class="h-6 w-px bg-slate-300 dark:bg-slate-700"></div>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-lg border-2 border-primary text-primary font-bold text-sm hover:bg-primary hover:text-white transition-all">
+<span class="material-icons text-sm">login</span>
+                        Acesso ao Aluno
+                    </button>
+</nav>
+<div class="md:hidden">
+<span class="material-icons text-3xl">menu</span>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative py-20 overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 -z-10"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div>
+<span class="inline-block px-4 py-1.5 rounded-full bg-accent-orange/10 text-accent-orange text-xs font-bold uppercase tracking-wider mb-6">
+                            Academia Digital Novos Horizonte
+                        </span>
+<h1 class="text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                            Transforme seu futuro com <span class="text-primary">tecnologia de ponta.</span>
+</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-lg">
+                            Formação completa do zero ao profissional com foco real no mercado de trabalho e projetos práticos.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all flex items-center gap-2">
+                                Ver Catálogo de Cursos
+                                <span class="material-icons">arrow_forward</span>
+</button>
+<div class="flex items-center gap-3 px-4 py-2 bg-white dark:bg-slate-800 rounded-xl border border-primary/10">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a female student smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo4uh9tfrkW4Nhs1BGsCotwmoCEOXLVw1Ll-0Svl7yo8hluxrOICgYiOa7F2p_gn408dYzgRrLAb7e5EJrUFdWLDinBAustWVoFHbG-pEZRlyM1EEZF0rJm7XmYTE56cgTHxU62Hb1bb5kR1FKNo-xN9WmTB_Tf0OK8GX2wQIqrdADBoz3i2t6cgj6t3JVb3_fD-IjFk9JFuIWUot_ILR4zrnKhkpccKt2c5woXSe3yBr3RlmTOoFXLy3GyCRcO6fWa5_hvOxB1EM"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-300 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a male student smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Lc6FvG4jkhTMuOVSoy9UQjk3v72UiaWAulP-21gwaXgO7G8SSGldEHc5HF-CzUTVXMpR_i1EFfmuIcIXGPxXbVdLjMNfpK1KnK36wT-k2q_ccfVaNM7WXyB62U_cr7bNjZZ-K0qmY2w2dfT304zej3RxnDv33TVui3o2Ipu4HFPtHFq7GzyOg-ClPTNJuwaHsqoK47_1Ce8ZA9rqyw2Lj6M7Pg8KAuBIEN_aOC3oD1TEq0feU6XEcHtGmBv6HLEXOJHgUSduKcM"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-primary flex items-center justify-center text-[10px] text-white font-bold">
+                                        +2k
+                                    </div>
+</div>
+<span class="text-xs font-medium text-slate-500">Alunos ativos hoje</span>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-video rounded-2xl overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800">
+<img class="w-full h-full object-cover" data-alt="Students collaborating on laptops in a modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS2oP2w6nFi1D1dGaHh63ZunkP_jatJNcmCS9PW0i3QgWkdAGfdDHD2YP1xkQEy5inVMKKxUw_bWP23DOhryUtJsIlOBzd6QXU_2QALpww_5_Rf28XJPLOiLVXKqOaDw55DL70dAPCjuyRWpK32UECHIkAXxHzL5oKGsalxFU6SS-q2wsKfopu1XA2ekf01WDumsIq-ZWcx6pF4jTvukP1Xoy8UuXmYOxUmpnR_AR0_Ox0Np03akLVey6zu_-wyveMWC8ayuwOSUw"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl border border-primary/10 hidden md:block">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+<span class="material-icons text-green-600">verified</span>
+</div>
+<div>
+<p class="text-sm font-bold">98% de Empregabilidade</p>
+<p class="text-xs text-slate-500 italic">Média dos últimos 12 meses</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Course Catalog Grid -->
+<section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<h2 class="text-3xl font-extrabold mb-4">Catálogo de Cursos</h2>
+<p class="text-slate-500 max-w-2xl">Escolha sua trilha de especialização com currículos atualizados trimestralmente pelas maiores empresas do setor.</p>
+</div>
+<div class="flex bg-white dark:bg-slate-800 p-1.5 rounded-xl border border-slate-200 dark:border-slate-700">
+<button class="px-6 py-2 bg-primary text-white rounded-lg text-sm font-bold">Todos</button>
+<button class="px-6 py-2 text-slate-500 text-sm font-bold hover:text-primary">Dev</button>
+<button class="px-6 py-2 text-slate-500 text-sm font-bold hover:text-primary">Design</button>
+<button class="px-6 py-2 text-slate-500 text-sm font-bold hover:text-primary">Data</button>
+</div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-2">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Software code on a screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEPVVzdbE-v3ZY4DPBbvDMdQ829KE1DGrJGygN5fLudb2-H0-YW-YX17Hx8V_DSLXNrwmd-_OogyCU7NaF-XtEYnwDwmXkg1K0UvlacSUV9_zOeOGDhgtuozMgeBNsFzvLBWVWZNpNTrNhYjb2yYTTQpYE8njTLIWPa8XFEp1wa5PI03Ezvz7pVI4I5X3pWRrDtuaFdNyZg-mgGDvk4XkVLXnN4PqJbyh4dqCcqXfx45LtnUF9tgKS378AqFOwK0NMR3K_wO3AIa8"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-3 py-1 bg-primary text-white text-[10px] font-bold rounded-full">FULL-STACK</span>
+<span class="px-3 py-1 bg-white/90 text-slate-900 text-[10px] font-bold rounded-full">NOVO</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors leading-tight">Desenvolvimento Full-Stack Pro</h3>
+<span class="text-accent-orange font-bold">R$ 97/mês</span>
+</div>
+<div class="flex gap-4 mb-6">
+<div class="flex items-center gap-1 text-slate-500 text-xs">
+<span class="material-icons text-sm">schedule</span> 6 Meses
+                            </div>
+<div class="flex items-center gap-1 text-slate-500 text-xs">
+<span class="material-icons text-sm">signal_cellular_alt</span> Iniciante
+                            </div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded text-[10px] font-medium">React</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded text-[10px] font-medium">Node.js</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded text-[10px] font-medium">PostgreSQL</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded text-[10px] font-medium">TypeScript</span>
+</div>
+<button class="w-full py-3 border-2 border-primary/20 text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all">Ver Detalhes</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-2">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="UI/UX design sketches and tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB97GbgGNKonS-aCI4xdtU23C90WTQVrf4VKGZwOrs-zQ7e2OWn5-582xBGqaPkQUTO24hkWgNTHZWTo0lazb3OuB9vzPtjF3ruBTcEjHhM_zgFoWFDZWrXgdXyJhIh5FyJE9V3X3GcHqScGaxrhcWY2sk-ZWzMh_NETDqBUG3O00g3ilSqbrwYDhd4DSfYqMhd0I8pzeV0p5DyfVVTihxS7_QuoxfxfmXkvIp-iazVwVpBRvOwHkdWqKKFjUlP4ykgnhufdL0_eNM"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-3 py-1 bg-primary text-white text-[10px] font-bold rounded-full">DESIGN</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors leading-tight">UI/UX Design Avançado</h3>
+<span class="text-accent-orange font-bold">R$ 89/mês</span>
+</div>
+<div class="flex gap-4 mb-6">
+<div class="flex items-center gap-1 text-slate-500 text-xs">
+<span class="material-icons text-sm">schedule</span> 4 Meses
+                            </div>
+<div class="flex items-center gap-1 text-slate-500 text-xs">
+<span class="material-icons text-sm">signal_cellular_alt</span> Avançado
+                            </div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded text-[10px] font-medium">Figma</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded text-[10px] font-medium">Prototipagem</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded text-[10px] font-medium">User Research</span>
+</div>
+<button class="w-full py-3 border-2 border-primary/20 text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all">Ver Detalhes</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-2">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Data charts and analytics on computer screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk3diRQtu_p3YM3DcNa3cHyeJ6YJbPKwrFoQeUxx6TBGIrXC8-eXrieqa5eXXKCTOWeYtK7KujD-qXh-clALfN_ObDoCtD-NHAVykdddj7vXErCtEjTeNulqatvhccxAsJB9RK0nmd20ymlq3gocsUZL3kXMbzkXCiz7-fn-Gzs7fcDBeQIvkIhDnntXaRuGGRP387gSIE5-k1Zms73eKx-TM9GxiflyPa4RqSw7lDP82U3brpUS1Bae7D2JuZan5ZXRtk0D-BssI"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-3 py-1 bg-primary text-white text-[10px] font-bold rounded-full">DATA SCIENCE</span>
+<span class="px-3 py-1 bg-accent-orange text-white text-[10px] font-bold rounded-full uppercase">Hot</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors leading-tight">Data Science &amp; IA Aplicada</h3>
+<span class="text-accent-orange font-bold">R$ 115/mês</span>
+</div>
+<div class="flex gap-4 mb-6">
+<div class="flex items-center gap-1 text-slate-500 text-xs">
+<span class="material-icons text-sm">schedule</span> 8 Meses
+                            </div>
+<div class="flex items-center gap-1 text-slate-500 text-xs">
+<span class="material-icons text-sm">signal_cellular_alt</span> Intermediário
+                            </div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded text-[10px] font-medium">Python</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded text-[10px] font-medium">Machine Learning</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded text-[10px] font-medium">SQL</span>
+</div>
+<button class="w-full py-3 border-2 border-primary/20 text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all">Ver Detalhes</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Curriculum Structure -->
+<section class="py-24 bg-slate-50 dark:bg-slate-900/50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-extrabold mb-4">Sua Jornada de Aprendizado</h2>
+<p class="text-slate-500 max-w-xl mx-auto">Desenvolvemos uma metodologia focada no "Learning by Doing", dividida em 3 fases críticas para sua carreira.</p>
+</div>
+<div class="grid lg:grid-cols-3 gap-8 relative">
+<!-- Connector Line (Desktop) -->
+<div class="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/20 to-transparent -translate-y-1/2 -z-10"></div>
+<!-- Phase 1 -->
+<div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-xl shadow-slate-200/50 dark:shadow-none border border-primary/10 relative">
+<div class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
+<span class="text-xl font-black italic">01</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Fase 1: Foundation</h3>
+<p class="text-slate-500 text-sm leading-relaxed mb-6">
+                            Construa uma base sólida. Lógica de programação, algoritmos, arquitetura de sistemas e conceitos fundamentais para qualquer stack.
+                        </p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm font-medium text-slate-700 dark:text-slate-300">
+<span class="material-icons text-primary text-lg">check_circle</span> Mentalidade Engenheira
+                            </li>
+<li class="flex items-center gap-3 text-sm font-medium text-slate-700 dark:text-slate-300">
+<span class="material-icons text-primary text-lg">check_circle</span> Lógica &amp; Sintaxe
+                            </li>
+</ul>
+</div>
+<!-- Phase 2 -->
+<div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-xl shadow-slate-200/50 dark:shadow-none border border-primary/10 relative ring-4 ring-primary ring-opacity-10 scale-105">
+<div class="w-14 h-14 bg-accent-orange text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-accent-orange/20">
+<span class="text-xl font-black italic">02</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Fase 2: Especialização</h3>
+<p class="text-slate-500 text-sm leading-relaxed mb-6">
+                            Mergulho profundo na tecnologia escolhida. Do conceito à implementação de funcionalidades complexas utilizando as ferramentas do mercado.
+                        </p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm font-medium text-slate-700 dark:text-slate-300">
+<span class="material-icons text-accent-orange text-lg">check_circle</span> Frameworks Modernos
+                            </li>
+<li class="flex items-center gap-3 text-sm font-medium text-slate-700 dark:text-slate-300">
+<span class="material-icons text-accent-orange text-lg">check_circle</span> Melhores Práticas de Clean Code
+                            </li>
+</ul>
+<div class="absolute -top-3 right-6 px-3 py-1 bg-primary text-white text-[10px] font-bold rounded-full">CORE CURRICULUM</div>
+</div>
+<!-- Phase 3 -->
+<div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-xl shadow-slate-200/50 dark:shadow-none border border-primary/10 relative">
+<div class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
+<span class="text-xl font-black italic">03</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Fase 3: Real Projects</h3>
+<p class="text-slate-500 text-sm leading-relaxed mb-6">
+                            Construção de portfólio real e treinamento de Soft Skills. Preparação para processos seletivos e dinâmicas de squad.
+                        </p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm font-medium text-slate-700 dark:text-slate-300">
+<span class="material-icons text-primary text-lg">check_circle</span> Projetos com Empresas Reais
+                            </li>
+<li class="flex items-center gap-3 text-sm font-medium text-slate-700 dark:text-slate-300">
+<span class="material-icons text-primary text-lg">check_circle</span> Mentoria de Carreira &amp; LinkedIn
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications & International Recognition -->
+<section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1">
+<div class="grid grid-cols-2 gap-6">
+<div class="p-8 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-4">
+<span class="material-icons text-blue-600 text-3xl">public</span>
+</div>
+<h4 class="font-bold text-sm">Padrão Internacional</h4>
+</div>
+<div class="p-8 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center mt-8">
+<div class="w-16 h-16 bg-orange-50 dark:bg-orange-900/30 rounded-full flex items-center justify-center mb-4">
+<span class="material-icons text-orange-600 text-3xl">workspace_premium</span>
+</div>
+<h4 class="font-bold text-sm">Certificado MEC</h4>
+</div>
+<div class="p-8 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center -mt-8">
+<div class="w-16 h-16 bg-green-50 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-4">
+<span class="material-icons text-green-600 text-3xl">badge</span>
+</div>
+<h4 class="font-bold text-sm">Parceiro Microsoft</h4>
+</div>
+<div class="p-8 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-indigo-50 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mb-4">
+<span class="material-icons text-indigo-600 text-3xl">groups</span>
+</div>
+<h4 class="font-bold text-sm">Networking Global</h4>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="text-4xl font-extrabold mb-6 leading-tight">Sua formação com <span class="text-primary underline decoration-accent-orange decoration-4 underline-offset-8">reconhecimento internacional.</span></h2>
+<p class="text-slate-600 dark:text-slate-400 mb-8 text-lg">
+                        Ao concluir qualquer trilha na Academia Digital Novos Horizonte, você recebe uma certificação digital verificada pela rede Blockchain, garantindo autenticidade e prestígio global.
+                    </p>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<span class="material-icons text-primary mt-1">task_alt</span>
+<div>
+<h4 class="font-bold">Certificado Válido</h4>
+<p class="text-sm text-slate-500">Aceito por grandes empresas de tecnologia e RHs no Brasil e exterior.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-icons text-primary mt-1">task_alt</span>
+<div>
+<h4 class="font-bold">Emblemas Digitais</h4>
+<p class="text-sm text-slate-500">Credly ready para exibir suas conquistas no LinkedIn instantaneamente.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action / Student Portal Area -->
+<section class="mb-24 px-4 sm:px-6 lg:px-8">
+<div class="max-w-7xl mx-auto bg-primary rounded-3xl p-8 lg:p-16 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 translate-x-20"></div>
+<div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
+<div class="text-white lg:max-w-xl text-center lg:text-left">
+<h2 class="text-3xl lg:text-5xl font-extrabold mb-6 italic">Já é nosso aluno?</h2>
+<p class="text-primary-100 text-lg opacity-90 mb-8">
+                            Acesse o seu portal agora para continuar sua trilha, enviar seus projetos e conectar-se com seus mentores.
+                        </p>
+<button class="px-10 py-4 bg-white text-primary font-black rounded-xl hover:bg-slate-50 transition-all flex items-center gap-3 mx-auto lg:mx-0">
+                            ACESSAR PORTAL DO ALUNO
+                            <span class="material-icons">arrow_forward_ios</span>
+</button>
+</div>
+<div class="w-full max-w-sm bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+<h3 class="text-white font-bold mb-6 text-center text-xl">Login Rápido</h3>
+<div class="space-y-4">
+<div>
+<input class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder:text-white/50 focus:ring-2 focus:ring-white/50 focus:border-transparent outline-none" placeholder="Seu e-mail de aluno" type="email"/>
+</div>
+<div>
+<input class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder:text-white/50 focus:ring-2 focus:ring-white/50 focus:border-transparent outline-none" placeholder="Sua senha" type="password"/>
+</div>
+<button class="w-full py-3 bg-accent-orange text-white font-bold rounded-lg hover:bg-accent-orange/90 transition-all">
+                                Entrar na plataforma
+                            </button>
+<p class="text-center text-white/60 text-xs">Esqueceu sua senha? <a class="underline text-white" href="#">Clique aqui</a></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons text-white text-sm">school</span>
+</div>
+<span class="text-lg font-extrabold tracking-tight text-primary">NOVOS <span class="text-slate-700 dark:text-slate-200 text-sm">HORIZONTE</span></span>
+</div>
+<p class="text-sm text-slate-500 leading-relaxed">
+                        Formando a próxima geração de talentos para o ecossistema digital. Educação que gera transformação.
+                    </p>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary">Plataforma</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Todos os Cursos</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Trilha de Carreira</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Certificações</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Planos para Empresas</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary">Suporte</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Central de Ajuda</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Comunidade Discord</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Fale Conosco</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary">Newsletter</h5>
+<p class="text-sm text-slate-500 mb-4">Receba dicas de carreira e descontos exclusivos.</p>
+<div class="flex gap-2">
+<input class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm flex-1" placeholder="Seu e-mail" type="text"/>
+<button class="bg-primary p-2 text-white rounded-lg">
+<span class="material-icons">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-slate-500">© 2024 Projeto Novos Horizonte. Todos os direitos reservados.</p>
+<div class="flex gap-6 text-slate-400">
+<span class="material-icons text-lg cursor-pointer hover:text-primary">facebook</span>
+<span class="material-icons text-lg cursor-pointer hover:text-primary">language</span>
+<span class="material-icons text-lg cursor-pointer hover:text-primary">movie</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

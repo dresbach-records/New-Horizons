@@ -1,0 +1,107 @@
+---
+const navLinks = [
+  { href: "#problema", text: "O Problema" },
+  { href: "#solucao", text: "Solução" },
+  { href: "#investidores", text: "Investidores" },
+  { href: "#mentores", text: "Mentores" },
+];
+--- 
+
+<header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                 <a href="/" class="flex items-center gap-2">
+                    <img alt="Projeto Novos Horizonte Logo" class="h-10 w-auto" src="/logosemfundo.png" />
+                 </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center justify-center flex-1 space-x-8">
+                {navLinks.map(link => (
+                    <a href={link.href} class="text-base font-medium text-slate-300 hover:text-white transition-colors">{link.text}</a>
+                ))}
+            </nav>
+
+            <!-- Right side -->
+            <div class="hidden md:flex items-center gap-4">
+                <div class="relative">
+                    <select class="bg-transparent border border-slate-600 text-white text-sm rounded-md focus:ring-primary focus:border-primary pl-3 pr-8 py-1.5 appearance-none">
+                        <option value="pt" class="bg-dark">PT</option>
+                        <option value="en" class="bg-dark">EN</option>
+                    </select>
+                    <span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">arrow_drop_down</span>
+                </div>
+                <a href="/login" class="text-slate-300 hover:text-white transition-colors">
+                    Login
+                </a>
+                <a href="/cadastro" class="bg-primary text-white px-5 py-2 rounded-md font-bold text-sm hover:bg-opacity-90 transition-colors">
+                    CADASTRE-SE
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" aria-label="Abrir menu" class="p-2 rounded-md text-slate-300 hover:text-white">
+                    <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+                    <span id="close-icon" class="material-symbols-outlined text-3xl hidden">close</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-dark/95 backdrop-blur-sm shadow-lg">
+        <div class="px-5 pt-4 pb-6 flex flex-col space-y-4">
+            {navLinks.map(link => (
+                <a href={link.href} class="text-lg font-semibold text-slate-200 hover:text-white hover:bg-slate-800 rounded-md py-2 px-3 transition-colors mobile-nav-link">{link.text}</a>
+            ))}
+             <a href="/login" class="text-slate-300 hover:text-white transition-colors">
+                    Login
+                </a>
+                <a href="/cadastro" class="bg-primary text-white px-5 py-2 rounded-md font-bold text-sm hover:bg-opacity-90 transition-colors">
+                    CADASTRE-SE
+                </a>
+        </div>
+    </div>
+</header>
+
+<script>
+    const header = document.getElementById("main-header");
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
+    const closeIcon = document.getElementById("close-icon");
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    // Toggle mobile menu
+    mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        menuIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+    });
+
+    // Close mobile menu when a link is clicked
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        });
+    });
+
+    // Change header background on scroll
+    function handleScroll() {
+        if (window.scrollY > 10) {
+            header.classList.add("bg-dark/90", "backdrop-blur-sm", "shadow-lg");
+        } else {
+            header.classList.remove("bg-dark/90", "backdrop-blur-sm", "shadow-lg");
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Run on page load
+    handleScroll();
+</script>

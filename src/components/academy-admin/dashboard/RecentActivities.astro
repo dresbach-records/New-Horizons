@@ -1,0 +1,15 @@
+---
+import Table from '../ui/Table.astro';
+
+const recentActivities = [
+  { user: 'João Silva', activity: 'se inscreveu no curso de Astro.js', time: '5 minutos atrás' },
+  { user: 'Maria Santos', activity: 'completou o módulo de React Hooks', time: '1 hora atrás' },
+  { user: 'Pedro Oliveira', activity: 'enviou um novo projeto', time: '3 horas atrás' },
+  { user: 'Ana Costa', activity: 'atualizou seu perfil', time: '1 dia atrás' },
+];
+---
+
+<div class="bg-white p-6 rounded-lg shadow-md">
+  <h2 class="text-xl font-semibold mb-4">Atividades Recentes</h2>
+  <Table headers={['Usuário', 'Atividade', 'Tempo']} data={recentActivities} />
+</div>

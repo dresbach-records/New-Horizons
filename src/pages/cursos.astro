@@ -1,0 +1,157 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const courses = [
+  {
+    title: "Desenvolvimento Full-Stack PRO",
+    duration: "6 meses",
+    level: "Avançado",
+    image: "/images/curso-fullstack.jpg",
+    description: "Domine o front-end e o back-end com as tecnologias mais demandadas pelo mercado."
+  },
+  {
+    title: "UI/UX Design de Alta Performance",
+    duration: "4 meses",
+    level: "Intermediário",
+    image: "/images/curso-uiux.jpg",
+    description: "Crie interfaces e experiências que encantam usuários e geram resultados para negócios."
+  },
+  {
+    title: "Data Science & IA Aplicada",
+    duration: "8 meses",
+    level: "Especialização",
+    image: "/images/curso-datascience.jpg",
+    description: "Transforme dados brutos em insights estratégicos e construa modelos de inteligência artificial."
+  },
+];
+
+const journeySteps = [
+    {
+        icon: "foundation",
+        title: "Fase 1: Foundation",
+        description: "Construa a base sólida dos conceitos essenciais em tecnologia e lógica."
+    },
+    {
+        icon: "integration_instructions",
+        title: "Fase 2: Especialização",
+        description: "Mergulhe em uma trilha de conhecimento específica e desenvolva projetos práticos."
+    },
+    {
+        icon: "rocket_launch",
+        title: "Fase 3: Go-to-Projects",
+        description: "Trabalhe em projetos reais de parceiros e construa seu portfólio profissional."
+    },
+];
+---
+
+<BaseLayout title="Cursos e Formação">
+  <div class="container mx-auto px-6 py-24">
+    <!-- Hero Section -->
+    <section class="grid lg:grid-cols-2 gap-16 items-center mb-24">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-dark mb-6">
+          Transforme seu futuro com tecnologia de ponta.
+        </h1>
+        <p class="text-lg text-gray-600 mb-8">
+          Nossos programas são desenhados em parceria com gigantes da tecnologia para te preparar para os desafios do mercado global.
+        </p>
+        <div class="flex items-center gap-4">
+          <a href="#catalogo" class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-opacity-90 transition-colors">
+            Ver Catálogo de Cursos
+          </a>
+          <div class="flex items-center -space-x-2">
+            <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/32.jpg" alt="user photo">
+            <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/44.jpg" alt="user photo">
+            <span class="w-10 h-10 rounded-full border-2 border-white bg-gray-200 flex items-center justify-center text-sm font-bold text-gray-600">+5k</span>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray-100 p-6 rounded-xl shadow-lg">
+        <div class="bg-white p-8 rounded-lg">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="font-bold text-lg">Próxima Turma</h3>
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Inscrições Abertas</span>
+          </div>
+          <p class="text-gray-600">O processo seletivo para a turma de <strong>Desenvolvimento Full-Stack PRO</strong> está aberto. Não perca a chance!</p>
+          <button class="w-full mt-6 bg-accent text-white py-3 rounded-lg font-bold hover:bg-opacity-90">
+            Garantir minha Vaga
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Catalog Section -->
+    <section id="catalogo" class="mb-24">
+      <h2 class="text-3xl md:text-4xl font-bold text-dark text-center mb-12">Catálogo de Cursos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {courses.map(course => (
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+            <div class="h-48 overflow-hidden">
+                <img src={course.image} alt={`Imagem do curso ${course.title}`} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <div class="flex-grow">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-sm font-semibold text-primary">{course.level}</span>
+                    <span class="text-sm text-gray-500">{course.duration}</span>
+                </div>
+                <h3 class="text-xl font-bold text-dark mb-2">{course.title}</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">{course.description}</p>
+              </div>
+              <a href="#" class="mt-6 font-bold text-primary flex items-center gap-2 group-hover:gap-3 transition-all">
+                Ver Detalhes <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Learning Journey Section -->
+    <section class="mb-24">
+        <h2 class="text-3xl md:text-4xl font-bold text-dark text-center mb-12">Sua Jornada de Aprendizado</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            {journeySteps.map(step => (
+                <div class="bg-light p-8 rounded-xl border border-gray-200">
+                    <div class="flex justify-center mb-4">
+                        <div class="bg-primary/10 text-primary rounded-full p-4">
+                            <span class="material-symbols-outlined text-4xl">{step.icon}</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-2">{step.title}</h3>
+                    <p class="text-gray-600">{step.description}</p>
+                </div>
+            ))}
+        </div>
+    </section>
+
+    <!-- Student Login Section -->
+    <section class="bg-blue-600 rounded-2xl">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="p-12 text-white">
+          <h2 class="text-3xl font-bold mb-4">Já é nosso aluno?</h2>
+          <p class="mb-8 max-w-md">Acesse o portal do aluno para ver suas notas, materiais de aula, e comunicados importantes.</p>
+          <a href="#" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">
+            ACESSAR O PORTAL DO ALUNO
+          </a>
+        </div>
+        <div class="bg-white p-12 rounded-r-2xl h-full">
+            <form>
+                <h3 class="font-bold text-2xl text-dark mb-6">Login Rápido</h3>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email ou CPF</label>
+                    <input type="text" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary" placeholder="seu.email@exemplo.com">
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Senha</label>
+                    <input type="password" id="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary" placeholder="********">
+                </div>
+                <button type="submit" class="w-full bg-accent text-white py-3 rounded-lg font-bold hover:bg-opacity-90">
+                    Entrar
+                </button>
+            </form>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Meus Cursos | Projeto Novos Horizonte</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee8c2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221910",
+                        "accent-blue": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e5e7eb;
+            border-radius: 10px;
+        }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #3f3f46;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 min-h-screen flex font-display">
+<aside class="w-72 bg-white dark:bg-zinc-900 border-r border-primary/10 flex flex-col h-screen sticky top-0">
+<div class="p-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-icons-round">rocket_launch</span>
+</div>
+<div class="flex flex-col">
+<span class="text-lg font-bold tracking-tight leading-none text-accent-blue dark:text-white">NOVOS</span>
+<span class="text-xs uppercase tracking-[0.2em] font-semibold text-primary">Horizonte</span>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">dashboard</span>
+            Dashboard
+        </a>
+<a class="flex items-center gap-4 px-4 py-3 bg-primary/10 text-primary font-semibold rounded-xl transition-all" href="#">
+<span class="material-icons-round">library_books</span>
+            Meus Cursos
+        </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">calendar_today</span>
+            Calendário
+        </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">folder_special</span>
+            Projetos
+        </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">verified</span>
+            Certificações
+        </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">forum</span>
+            Comunidade
+        </a>
+</nav>
+<div class="p-6">
+<div class="bg-primary/5 rounded-2xl p-4 border border-primary/20">
+<p class="text-xs text-slate-500 mb-2">Plano Pro Premium</p>
+<div class="flex items-center justify-between mb-3">
+<span class="font-bold text-accent-blue dark:text-white">Ativo até Dez 24</span>
+<span class="material-icons-round text-primary text-sm">stars</span>
+</div>
+<button class="w-full py-2 bg-white dark:bg-zinc-800 text-xs font-bold rounded-lg border border-primary/30 text-primary">Gerenciar Plano</button>
+</div>
+</div>
+<div class="p-4 border-t border-slate-100 dark:border-zinc-800 flex items-center gap-3">
+<img alt="Profile photo of a male student" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD6t93a5ESdZg7OPSgo36jBrp-sNO7ZjeKUH4tgGFqzQ6TKHCrjKC1hSeDMrAXiWNmkhTXcZ1gPTF7KAKaZMaWnh8uA-cDkHRV78eV5UxWzgvMwB1V4q6bz2D3SyH0-F_XS4v9YIe4qPD03huX6smpC5qLBzWLzPfnbJJvAfV0tq3yKk8STxCI5QWO2AoXW1rTyLzewcWLBUW6dfgH3Lq7-I7co8cpBSbq6z7hvrRtV3lqZ6sRSKaAi19l1tAMqWcNsaWoAX_aSac"/>
+<div class="flex-1">
+<p class="text-sm font-bold truncate">Marcos Silva</p>
+<p class="text-xs text-slate-500">marcos@novos.edu</p>
+</div>
+<button class="text-slate-400 hover:text-red-500"><span class="material-icons-round text-xl">logout</span></button>
+</div>
+</aside>
+<main class="flex-1 flex flex-col h-screen overflow-hidden">
+<header class="h-20 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md px-8 flex items-center justify-between border-b border-primary/10 z-10">
+<div class="flex items-center gap-8">
+<h1 class="text-2xl font-bold text-accent-blue dark:text-white">Meus Cursos</h1>
+<div class="hidden md:flex items-center bg-slate-100 dark:bg-zinc-800 p-1 rounded-xl">
+<button class="px-6 py-2 bg-white dark:bg-zinc-700 shadow-sm text-primary font-bold rounded-lg text-sm transition-all">Em andamento</button>
+<button class="px-6 py-2 text-slate-500 font-semibold rounded-lg text-sm hover:text-primary transition-all">Concluídos</button>
+<button class="px-6 py-2 text-slate-500 font-semibold rounded-lg text-sm hover:text-primary transition-all">Favoritos</button>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative w-64">
+<span class="material-icons-round absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="w-full bg-background-light dark:bg-zinc-800 border-none rounded-full pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary/50 transition-all" placeholder="Buscar em meus cursos..." type="text"/>
+</div>
+<button class="relative text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons-round text-2xl">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full ring-2 ring-white dark:ring-zinc-900"></span>
+</button>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8 custom-scrollbar">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+<div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-primary/5 shadow-sm flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-icons-round">auto_stories</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Cursos Ativos</p>
+<p class="text-2xl font-bold text-accent-blue dark:text-white">04</p>
+</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-primary/5 shadow-sm flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-green-500/10 text-green-500 flex items-center justify-center">
+<span class="material-icons-round">emoji_events</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Concluídos</p>
+<p class="text-2xl font-bold text-accent-blue dark:text-white">12</p>
+</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-primary/5 shadow-sm flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center">
+<span class="material-icons-round">access_time</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Tempo Total</p>
+<p class="text-2xl font-bold text-accent-blue dark:text-white">158h</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-zinc-900 rounded-2xl border border-slate-100 dark:border-zinc-800 shadow-sm overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300">
+<div class="h-48 bg-accent-blue relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/30 to-transparent z-10"></div>
+<img alt="Full-Stack course cover" class="absolute inset-0 w-full h-full object-cover opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQnlAnM_4nROygGzyUdKws3LQFV_2uHWrGO0nfrH76h0Ch5EKZSR31kW9-I60E7XZvG3W384BECReomW7PFTZvpUgwF-uUfj7sNiakAAQMCUgV-i-p9WoBeAvPTx5rHASjy5dcya_KImeYif16LA2wv0d2N-vI3-2uHp5lsPaVm8Op8ruswBQMAriArM9x5gizAKKRmAwKjwNdZJIli4LZ-PAW-mMDzHdl8ii19bJBGyVnEF2C7olH6jn22lNcPUpEkrSCIiHx6Sc"/>
+<div class="absolute top-4 left-4 z-20">
+<span class="bg-white/90 dark:bg-zinc-900/90 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-accent-blue dark:text-primary">Tecnologia</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-lg font-bold text-accent-blue dark:text-white mb-2 leading-tight">Formação Full-Stack Developer: Do Zero ao Profissional</h3>
+<p class="text-sm text-slate-500 mb-6 line-clamp-2">Aprenda Node.js, React, TypeScript e as melhores práticas de mercado para arquitetura de software.</p>
+<div class="mt-auto">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold text-slate-400">Progresso do curso</span>
+<span class="text-xs font-bold text-primary">65%</span>
+</div>
+<div class="h-2 bg-slate-100 dark:bg-zinc-800 rounded-full overflow-hidden mb-6">
+<div class="h-full bg-primary rounded-full w-[65%]"></div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-lg">play_lesson</span>
+<span class="text-xs font-medium">12/28 aulas</span>
+</div>
+<button class="px-6 py-2.5 bg-primary hover:bg-orange-600 text-white font-bold rounded-xl text-sm transition-all flex items-center gap-2 group-hover:px-8">
+                                    Continuar
+                                    <span class="material-icons-round text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 rounded-2xl border border-slate-100 dark:border-zinc-800 shadow-sm overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300">
+<div class="h-48 bg-purple-600 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-indigo-500/30 to-transparent z-10"></div>
+<img alt="UI/UX course cover" class="absolute inset-0 w-full h-full object-cover opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6_YhcB5oNnX_oJaWsU9StSPYsfXujvK9WhrOkC727W1wkhMqz3dLdGfxnSZodpCgJ2NRmC0zN7ZAhANcVMA9P1hkIoouessnyh9LPahSs-RE36631hLKAbmPR9Xk2Yt-W5y3D7pEFHltS93fxldMB_COYKFHpwDbFzi-nxjbFGF33OT-ranJcP3uUV9t_acWMv0HMar44diVr86-AuURcXikOwmRNUGa5Rj9yB24dTdMTh3_ZkeRfzRX8cE18XiEibrd9Qcbv_CI"/>
+<div class="absolute top-4 left-4 z-20">
+<span class="bg-white/90 dark:bg-zinc-900/90 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-accent-blue dark:text-primary">Design</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-lg font-bold text-accent-blue dark:text-white mb-2 leading-tight">UI/UX Design: Princípios de Design Moderno e Figma</h3>
+<p class="text-sm text-slate-500 mb-6 line-clamp-2">Domine o processo criativo desde o wireframe até o protótipo de alta fidelidade com foco no usuário.</p>
+<div class="mt-auto">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold text-slate-400">Progresso do curso</span>
+<span class="text-xs font-bold text-primary">45%</span>
+</div>
+<div class="h-2 bg-slate-100 dark:bg-zinc-800 rounded-full overflow-hidden mb-6">
+<div class="h-full bg-primary rounded-full w-[45%]"></div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-lg">play_lesson</span>
+<span class="text-xs font-medium">08/18 aulas</span>
+</div>
+<button class="px-6 py-2.5 bg-primary hover:bg-orange-600 text-white font-bold rounded-xl text-sm transition-all flex items-center gap-2 group-hover:px-8">
+                                    Continuar
+                                    <span class="material-icons-round text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 rounded-2xl border border-slate-100 dark:border-zinc-800 shadow-sm overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300">
+<div class="h-48 bg-emerald-600 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-teal-500/30 to-transparent z-10"></div>
+<img alt="Data Science course cover" class="absolute inset-0 w-full h-full object-cover opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsONUVOR4EXqsRj5xuIY7KeDdsSxp5GZNRmJoGHKrjL6tc6_6gVZ5pZl47wuQ335Ozfb7mGz6DPFl4IHXD89MLm8M6pM4lFW95P2iZ4MTiY8Ev93g1q0ToEXKmv_XRXD2wBpF8OP5hxIaU9YuJSWdf0ZjFc1m0gOy0M9ZgFZXDxvOQOtjJ43GC3s2vmH_1qDD5NSboW4RUrc7qsJKUkd51160jhjrwji9W34v56scVGnR61KDCq1FLlnl_sEcUjwcZH3DMIb49jhc"/>
+<div class="absolute top-4 left-4 z-20">
+<span class="bg-white/90 dark:bg-zinc-900/90 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-accent-blue dark:text-primary">Data Science</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-lg font-bold text-accent-blue dark:text-white mb-2 leading-tight">Ciência de Dados: Fundamentos de Python e Machine Learning</h3>
+<p class="text-sm text-slate-500 mb-6 line-clamp-2">Explore grandes conjuntos de dados e aprenda a criar modelos preditivos com bibliotecas robustas.</p>
+<div class="mt-auto">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold text-slate-400">Progresso do curso</span>
+<span class="text-xs font-bold text-primary">15%</span>
+</div>
+<div class="h-2 bg-slate-100 dark:bg-zinc-800 rounded-full overflow-hidden mb-6">
+<div class="h-full bg-primary rounded-full w-[15%]"></div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-lg">play_lesson</span>
+<span class="text-xs font-medium">04/32 aulas</span>
+</div>
+<button class="px-6 py-2.5 bg-primary hover:bg-orange-600 text-white font-bold rounded-xl text-sm transition-all flex items-center gap-2 group-hover:px-8">
+                                    Continuar
+                                    <span class="material-icons-round text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 rounded-2xl border border-slate-100 dark:border-zinc-800 shadow-sm overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300">
+<div class="h-48 bg-pink-600 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-orange-400/30 to-transparent z-10"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-icons-round text-white/20 text-8xl">language</span>
+</div>
+<div class="absolute top-4 left-4 z-20">
+<span class="bg-white/90 dark:bg-zinc-900/90 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-accent-blue dark:text-primary">Idiomas</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-lg font-bold text-accent-blue dark:text-white mb-2 leading-tight">Inglês para Tecnologia: Vocabulário e Conversação</h3>
+<p class="text-sm text-slate-500 mb-6 line-clamp-2">Aprenda os termos técnicos e melhore sua comunicação para trabalhar em equipes globais.</p>
+<div class="mt-auto">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold text-slate-400">Progresso do curso</span>
+<span class="text-xs font-bold text-primary">82%</span>
+</div>
+<div class="h-2 bg-slate-100 dark:bg-zinc-800 rounded-full overflow-hidden mb-6">
+<div class="h-full bg-primary rounded-full w-[82%]"></div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-lg">play_lesson</span>
+<span class="text-xs font-medium">21/25 aulas</span>
+</div>
+<button class="px-6 py-2.5 bg-primary hover:bg-orange-600 text-white font-bold rounded-xl text-sm transition-all flex items-center gap-2 group-hover:px-8">
+                                    Continuar
+                                    <span class="material-icons-round text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-slate-100/50 dark:bg-zinc-900/50 rounded-2xl border-2 border-dashed border-slate-200 dark:border-zinc-800 flex flex-col items-center justify-center p-8 text-center group cursor-pointer hover:bg-white dark:hover:bg-zinc-900 transition-all duration-300">
+<div class="w-16 h-16 rounded-full bg-white dark:bg-zinc-800 flex items-center justify-center text-slate-400 group-hover:text-primary group-hover:scale-110 transition-all mb-4 shadow-sm">
+<span class="material-icons-round text-3xl">add</span>
+</div>
+<h3 class="font-bold text-slate-600 dark:text-slate-300 mb-1">Novo Conhecimento?</h3>
+<p class="text-xs text-slate-400 max-w-[200px]">Explore nosso catálogo completo e comece sua próxima jornada.</p>
+<button class="mt-6 text-sm font-bold text-primary hover:underline">Ir para o Catálogo</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+</body></html>

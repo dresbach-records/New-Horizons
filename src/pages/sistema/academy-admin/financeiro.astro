@@ -1,0 +1,33 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import Card from '../../../components/academy-admin/dashboard/Card.astro';
+import Table from '../../../components/academy-admin/ui/Table.astro';
+import { Icon } from 'astro-icon/components';
+
+const transactions = [
+  { date: '2024-07-28', description: 'Inscrição - Astro.js para Iniciantes', amount: 'R$ 99,90', status: 'Concluído' },
+  { date: '2024-07-27', description: 'Inscrição - React com TypeScript', amount: 'R$ 149,90', status: 'Concluído' },
+  { date: '2024-07-26', description: 'Pagamento de Afiliado', amount: '- R$ 50,00', status: 'Concluído' },
+  { date: '2024-07-25', description: 'Inscrição - Vue.js Avançado', amount: 'R$ 199,90', status: 'Pendente' },
+];
+---
+
+<AdminLayout title="Financeiro - Academy Admin">
+  <h1 class="text-3xl font-bold mb-6">Visão Geral Financeira</h1>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+    <Card title="Receita Bruta (Mês)" value="R$ 15.850,00">
+      <Icon name="ic:round-trending-up" class="h-8 w-8 text-green-500" />
+    </Card>
+    <Card title="Despesas (Mês)" value="R$ 2.350,00">
+      <Icon name="ic:round-trending-down" class="h-8 w-8 text-red-500" />
+    </Card>
+    <Card title="Lucro Líquido (Mês)" value="R$ 13.500,00">
+      <Icon name="ic:round-account-balance-wallet" class="h-8 w-8 text-blue-500" />
+    </Card>
+  </div>
+
+  <div class="bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-xl font-semibold mb-4">Transações Recentes</h2>
+    <Table headers={['Data', 'Descrição', 'Valor', 'Status']} data={transactions} />
+  </div>
+</AdminLayout>

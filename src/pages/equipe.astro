@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+--- 
+<BaseLayout title="Equipe">
+  <section class="relative py-32 overflow-hidden" id="missao">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl text-center mx-auto">
+        <h1 class="text-5xl lg:text-6xl font-extrabold text-white mb-8 leading-tight">
+          Nossa Liderança
+        </h1>
+        <p class="text-xl text-slate-400 leading-relaxed mb-10">
+          Conheça as mentes dedicadas que impulsionam a visão do Novos Horizontes, unindo experiência global e paixão pelo desenvolvimento local.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 overflow-hidden" id="equipe">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+        <!-- Team Member 1 -->
+        <div class="text-center group">
+          <div class="relative mb-6 inline-block">
+            <div class="w-48 h-48 rounded-2xl overflow-hidden border-4 border-white dark:border-slate-800 shadow-xl group-hover:border-primary transition-all duration-300">
+              <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4e4RUmq7thAhfQc3RhPbnudkASetSpCHCgNqnVSC-njZ1Zep-TC13Tt1wp_OXoGF0ov-RFsYWb3eQbHX7n6VtvccB-zUqar7-Cxat68isKELUkJsBP8OOJwJT7s5_FU_tKR30bMB-ELNWG0DXCwpYdPFXH62OqLOUkAJ7tvYD2ZobbOQgF9weZHAdWBc5WbuGzEwMpF7M6CGzYT5Ne2TjYOyXY4bAmrXdYYt03UuvqJsHcXWJGgQMxhXxauH1ApamkPwkqGNoqKE"/>
+            </div>
+          </div>
+          <h4 class="text-xl font-bold text-white">Dr. André Silva</h4>
+          <p class="text-primary font-semibold text-sm mb-2">Diretor Executivo</p>
+          <p class="text-xs text-slate-500 px-4">Especialista em políticas de infraestrutura digital com 15 anos de experiência na África.</p>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="text-center group">
+          <div class="relative mb-6 inline-block">
+            <div class="w-48 h-48 rounded-2xl overflow-hidden border-4 border-white dark:border-slate-800 shadow-xl group-hover:border-primary transition-all duration-300">
+              <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCICYOXrRsLahKuRgDH_5dB8FHOvr9inyodAC-CgHYWVAspDN-GSvMkRbahQXK5JdhkZiBRPb9nOEtExR5GXlLIDrON_jNWI9gIoihUtdU-QoX0USCKTpbDStEBwtixGHKZCwTUkqQ92B6r96WvzK1gdFgWnGGUbaZAUG8sKP_OVh3EnuY0eeSAwfxwNefFivV9Mj_ztlbFA0cBp4DIn8W_Smv6LUinB8FzKDWHafd1H-ArBI2nLpmDvKAAvSDsRaqqnATsWjNJkCM"/>
+            </div>
+          </div>
+          <h4 class="text-xl font-bold text-white">Elena Mbaye</h4>
+          <p class="text-primary font-semibold text-sm mb-2">COO</p>
+          <p class="text-xs text-slate-500 px-4">Líder de operações focada em parcerias estratégicas e crescimento sustentável.</p>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="text-center group">
+          <div class="relative mb-6 inline-block">
+            <div class="w-48 h-48 rounded-2xl overflow-hidden border-4 border-white dark:border-slate-800 shadow-xl group-hover:border-primary transition-all duration-300">
+              <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV1-SOrXrDz9wKAiwddSDtczmSysH_VWX2WK6Oi80YguyX3lGkP35zGHN3UUFQ0NUYsqgvGjr2O70kWetdFpCQ5bff4V4pNEdHRz3QXTr_xyLnv70zP31Z6iYTR1PL4I7u0OaL5ysN2yr_SyV3kBf5rzPxqvhd5wPU2KznnehUGr_kFAjxueLFXHsfkTShEnw5iVtBXL9gYK5FdH435bA0svuYAzPTAacfZc3Ptv2aVTenqrSuvMxG52Z2qDR2GGvvKP1SOYrGeiE"/>
+            </div>
+          </div>
+          <h4 class="text-xl font-bold text-white">Marcus Tadesse</h4>
+          <p class="text-primary font-semibold text-sm mb-2">CTO</p>
+          <p class="text-xs text-slate-500 px-4">Arquiteto de soluções focado em tecnologias descentralizadas e conectividade rural.</p>
+        </div>
+        <!-- Team Member 4 -->
+        <div class="text-center group">
+          <div class="relative mb-6 inline-block">
+            <div class="w-48 h-48 rounded-2xl overflow-hidden border-4 border-white dark:border-slate-800 shadow-xl group-hover:border-primary transition-all duration-300">
+              <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5b8r3E_zUVc36ulKUL9T219rVDhlmy9CzQlul66hQ4fuG-J9f2hUsCBCYwmgjJvCVez0k35HGyVZjSHw2TYoKBIaAGHJ-Iqfg7ergzzm2jla2VK3dQxYpn0grwUhJ8GmxBOmithDT0vwZC7Aa6zEiGvp4jepHEFCucz18-DI_Je1Y51c15BzGPtGpIuwcxRYj_kcuDK2wXtX9cPS91huWp6IBqSyevsihaTsJNr_CAizL9jnP3trXxK5BMdZUdXmqgmUFfoO24Gk"/>
+            </div>
+          </div>
+          <h4 class="text-xl font-bold text-white">Sofia Costa</h4>
+          <p class="text-primary font-semibold text-sm mb-2">Diretora de Impacto Social</p>
+          <p class="text-xs text-slate-500 px-4">Responsável por medir e potencializar os resultados sociais em todas as nossas frentes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

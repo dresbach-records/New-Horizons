@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Perfil e Configurações | Projeto Novos Horizonte</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee8c2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#18181b",
+                        "accent-blue": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: 'Lexend', sans-serif;
+            }
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e5e7eb;
+            border-radius: 10px;
+        }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #3f3f46;
+        }
+        .tab-active {
+            @apply border-primary text-primary border-b-2;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 min-h-screen flex font-display">
+<aside class="w-72 bg-white dark:bg-zinc-900 border-r border-primary/10 flex flex-col h-screen sticky top-0">
+<div class="p-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-icons-round">rocket_launch</span>
+</div>
+<div class="flex flex-col">
+<span class="text-lg font-bold tracking-tight leading-none text-accent-blue dark:text-white">NOVOS</span>
+<span class="text-xs uppercase tracking-[0.2em] font-semibold text-primary">Horizonte</span>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">dashboard</span>
+            Dashboard
+        </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">library_books</span>
+            Meus Cursos
+        </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">calendar_today</span>
+            Calendário
+        </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">folder_special</span>
+            Projetos
+        </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">verified</span>
+            Certificações
+        </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">forum</span>
+            Comunidade
+        </a>
+</nav>
+<div class="p-4 border-t border-slate-100 dark:border-zinc-800 flex items-center gap-3">
+<img alt="Marcos Silva" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD6t93a5ESdZg7OPSgo36jBrp-sNO7ZjeKUH4tgGFqzQ6TKHCrjKC1hSeDMrAXiWNmkhTXcZ1gPTF7KAKaZMaWnh8uA-cDkHRV78eV5UxWzgvMwB1V4q6bz2D3SyH0-F_XS4v9YIe4qPD03huX6smpC5qLBzWLzPfnbJJvAfV0tq3yKk8STxCI5QWO2AoXW1rTyLzewcWLBUW6dfgH3Lq7-I7co8cpBSbq6z7hvrRtV3lqZ6sRSKaAi19l1tAMqWcNsaWoAX_aSac"/>
+<div class="flex-1">
+<p class="text-sm font-bold truncate">Marcos Silva</p>
+<p class="text-xs text-slate-500">marcos@novos.edu</p>
+</div>
+<button class="text-slate-400 hover:text-red-500"><span class="material-icons-round">logout</span></button>
+</div>
+</aside>
+<main class="flex-1 flex flex-col h-screen overflow-hidden">
+<header class="h-20 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md px-8 flex items-center justify-between border-b border-primary/10 z-10 sticky top-0">
+<div class="flex items-center gap-2 text-slate-400">
+<span class="material-icons-round">settings</span>
+<span class="text-sm font-semibold uppercase tracking-wider">Configurações de Perfil</span>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons-round">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full ring-2 ring-white dark:ring-zinc-900"></span>
+</button>
+<div class="h-8 w-[1px] bg-slate-200 dark:bg-zinc-800"></div>
+<button class="bg-primary hover:bg-orange-600 text-white px-6 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20">
+                Salvar Alterações
+            </button>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8 custom-scrollbar">
+<section class="bg-white dark:bg-zinc-900 rounded-3xl p-8 mb-8 border border-slate-100 dark:border-zinc-800 flex items-center gap-8 shadow-sm">
+<div class="relative group">
+<img alt="Marcos Silva" class="w-32 h-32 rounded-2xl object-cover ring-4 ring-primary/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD6t93a5ESdZg7OPSgo36jBrp-sNO7ZjeKUH4tgGFqzQ6TKHCrjKC1hSeDMrAXiWNmkhTXcZ1gPTF7KAKaZMaWnh8uA-cDkHRV78eV5UxWzgvMwB1V4q6bz2D3SyH0-F_XS4v9YIe4qPD03huX6smpC5qLBzWLzPfnbJJvAfV0tq3yKk8STxCI5QWO2AoXW1rTyLzewcWLBUW6dfgH3Lq7-I7co8cpBSbq6z7hvrRtV3lqZ6sRSKaAi19l1tAMqWcNsaWoAX_aSac"/>
+<button class="absolute -bottom-2 -right-2 bg-white dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 p-2 rounded-lg shadow-lg hover:text-primary transition-colors">
+<span class="material-icons-round text-sm">photo_camera</span>
+</button>
+</div>
+<div>
+<h1 class="text-2xl font-bold text-accent-blue dark:text-white mb-1">Marcos Silva</h1>
+<p class="text-slate-500 font-medium mb-4 flex items-center gap-2">
+<span class="material-icons-round text-primary text-sm">badge</span>
+                    ID de Estudante: NH-2024-8842
+                </p>
+<div class="flex gap-3">
+<button class="px-4 py-2 bg-primary/10 text-primary rounded-lg text-xs font-bold hover:bg-primary hover:text-white transition-all">Alterar Foto</button>
+<button class="px-4 py-2 bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-slate-400 rounded-lg text-xs font-bold hover:bg-slate-200 transition-all">Remover Foto</button>
+</div>
+</div>
+</section>
+<nav class="flex gap-8 border-b border-slate-200 dark:border-zinc-800 mb-8">
+<button class="pb-4 font-bold text-sm tab-active transition-all">Perfil Público</button>
+<button class="pb-4 font-bold text-sm text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-all">Segurança</button>
+<button class="pb-4 font-bold text-sm text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-all">Notificações</button>
+<button class="pb-4 font-bold text-sm text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-all">Pagamento</button>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-8">
+<section class="bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-slate-100 dark:border-zinc-800 shadow-sm">
+<h3 class="text-lg font-bold text-accent-blue dark:text-white mb-6">Informações Profissionais</h3>
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-bold text-slate-600 dark:text-slate-400 mb-2">Biografia</label>
+<textarea class="w-full bg-slate-50 dark:bg-zinc-800 border-slate-200 dark:border-zinc-700 rounded-xl p-4 text-sm focus:ring-primary focus:border-primary transition-all" placeholder="Conte-nos um pouco sobre sua jornada e objetivos..." rows="4"></textarea>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-bold text-slate-600 dark:text-slate-400 mb-2">LinkedIn</label>
+<div class="relative">
+<span class="material-icons-round absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">link</span>
+<input class="w-full bg-slate-50 dark:bg-zinc-800 border-slate-200 dark:border-zinc-700 rounded-xl pl-10 py-3 text-sm focus:ring-primary focus:border-primary transition-all" placeholder="linkedin.com/in/seuusuario" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-bold text-slate-600 dark:text-slate-400 mb-2">GitHub</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">code</span>
+<input class="w-full bg-slate-50 dark:bg-zinc-800 border-slate-200 dark:border-zinc-700 rounded-xl pl-10 py-3 text-sm focus:ring-primary focus:border-primary transition-all" placeholder="github.com/seuusuario" type="text"/>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-bold text-slate-600 dark:text-slate-400 mb-2">Áreas de Especialidade (Tags)</label>
+<div class="flex flex-wrap gap-2 p-4 bg-slate-50 dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 rounded-xl">
+<span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold flex items-center gap-2">
+                                    React <button class="material-icons-round text-xs">close</button>
+</span>
+<span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold flex items-center gap-2">
+                                    UI Design <button class="material-icons-round text-xs">close</button>
+</span>
+<span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold flex items-center gap-2">
+                                    TypeScript <button class="material-icons-round text-xs">close</button>
+</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm p-0 ml-2" placeholder="Adicionar nova..." type="text"/>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-slate-100 dark:border-zinc-800 shadow-sm">
+<h3 class="text-lg font-bold text-accent-blue dark:text-white mb-6">Segurança e Acesso</h3>
+<div class="space-y-6">
+<div class="flex items-center justify-between p-4 bg-slate-50 dark:bg-zinc-800 rounded-2xl border border-slate-200 dark:border-zinc-700">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white dark:bg-zinc-900 rounded-xl flex items-center justify-center text-primary border border-slate-100 dark:border-zinc-800">
+<span class="material-icons-round">password</span>
+</div>
+<div>
+<p class="font-bold text-sm">Senha de Acesso</p>
+<p class="text-xs text-slate-500">Última alteração há 3 meses</p>
+</div>
+</div>
+<button class="text-primary text-xs font-bold hover:underline">Alterar Senha</button>
+</div>
+<div class="flex items-center justify-between p-4 bg-slate-50 dark:bg-zinc-800 rounded-2xl border border-slate-200 dark:border-zinc-700">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white dark:bg-zinc-900 rounded-xl flex items-center justify-center text-green-500 border border-slate-100 dark:border-zinc-800">
+<span class="material-icons-round">verified_user</span>
+</div>
+<div>
+<p class="font-bold text-sm">Autenticação de Dois Fatores (2FA)</p>
+<p class="text-xs text-slate-500">Adicione uma camada extra de segurança</p>
+</div>
+</div>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-zinc-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="space-y-8">
+<section class="bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-slate-100 dark:border-zinc-800 shadow-sm">
+<h3 class="text-lg font-bold text-accent-blue dark:text-white mb-6">Preferências</h3>
+<div class="space-y-8">
+<div>
+<label class="block text-sm font-bold text-slate-600 dark:text-slate-400 mb-4">Tema do Sistema</label>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex flex-col items-center gap-3 p-4 rounded-2xl border-2 border-primary bg-primary/5 text-primary">
+<span class="material-icons-round text-3xl">light_mode</span>
+<span class="text-xs font-bold uppercase tracking-widest">Light</span>
+</button>
+<button class="flex flex-col items-center gap-3 p-4 rounded-2xl border-2 border-slate-100 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-800 text-slate-400">
+<span class="material-icons-round text-3xl">dark_mode</span>
+<span class="text-xs font-bold uppercase tracking-widest">Dark</span>
+</button>
+</div>
+</div>
+<div>
+<label class="block text-sm font-bold text-slate-600 dark:text-slate-400 mb-3">Idioma</label>
+<select class="w-full bg-slate-50 dark:bg-zinc-800 border-slate-200 dark:border-zinc-700 rounded-xl px-4 py-3 text-sm focus:ring-primary focus:border-primary transition-all">
+<option>Português (Brasil)</option>
+<option>English (United States)</option>
+<option>Español</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-bold text-slate-600 dark:text-slate-400 mb-3">Fuso Horário</label>
+<select class="w-full bg-slate-50 dark:bg-zinc-800 border-slate-200 dark:border-zinc-700 rounded-xl px-4 py-3 text-sm focus:ring-primary focus:border-primary transition-all">
+<option>(GMT-03:00) Brasília</option>
+<option>(GMT-05:00) New York</option>
+<option>(GMT+00:00) London</option>
+</select>
+</div>
+</div>
+</section>
+<div class="bg-accent-blue rounded-3xl p-8 text-white relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
+<h4 class="text-xl font-bold mb-3 relative z-10">Precisa de ajuda?</h4>
+<p class="text-slate-300 text-sm mb-6 relative z-10">Nossa equipe de suporte está disponível para te auxiliar com qualquer dúvida sobre as configurações.</p>
+<button class="w-full py-3 bg-white text-accent-blue font-bold rounded-xl hover:bg-primary hover:text-white transition-all">
+                        Central de Ajuda
+                    </button>
+</div>
+</div>
+</div>
+<div class="mt-8 border-t border-slate-200 dark:border-zinc-800 pt-8 flex justify-between items-center mb-12">
+<div>
+<p class="text-slate-800 dark:text-white font-bold">Desativar conta</p>
+<p class="text-slate-500 text-xs">Isso tornará seu perfil privado e pausará seus estudos temporariamente.</p>
+</div>
+<button class="px-6 py-2 border border-red-200 text-red-500 rounded-lg text-sm font-bold hover:bg-red-50 transition-all">
+                Desativar Conta
+            </button>
+</div>
+</div>
+</main>
+
+</body></html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Novos Horizonte Academy - Correção de Projetos</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,FILL@0..1" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f27f0d",
+                        "primary-hover": "#d96f0a",
+                        "sidebar-dark": "#0f172a",
+                        "background-light": "#f8f9fc",
+                        "navy-accent": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body { @apply font-display text-slate-800 bg-background-light; }
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        input[type="range"] {
+            @apply accent-primary;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex">
+<aside class="w-64 bg-sidebar-dark text-white flex flex-col fixed h-full z-50">
+<div class="p-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons-round text-white text-xl">school</span>
+</div>
+<span class="font-bold text-lg tracking-tight">Novos Horizonte</span>
+</div>
+<nav class="flex-1 px-4 py-6 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-icons-round">dashboard</span>
+<span class="font-medium">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-icons-round">groups</span>
+<span class="font-medium">Minhas Turmas</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary/10 text-primary border-r-4 border-primary rounded-r-none rounded-lg transition-all" href="#">
+<span class="material-icons-round">assignment_turned_in</span>
+<span class="font-medium">Correção de Projetos</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-icons-round">calendar_today</span>
+<span class="font-medium">Agenda de Mentorias</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-icons-round">forum</span>
+<span class="font-medium">Comunidade</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-icons-round">folder_special</span>
+<span class="font-medium">Recursos Docentes</span>
+</a>
+</nav>
+<div class="p-4 mt-auto">
+<div class="bg-white/5 rounded-xl p-4 flex items-center gap-3">
+<img alt="Mentor Profile" class="w-10 h-10 rounded-full border-2 border-primary/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd0sxz3EItUuzCra1t1yfIMifiLjN7niC-XgLBZne4c17JFUM-wmKaZuqh02DXxtwrneLqMIXzahyhMBO4auiH3Kjg9c-qJV5MGypZDeymdMdd6ROzbzVH8VRHU0uPe739igdGS7By7CNfMuUkv_sqeNaOW0j6JMnQ1NrAHcCZG09b_5_vfWl81bvi0UpVpshLAlIYxUjHwN1mivWi0MwsKrO-fSXImK9KMoE7WxV72ZW4YOKldikmKaHj5k-tTe7iHGpCRh-Per8"/>
+<div class="overflow-hidden">
+<p class="text-sm font-semibold truncate">Ricardo Mendes</p>
+<p class="text-xs text-slate-500 truncate">Sênior UI Designer</p>
+</div>
+</div>
+</div>
+</aside>
+<aside class="w-80 border-r border-slate-200 bg-white fixed h-full ml-64 z-40 overflow-y-auto custom-scrollbar">
+<div class="p-6 border-b border-slate-100">
+<h2 class="text-lg font-bold text-slate-900 mb-4">Fila de Correção</h2>
+<div class="space-y-3">
+<div>
+<label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 block">Urgência</label>
+<select class="w-full text-sm border-slate-200 rounded-lg focus:ring-primary focus:border-primary">
+<option>Todas</option>
+<option>Crítica (Prazos)</option>
+<option>Alta</option>
+<option>Normal</option>
+</select>
+</div>
+<div>
+<label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 block">Curso</label>
+<select class="w-full text-sm border-slate-200 rounded-lg focus:ring-primary focus:border-primary">
+<option>Todos os cursos</option>
+<option>Product Design</option>
+<option>UI Architecture</option>
+<option>Design Systems</option>
+</select>
+</div>
+</div>
+</div>
+<div class="divide-y divide-slate-100">
+<div class="p-4 bg-primary/5 border-l-4 border-primary cursor-pointer">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[10px] font-bold bg-orange-100 text-orange-700 px-2 py-0.5 rounded uppercase">Urgente</span>
+<span class="text-[10px] text-slate-400">Há 2h</span>
+</div>
+<div class="flex items-center gap-3">
+<img alt="Student" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1GePMIp4l5GN1SeW93Z-dTpWPnNzLEVFaIE9DZ8KIm76vV9AdlN3MwZuaZZ1fUZaTZ8eJzvrbc0okcr0rkcuD2aZiRTNk2Cl87UUPNj0nyMTp3O1E9x_wHcRdzk_uB0bLJA36I8EUAxDTqAVTY44lduS9ucG7qYyajrMo9_H-DA97_evCp6GKG0qETpkS9SFzCg_h43vAgRySW2s2LZ-VYmBnb_bi2VGKpeszXLOyzkG39xv3RXjilJiESF-UglnNaAtSvik3leQ"/>
+<div>
+<h3 class="text-sm font-bold text-slate-900">Beatriz Santos</h3>
+<p class="text-xs text-slate-500">Product Design • Mod 3</p>
+</div>
+</div>
+</div>
+<div class="p-4 hover:bg-slate-50 transition-colors cursor-pointer group">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[10px] font-bold bg-slate-100 text-slate-500 px-2 py-0.5 rounded uppercase">Normal</span>
+<span class="text-[10px] text-slate-400">Há 5h</span>
+</div>
+<div class="flex items-center gap-3">
+<img alt="Student" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZlpDUMYp47nkZaJguB4tx4wXeYZxYFEFgPjYmx31NoQIvQ-7h3hR-LHmPPF0LRu8Asivtfd_n8E2VDJB70eLUCubCEWKfB1qLTVogDBobU1_5Ju8NYUw7t7RCVZR6kO9SPAWS0ovRyAphNLMUmRWnQKo0Jn3H6PfwwUJ1O58zLoSMexLe55Nbt73vgCh5M4_1uRPwxq4kfkbDsLmvX3LUEeqS-3qx8W02fkr-XmVHUvXG4SDsTD2q7cSpd9eAiRVRJ_jwu15Iknk"/>
+<div>
+<h3 class="text-sm font-bold text-slate-900 group-hover:text-primary transition-colors">Lucas Oliveira</h3>
+<p class="text-xs text-slate-500">UI Architecture • Mod 1</p>
+</div>
+</div>
+</div>
+<div class="p-4 hover:bg-slate-50 transition-colors cursor-pointer group">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[10px] font-bold bg-slate-100 text-slate-500 px-2 py-0.5 rounded uppercase">Normal</span>
+<span class="text-[10px] text-slate-400">Ontem</span>
+</div>
+<div class="flex items-center gap-3">
+<img alt="Student" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwO_Zm0u1cB_ykWDxMiM0A8JNihJLSwrk8264cXY2paYlwXalsI67tW8UK5EfS2dB4OzWVS3P9bC0Sq25BLTHKRZR3pPE7qn5NvFJ6Zbg74tnPawfvNv4YdPBxM5JzvNfiTlSA55RBRsP3VF82s6q0-vbqdYg5z0yjnqBXFuANSZ9vih5fQjODb95SmiNhuHqI23t6U4HaEYH4hw3_0hnW7W41zjA8exjfFVhszwsrg1p5T-cCMCJV6OCnPICrDsMCLX0eVKi256Y"/>
+<div>
+<h3 class="text-sm font-bold text-slate-900 group-hover:text-primary transition-colors">Carla Ferreira</h3>
+<p class="text-xs text-slate-500">Design Systems • Mod 2</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 ml-[576px] p-8 min-w-0">
+<div class="flex items-center justify-between mb-8">
+<div>
+<nav class="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">
+<a class="hover:text-primary transition-colors" href="#">Correção</a>
+<span class="material-icons-round text-sm">chevron_right</span>
+<span class="text-slate-900">Beatriz Santos</span>
+</nav>
+<h1 class="text-2xl font-extrabold text-slate-900">E-commerce Checkout Experience</h1>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2 border border-slate-200 rounded-lg text-sm font-semibold text-slate-600 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-[20px]">history</span>
+                Histórico
+            </button>
+<button class="flex items-center gap-2 px-6 py-2 bg-primary text-white rounded-lg text-sm font-bold hover:bg-primary-hover shadow-lg shadow-primary/20 transition-all">
+                Finalizar Avaliação
+            </button>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+<div class="space-y-8">
+<section class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+<div class="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+<div class="flex items-center gap-2">
+<span class="material-icons-round text-primary">visibility</span>
+<h2 class="font-bold text-sm text-slate-700">Visualização do Projeto</h2>
+</div>
+<div class="flex gap-2">
+<a class="p-1.5 hover:bg-white rounded border border-transparent hover:border-slate-200 transition-all text-slate-500" href="#" title="Link Figma">
+<span class="material-symbols-outlined text-[18px]">design_services</span>
+</a>
+<a class="p-1.5 hover:bg-white rounded border border-transparent hover:border-slate-200 transition-all text-slate-500" href="#" title="Link GitHub">
+<span class="material-symbols-outlined text-[18px]">code</span>
+</a>
+</div>
+</div>
+<div class="aspect-video bg-slate-900 flex items-center justify-center overflow-hidden">
+<img alt="Project Screenshot" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtvc31sX82kYrjOon2_qwxmeVDeRnlKhrPJV-8iMwLkxkYkztUmmVj320rrqDEOFoZsn-YKIjZgl6vCfWqUtT4xGmmho1vISFUxMdieTUWZlxKZ2lkztZzEGlarWxc7n8_k3nMDccv1L36QMlrLbhO7KINFP6SYi5wI164jABMJi8eZkD4ZG011jVSEyS2CWA0u_BPke8qnaqiGtVzLf0jyiNTXw5_Inrr7Vep6P3M2EKhySK4PU57SvqEKknGrEOR0KoQLnpxX0w"/>
+<div class="absolute flex flex-col items-center">
+<span class="material-icons-round text-white text-4xl mb-2">play_circle_filled</span>
+<p class="text-white text-xs font-bold uppercase tracking-wider">Expandir Protótipo</p>
+</div>
+</div>
+<div class="p-4 bg-slate-50 border-t border-slate-100 flex items-center gap-4">
+<div class="flex-1 flex items-center gap-3 p-3 bg-white rounded-lg border border-slate-200 cursor-pointer hover:border-primary transition-colors">
+<span class="material-icons-round text-blue-500">attachment</span>
+<span class="text-xs font-medium text-slate-600 truncate">documentation_v2.pdf</span>
+</div>
+<div class="flex-1 flex items-center gap-3 p-3 bg-white rounded-lg border border-slate-200 cursor-pointer hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-orange-500">link</span>
+<span class="text-xs font-medium text-slate-600 truncate">figma.com/file/checkout-ui...</span>
+</div>
+</div>
+</section>
+<section class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+<div class="p-4 border-b border-slate-100 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-icons-round text-primary">rate_review</span>
+<h2 class="font-bold text-sm text-slate-700">Comentários Detalhados</h2>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 hover:bg-slate-100 rounded text-slate-400"><span class="material-icons-round text-sm">format_bold</span></button>
+<button class="p-1.5 hover:bg-slate-100 rounded text-slate-400"><span class="material-icons-round text-sm">format_italic</span></button>
+<button class="p-1.5 hover:bg-slate-100 rounded text-slate-400"><span class="material-icons-round text-sm">format_list_bulleted</span></button>
+</div>
+</div>
+<textarea class="w-full h-48 p-6 text-sm border-none focus:ring-0 placeholder-slate-300 resize-none" placeholder="Escreva aqui seu feedback detalhado para o aluno..."></textarea>
+<div class="p-4 bg-slate-50 border-t border-slate-100 flex items-center gap-3">
+<button class="flex-1 flex items-center justify-center gap-2 py-3 border-2 border-dashed border-slate-300 rounded-xl text-slate-500 hover:border-primary hover:text-primary transition-all">
+<span class="material-icons-round text-lg">mic</span>
+<span class="text-xs font-bold uppercase tracking-wider">Gravar Áudio</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-2 py-3 border-2 border-dashed border-slate-300 rounded-xl text-slate-500 hover:border-primary hover:text-primary transition-all">
+<span class="material-icons-round text-lg">video_camera_back</span>
+<span class="text-xs font-bold uppercase tracking-wider">Subir Vídeo</span>
+</button>
+</div>
+</section>
+</div>
+<div class="space-y-8">
+<section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+<div class="flex items-center gap-2 mb-8">
+<span class="material-icons-round text-primary">analytics</span>
+<h2 class="font-bold text-sm text-slate-700 uppercase tracking-wider">Critérios de Avaliação</h2>
+</div>
+<div class="space-y-10">
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="text-sm font-bold text-slate-900">Technical Execution</h3>
+<p class="text-xs text-slate-500">Código limpo, performance e boas práticas.</p>
+</div>
+<span class="text-lg font-black text-primary">8.5<span class="text-xs text-slate-400">/10</span></span>
+</div>
+<input class="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer" max="10" min="0" step="0.5" type="range" value="8.5"/>
+<div class="flex justify-between text-[10px] font-bold text-slate-400 uppercase">
+<span>Iniciante</span>
+<span>Avançado</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="text-sm font-bold text-slate-900">Design Quality</h3>
+<p class="text-xs text-slate-500">Estética, usabilidade e acessibilidade.</p>
+</div>
+<span class="text-lg font-black text-primary">9.0<span class="text-xs text-slate-400">/10</span></span>
+</div>
+<input class="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer" max="10" min="0" step="0.5" type="range" value="9"/>
+<div class="flex justify-between text-[10px] font-bold text-slate-400 uppercase">
+<span>Insuficiente</span>
+<span>Excepcional</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="text-sm font-bold text-slate-900">Documentation</h3>
+<p class="text-xs text-slate-500">Clareza no README e guia de projeto.</p>
+</div>
+<span class="text-lg font-black text-primary">7.5<span class="text-xs text-slate-400">/10</span></span>
+</div>
+<input class="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer" max="10" min="0" step="0.5" type="range" value="7.5"/>
+<div class="flex justify-between text-[10px] font-bold text-slate-400 uppercase">
+<span>Incompleto</span>
+<span>Completo</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="text-sm font-bold text-slate-900">Innovation</h3>
+<p class="text-xs text-slate-500">Originalidade e soluções criativas.</p>
+</div>
+<span class="text-lg font-black text-primary">6.0<span class="text-xs text-slate-400">/10</span></span>
+</div>
+<input class="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer" max="10" min="0" step="0.5" type="range" value="6"/>
+<div class="flex justify-between text-[10px] font-bold text-slate-400 uppercase">
+<span>Padrão</span>
+<span>Inovador</span>
+</div>
+</div>
+</div>
+<div class="mt-12 p-6 bg-navy-accent rounded-xl text-white">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold uppercase tracking-widest opacity-60">Nota Final Calculada</span>
+<span class="material-icons-round text-primary">verified</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-black">7.8</span>
+<span class="text-lg opacity-40">/ 10.0</span>
+</div>
+<p class="text-[10px] mt-4 text-slate-400 uppercase tracking-wider font-bold">Status: Aprovado com ressalvas</p>
+</div>
+</section>
+<section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+<h3 class="text-sm font-bold text-slate-700 mb-4 flex items-center gap-2">
+<span class="material-icons-round text-primary text-lg">lightbulb</span>
+                    Sugestões Rápidas
+                </h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-full text-xs font-medium text-slate-600 hover:border-primary hover:text-primary transition-all">Refactor CSS Grid</button>
+<button class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-full text-xs font-medium text-slate-600 hover:border-primary hover:text-primary transition-all">Melhorar Contraste</button>
+<button class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-full text-xs font-medium text-slate-600 hover:border-primary hover:text-primary transition-all">Adicionar Testes Unitários</button>
+<button class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-full text-xs font-medium text-slate-600 hover:border-primary hover:text-primary transition-all">Documentar API</button>
+</div>
+</section>
+</div>
+</div>
+<div class="fixed bottom-8 right-8 xl:hidden">
+<button class="w-14 h-14 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-icons-round">check</span>
+</button>
+</div>
+</main>
+<div data-location="São Paulo, Brazil" style="display:none;"></div>
+
+</body></html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Calendário Acadêmico | Projeto Novos Horizonte</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee8c2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1a140e",
+                        "accent-blue": "#3b82f6",
+                        "sidebar-dark": "#221910",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e5e7eb;
+            border-radius: 10px;
+        }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #3f3f46;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 min-h-screen flex font-display">
+<aside class="w-72 bg-white dark:bg-sidebar-dark border-r border-primary/10 flex flex-col h-screen sticky top-0">
+<div class="p-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white shadow-lg shadow-primary/20">
+<span class="material-icons-round">rocket_launch</span>
+</div>
+<div class="flex flex-col">
+<span class="text-lg font-bold tracking-tight leading-none text-slate-900 dark:text-white">NOVOS</span>
+<span class="text-xs uppercase tracking-[0.2em] font-semibold text-primary">Horizonte</span>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">dashboard</span>
+            Dashboard
+        </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">library_books</span>
+            Meus Cursos
+        </a>
+<a class="flex items-center gap-4 px-4 py-3 bg-primary text-white font-semibold rounded-xl shadow-lg shadow-primary/20 transition-all" href="#">
+<span class="material-icons-round">calendar_today</span>
+            Calendário
+        </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">folder_special</span>
+            Projetos
+        </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">verified</span>
+            Certificações
+        </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">forum</span>
+            Comunidade
+        </a>
+</nav>
+<div class="p-4 border-t border-slate-100 dark:border-zinc-800 flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD6t93a5ESdZg7OPSgo36jBrp-sNO7ZjeKUH4tgGFqzQ6TKHCrjKC1hSeDMrAXiWNmkhTXcZ1gPTF7KAKaZMaWnh8uA-cDkHRV78eV5UxWzgvMwB1V4q6bz2D3SyH0-F_XS4v9YIe4qPD03huX6smpC5qLBzWLzPfnbJJvAfV0tq3yKk8STxCI5QWO2AoXW1rTyLzewcWLBUW6dfgH3Lq7-I7co8cpBSbq6z7hvrRtV3lqZ6sRSKaAi19l1tAMqWcNsaWoAX_aSac"/>
+<div class="flex-1">
+<p class="text-sm font-bold truncate">Marcos Silva</p>
+<p class="text-xs text-slate-500">marcos@novos.edu</p>
+</div>
+<button class="text-slate-400 hover:text-red-500"><span class="material-icons-round text-xl">logout</span></button>
+</div>
+</aside>
+<main class="flex-1 flex flex-col h-screen overflow-hidden">
+<header class="h-20 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md px-8 flex items-center justify-between border-b border-primary/10 z-10 sticky top-0">
+<div class="flex items-center gap-4">
+<h1 class="text-xl font-bold text-slate-900 dark:text-white">Calendário Acadêmico</h1>
+<div class="h-6 w-[1px] bg-slate-200 dark:bg-zinc-800"></div>
+<div class="flex items-center gap-2">
+<button class="p-1 hover:bg-slate-100 dark:hover:bg-zinc-800 rounded-lg transition-colors">
+<span class="material-icons-round text-slate-400">chevron_left</span>
+</button>
+<span class="font-bold text-slate-700 dark:text-slate-200">Outubro 2024</span>
+<button class="p-1 hover:bg-slate-100 dark:hover:bg-zinc-800 rounded-lg transition-colors">
+<span class="material-icons-round text-slate-400">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-slate-300 rounded-xl text-sm font-bold hover:bg-slate-200 dark:hover:bg-zinc-700 transition-all">
+<span class="material-icons-round text-lg">sync</span>
+                Sincronizar com Google
+            </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-slate-300 rounded-xl text-sm font-bold hover:bg-slate-200 dark:hover:bg-zinc-700 transition-all">
+<span class="material-icons-round text-lg">alternate_email</span>
+                Sincronizar Outlook
+            </button>
+<div class="h-8 w-[1px] bg-slate-200 dark:bg-zinc-800"></div>
+<button class="p-2 bg-primary/10 text-primary rounded-xl font-bold text-sm">Hoje</button>
+</div>
+</header>
+<div class="flex-1 flex overflow-hidden">
+<aside class="w-80 bg-white dark:bg-zinc-900/50 border-r border-slate-100 dark:border-zinc-800 p-6 overflow-y-auto custom-scrollbar">
+<h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">Próximas Atividades</h3>
+<div class="space-y-6">
+<div class="group cursor-pointer">
+<div class="flex items-start gap-3">
+<div class="w-2 h-12 bg-primary rounded-full group-hover:scale-y-110 transition-transform"></div>
+<div>
+<span class="text-[10px] font-bold text-primary uppercase">Prazo de Entrega</span>
+<h4 class="font-bold text-slate-900 dark:text-white leading-tight mt-0.5">Projeto Final: Redesign Hub</h4>
+<div class="flex items-center gap-1.5 mt-2 text-slate-500">
+<span class="material-icons-round text-sm">schedule</span>
+<span class="text-xs font-medium">Hoje, 23:59</span>
+</div>
+</div>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="flex items-start gap-3">
+<div class="w-2 h-12 bg-accent-blue rounded-full group-hover:scale-y-110 transition-transform"></div>
+<div>
+<span class="text-[10px] font-bold text-accent-blue uppercase">Mentoria ao Vivo</span>
+<h4 class="font-bold text-slate-900 dark:text-white leading-tight mt-0.5">Carreira &amp; LinkedIn: Como se destacar</h4>
+<div class="flex items-center gap-1.5 mt-2 text-slate-500">
+<span class="material-symbols-outlined text-sm">videocam</span>
+<span class="text-xs font-medium">Amanhã, 19:00</span>
+</div>
+</div>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="flex items-start gap-3">
+<div class="w-2 h-12 bg-purple-500 rounded-full group-hover:scale-y-110 transition-transform"></div>
+<div>
+<span class="text-[10px] font-bold text-purple-500 uppercase">Avaliação</span>
+<h4 class="font-bold text-slate-900 dark:text-white leading-tight mt-0.5">Quiz de Algoritmos: Nível Avançado</h4>
+<div class="flex items-center gap-1.5 mt-2 text-slate-500">
+<span class="material-icons-round text-sm">assignment</span>
+<span class="text-xs font-medium">15 Out, 14:00</span>
+</div>
+</div>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="flex items-start gap-3">
+<div class="w-2 h-12 bg-accent-blue rounded-full group-hover:scale-y-110 transition-transform"></div>
+<div>
+<span class="text-[10px] font-bold text-accent-blue uppercase">Aula Magna</span>
+<h4 class="font-bold text-slate-900 dark:text-white leading-tight mt-0.5">Novas tendências em React Server Components</h4>
+<div class="flex items-center gap-1.5 mt-2 text-slate-500">
+<span class="material-symbols-outlined text-sm">videocam</span>
+<span class="text-xs font-medium">18 Out, 20:00</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Legenda</h3>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded bg-primary"></div>
+<span class="text-xs font-medium">Prazos e Entregas</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded bg-accent-blue"></div>
+<span class="text-xs font-medium">Mentorias e Aulas</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded bg-purple-500"></div>
+<span class="text-xs font-medium">Exames e Quizzes</span>
+</div>
+</div>
+</div>
+</aside>
+<div class="flex-1 bg-white dark:bg-background-dark p-8 overflow-y-auto custom-scrollbar">
+<div class="calendar-grid gap-px bg-slate-100 dark:bg-zinc-800 border border-slate-200 dark:border-zinc-800 rounded-2xl overflow-hidden shadow-sm">
+<div class="bg-slate-50 dark:bg-zinc-900/80 p-4 text-center text-xs font-bold text-slate-400 uppercase tracking-widest">Dom</div>
+<div class="bg-slate-50 dark:bg-zinc-900/80 p-4 text-center text-xs font-bold text-slate-400 uppercase tracking-widest">Seg</div>
+<div class="bg-slate-50 dark:bg-zinc-900/80 p-4 text-center text-xs font-bold text-slate-400 uppercase tracking-widest">Ter</div>
+<div class="bg-slate-50 dark:bg-zinc-900/80 p-4 text-center text-xs font-bold text-slate-400 uppercase tracking-widest">Qua</div>
+<div class="bg-slate-50 dark:bg-zinc-900/80 p-4 text-center text-xs font-bold text-slate-400 uppercase tracking-widest">Qui</div>
+<div class="bg-slate-50 dark:bg-zinc-900/80 p-4 text-center text-xs font-bold text-slate-400 uppercase tracking-widest">Sex</div>
+<div class="bg-slate-50 dark:bg-zinc-900/80 p-4 text-center text-xs font-bold text-slate-400 uppercase tracking-widest">Sáb</div>
+<div class="bg-slate-50/50 dark:bg-zinc-900/30 min-h-[120px] p-4 text-slate-300 dark:text-zinc-700 font-bold">29</div>
+<div class="bg-slate-50/50 dark:bg-zinc-900/30 min-h-[120px] p-4 text-slate-300 dark:text-zinc-700 font-bold">30</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group hover:bg-slate-50/50 dark:hover:bg-zinc-800/50 transition-colors">
+<span class="font-bold text-slate-400">01</span>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group hover:bg-slate-50/50 dark:hover:bg-zinc-800/50 transition-colors">
+<span class="font-bold text-slate-400">02</span>
+<div class="px-2 py-1 bg-primary/10 border-l-2 border-primary rounded text-[10px] font-bold text-primary truncate">Projeto UX</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group hover:bg-slate-50/50 dark:hover:bg-zinc-800/50 transition-colors">
+<span class="font-bold text-slate-400">03</span>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group hover:bg-slate-50/50 dark:hover:bg-zinc-800/50 transition-colors">
+<span class="font-bold text-slate-400">04</span>
+<div class="px-2 py-1 bg-accent-blue/10 border-l-2 border-accent-blue rounded text-[10px] font-bold text-accent-blue truncate">Mentoria Individual</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group hover:bg-slate-50/50 dark:hover:bg-zinc-800/50 transition-colors">
+<span class="font-bold text-slate-400">05</span>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group hover:bg-slate-50/50 dark:hover:bg-zinc-800/50 transition-colors">
+<span class="font-bold text-slate-400">06</span>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group hover:bg-slate-50/50 dark:hover:bg-zinc-800/50 transition-colors">
+<span class="font-bold text-slate-400">07</span>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group bg-primary/5 ring-2 ring-primary ring-inset">
+<span class="font-bold text-primary">08</span>
+<div class="px-2 py-1 bg-primary text-white rounded text-[10px] font-bold truncate shadow-sm">Redesign Hub Final</div>
+<div class="px-2 py-1 bg-accent-blue/10 border-l-2 border-accent-blue rounded text-[10px] font-bold text-accent-blue truncate">Revisão Sprint</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group hover:bg-slate-50/50 dark:hover:bg-zinc-800/50 transition-colors">
+<span class="font-bold text-slate-400">09</span>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group hover:bg-slate-50/50 dark:hover:bg-zinc-800/50 transition-colors">
+<span class="font-bold text-slate-400">10</span>
+<div class="px-2 py-1 bg-accent-blue/10 border-l-2 border-accent-blue rounded text-[10px] font-bold text-accent-blue truncate">Live: LinkedIn</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group hover:bg-slate-50/50 dark:hover:bg-zinc-800/50 transition-colors">
+<span class="font-bold text-slate-400">11</span>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group hover:bg-slate-50/50 dark:hover:bg-zinc-800/50 transition-colors">
+<span class="font-bold text-slate-400">12</span>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group hover:bg-slate-50/50 dark:hover:bg-zinc-800/50 transition-colors">
+<span class="font-bold text-slate-400">13</span>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group hover:bg-slate-50/50 dark:hover:bg-zinc-800/50 transition-colors">
+<span class="font-bold text-slate-400">14</span>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group hover:bg-slate-50/50 dark:hover:bg-zinc-800/50 transition-colors">
+<span class="font-bold text-slate-400">15</span>
+<div class="px-2 py-1 bg-purple-500/10 border-l-2 border-purple-500 rounded text-[10px] font-bold text-purple-600 truncate">Quiz Algoritmos</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group hover:bg-slate-50/50 dark:hover:bg-zinc-800/50 transition-colors">
+<span class="font-bold text-slate-400">16</span>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group hover:bg-slate-50/50 dark:hover:bg-zinc-800/50 transition-colors">
+<span class="font-bold text-slate-400">17</span>
+<div class="px-2 py-1 bg-primary/10 border-l-2 border-primary rounded text-[10px] font-bold text-primary truncate">Entrega Prototipagem</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group hover:bg-slate-50/50 dark:hover:bg-zinc-800/50 transition-colors">
+<span class="font-bold text-slate-400">18</span>
+<div class="px-2 py-1 bg-accent-blue/10 border-l-2 border-accent-blue rounded text-[10px] font-bold text-accent-blue truncate">Aula: React Server</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 flex flex-col gap-2 relative group hover:bg-slate-50/50 dark:hover:bg-zinc-800/50 transition-colors">
+<span class="font-bold text-slate-400">19</span>
+</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 text-slate-400 font-bold">20</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 text-slate-400 font-bold">21</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 text-slate-400 font-bold">22</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 text-slate-400 font-bold">23</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 text-slate-400 font-bold">24</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 text-slate-400 font-bold">25</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 text-slate-400 font-bold">26</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 text-slate-400 font-bold">27</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 text-slate-400 font-bold">28</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 text-slate-400 font-bold">29</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 text-slate-400 font-bold">30</div>
+<div class="bg-white dark:bg-zinc-900 min-h-[120px] p-4 text-slate-400 font-bold">31</div>
+<div class="bg-slate-50/50 dark:bg-zinc-900/30 min-h-[120px] p-4 text-slate-300 dark:text-zinc-700 font-bold">01</div>
+<div class="bg-slate-50/50 dark:bg-zinc-900/30 min-h-[120px] p-4 text-slate-300 dark:text-zinc-700 font-bold">02</div>
+</div>
+</div>
+</div>
+</main>
+
+</body></html>

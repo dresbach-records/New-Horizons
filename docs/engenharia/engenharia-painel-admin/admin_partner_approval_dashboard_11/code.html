@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Regional Impact Report Dashboard - Projeto Novos Horizontes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "accent": "#F59E0B",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Public Sans', sans-serif; }
+        .sidebar-item-active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #F59E0B;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .chart-bar {
+            @apply transition-all duration-500 ease-in-out;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 flex h-screen overflow-hidden">
+<aside class="w-72 bg-primary text-white flex flex-col shrink-0 shadow-xl z-20">
+<div class="p-6 border-b border-white/10 flex items-center gap-3">
+<div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+<span class="material-icons text-white">explore</span>
+</div>
+<div>
+<h1 class="font-bold text-lg leading-none uppercase tracking-wider">Novos Horizontes</h1>
+<span class="text-[10px] opacity-70">Hub Luanda / Parceiro</span>
+</div>
+</div>
+<nav class="flex-1 py-6 overflow-y-auto custom-scrollbar">
+<div class="px-4 mb-4 text-[11px] uppercase tracking-widest text-white/40 font-bold">Menu</div>
+<a class="flex items-center gap-3 px-6 py-3 sidebar-item-active" href="#">
+<span class="material-icons text-sm">insights</span>
+<span class="text-sm font-medium">Relatório de Impacto</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">people</span>
+<span class="text-sm font-medium">Estudantes</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">school</span>
+<span class="text-sm font-medium">Cursos &amp; Formação</span>
+</a>
+<div class="px-4 mt-8 mb-4 text-[11px] uppercase tracking-widest text-white/40 font-bold">Operações</div>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">receipt_long</span>
+<span class="text-sm font-medium">Financeiro</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-white/5" href="#">
+<span class="material-icons text-sm opacity-70">forum</span>
+<span class="text-sm font-medium">Comunicação Hub</span>
+</a>
+</nav>
+<div class="p-4 mt-auto border-t border-white/10">
+<div class="bg-white/5 rounded-lg p-3 flex items-center gap-3">
+<img alt="Admin Profile" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOReo_e19_4yoog43QfGwr-Jw4INr9ARXr2MuQk3yzVwtgBPKjCuqp65VSP58kT38tV8LaLs-ZMfb_AbXTu0-wsO7LmzKt237wB85YMqVAt29TNe1t_xPDwZizIABK4SUBzvbj6zChFWBIs92h5Ei2IwFHvX-_v6kH1bKlRMWKZYm-C7yPRgKXi0Y0_pjQk8oCKXrZUKxQQilPFgzDucleEypf43_LP5uP9xHBIwmraRq-A7DsfDklhflkGOOktffJpBpqn5gBtDQ"/>
+<div class="overflow-hidden">
+<p class="text-sm font-semibold truncate text-white">Gestor Regional</p>
+<p class="text-[11px] text-white/50 truncate">Hub Luanda, Angola</p>
+</div>
+<button class="ml-auto text-white/40 hover:text-white">
+<span class="material-icons text-lg">logout</span>
+</button>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 shrink-0">
+<h2 class="text-xl font-bold text-primary dark:text-white">Relatório de Impacto Regional - Hub Luanda</h2>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors relative">
+<span class="material-icons">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-accent rounded-full border-2 border-white dark:border-slate-900"></span>
+</button>
+<div class="h-8 w-[1px] bg-slate-200 dark:border-slate-700 mx-2"></div>
+<div class="flex items-center gap-2 px-3 py-1.5 bg-green-50 dark:bg-green-900/20 rounded-full">
+<span class="w-2 h-2 bg-green-500 rounded-full"></span>
+<span class="text-[10px] font-bold text-green-700 dark:text-green-400 uppercase tracking-tight">Sincronizado: Hoje, 09:42</span>
+</div>
+</div>
+</header>
+<div class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-8 py-3 flex items-center gap-6">
+<div class="flex items-center gap-3">
+<span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Período:</span>
+<select class="text-sm font-medium bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary/20 cursor-pointer">
+<option>Mensal</option>
+<option>Trimestral</option>
+<option selected="">Anual</option>
+</select>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Categoria:</span>
+<div class="flex gap-2">
+<button class="px-3 py-1.5 bg-primary text-white text-xs font-semibold rounded-full">Educação</button>
+<button class="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold rounded-full hover:bg-slate-200">Empregabilidade</button>
+<button class="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold rounded-full hover:bg-slate-200">Sustentabilidade</button>
+</div>
+</div>
+<div class="ml-auto flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span class="text-xs font-medium">Janeiro 2024 - Dezembro 2024</span>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto p-8 space-y-8 custom-scrollbar">
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="w-10 h-10 bg-blue-50 dark:bg-primary/20 rounded-lg flex items-center justify-center text-primary dark:text-blue-300">
+<span class="material-icons">group</span>
+</div>
+<span class="text-accent text-xs font-bold flex items-center">+12% <span class="material-icons text-xs">trending_up</span></span>
+</div>
+<p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Vidas Transformadas</p>
+<h3 class="text-2xl font-bold">1,452</h3>
+<p class="text-[10px] text-slate-400 mt-2">Total de alunos formados no Hub</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="w-10 h-10 bg-green-50 dark:bg-green-900/20 rounded-lg flex items-center justify-center text-green-600 dark:text-green-400">
+<span class="material-icons">payments</span>
+</div>
+<span class="text-accent text-xs font-bold flex items-center">+24% <span class="material-icons text-xs">trending_up</span></span>
+</div>
+<p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Média Salarial Pós-Formação</p>
+<h3 class="text-2xl font-bold">Kz 420.000</h3>
+<p class="text-[10px] text-slate-400 mt-2">Aumento vs. renda prévia (Kz 120k)</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="w-10 h-10 bg-orange-50 dark:bg-accent/20 rounded-lg flex items-center justify-center text-accent">
+<span class="material-icons">signal_cellular_alt</span>
+</div>
+<span class="text-green-600 text-xs font-bold flex items-center">-15% <span class="material-icons text-xs">trending_down</span></span>
+</div>
+<p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Redução de Gap Digital (%)</p>
+<h3 class="text-2xl font-bold">38.4%</h3>
+<p class="text-[10px] text-slate-400 mt-2">Acesso a ferramentas tech na região</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="w-10 h-10 bg-purple-50 dark:bg-purple-900/20 rounded-lg flex items-center justify-center text-purple-600 dark:text-purple-400">
+<span class="material-icons">public</span>
+</div>
+<span class="text-slate-400 text-xs font-bold">Meta: 5k</span>
+</div>
+<p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Horas de Mentoria Int.</p>
+<h3 class="text-2xl font-bold">4,120h</h3>
+<p class="text-[10px] text-slate-400 mt-2">Conexões com mentores globais</p>
+</div>
+</section>
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-8">
+<h4 class="font-bold text-slate-800 dark:text-white flex items-center gap-2">
+<span class="material-icons text-primary text-sm">trending_up</span>
+                        Crescimento de Renda (Pré vs. Pós)
+                    </h4>
+<div class="flex gap-4 text-[10px] font-bold uppercase tracking-wider">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-slate-300"></span> Pré-Programa</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-accent"></span> Pós-Programa</span>
+</div>
+</div>
+<div class="h-64 flex items-end justify-between relative pt-6 px-4">
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full flex justify-center gap-1 items-end h-full">
+<div class="w-4 bg-slate-200 dark:bg-slate-800 h-[20%] rounded-t-sm"></div>
+<div class="w-4 bg-accent h-[65%] rounded-t-sm"></div>
+</div>
+<span class="text-[10px] text-slate-400 font-bold">Q1</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full flex justify-center gap-1 items-end h-full">
+<div class="w-4 bg-slate-200 dark:bg-slate-800 h-[25%] rounded-t-sm"></div>
+<div class="w-4 bg-accent h-[70%] rounded-t-sm"></div>
+</div>
+<span class="text-[10px] text-slate-400 font-bold">Q2</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full flex justify-center gap-1 items-end h-full">
+<div class="w-4 bg-slate-200 dark:bg-slate-800 h-[22%] rounded-t-sm"></div>
+<div class="w-4 bg-accent h-[85%] rounded-t-sm"></div>
+</div>
+<span class="text-[10px] text-slate-400 font-bold">Q3</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full flex justify-center gap-1 items-end h-full">
+<div class="w-4 bg-slate-200 dark:bg-slate-800 h-[30%] rounded-t-sm"></div>
+<div class="w-4 bg-accent h-[95%] rounded-t-sm"></div>
+</div>
+<span class="text-[10px] text-slate-400 font-bold">Q4</span>
+</div>
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none pb-8">
+<div class="w-full border-t border-slate-100 dark:border-slate-800"></div>
+<div class="w-full border-t border-slate-100 dark:border-slate-800"></div>
+<div class="w-full border-t border-slate-100 dark:border-slate-800"></div>
+<div class="w-full border-t border-slate-100 dark:border-slate-800"></div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col">
+<h4 class="font-bold text-slate-800 dark:text-white mb-6 text-sm">Igualdade de Gênero</h4>
+<div class="flex-1 flex items-center justify-center relative">
+<div class="w-32 h-32 rounded-full border-[16px] border-primary border-r-accent border-b-accent rotate-45"></div>
+<div class="absolute flex flex-col items-center">
+<span class="text-xl font-bold">58%</span>
+<span class="text-[8px] uppercase font-bold text-slate-400">Mulheres</span>
+</div>
+</div>
+<div class="mt-4 space-y-2">
+<div class="flex items-center justify-between text-xs">
+<span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-accent"></span> Feminino</span>
+<span class="font-bold">58%</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span> Masculino</span>
+<span class="font-bold">42%</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col">
+<h4 class="font-bold text-slate-800 dark:text-white mb-6 text-sm">Impacto Econômico Local</h4>
+<div class="flex-1 flex flex-col justify-center gap-4">
+<div class="space-y-1">
+<div class="flex justify-between text-[10px] font-bold text-slate-400">
+<span>SALÁRIOS REMOTOS</span>
+<span>Kz 85M</span>
+</div>
+<div class="h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%] rounded-full"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-[10px] font-bold text-slate-400">
+<span>CONSUMO LOCAL</span>
+<span>Kz 32M</span>
+</div>
+<div class="h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-accent w-[45%] rounded-full"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-[10px] font-bold text-slate-400">
+<span>IMPOSTOS GERADOS</span>
+<span>Kz 12M</span>
+</div>
+<div class="h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-slate-400 w-[20%] rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+<p class="text-[10px] text-slate-500 italic">Total Estimado: Kz 129M injetados na economia de Luanda.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold text-slate-800 dark:text-white">Vozes da Região: Histórias de Sucesso</h3>
+<button class="text-sm font-semibold text-primary dark:text-blue-400 hover:underline">Ver todas as histórias</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-icons text-5xl">format_quote</span>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<img alt="Estudante" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACzuYzjfoW56RUUwbAZBxbUpyeRM7hiQlJ5eo37Q5emcMg7EFS5Wc287U_HDy4UFGdZyEyF3vnSAVccJlDTChRnu1QpK5jjeJA7xSkig3t0eEJ4egSvNr-wgnlhEahRSH3hwajuHhzeCxWZpFLOBD6-Eswa3MfWHmOpBI9ZVpfIPnGoeKW1-GfQ6CrHMTlsgGzo9MmsNCBV4ZDVRkna5iw6EPqFZSCiB8VxWXUoPrwO223NMTMKcq4XTNt3JgamdNpXGj75h646gI"/>
+<div>
+<h5 class="text-sm font-bold">Kieza Manuel</h5>
+<p class="text-[10px] text-slate-500">Desenvolvedora Web Jr.</p>
+</div>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed italic">
+                        "Antes do programa, eu não tinha perspectiva de trabalhar com tecnologia em Luanda. Hoje, trabalho remotamente para uma empresa em Portugal e sustento minha família."
+                    </p>
+<div class="mt-4 flex gap-1">
+<span class="material-icons text-accent text-xs">star</span>
+<span class="material-icons text-accent text-xs">star</span>
+<span class="material-icons text-accent text-xs">star</span>
+<span class="material-icons text-accent text-xs">star</span>
+<span class="material-icons text-accent text-xs">star</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-icons text-5xl">format_quote</span>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">JM</div>
+<div>
+<h5 class="text-sm font-bold">João Mutamba</h5>
+<p class="text-[10px] text-slate-500">Especialista em Dados</p>
+</div>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed italic">
+                        "A mentoria internacional foi o diferencial. Conectar com profissionais do Vale do Silício abriu minha mente para soluções que agora aplico no mercado angolano."
+                    </p>
+<div class="mt-4 flex gap-1">
+<span class="material-icons text-accent text-xs">star</span>
+<span class="material-icons text-accent text-xs">star</span>
+<span class="material-icons text-accent text-xs">star</span>
+<span class="material-icons text-accent text-xs">star</span>
+<span class="material-icons text-accent text-xs">star</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-icons text-5xl">format_quote</span>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<img alt="Estudante" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOReo_e19_4yoog43QfGwr-Jw4INr9ARXr2MuQk3yzVwtgBPKjCuqp65VSP58kT38tV8LaLs-ZMfb_AbXTu0-wsO7LmzKt237wB85YMqVAt29TNe1t_xPDwZizIABK4SUBzvbj6zChFWBIs92h5Ei2IwFHvX-_v6kH1bKlRMWKZYm-C7yPRgKXi0Y0_pjQk8oCKXrZUKxQQilPFgzDucleEypf43_LP5uP9xHBIwmraRq-A7DsfDklhflkGOOktffJpBpqn5gBtDQ"/>
+<div>
+<h5 class="text-sm font-bold">Sara Domingos</h5>
+<p class="text-[10px] text-slate-500">UX Designer</p>
+</div>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed italic">
+                        "O Novos Horizontes não ensinou apenas código, ensinou dignidade. Minha renda quadruplicou e agora estou mentoreando novas meninas no Hub Luanda."
+                    </p>
+<div class="mt-4 flex gap-1">
+<span class="material-icons text-accent text-xs">star</span>
+<span class="material-icons text-accent text-xs">star</span>
+<span class="material-icons text-accent text-xs">star</span>
+<span class="material-icons text-accent text-xs">star</span>
+<span class="material-symbols-outlined text-accent text-[14px]">star_half</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="h-20 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-8 flex items-center justify-between shrink-0">
+<div class="flex items-center gap-2 text-slate-400 text-xs">
+<span class="material-icons text-sm">info</span>
+            Este relatório foi gerado automaticamente e auditado pela sede global.
+        </div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-icons text-lg">share</span>
+                Compartilhar Link
+            </button>
+<button class="flex items-center gap-2 px-6 py-2 bg-primary text-white rounded-lg text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+<span class="material-icons text-lg">download</span>
+                Exportar Relatório para Investidores (PDF/Excel)
+            </button>
+</div>
+</footer>
+</main>
+
+</body></html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Student Digital Academy Dashboard | Projeto Novos Horizonte</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ee8c2b",
+            "background-light": "#f8f7f6",
+            "background-dark": "#221910",
+            "accent-blue": "#1e293b",
+          },
+          fontFamily: {
+            "display": ["Lexend"]
+          },
+          borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style type="text/tailwindcss">
+    @layer base {
+      body {
+        font-family: 'Lexend', sans-serif;
+      }
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #e5e7eb;
+      border-radius: 10px;
+    }
+    .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #3f3f46;
+    }
+    .notification-dropdown {
+        display: none;
+    }
+    .group:hover .notification-dropdown {
+        display: block;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 min-h-screen flex font-display">
+<aside class="w-72 bg-white dark:bg-zinc-900 border-r border-primary/10 flex flex-col h-screen sticky top-0 z-50">
+<div class="p-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-icons-round">rocket_launch</span>
+</div>
+<div class="flex flex-col">
+<span class="text-lg font-bold tracking-tight leading-none text-accent-blue dark:text-white">NOVOS</span>
+<span class="text-xs uppercase tracking-[0.2em] font-semibold text-primary">Horizonte</span>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 bg-primary/10 text-primary font-semibold rounded-xl transition-all" href="#">
+<span class="material-icons-round">dashboard</span>
+        Dashboard
+      </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">library_books</span>
+        Meus Cursos
+      </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">calendar_today</span>
+        Calendário
+      </a>
+<a class="flex items-center justify-between px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<div class="flex items-center gap-4">
+<span class="material-icons-round text-primary">chat_bubble</span>
+        Mensagens
+      </div>
+<span class="bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">3</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">folder_special</span>
+        Projetos
+      </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">verified</span>
+        Certificações
+      </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-500 hover:bg-background-light dark:hover:bg-zinc-800 rounded-xl transition-all" href="#">
+<span class="material-icons-round">forum</span>
+        Comunidade
+      </a>
+</nav>
+<div class="p-6">
+<div class="bg-primary/5 rounded-2xl p-4 border border-primary/20">
+<p class="text-xs text-slate-500 mb-2">Plano Pro Premium</p>
+<div class="flex items-center justify-between mb-3">
+<span class="font-bold text-accent-blue dark:text-white">Ativo até Dez 24</span>
+<span class="material-icons-round text-primary text-sm">stars</span>
+</div>
+<button class="w-full py-2 bg-white dark:bg-zinc-800 text-xs font-bold rounded-lg border border-primary/30 text-primary">Gerenciar Plano</button>
+</div>
+</div>
+<div class="p-4 border-t border-slate-100 dark:border-zinc-800 flex items-center gap-3">
+<img alt="Profile photo of a male student" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD6t93a5ESdZg7OPSgo36jBrp-sNO7ZjeKUH4tgGFqzQ6TKHCrjKC1hSeDMrAXiWNmkhTXcZ1gPTF7KAKaZMaWnh8uA-cDkHRV78eV5UxWzgvMwB1V4q6bz2D3SyH0-F_XS4v9YIe4qPD03huX6smpC5qLBzWLzPfnbJJvAfV0tq3yKk8STxCI5QWO2AoXW1rTyLzewcWLBUW6dfgH3Lq7-I7co8cpBSbq6z7hvrRtV3lqZ6sRSKaAi19l1tAMqWcNsaWoAX_aSac"/>
+<div class="flex-1">
+<p class="text-sm font-bold truncate">Marcos Silva</p>
+<p class="text-xs text-slate-500">marcos@novos.edu</p>
+</div>
+<button class="text-slate-400 hover:text-red-500"><span class="material-icons-round">logout</span></button>
+</div>
+</aside>
+<main class="flex-1 flex flex-col h-screen overflow-hidden relative">
+<header class="h-20 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md px-8 flex items-center justify-between border-b border-primary/10 z-30 sticky top-0">
+<div class="relative w-96">
+<span class="material-icons-round absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-background-light dark:bg-zinc-800 border-none rounded-full pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary/50 transition-all" placeholder="Pesquisar aulas, materiais ou mentorias..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<button class="relative text-slate-400 hover:text-primary transition-colors p-2 rounded-full hover:bg-slate-100 dark:hover:bg-zinc-800">
+<span class="material-icons-round">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-primary rounded-full ring-2 ring-white dark:ring-zinc-900"></span>
+</button>
+<div class="notification-dropdown absolute right-0 top-full mt-2 w-80 bg-white dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 rounded-2xl shadow-xl z-50 overflow-hidden">
+<div class="p-4 border-b border-slate-100 dark:border-zinc-800 flex items-center justify-between bg-slate-50/50 dark:bg-zinc-800/50">
+<span class="font-bold text-sm">Notificações</span>
+<button class="text-[10px] text-primary font-bold uppercase hover:underline">Limpar todas</button>
+</div>
+<div class="max-h-[400px] overflow-y-auto custom-scrollbar">
+<div class="p-4 border-b border-slate-50 dark:border-zinc-800 hover:bg-slate-50 dark:hover:bg-zinc-800 transition-colors cursor-pointer">
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">
+<span class="material-icons-round text-sm">assignment_turned_in</span>
+</div>
+<div>
+<p class="text-xs font-bold text-accent-blue dark:text-white">Seu projeto foi avaliado!</p>
+<p class="text-[11px] text-slate-500 mt-1">O feedback do módulo de APIs já está disponível.</p>
+<span class="text-[10px] text-slate-400 mt-2 block">Há 5 minutos</span>
+</div>
+</div>
+</div>
+<div class="p-4 border-b border-slate-50 dark:border-zinc-800 hover:bg-slate-50 dark:hover:bg-zinc-800 transition-colors cursor-pointer">
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-icons-round text-sm">event</span>
+</div>
+<div>
+<p class="text-xs font-bold text-accent-blue dark:text-white">Nova mentoria agendada</p>
+<p class="text-[11px] text-slate-500 mt-1">Sua sessão com Bruno Souza foi confirmada para amanhã.</p>
+<span class="text-[10px] text-slate-400 mt-2 block">Há 2 horas</span>
+</div>
+</div>
+</div>
+<div class="p-4 hover:bg-slate-50 dark:hover:bg-zinc-800 transition-colors cursor-pointer">
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
+<span class="material-icons-round text-sm">groups</span>
+</div>
+<div>
+<p class="text-xs font-bold text-accent-blue dark:text-white">Novo comentário na comunidade</p>
+<p class="text-[11px] text-slate-500 mt-1">Ana Julia respondeu sua dúvida sobre React Hooks.</p>
+<span class="text-[10px] text-slate-400 mt-2 block">Há 4 horas</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-3 bg-slate-50/50 dark:bg-zinc-800/50 text-center">
+<button class="text-xs font-bold text-slate-500 hover:text-primary transition-colors">Ver todas as notificações</button>
+</div>
+</div>
+</div>
+<div class="h-8 w-[1px] bg-slate-200 dark:bg-zinc-800"></div>
+<div class="flex items-center gap-3 bg-slate-100 dark:bg-zinc-800 px-3 py-1.5 rounded-full">
+<span class="material-icons-round text-primary text-sm">local_fire_department</span>
+<span class="text-sm font-bold">12 Dias seguidos</span>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8 custom-scrollbar">
+<section class="flex flex-col md:flex-row items-center justify-between gap-8 mb-10">
+<div class="flex-1">
+<h1 class="text-3xl font-bold text-accent-blue dark:text-white mb-2">Olá, Marcos! 👋</h1>
+<p class="text-slate-500 text-lg">Pronto para sua próxima aula de <span class="text-primary font-semibold">Full-Stack Development</span>?</p>
+</div>
+<div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-zinc-800 flex items-center gap-6">
+<div class="relative w-20 h-20">
+<svg class="w-20 h-20 -rotate-90">
+<circle class="text-slate-100 dark:text-zinc-800" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-dasharray="213.6" stroke-dashoffset="74.76" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-lg font-bold">65%</span>
+</div>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Progresso Geral</p>
+<p class="text-xl font-bold text-accent-blue dark:text-white">Faltam 12 módulos</p>
+<p class="text-sm text-green-500 font-medium">Bom ritmo esta semana!</p>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-8">
+<div class="relative overflow-hidden bg-accent-blue rounded-3xl p-8 text-white min-h-[240px] flex flex-col justify-between group">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+<div class="absolute inset-0 bg-gradient-to-br from-primary via-transparent to-transparent"></div>
+<div class="absolute bottom-0 right-0 w-64 h-64 bg-primary blur-[80px] rounded-full translate-x-1/2 translate-y-1/2"></div>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 text-primary text-sm font-bold uppercase tracking-widest mb-4">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                Continue de onde parou
+              </div>
+<h2 class="text-2xl font-bold mb-2">Módulo 4: Arquitetura de APIs Modernas</h2>
+<p class="text-slate-300 max-w-md">Próximo vídeo: Implementação de Autenticação JWT com Node.js e Middleware de segurança.</p>
+</div>
+<div class="relative z-10 flex items-center gap-4">
+<button class="bg-primary hover:bg-orange-600 px-8 py-3 rounded-xl font-bold transition-all flex items-center gap-2 group-hover:scale-105">
+<span class="material-icons-round">play_circle</span>
+                Retomar Aula
+              </button>
+<div class="text-sm text-slate-400">
+<span class="font-bold text-white">18 min</span> restantes
+              </div>
+</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 rounded-3xl p-6 border border-slate-100 dark:border-zinc-800 shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xl font-bold text-accent-blue dark:text-white flex items-center gap-2">
+<span class="material-icons-round text-primary">chat</span>
+            Mensagens Recentes
+          </h3>
+<button class="text-primary font-semibold text-sm hover:underline flex items-center gap-1">
+            Ver todas <span class="material-icons-round text-xs">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="p-4 rounded-2xl bg-slate-50 dark:bg-zinc-800/50 border border-slate-100 dark:border-zinc-800 hover:border-primary/50 transition-all cursor-pointer">
+<div class="flex items-center gap-3 mb-3">
+<img alt="Mentor profile" class="w-10 h-10 rounded-full border-2 border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQnlAnM_4nROygGzyUdKws3LQFV_2uHWrGO0nfrH76h0Ch5EKZSR31kW9-I60E7XZvG3W384BECReomW7PFTZvpUgwF-uUfj7sNiakAAQMCUgV-i-p9WoBeAvPTx5rHASjy5dcya_KImeYif16LA2wv0d2N-vI3-2uHp5lsPaVm8Op8ruswBQMAriArM9x5gizAKKRmAwKjwNdZJIli4LZ-PAW-mMDzHdl8ii19bJBGyVnEF2C7olH6jn22lNcPUpEkrSCIiHx6Sc"/>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate">Mentor Bruno</p>
+<p class="text-[10px] text-green-500 font-bold uppercase">Online</p>
+</div>
+</div>
+<p class="text-xs text-slate-500 line-clamp-2">"Marcos, vi seu código e deixei umas dicas sobre o pattern..."</p>
+<span class="text-[10px] text-slate-400 mt-2 block">Hoje, 10:45</span>
+</div>
+<div class="p-4 rounded-2xl bg-slate-50 dark:bg-zinc-800/50 border border-slate-100 dark:border-zinc-800 hover:border-primary/50 transition-all cursor-pointer">
+<div class="flex items-center gap-3 mb-3">
+<img alt="Peer profile" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6_YhcB5oNnX_oJaWsU9StSPYsfXujvK9WhrOkC727W1wkhMqz3dLdGfxnSZodpCgJ2NRmC0zN7ZAhANcVMA9P1hkIoouessnyh9LPahSs-RE36631hLKAbmPR9Xk2Yt-W5y3D7pEFHltS93fxldMB_COYKFHpwDbFzi-nxjbFGF33OT-ranJcP3uUV9t_acWMv0HMar44diVr86-AuURcXikOwmRNUGa5Rj9yB24dTdMTh3_ZkeRfzRX8cE18XiEibrd9Qcbv_CI"/>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate">Ana Julia</p>
+<p class="text-[10px] text-slate-400 font-bold uppercase">Offline</p>
+</div>
+</div>
+<p class="text-xs text-slate-500 line-clamp-2">"Muito obrigada pela ajuda no CSS! Funcionou perfeito..."</p>
+<span class="text-[10px] text-slate-400 mt-2 block">Ontem, 19:20</span>
+</div>
+<div class="p-4 rounded-2xl bg-primary/5 border border-primary/20 hover:border-primary/50 transition-all cursor-pointer">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-icons-round">campaign</span>
+</div>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate text-primary">Avisos Gerais</p>
+<p class="text-[10px] text-primary/70 font-bold uppercase">Projeto</p>
+</div>
+</div>
+<p class="text-xs text-slate-500 line-clamp-2 italic">Nova documentação liberada para o projeto final.</p>
+<span class="text-[10px] text-slate-400 mt-2 block">Há 1 hora</span>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xl font-bold text-accent-blue dark:text-white">Meus Cursos em Andamento</h3>
+<button class="text-primary font-semibold text-sm hover:underline">Ver todos</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white dark:bg-zinc-900 p-5 rounded-2xl border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-md transition-shadow">
+<div class="h-32 rounded-xl bg-slate-100 dark:bg-zinc-800 mb-4 overflow-hidden relative">
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-zinc-900/90 px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">UI/UX Design</div>
+<div class="w-full h-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center">
+<span class="material-icons-round text-white text-4xl">brush</span>
+</div>
+</div>
+<h4 class="font-bold mb-1 truncate">UI/UX Design: Princípios Avançados</h4>
+<div class="flex items-center gap-2 mb-4">
+<div class="flex-1 h-1.5 bg-slate-100 dark:bg-zinc-800 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[45%]"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-400">45%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-icons-round text-slate-400 text-sm">schedule</span>
+<span class="text-xs text-slate-500">4h restantes</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-slate-50 dark:bg-zinc-800 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-icons-round text-lg">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 p-5 rounded-2xl border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-md transition-shadow">
+<div class="h-32 rounded-xl bg-slate-100 dark:bg-zinc-800 mb-4 overflow-hidden relative">
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-zinc-900/90 px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">Computação</div>
+<div class="w-full h-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+<span class="material-icons-round text-white text-4xl">code</span>
+</div>
+</div>
+<h4 class="font-bold mb-1 truncate">Algoritmos Avançados &amp; Estrutura</h4>
+<div class="flex items-center gap-2 mb-4">
+<div class="flex-1 h-1.5 bg-slate-100 dark:bg-zinc-800 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[82%]"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-400">82%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-icons-round text-slate-400 text-sm">schedule</span>
+<span class="text-xs text-slate-500">1h restante</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-slate-50 dark:bg-zinc-800 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-icons-round text-lg">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-8">
+<div class="bg-white dark:bg-zinc-900 rounded-3xl p-6 border border-slate-100 dark:border-zinc-800 shadow-sm">
+<h3 class="text-lg font-bold mb-6">Próximos Prazos</h3>
+<div class="space-y-6">
+<div class="flex gap-4 relative">
+<div class="flex flex-col items-center">
+<div class="w-2 h-2 rounded-full bg-red-500 mt-1.5"></div>
+<div class="w-[1px] h-full bg-slate-100 dark:bg-zinc-800 mt-2"></div>
+</div>
+<div>
+<p class="text-xs font-bold text-red-500 uppercase tracking-wider mb-1">Hoje, 23:59</p>
+<p class="font-bold text-accent-blue dark:text-white leading-tight">Entrega de Projeto Final: Redesign Hub</p>
+<p class="text-xs text-slate-500 mt-1">Módulo 4: UI/UX Design</p>
+</div>
+</div>
+<div class="flex gap-4 relative">
+<div class="flex flex-col items-center">
+<div class="w-2 h-2 rounded-full bg-primary mt-1.5"></div>
+<div class="w-[1px] h-full bg-slate-100 dark:bg-zinc-800 mt-2"></div>
+</div>
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-wider mb-1">Amanhã, 19:00</p>
+<p class="font-bold text-accent-blue dark:text-white leading-tight">Mentoria ao Vivo: Carreira &amp; LinkedIn</p>
+<p class="text-xs text-slate-500 mt-1">Com Tutor Bruno Souza</p>
+<button class="mt-3 text-[10px] bg-primary text-white font-bold py-1.5 px-3 rounded-lg flex items-center gap-1">
+<span class="material-icons-round text-sm">videocam</span>
+                    Adicionar ao Agenda
+                  </button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-primary to-orange-600 rounded-3xl p-6 text-white shadow-lg shadow-primary/20">
+<span class="material-icons-round text-4xl mb-4">psychology</span>
+<h3 class="text-xl font-bold mb-2">Dúvidas no código?</h3>
+<p class="text-white/80 text-sm mb-6">Agende uma sessão individual com um mentor sênior agora.</p>
+<button class="w-full py-3 bg-white text-primary font-bold rounded-xl hover:bg-slate-50 transition-colors">Agendar Agora</button>
+</div>
+<div class="bg-white dark:bg-zinc-900 rounded-3xl p-6 border border-slate-100 dark:border-zinc-800 shadow-sm">
+<h3 class="text-lg font-bold mb-4">Leaderboard Semanal</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="text-sm font-bold text-slate-400 w-4">1</span>
+<img alt="Student profile" class="w-8 h-8 rounded-full border border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6_YhcB5oNnX_oJaWsU9StSPYsfXujvK9WhrOkC727W1wkhMqz3dLdGfxnSZodpCgJ2NRmC0zN7ZAhANcVMA9P1hkIoouessnyh9LPahSs-RE36631hLKAbmPR9Xk2Yt-W5y3D7pEFHltS93fxldMB_COYKFHpwDbFzi-nxjbFGF33OT-ranJcP3uUV9t_acWMv0HMar44diVr86-AuURcXikOwmRNUGa5Rj9yB24dTdMTh3_ZkeRfzRX8cE18XiEibrd9Qcbv_CI"/>
+<span class="text-sm font-medium flex-1">Ana Julia</span>
+<span class="text-xs font-bold text-primary">2,450 XP</span>
+</div>
+<div class="flex items-center gap-3 bg-primary/5 -mx-2 px-2 py-1.5 rounded-xl border border-primary/10">
+<span class="text-sm font-bold text-primary w-4">3</span>
+<img alt="Current user avatar" class="w-8 h-8 rounded-full ring-2 ring-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsONUVOR4EXqsRj5xuIY7KeDdsSxp5GZNRmJoGHKrjL6tc6_6gVZ5pZl47wuQ335Ozfb7mGz6DPFl4IHXD89MLm8M6pM4lFW95P2iZ4MTiY8Ev93g1q0ToEXKmv_XRXD2wBpF8OP5hxIaU9YuJSWdf0ZjFc1m0gOy0M9ZgFZXDxvOQOtjJ43GC3s2vmH_1qDD5NSboW4RUrc7qsJKUkd51160jhjrwji9W34v56scVGnR61KDCq1FLlnl_sEcUjwcZH3DMIb49jhc"/>
+<span class="text-sm font-bold flex-1">Você</span>
+<span class="text-xs font-bold text-primary">1,980 XP</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-8 right-8 z-50">
+<button class="w-16 h-16 bg-accent-blue dark:bg-white text-white dark:text-accent-blue rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative border-4 border-white dark:border-zinc-900">
+<span class="material-icons-round text-3xl">chat</span>
+<span class="absolute -top-1 -right-1 w-6 h-6 bg-primary text-white text-[10px] font-bold rounded-full flex items-center justify-center ring-2 ring-white dark:ring-zinc-900">3</span>
+<span class="absolute right-20 bg-accent-blue text-white px-4 py-2 rounded-xl text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-lg">Suas Mensagens</span>
+</button>
+</div>
+
+</body></html>

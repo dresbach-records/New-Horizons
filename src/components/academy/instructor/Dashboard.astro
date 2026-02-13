@@ -1,0 +1,19 @@
+---
+import StatsCard from './StatsCard.astro';
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <StatsCard title="Alunos Ativos" value="1,250" icon="users" />
+    <StatsCard title="Novos Alunos (Mês)" value="150" icon="user-plus" />
+    <StatsCard title="Cursos Publicados" value="25" icon="video" />
+    <StatsCard title="Avaliações" value="4.8/5.0" icon="star" />
+</div>
+
+<div class="mt-8">
+    <h2 class="text-xl font-bold mb-4">Atividade Recente</h2>
+    <ul>
+        <li class="border-b py-2">Novo comentário em "Introdução ao Astro.js"</li>
+        <li class="border-b py-2">Aluno concluiu "Construindo um Blog com Astro"</li>
+        <li class="border-b py-2">Nova avaliação 5 estrelas em "Astro para E-commerce"</li>
+    </ul>
+</div>

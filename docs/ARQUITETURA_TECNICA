@@ -1,0 +1,356 @@
+📘 DOCUMENTO ARQUITETURAL TÉCNICO
+Projeto Novos Horizonte
+
+Plataforma de Inclusão Digital e Formação Tecnológica
+
+1️⃣ VISÃO GERAL DO SISTEMA
+
+O Projeto Novos Horizonte é uma plataforma modular composta por:
+
+🌐 Site Institucional (Astro)
+
+🎓 Dashboard Educacional (Angular)
+
+🚀 Backend API (NestJS)
+
+🗄 Banco de Dados PostgreSQL
+
+🔐 Autenticação JWT
+
+📊 Camada de Analytics & ESG
+
+Arquitetura baseada em separação clara de responsabilidades (Clean Architecture + Modular Monolith evolutivo).
+
+2️⃣ ARQUITETURA GERAL
+                    ┌──────────────────────┐
+                    │     Frontend Site    │
+                    │        (Astro)       │
+                    └────────────┬─────────┘
+                                 │
+                                 ▼
+                    ┌──────────────────────┐
+                    │   Frontend App       │
+                    │     (Angular)        │
+                    └────────────┬─────────┘
+                                 │ REST API
+                                 ▼
+                    ┌──────────────────────┐
+                    │       Backend        │
+                    │      (NestJS)        │
+                    └────────────┬─────────┘
+                                 │
+                                 ▼
+                    ┌──────────────────────┐
+                    │    PostgreSQL DB     │
+                    └──────────────────────┘
+
+3️⃣ CAMADAS DO SISTEMA
+🔹 3.1 Frontend Institucional (Astro)
+
+Responsabilidades:
+
+SEO
+
+Captação de investidores
+
+Conteúdo institucional
+
+Landing pages
+
+ESG público
+
+Blog
+
+Renderização:
+
+Static First
+
+SSR opcional
+
+Otimizado para performance
+
+🔹 3.2 Frontend Aplicação (Angular)
+
+Responsável pelos dashboards:
+
+Aluno
+
+Mentor
+
+Admin
+
+Estrutura modular por domínio.
+
+🔹 3.3 Backend (NestJS)
+
+Arquitetura modular:
+
+modules/
+ ├── auth
+ ├── users
+ ├── students
+ ├── mentors
+ ├── admin
+ ├── courses
+ ├── classes
+ ├── analytics
+ └── notifications
+
+
+Cada módulo contém:
+
+Controller
+
+Service
+
+DTO
+
+Entity
+
+Guards
+
+Validators
+
+4️⃣ PADRÕES ARQUITETURAIS UTILIZADOS
+
+Modular Architecture
+
+Separation of Concerns
+
+Role-Based Access Control (RBAC)
+
+RESTful API
+
+DTO Validation
+
+Clean Code Principles
+
+Environment Isolation
+
+Feature-based Folder Structure
+
+5️⃣ ESTRUTURA DE ROLES
+STUDENT
+MENTOR
+ADMIN
+SUPER_ADMIN
+INVESTOR (opcional futuro)
+
+
+Controle feito via:
+
+JWT Token
+
+Role Guards
+
+Custom Decorators
+
+6️⃣ AUTENTICAÇÃO
+
+Modelo:
+
+Login
+
+JWT Access Token
+
+Refresh Token
+
+Guards por rota
+
+Fluxo:
+
+Login → Gera Access + Refresh
+Access Token → Protege rotas
+Refresh → Renova sessão
+
+7️⃣ BANCO DE DADOS
+
+Tecnologia:
+
+PostgreSQL
+
+Prisma ORM
+
+Principais Entidades:
+
+User
+Student
+Mentor
+Admin
+Course
+Class
+Lesson
+Progress
+Certificate
+FinancialRecord
+Hub
+Country
+Analytics
+
+
+Relacionamentos:
+
+1:N Mentor → Classes
+
+1:N Class → Students
+
+N:N Student ↔ Course
+
+1:N Student → Progress
+
+1:N Course → Lessons
+
+8️⃣ SEGURANÇA
+
+JWT
+
+Guards por Role
+
+Validação DTO
+
+Rate Limiting (recomendado)
+
+HTTPS obrigatório
+
+Hash bcrypt para senhas
+
+Sanitização de inputs
+
+CORS configurado
+
+9️⃣ ESTRATÉGIA DE ESCALABILIDADE
+
+Curto prazo:
+
+Modular Monolith
+
+Médio prazo:
+
+Separação em microserviços:
+
+Auth Service
+
+Analytics Service
+
+Notification Service
+
+Longo prazo:
+
+Event-driven architecture
+
+Message Broker (Kafka / RabbitMQ)
+
+🔟 MONITORAMENTO E MÉTRICAS
+
+Futuro recomendado:
+
+Logs estruturados
+
+Winston Logger
+
+OpenTelemetry
+
+Prometheus
+
+Grafana
+
+11️⃣ CI/CD
+
+Pipeline ideal:
+
+Push → Lint → Test → Build → Deploy
+
+
+Deploy recomendado:
+
+Frontend: Vercel / Netlify
+
+Backend: Railway / Render / AWS
+
+Banco: Supabase / Neon / RDS
+
+12️⃣ INFRAESTRUTURA
+
+Estrutura ideal em produção:
+
+Cloud Provider
+ ├── API Server
+ ├── Database
+ ├── CDN
+ ├── Storage (S3)
+ └── Monitoring
+
+13️⃣ TAILWIND – POLÍTICA OFICIAL
+
+🚫 NÃO utilizar CDN.
+
+Instalação obrigatória via:
+
+npm install -D tailwindcss postcss autoprefixer
+
+
+Motivo:
+
+Evita perda de estilo
+
+Build otimizado
+
+Purge automático
+
+Menor bundle
+
+Performance superior
+
+14️⃣ ORGANIZAÇÃO DE PASTAS – RAIZ COMPLETA
+novos-horizonte-platform/
+│
+├── frontend-site/
+├── frontend-app/
+├── backend/
+│
+├── docker-compose.yml
+├── .env
+└── docs/
+    ├── ARQUITETURA_TECNICA.md
+    ├── BLUEPRINT.md
+    ├── ROUTES.md
+    └── SEGURANCA.md
+
+15️⃣ ESTRATÉGIA FUTURA
+
+IA para análise de risco educacional
+
+Ranking continental
+
+Micro-certificações NFT verificáveis
+
+API pública ESG
+
+Plataforma white-label
+
+16️⃣ PRINCÍPIOS DO PROJETO
+
+Inclusão Digital
+
+Escalabilidade Continental
+
+Governança Transparente
+
+Performance
+
+Segurança
+
+Arquitetura Evolutiva
+
+17️⃣ STATUS ARQUITETURAL
+
+✔ Arquitetura modular definida
+✔ Separação frontend/backend
+✔ Sistema escalável
+✔ Base preparada para expansão
+
+📌 DOCUMENTO OFICIAL
+
+Versão: 1.0
+Status: Estrutura Base Definida
+Projeto: Novos Horizonte
