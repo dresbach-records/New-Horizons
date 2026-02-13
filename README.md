@@ -126,24 +126,25 @@ frontend-app/
 
 ---
 
-## 3. Luanda Hub Dashboard (Astro.js)
+## 3. HORIZON System (Astro.js)
 
-O **Luanda Hub** é um dashboard regional, construído com Astro.js, para a equipe local de Luanda. Ele fornece uma visão geral das operações, incluindo alunos, mentores e projetos específicos da região.
+O **HORIZON System** é o sistema de gestão da plataforma, construído com Astro.js. Ele fornece uma interface para administradores gerenciarem o conteúdo, usuários e configurações do projeto.
 
 ### Estrutura de Arquivos
 
 ```
 src/
 ├── components/
-│   └── luanda/
+│   └── horizon-system/
 │       ├── Header.astro
 │       ├── Sidebar.astro
 │       └── Footer.astro
 ├── layouts/
-│   └── LuandaHubLayout.astro
+│   └── HORIZONSystemLayout.astro
 └── pages/
     └── sistem/
-        └── Luanda-Hub/
+        ├── login.astro
+        └── HORIZON-System/
             └── index.astro
 ```
 
